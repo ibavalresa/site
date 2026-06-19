@@ -223,6 +223,11 @@ nav {
 }
 .mobile-menu-close::before { transform: rotate(45deg); }
 .mobile-menu-close::after  { transform: rotate(-45deg); }
+.mobile-menu-logo {
+  position: absolute; top: 25px; left: 24px;
+  display: flex; align-items: center;
+}
+.mobile-menu-logo img { height: 30px; width: auto; display: block; object-fit: contain; }
 .mobile-menu-group { border-bottom: 1px solid var(--border); padding: 4px 0; }
 .mobile-menu-group:last-child { border-bottom: none; }
 .mobile-menu-head {
@@ -1486,7 +1491,20 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   .hero { padding: 100px 20px 60px; }
   .section-inner { padding: 0 20px; }
   .bigstats-grid { grid-template-columns: 1fr 1fr; }
-  .brands-grid { }
+  .brands-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .brand-item {
+    min-width: 0; max-width: none;
+    min-height: 104px;
+    padding: 18px 14px;
+    border-right: 1px solid var(--border);
+  }
+  .brand-item:nth-child(2n) { border-right: none; }
+  .brand-item:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .brand-logo-img { height: 56px; max-width: 100%; }
+  .brand-item img[style] { max-width: 104px !important; }
   .footer-inner { grid-template-columns: 1fr; }
 }
 /* ── ABOUT PAGE STYLES ── */
@@ -1541,7 +1559,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 }
 
 /* About sections */
-.about-section { padding: 96px 0; border-top: 1px solid var(--border); }
+.about-section { padding: 60px 0; border-top: 1px solid var(--border); }
 .about-section:first-of-type { border-top: none; }
 .about-section .section-inner { max-width: 1080px; }
 .about-lead {
@@ -1631,12 +1649,14 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 
 /* Pull quote */
 .about-pull {
-  margin: 64px 0;
+  margin: 48px 0;
   padding: 48px 40px;
   border-left: 3px solid var(--accent);
   background: linear-gradient(135deg, rgba(38,53,140,0.04) 0%, rgba(38,53,140,0) 100%);
   border-radius: 0 14px 14px 0;
 }
+.about-pull:first-child { margin-top: 0; }
+.about-pull:last-child { margin-bottom: 0; }
 .about-pull p {
   font-size: clamp(22px, 2.4vw, 32px);
   font-weight: 600; line-height: 1.3; color: var(--text);
@@ -1812,7 +1832,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 }
 
 @media (max-width: 900px) {
-  .about-section { padding: 64px 0; }
+  .about-section { padding: 36px 0; }
   .about-grid-2 { grid-template-columns: 1fr; gap: 24px; }
   .about-bullets { grid-template-columns: 1fr; padding: 24px; }
   .about-metrics { grid-template-columns: repeat(2, 1fr); }
@@ -1946,6 +1966,9 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 
 <!-- Mobile menu drawer -->
 <div class="mobile-menu" id="mobile-menu">
+  <a class="mobile-menu-logo" href="index.html" aria-label="Ana sayfa">
+    <img src="assets/logos/ibavalresa-white.png" alt="İBAVALRESA" style="filter:brightness(0);">
+  </a>
   <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Menüyü kapat" type="button"></button>
   <div class="mobile-menu-group">
     <button class="mobile-menu-head" data-toggle>Kurumsal
@@ -2000,9 +2023,9 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 <!-- ── INTRO + JUMP NAV ── -->
 <section class="about-section">
   <div class="section-inner">
-    <div class="section-tag reveal" style="margin-bottom: 16px;">İbavalresa Kariyer</div>
-    <h2 class="about-h2 reveal">Birlikte büyüyen bir aile.</h2>
-    <p class="about-lead reveal">İbavalresa olarak; stajından tam zamanlı işe, mezun adımından deneyimli profesyonele kadar her kariyer aşamasında çalışanlarımızın yanında yer alıyor; bilgi, deneyim ve yetkinlikleri doğru araçlarla buluşturuyoruz.</p>
+    <div class="section-tag reveal" style="margin-bottom: 16px;">İBAVALRESA Kariyer</div>
+    <h2 class="about-h2 reveal">Birlikte büyüyen bir takım.</h2>
+    <p class="about-lead reveal">İBAVALRESA olarak; stajından tam zamanlı işe, mezun adımından deneyimli profesyonele kadar her kariyer aşamasında çalışanlarımızın yanında yer alıyor; bilgi, deneyim ve yetkinlikleri doğru araçlarla buluşturuyoruz.</p>
     <div class="hr-jumps reveal">
       <a href="#ogrenciler" class="hr-jump">Öğrenciler</a>
       <a href="#muhendis" class="hr-jump">Proje Mühendislerimiz</a>
@@ -2018,7 +2041,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">İbavalresa — Staj Programı</div>
+        <div class="section-tag" style="margin-bottom: 16px;">İBAVALRESA — Staj Programı</div>
         <h2 class="about-h2">Öğrenciler.</h2>
         <p class="about-p" style="margin-top:8px;"><em>Çalışarak Öğren.</em></p>
       </div>
@@ -2036,7 +2059,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">İba.Valresa</div>
+        <div class="section-tag" style="margin-bottom: 16px;">İBAVALRESA</div>
         <h2 class="about-h2">Proje Mühendislerimiz.</h2>
       </div>
       <div>
@@ -2052,7 +2075,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">İbavalresa</div>
+        <div class="section-tag" style="margin-bottom: 16px;">İBAVALRESA</div>
         <h2 class="about-h2">İş İmkânlarımız.</h2>
       </div>
       <div>
@@ -2070,13 +2093,13 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">İbavalresa</div>
+        <div class="section-tag" style="margin-bottom: 16px;">İBAVALRESA</div>
         <h2 class="about-h2">Çalışanlarımız.</h2>
       </div>
       <div>
         <p class="about-p">İşe alımınız sonrasında, çalışmaya başlayacağınız bölümün ve kişisel yetkinliklerinizin gereklerine göre oluşturulmuş <strong>oryantasyon programlarımız</strong> ile işe hızlı ve kolay uyumunuz sağlanır.</p>
         <p class="about-p">Sürekli gelişim prensibiyle, çalışanlarımızın eğitim ihtiyaçları takip edilir; her bir çalışanımızın gelişim alanları farklı çalışmalarla desteklenir.</p>
-        <p class="about-p">Bilimin ve teknolojinin ışığında kendinizi geliştirebileceğiniz, <strong>mutlu ve sıcak bir çalışma ortamında</strong> kariyerinizi daha ileri seviyelere taşıyabileceğiniz bir ailenin parçası olursunuz.</p>
+        <p class="about-p">Bilimin ve teknolojinin ışığında kendinizi geliştirebileceğiniz, <strong>mutlu ve sıcak bir çalışma ortamında</strong> kariyerinizi daha ileri seviyelere taşıyabileceğiniz bir takımın parçası olursunuz.</p>
       </div>
     </div>
   </div>
@@ -2089,7 +2112,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
     <h2 class="about-h2 reveal">Doğruluk ve Etik Kurallarımız.</h2>
     <p class="about-p reveal">Hedeflerimize ulaşmak için; yaptığı işi <strong>liderlik, adalet ve dürüstlük</strong> çerçevesinde sunmaya hevesli çalışanlarımız olmasını önemsiyoruz. Birbirimize ve müşterilerimize karşı taşıdığımız sorumluluğun farkındayız.</p>
     <p class="about-p reveal">Markalarımızın ve itibarının bekçileriyiz; piyasada temsil ettiği değerleri savunmak için işimizi olması gerektiği gibi ve dürüstçe yapıyoruz. Olumsuz bir geri dönüş korkusu olmadan fikir ve bilgi alışverişinde bulunabileceğimiz <strong>açık iletişim ortamını</strong> destekliyoruz.</p>
-    <p class="about-p reveal">İbavalresa çalışanları olarak <strong>doğruluk ve hesap verilebilirliğe</strong> azami değer veriyor; tüm uygulamalarımızın şeffaf, dürüst ve etik olduğundan emin olmak için birbirimize destek oluyoruz.</p>
+    <p class="about-p reveal">İBAVALRESA çalışanları olarak <strong>doğruluk ve hesap verilebilirliğe</strong> azami değer veriyor; tüm uygulamalarımızın şeffaf, dürüst ve etik olduğundan emin olmak için birbirimize destek oluyoruz.</p>
     <div class="about-pull reveal">
       <p>Her bir çalışanımızın katkısı <em>eşit derecede</em> değerlidir.</p>
     </div>
@@ -2101,9 +2124,9 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="hr-cta-card reveal">
       <div class="hr-cta-text">
-        <div class="section-tag" style="margin-bottom: 14px;">İbavalresa Ailesi</div>
+        <div class="section-tag" style="margin-bottom: 14px;">İBAVALRESA Takımı</div>
         <h2 class="about-h2" style="margin-bottom:18px;">Bize Katılmak İster Misiniz?</h2>
-        <p class="about-p">İbavalresa Ailesi'ne katılmak isterseniz aşağıdaki butona tıklayarak güncel iş ilânlarımızı inceleyebilirsiniz.</p>
+        <p class="about-p">İBAVALRESA Takımı'na katılmak isterseniz aşağıdaki butona tıklayarak güncel iş ilânlarımızı inceleyebilirsiniz.</p>
         <p class="about-p" style="font-size:14px;color:var(--text3);font-style:italic;">KVKK kanunu gereğince, iş ve staj başvurularınızı sadece kariyer.net ilânlarımız üzerinden yapmanızı rica ederiz. Sitemizdeki iletişim formları ve mail üzerinden yapılan başvurular silinecek ve değerlendirmeye alınmayacaktır.</p>
       </div>
       <div class="hr-cta-action">
@@ -2118,7 +2141,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 </section>
 
 <!-- ── BRANDS ── -->
-<section class="brands" id="markalar" style="height: 300px">
+<section class="brands" id="markalar" style="min-height: 300px">
   <div class="section-inner">
     <div class="brands-label reveal">Logolarımız</div>
     <div class="brands-grid reveal">

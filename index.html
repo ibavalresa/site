@@ -223,6 +223,11 @@ nav {
 }
 .mobile-menu-close::before { transform: rotate(45deg); }
 .mobile-menu-close::after  { transform: rotate(-45deg); }
+.mobile-menu-logo {
+  position: absolute; top: 25px; left: 24px;
+  display: flex; align-items: center;
+}
+.mobile-menu-logo img { height: 30px; width: auto; display: block; object-fit: contain; }
 .mobile-menu-group { border-bottom: 1px solid var(--border); padding: 4px 0; }
 .mobile-menu-group:last-child { border-bottom: none; }
 .mobile-menu-head {
@@ -1263,6 +1268,14 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 }
 .whyus-hero-img:hover img { transform: scale(1.03); }
 
+@media(max-width:900px) {
+  .whyus-top { grid-template-columns: 1fr; gap: 36px; }
+  .whyus-lead { position: static; top: auto; }
+}
+@media(max-width:600px) {
+  .whyus-cards { grid-template-columns: 1fr; }
+}
+
 /* ── FEATURE CARDS ── */
 .feature-cards {
   display: flex;
@@ -1373,9 +1386,9 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 .fcard:hover .fcard-link { gap: 10px; }
 
 @media(max-width:900px) {
-  .fcard { grid-template-columns: 1fr; }
-  .fcard-img { height: 220px; }
-  .fcard-body { padding: 28px 24px; border-left: none; border-top: 1px solid var(--border); }
+  .fcard, .fcard:nth-child(even) { grid-template-columns: 1fr; }
+  .fcard-img, .fcard:nth-child(even) .fcard-img { order: 0; height: 220px; }
+  .fcard-body, .fcard:nth-child(even) .fcard-body { order: 0; padding: 28px 24px; border-left: none; border-right: none; border-top: 1px solid var(--border); }
 }
 
 /* Kampüs figure — about-figure style: rounded, bordered, image + caption */
@@ -1561,7 +1574,20 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   .hero { padding: 100px 20px 60px; }
   .section-inner { padding: 0 20px; }
   .bigstats-grid { grid-template-columns: 1fr 1fr; }
-  .brands-grid { }
+  .brands-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .brand-item {
+    min-width: 0; max-width: none;
+    min-height: 104px;
+    padding: 18px 14px;
+    border-right: 1px solid var(--border);
+  }
+  .brand-item:nth-child(2n) { border-right: none; }
+  .brand-item:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .brand-logo-img { height: 56px; max-width: 100%; }
+  .brand-item img[style] { max-width: 104px !important; }
   .footer-inner { grid-template-columns: 1fr; }
 }
 </style>
@@ -1689,6 +1715,9 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 
 <!-- Mobile menu drawer -->
 <div class="mobile-menu" id="mobile-menu">
+  <a class="mobile-menu-logo" href="index.html" aria-label="Ana sayfa">
+    <img src="assets/logos/ibavalresa-white.png" alt="İBAVALRESA" style="filter:brightness(0);">
+  </a>
   <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Menüyü kapat" type="button"></button>
   <div class="mobile-menu-group">
     <button class="mobile-menu-head" data-toggle>Kurumsal
@@ -2011,7 +2040,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 </section>
 
 <!-- ── BRANDS ── -->
-<section class="brands" id="markalar" style="height: 300px">
+<section class="brands" id="markalar" style="min-height: 300px">
   <div class="section-inner">
     <div class="brands-label reveal">Logolarımız</div>
     <div class="brands-grid reveal">
