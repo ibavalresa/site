@@ -1385,10 +1385,24 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 }
 .fcard:hover .fcard-link { gap: 10px; }
 
+/* stats variant — sayı paneli (fotoğraf yerine) */
+.fcard-img.fcard-stats {
+  display: flex; flex-direction: column; justify-content: center; gap: 22px;
+  padding: 40px 44px;
+  background: linear-gradient(150deg, var(--accent) 0%, #16205c 100%);
+}
+.fcard-stat { display: flex; flex-direction: column; }
+.fcard-stat-num { font-size: 42px; font-weight: 800; color: #fff; line-height: 1; letter-spacing: -1.5px; }
+.fcard-stat-num sup { font-size: 20px; vertical-align: super; opacity: .75; }
+.fcard-stat-lbl { font-size: 13px; font-weight: 500; color: rgba(255,255,255,.82); margin-top: 5px; }
+
 @media(max-width:900px) {
   .fcard, .fcard:nth-child(even) { grid-template-columns: 1fr; }
   .fcard-img, .fcard:nth-child(even) .fcard-img { order: 0; height: 220px; }
   .fcard-body, .fcard:nth-child(even) .fcard-body { order: 0; padding: 28px 24px; border-left: none; border-right: none; border-top: 1px solid var(--border); }
+  .fcard-img.fcard-stats { flex-direction: row; justify-content: space-around; align-items: center; padding: 24px 16px; gap: 10px; }
+  .fcard-stats .fcard-stat { align-items: center; text-align: center; }
+  .fcard-stats .fcard-stat-num { font-size: 32px; }
 }
 
 /* Kampüs figure — about-figure style: rounded, bordered, image + caption */
@@ -1795,8 +1809,8 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <h1 id="hero-title">Kalite.<br><em>Her Zaman.</em></h1>
 
   <p class="hero-sub">
-    Global pazarlara yüksek kaliteli ahşap boya ve vernik çözümleri, endüstriyel boyalar sunan,
-    Türk–İspanyol ortaklı üretim gücü.
+    Türk–İspanyol ortaklığından doğan üretim ve Ar-Ge gücümüzle, dünya pazarlarına yüksek kaliteli
+    ahşap boya, vernik ve endüstriyel boya çözümleri sunuyoruz.
   </p>
 
   <div class="hero-actions">
@@ -1854,6 +1868,24 @@ footer img[alt="ibavalresa"] { filter: none !important; }
           <div class="fcard-eyebrow">Türk–İspanyol Ar-Ge Gücü</div>
           <div class="fcard-title">Araştırma - Geliştirme.</div>
           <p class="fcard-desc">İBA VALRESA Ar-Ge, global bilgi birikimiyle beslenen, teknolojik ürünler ve yenilikçi formülasyonlar geliştiren bir yapı olarak; müşteri ihtiyaçlarını merkeze alan, uygulamaya değer çözümler üretir. Sürdürülebilir ve çevre dostu teknolojiler odağında geliştirilen ürünlerimiz; yüksek performans, estetik yüzey kalitesi ve global kalite standartlarını bir arada sunar. Ar-Ge yaklaşımımız yalnızca ürün geliştirmekle sınırlı değildir; farklı uygulama teknikleri, proses uyumluluğu ve sahada katma değer yaratan uygulama çözümleri üzerinde de aktif olarak çalışır, müşterilerimizin üretim süreçlerine doğrudan katkı sağlar.</p>
+          <span class="fcard-link">
+            Daha fazla bilgi
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- GÜÇLÜ SATIŞ & TEKNİK DESTEK -->
+      <a class="fcard" href="hizmetlerimiz.html">
+        <div class="fcard-img fcard-stats">
+          <div class="fcard-stat"><span class="fcard-stat-num">50<sup>+</sup></span><span class="fcard-stat-lbl">Yurtiçi Bayilik</span></div>
+          <div class="fcard-stat"><span class="fcard-stat-num">25<sup>+</sup></span><span class="fcard-stat-lbl">Ülkeye İhracat</span></div>
+          <div class="fcard-stat"><span class="fcard-stat-num">%50</span><span class="fcard-stat-lbl">İhracat Payı</span></div>
+        </div>
+        <div class="fcard-body">
+          <div class="fcard-eyebrow">Satış & Teknik Destek</div>
+          <div class="fcard-title">Güçlü satış ve teknik destek ağı.</div>
+          <p class="fcard-desc">Toplam satışlarımızın yaklaşık yarısını oluşturan global iş ortaklıklarımız, 25'ten fazla ülkeye ulaşan ihracat ağımız ve Türkiye genelindeki yaygın bayi organizasyonumuzla müşterilerimize hızlı, yerinde ve sürdürülebilir destek sunuyoruz. 6 farklı bölgede görev yapan satış ve teknik ekiplerimiz ile Türkiye'nin önde gelen mobilya üreticilerinin güvenilir çözüm ortağı olarak faaliyet gösteriyoruz.</p>
           <span class="fcard-link">
             Daha fazla bilgi
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -2348,7 +2380,7 @@ const LANG_CONTENT = {
     navCta: "Online Sipariş →",
     badge: "+60 Yıl Tecrübe",
     heroTitle: "Kalite.<br><em>Her Zaman.</em>",
-    heroSub: "Global pazarlara yüksek kaliteli ahşap boya ve vernik çözümleri, endüstriyel boyalar sunan, Türk–İspanyol ortaklı üretim gücü.",
+    heroSub: "Türk–İspanyol ortaklığından doğan üretim ve Ar-Ge gücümüzle, dünya pazarlarına yüksek kaliteli ahşap boya, vernik ve endüstriyel boya çözümleri sunuyoruz.",
     btn1: "Markalarımız", btn2: "Hakkımızda",
     s1:"Yıl Tecrübe", s2:"m² Kampüs", s3:"Marka", s4:"Kıta",
     cta: "İletişime Geçin",

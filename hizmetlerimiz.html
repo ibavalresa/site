@@ -1776,6 +1776,44 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 }
 .about-grid-2 .about-p { max-width: none; }
 
+/* ── HİZMET KARTLARI (4'lü grid) ── */
+.hcards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.hcard {
+  background: var(--bg);
+  padding: 42px 38px;
+  transition: background .2s;
+}
+.hcard:hover { background: var(--bg2); }
+.hcard-num {
+  font-size: 12px; font-weight: 800; letter-spacing: .14em;
+  color: var(--accent); margin-bottom: 18px;
+}
+.hcard-title {
+  font-size: 22px; font-weight: 800; letter-spacing: -.6px;
+  color: var(--text); margin-bottom: 14px; line-height: 1.2;
+}
+.hcard-desc {
+  font-size: 14.5px; color: var(--text2); line-height: 1.75;
+}
+.hcard-desc strong { color: var(--text); font-weight: 700; }
+.hcard-tbd {
+  color: var(--accent); font-weight: 700;
+  border-bottom: 1px dashed var(--accent);
+}
+@media(max-width:760px) {
+  .hcards-grid { grid-template-columns: 1fr; }
+  .hcard { padding: 32px 26px; }
+}
+
 /* Stat list (bullet list with strong values) */
 .about-bullets {
   display: grid;
@@ -2106,66 +2144,31 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   </div>
 </section>
 
-<!-- ── SECTION 01: SATIŞ & SATIŞ SONRASI ── -->
+<!-- ── HİZMET ALANLARI (4 kart) ── -->
 <section class="about-section">
   <div class="section-inner">
-    <div class="reveal">
-      <div class="section-tag" style="margin-bottom: 16px;">01 — Yaklaşımımız</div>
-      <h2 class="about-h2">Satış öncesinden sonrasına, tek bir ekip.</h2>
-      <p class="about-p" style="max-width:720px;margin-top:18px;">Müşterilerimizi yalnızca bir ürünle değil, <strong>uçtan uca bir hizmetle</strong> buluşturuyoruz. Doğru ürün seçimi, renk ve uygulama danışmanlığından teslimat sonrası teknik desteğe kadar her aşamada yanınızdayız.</p>
-      <div class="hchips">
-        <span class="hchip">Renk &amp; uygulama danışmanlığı</span>
-        <span class="hchip">Sahada teknik destek</span>
-        <span class="hchip">Hızlı geri dönüş</span>
-        <span class="hchip">Bayi &amp; uygulayıcı eğitimleri</span>
+    <div class="hcards-grid reveal">
+      <div class="hcard">
+        <div class="hcard-num">01 — İHRACAT GÜCÜ</div>
+        <h2 class="hcard-title">İhracat Gücü</h2>
+        <p class="hcard-desc"><strong>%50'ye yaklaşan ihracat satış oranı</strong> ile global ahşap boyaları pazarında tanınmış markalardan biriyiz.</p>
+      </div>
+      <div class="hcard">
+        <div class="hcard-num">02 — SATIŞ SONRASI DESTEK</div>
+        <h2 class="hcard-title">Satış Sonrası Destek</h2>
+        <p class="hcard-desc">Türkiye'de <strong>60'ı aşkın bayi</strong> ve <strong>6 farklı merkezde</strong> bulunan yetkin satış ve teknik ekiplerimizle müşterilerimize hızlı ve yerinde destek sunuyoruz.</p>
+      </div>
+      <div class="hcard">
+        <div class="hcard-num">03 — GÜÇLÜ REFERANSLAR</div>
+        <h2 class="hcard-title">Güçlü Referanslar</h2>
+        <p class="hcard-desc">Türkiye'nin en önemli mobilya üretim bölgelerindeki başlıca üreticilerin güvenilir iş ortağıyız. Türkiye'nin önde gelen <strong>mutfak ve banyo mobilyaları, panel mobilya, kapı ve ofis mobilyası</strong> üreticileri tarafından tercih edilmektedir.</p>
+      </div>
+      <div class="hcard">
+        <div class="hcard-num">04 — TEKNOLOJİK RENK HİZMETİ</div>
+        <h2 class="hcard-title">Teknolojik Renk Hizmeti</h2>
+        <p class="hcard-desc">Türkiye'de ve yurtdışında toplam <span class="hcard-tbd">[renk makinesi sayısı]</span> renk makinası ağı ile yaygın, hızlı, güvenilir ve tekrar edilebilir renklendirme hizmeti sağlıyoruz.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ── SECTION 02: PLANLAMA & SEVKİYAT ── -->
-<section class="about-section">
-  <div class="section-inner">
-    <div class="about-grid-2 reveal">
-      <div>
-        <div class="section-tag" style="margin-bottom: 16px;">02 — Planlama & Sevkiyat</div>
-        <h2 class="about-h2">Zamanında ve eksiksiz teslimat.</h2>
-      </div>
-      <div>
-        <p class="about-p">Güçlü üretim planlama ve <strong>otomasyonlu depo–lojistik altyapımız</strong> sayesinde siparişler doğru, zamanında ve eksiksiz şekilde sevk edilir. Stok yönetiminden sevkiyata kadar tüm süreç tek sistem üzerinden izlenir.</p>
-        <p class="about-p">Yüksek raflı otomatik depomuz, geniş ürün gamında <strong>kesintisiz tedarik</strong> ve hızlı çıkış sağlar.</p>
-      </div>
-    </div>
-    <div class="logi-grid reveal">
-      <figure><img src="img/lojistik-1.jpeg" alt="Otomatik yüksek raflı depo" loading="lazy"></figure>
-      <figure><img src="img/lojistik-2.jpeg" alt="Depo ve sevkiyat altyapısı" loading="lazy"></figure>
-      <figure><img src="img/lojistik-3.jpeg" alt="Lojistik ve stok yönetimi" loading="lazy"></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ── SECTION 03: BAYİLERLE İLETİŞİM + VİDEO ── -->
-<section class="about-section">
-  <div class="section-inner">
-    <div class="about-grid-2 reveal" style="margin-bottom:44px;">
-      <div>
-        <div class="section-tag" style="margin-bottom: 16px;">03 — Bayilerimiz</div>
-        <h2 class="about-h2">Bayilerimizle açık iletişim.</h2>
-      </div>
-      <div>
-        <p class="about-p">Bayilerimizi birer <strong>iş ortağı</strong> olarak görüyoruz. Düzenli bayi buluşmaları, satış toplantıları ve sürekli geri bildirim ile sahanın nabzını birlikte tutuyor; kararlarımızı şeffaf ve açık bir iletişimle alıyoruz.</p>
-      </div>
-    </div>
-    <div class="video-frame reveal" id="salesVideo" data-video-id="vqASuSyX2F0" role="button" tabindex="0" aria-label="Bayi satış toplantısı videosunu oynat">
-      <img class="video-poster" src="img/guclu-is-ortaklari.jpg" alt="İba Valresa — Güçlü İş Ortakları">
-      <div class="video-overlay">
-        <button class="video-play-btn" type="button" aria-label="Oynat">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </button>
-        <div class="video-overlay-label">Bayilerimizle Satış Toplantımız &nbsp;↗</div>
-      </div>
-    </div>
-    <p class="video-caption reveal">YouTube'da izlemek için tıklayın.</p>
   </div>
 </section>
 
