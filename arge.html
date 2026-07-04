@@ -3,7 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ar-Ge — İbavalresa</title>
+<title>Ar-Ge — İBAVALRESA</title>
+<link rel="canonical" href="https://www.ibavalresa.com.tr/arge.html">
+<meta name="description" content="İBAVALRESA Ar-Ge: Türk–İspanyol bilgi birikimiyle teknolojik ürünler, yenilikçi formülasyonlar ve sürdürülebilir, çevre dostu boya çözümleri geliştiriyoruz.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="İBAVALRESA">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Ar-Ge — İBAVALRESA">
+<meta property="og:description" content="İBAVALRESA Ar-Ge: Türk–İspanyol bilgi birikimiyle teknolojik ürünler, yenilikçi formülasyonlar ve sürdürülebilir, çevre dostu boya çözümleri geliştiriyoruz.">
+<meta property="og:url" content="https://www.ibavalresa.com.tr/arge.html">
+<meta property="og:image" content="https://www.ibavalresa.com.tr/img/kampus-havadan.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ar-Ge — İBAVALRESA">
+<meta name="twitter:description" content="İBAVALRESA Ar-Ge: Türk–İspanyol bilgi birikimiyle teknolojik ürünler, yenilikçi formülasyonlar ve sürdürülebilir, çevre dostu boya çözümleri geliştiriyoruz.">
+<meta name="twitter:image" content="https://www.ibavalresa.com.tr/img/kampus-havadan.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBA VALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
+</script>
+
 <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>" type="image/svg+xml">
 <link rel="shortcut icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -280,6 +297,7 @@ nav {
   color: var(--text); cursor: pointer;
 }
 .mobile-menu-langs button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.mobile-menu-langs button:disabled { opacity: .4; cursor: default; }
 
 body.menu-open { overflow: hidden; }
 
@@ -938,6 +956,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 }
 .lang-option:hover { background: rgba(0,0,0,.05); color: var(--text); }
 .lang-option.active { color: var(--text); }
+.lang-option:disabled { opacity: .4; cursor: default; }
 
 .lang-flag { font-size: 15px; line-height: 1; }
 .lang-name { flex: 1; }
@@ -1570,6 +1589,14 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   letter-spacing: -.3px;
   text-wrap: pretty;
 }
+.section-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--accent);
+}
+.section-tag::before {
+  content: ""; width: 22px; height: 1px; background: var(--accent); opacity: .5;
+}
 .about-h2 {
   font-size: clamp(28px, 3.4vw, 44px);
   font-weight: 700; letter-spacing: -1.5px;
@@ -1848,8 +1875,12 @@ footer img[alt="ibavalresa"] { filter: none !important; }
           <span class="lang-flag">🇬🇧</span><span class="lang-name">English</span>
           <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
         </button>
-        <button class="lang-option" data-lang="RU" onclick="selectLang('RU')">
+        <button class="lang-option" data-lang="RU" disabled title="Çok yakında">
           <span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span>
+          <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
+        </button>
+        <button class="lang-option" data-lang="ES" disabled title="Çok yakında">
+          <span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span>
           <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
         </button>
       </div>
@@ -1907,7 +1938,8 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="mobile-menu-langs">
     <button class="active" onclick="selectLang('TR')">🇹🇷 TR</button>
     <button onclick="selectLang('EN')">🇬🇧 EN</button>
-    <button onclick="selectLang('RU')">🇷🇺 RU</button>
+    <button disabled title="Çok yakında">🇷🇺 RU</button>
+    <button disabled title="Çok yakında">🇪🇸 ES</button>
   </div>
 </div>
 
@@ -1922,7 +1954,6 @@ footer img[alt="ibavalresa"] { filter: none !important; }
     <div class="section-tag reveal" style="margin-bottom: 16px;">İnovasyon ve Ar-Ge Kültürümüz</div>
     <h2 class="about-h2 reveal">Global bilgi birikiminden gelen güç.</h2>
     <p class="about-lead reveal">İBAVALRESA Ar-Ge, global bilgi birikimiyle beslenen, teknolojik ürünler ve yenilikçi formülasyonlar geliştiren bir yapı olarak; müşteri ihtiyaçlarını merkeze alan, uygulamaya değer çözümler üretir.</p>
-    <p class="about-p reveal">Sürdürülebilir ve çevre dostu teknolojiler odağında geliştirilen ürünlerimiz; yüksek performans, estetik yüzey kalitesi ve global kalite standartlarını bir arada sunar. Ar-Ge yaklaşımımız yalnızca ürün geliştirmekle sınırlı değildir; farklı uygulama teknikleri, proses uyumluluğu ve sahada katma değer yaratan uygulama çözümleri üzerinde de aktif olarak çalışır, müşterilerimizin üretim süreçlerine doğrudan katkı sağlar.</p>
   </div>
 </section>
 
@@ -1937,6 +1968,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <div>
         <p class="about-p">Ar-Ge çalışmalarımızda, uygulama verimliliğini artıran ve süreçleri hızlandıran <strong>teknolojik ürünler</strong> geliştiriyoruz. Kuruma sürelerini optimize eden, yüksek dayanıklılık ve yüzey kalitesi sunan formülasyonlarımız; estetik performans ile endüstriyel gereklilikleri bir arada karşılar.</p>
         <p class="about-p"><strong>Su bazlı sistemler</strong> ve <strong>düşük VOC</strong> içeren çözümlerle, hem uygulayıcılar hem son kullanıcılar için daha güvenli ürünler sunuyoruz.</p>
+        <p class="about-p">Geliştirdiğimiz ürünler; <strong>yüksek performans, estetik yüzey kalitesi ve global kalite standartlarını</strong> bir arada sunar.</p>
       </div>
     </div>
   </div>
@@ -1952,11 +1984,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       </div>
       <div>
         <p class="about-p">Yenilikçi ürün geliştirme anlayışımızın merkezinde sürdürülebilirlik yer alır. Ar-Ge süreçlerimizde çevresel etkiyi azaltmayı, kaynakları daha verimli kullanmayı ve uzun vadeli çözümler üretmeyi hedefleriz.</p>
-        <ul class="about-bullets" style="grid-template-columns: 1fr;">
-          <li><span>Çevresel etkileri azaltmaya yönelik <strong>formülasyonlar</strong></span></li>
-          <li><span><strong>Su bazlı</strong> ve düşük solvent içeren teknolojiler</span></li>
-          <li><span><strong>Enerji ve hammadde verimliliğini</strong> destekleyen geliştirmeler</span></li>
-        </ul>
+        <p class="about-p">Ürünlerimizi <strong>sürdürülebilir ve çevre dostu teknolojiler</strong> odağında geliştiriyoruz.</p>
       </div>
     </div>
   </div>
@@ -1972,12 +2000,17 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       </div>
       <div>
         <p class="about-p">Mobilya ve ahşap endüstrisinin farklı uygulama ihtiyaçlarına yönelik çözümler geliştiriyoruz. Ürünlerimiz yalnızca performans değil, <strong>uygulama kolaylığı</strong> ve <strong>görsel kalite</strong> de sunar.</p>
-        <ul class="about-bullets" style="grid-template-columns: 1fr;">
-          <li><span>Yüksek <strong>çizilme ve kimyasal dayanım</strong> sağlayan kaplamalar</span></li>
-          <li><span>Farklı yüzey efektleri — <strong>mat, parlak, soft-touch</strong></span></li>
-          <li><span><strong>Trend renk ve doku</strong> seçenekleriyle estetik çözümler</span></li>
-        </ul>
+        <p class="about-p">Ar-Ge yaklaşımımız yalnızca ürün geliştirmekle sınırlı değildir; <strong>farklı uygulama teknikleri, proses uyumluluğu</strong> ve sahada katma değer yaratan uygulama çözümleri üzerinde de aktif olarak çalışır, müşterilerimizin üretim süreçlerine doğrudan katkı sağlar.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PULL QUOTE ── -->
+<section class="about-section" style="padding-top:0;border-top:none;">
+  <div class="section-inner">
+    <div class="about-pull reveal">
+      <p><em>Laboratuvardan sahaya,</em> bilgiyi çözüme dönüştürüyoruz.</p>
     </div>
   </div>
 </section>
@@ -2045,7 +2078,8 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <ul>
         <li><a href="iletisim.html">Bize Ulaşın</a></li>
         <li style="margin-top:10px;"><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/17623" target="_blank" style="font-size:11px;">Bilgi Toplumu Hizmetleri</a></li>
-        <li><a href="https://ibavalresa.com.tr/demo/kvkk-aydinlatma-metni/" style="font-size:11px;">KVKK Aydınlatma Metni</a></li>
+        <li><a href="kvkk-aydinlatma-metni.html" style="font-size:11px;">KVKK Aydınlatma Metni</a></li>
+        <li><a href="cerez-politikasi.html" style="font-size:11px;">Çerez Politikası</a></li>
       </ul>
     </div>
   </div>
@@ -2264,36 +2298,25 @@ function toggleLang() {
 
 function selectLang(lang) {
   currentLang = lang;
-  // update button label
   document.getElementById('lang-current').textContent = lang;
-  // update active state
   document.querySelectorAll('.lang-option').forEach(el => {
     const isActive = el.dataset.lang === lang;
     el.classList.toggle('active', isActive);
-    el.querySelector('.lang-check').style.opacity = isActive ? '1' : '0';
+    const chk = el.querySelector('.lang-check'); if (chk) chk.style.opacity = isActive ? '1' : '0';
   });
-  // close dropdown
+  document.querySelectorAll('.mobile-menu-langs button').forEach(b => b.classList.toggle('active', b.textContent.trim().endsWith(lang)));
   document.getElementById('lang-switcher').classList.remove('open');
-  // apply content
-  const c = LANG_CONTENT[lang];
-  document.querySelectorAll('.nav-links a').forEach((a, i) => { if(c.navLinks[i]) a.textContent = c.navLinks[i]; });
-  document.getElementById('nav-cta').textContent = c.navCta;
-  const heroBadge = document.querySelector('.hero-badge');
-  if (heroBadge) heroBadge.innerHTML = `<span></span>${c.badge}`;
-  const heroTitle = document.getElementById('hero-title');
-  if (heroTitle) heroTitle.innerHTML = c.heroTitle;
-  const heroSub = document.querySelector('.hero-sub');
-  if (heroSub) heroSub.textContent = c.heroSub;
-  const btns = document.querySelectorAll('.hero-actions .btn-primary, .hero-actions .btn-secondary');
-  if(btns[0]) btns[0].childNodes[0].textContent = c.btn1 + ' ';
-  if(btns[1]) btns[1].textContent = c.btn2;
-  document.querySelectorAll('.hero-stat-label').forEach((el, i) => {
-    const labels = [c.s1, c.s2, c.s3, c.s4];
-    if(labels[i]) el.textContent = labels[i];
+  document.documentElement.lang = lang === 'EN' ? 'en' : (lang === 'RU' ? 'ru' : (lang === 'ES' ? 'es' : 'tr'));
+  // Tüm sayfa: TR <-> EN (data-en öznitelikleri). Çeviri eklenmemiş sayfalarda no-op.
+  document.querySelectorAll('[data-en]').forEach(el => {
+    if (el.__tr == null) el.__tr = el.innerHTML;
+    el.innerHTML = (lang === 'EN') ? el.getAttribute('data-en') : el.__tr;
   });
-  const ctaBtn = document.querySelector('.finalcta .btn-primary');
-  if (ctaBtn && ctaBtn.childNodes[0]) ctaBtn.childNodes[0].textContent = c.cta + ' ';
+  try { localStorage.setItem('ibav_lang', lang); } catch (e) {}
 }
+document.addEventListener('DOMContentLoaded', () => {
+  try { const l = localStorage.getItem('ibav_lang'); if (l && l !== 'TR') selectLang(l); } catch (e) {}
+});
 
 // Close dropdown on outside click
 document.addEventListener('click', e => {
@@ -2306,6 +2329,48 @@ window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
   nav.style.borderBottomColor = window.scrollY > 40 ? 'rgba(0,0,0,0.12)' : 'rgba(0,0,0,0.07)';
 });
+</script>
+<!-- ── ÇEREZ BİLDİRİMİ ── -->
+<style>
+.cookie-bar {
+  position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%);
+  z-index: 300; width: min(680px, calc(100% - 32px));
+  display: flex; align-items: center; gap: 16px;
+  background: #0d0d10; color: #fff;
+  border: 1px solid rgba(255,255,255,0.12); border-radius: 14px;
+  padding: 16px 20px; box-shadow: 0 16px 50px rgba(0,0,0,0.3);
+  font-size: 13.5px; line-height: 1.55;
+}
+.cookie-bar[hidden] { display: none; }
+.cookie-bar-text { margin: 0; flex: 1; color: rgba(255,255,255,0.85); }
+.cookie-bar-text a { color: #fff; text-decoration: underline; }
+.cookie-bar-btn {
+  flex-shrink: 0; background: var(--accent, #26358C); color: #fff;
+  border: none; border-radius: 8px; padding: 10px 20px;
+  font-size: 13.5px; font-weight: 600; cursor: pointer; font-family: inherit;
+}
+.cookie-bar-btn:hover { opacity: .92; }
+@media (max-width: 560px) {
+  .cookie-bar { flex-direction: column; align-items: stretch; bottom: 12px; gap: 12px; }
+  .cookie-bar-btn { width: 100%; }
+}
+</style>
+<div class="cookie-bar" id="cookieBar" role="region" aria-label="Çerez bildirimi" hidden>
+  <p class="cookie-bar-text">Bu web sitesinde, siteyi düzgün çalıştırmak ve deneyiminizi iyileştirmek için zorunlu çerezler kullanılmaktadır. Ayrıntılar için <a href="cerez-politikasi.html">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
+  <button class="cookie-bar-btn" id="cookieAccept" type="button">Tamam</button>
+</div>
+<script>
+(function(){
+  try { if (localStorage.getItem('ibav_cookieNotice') === '1') return; } catch(e){}
+  var bar = document.getElementById('cookieBar');
+  if (!bar) return;
+  bar.hidden = false;
+  var btn = document.getElementById('cookieAccept');
+  btn && btn.addEventListener('click', function(){
+    bar.hidden = true;
+    try { localStorage.setItem('ibav_cookieNotice','1'); } catch(e){}
+  });
+})();
 </script>
 </body>
 </html>

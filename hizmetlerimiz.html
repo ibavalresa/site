@@ -3,7 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hizmetlerimiz — İbavalresa</title>
+<title>Hizmetlerimiz — İBAVALRESA</title>
+<link rel="canonical" href="https://www.ibavalresa.com.tr/hizmetlerimiz.html">
+<meta name="description" content="İhracat gücü, satış sonrası destek, güçlü referanslar ve teknolojik renk hizmetiyle İBAVALRESA'nın müşteri odaklı satış ve teknik destek ağı.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="İBAVALRESA">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Hizmetlerimiz — İBAVALRESA">
+<meta property="og:description" content="İhracat gücü, satış sonrası destek, güçlü referanslar ve teknolojik renk hizmetiyle İBAVALRESA'nın müşteri odaklı satış ve teknik destek ağı.">
+<meta property="og:url" content="https://www.ibavalresa.com.tr/hizmetlerimiz.html">
+<meta property="og:image" content="https://www.ibavalresa.com.tr/img/kampus-havadan.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hizmetlerimiz — İBAVALRESA">
+<meta name="twitter:description" content="İhracat gücü, satış sonrası destek, güçlü referanslar ve teknolojik renk hizmetiyle İBAVALRESA'nın müşteri odaklı satış ve teknik destek ağı.">
+<meta name="twitter:image" content="https://www.ibavalresa.com.tr/img/kampus-havadan.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBA VALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
+</script>
+
 <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>" type="image/svg+xml">
 <link rel="shortcut icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -280,6 +297,7 @@ nav {
   color: var(--text); cursor: pointer;
 }
 .mobile-menu-langs button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.mobile-menu-langs button:disabled { opacity: .4; cursor: default; }
 
 body.menu-open { overflow: hidden; }
 
@@ -938,6 +956,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 }
 .lang-option:hover { background: rgba(0,0,0,.05); color: var(--text); }
 .lang-option.active { color: var(--text); }
+.lang-option:disabled { opacity: .4; cursor: default; }
 
 .lang-flag { font-size: 15px; line-height: 1; }
 .lang-name { flex: 1; }
@@ -1571,6 +1590,95 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   content: ""; width: 22px; height: 1px; background: var(--accent); opacity: .5;
 }
 
+/* ── VİDEO GALERİSİ ── */
+.vgallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 8px;
+}
+.vcard { display: block; text-decoration: none; color: inherit; }
+.vcard-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #eeeef2;
+  border: 1px solid var(--border);
+}
+.vcard-media img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform .5s cubic-bezier(.22,.68,0,1);
+}
+.vcard:hover .vcard-media img { transform: scale(1.05); }
+.vcard-media::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(13,13,16,.42) 0%, transparent 46%);
+  transition: opacity .3s;
+}
+.vcard-play {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 58px; height: 58px; border-radius: 50%;
+  background: rgba(255,255,255,.92);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2;
+  transition: transform .25s, background .25s;
+  box-shadow: 0 8px 28px rgba(0,0,0,.28);
+}
+.vcard:hover .vcard-play { transform: translate(-50%,-50%) scale(1.08); background: #fff; }
+.vcard-play svg { width: 22px; height: 22px; color: var(--accent); margin-left: 3px; }
+.vcard-yt {
+  position: absolute; left: 14px; bottom: 12px; z-index: 2;
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 12px; font-weight: 600; color: #fff; letter-spacing: .02em;
+}
+.vcard-yt svg { width: 18px; height: 18px; }
+.vcard-title {
+  margin-top: 14px;
+  font-size: 15px; font-weight: 600; letter-spacing: -.2px;
+  color: var(--text); line-height: 1.4;
+  transition: color .2s;
+}
+.vcard:hover .vcard-title { color: var(--accent); }
+@media(max-width:900px){ .vgallery { grid-template-columns: repeat(2, 1fr); gap: 16px; } }
+@media(max-width:560px){ .vgallery { grid-template-columns: 1fr; } }
+
+/* ── VİDEO LIGHTBOX ── */
+.vmodal {
+  position: fixed; inset: 0; z-index: 1000;
+  display: none; align-items: center; justify-content: center;
+  padding: 24px;
+  background: rgba(8,8,12,.82);
+  backdrop-filter: blur(6px);
+  opacity: 0; transition: opacity .25s;
+}
+.vmodal.open { display: flex; opacity: 1; }
+.vmodal-inner {
+  position: relative;
+  width: min(1000px, 100%);
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,.6);
+  transform: scale(.96); transition: transform .25s;
+}
+.vmodal.open .vmodal-inner { transform: scale(1); }
+.vmodal-frame, .vmodal-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+.vmodal-close {
+  position: absolute; top: -44px; right: 0;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.14); border: none; border-radius: 50%;
+  color: #fff; cursor: pointer; font-size: 18px; line-height: 1;
+  transition: background .2s;
+}
+.vmodal-close:hover { background: rgba(255,255,255,.26); }
+@media(max-width:560px){ .vmodal { padding: 16px; } .vmodal-close { top: -40px; } }
+
 /* ── HORIZONTAL CHIPS ── */
 .hchips {
   display: flex;
@@ -2063,8 +2171,12 @@ footer img[alt="ibavalresa"] { filter: none !important; }
           <span class="lang-flag">🇬🇧</span><span class="lang-name">English</span>
           <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
         </button>
-        <button class="lang-option" data-lang="RU" onclick="selectLang('RU')">
+        <button class="lang-option" data-lang="RU" disabled title="Çok yakında">
           <span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span>
+          <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
+        </button>
+        <button class="lang-option" data-lang="ES" disabled title="Çok yakında">
+          <span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span>
           <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
         </button>
       </div>
@@ -2122,7 +2234,8 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="mobile-menu-langs">
     <button class="active" onclick="selectLang('TR')">🇹🇷 TR</button>
     <button onclick="selectLang('EN')">🇬🇧 EN</button>
-    <button onclick="selectLang('RU')">🇷🇺 RU</button>
+    <button disabled title="Çok yakında">🇷🇺 RU</button>
+    <button disabled title="Çok yakında">🇪🇸 ES</button>
   </div>
 </div>
 
@@ -2166,8 +2279,84 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <div class="hcard">
         <div class="hcard-num">04 — TEKNOLOJİK RENK HİZMETİ</div>
         <h2 class="hcard-title">Teknolojik Renk Hizmeti</h2>
-        <p class="hcard-desc">Türkiye'de ve yurtdışında toplam <span class="hcard-tbd">[renk makinesi sayısı]</span> renk makinası ağı ile yaygın, hızlı, güvenilir ve tekrar edilebilir renklendirme hizmeti sağlıyoruz.</p>
+        <p class="hcard-desc">Türkiye'de ve yurtdışında toplam <strong>100'ün üzerinde</strong> renk makinası ağı ile yaygın, hızlı, güvenilir ve tekrar edilebilir renklendirme hizmeti sağlıyoruz.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VİDEO GALERİSİ ── -->
+<section class="about-section" style="border-top:1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-tag reveal" style="margin-bottom:16px;">Videolar</div>
+    <h2 class="about-h2 reveal" style="margin-bottom:14px;">Sahadan ve etkinliklerden.</h2>
+    <p class="about-lead reveal" style="max-width:720px;font-size:17px;margin-bottom:38px;">Bayi buluşmalarımızdan fuar sunumlarına, İBAVALRESA ve Valresa dünyasından seçtiğimiz videolar.</p>
+    <div class="vgallery reveal">
+      <a class="vcard" href="https://youtu.be/XJSlZx6Hb-A" target="_blank" rel="noopener" aria-label="İbavalresa – Güçlü İş Ortakları Bayi Toplantısı videosunu YouTube'da izle">
+        <div class="vcard-media">
+          <img src="img/video-XJSlZx6Hb-A.jpg" alt="İbavalresa – Güçlü İş Ortakları Bayi Toplantısı" loading="lazy">
+          <span class="vcard-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard-yt"><svg viewBox="0 0 24 24" fill="#fff"><path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C21.53 3.55 12 3.55 12 3.55s-9.53 0-11.39.53A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12C4.47 20.45 12 20.45 12 20.45s9.53 0 11.39-.53A3 3 0 0 0 23.5 17.8 31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>YouTube</span>
+        </div>
+        <div class="vcard-title">Güçlü İş Ortakları Bayi Toplantısı</div>
+      </a>
+      <a class="vcard" href="https://youtu.be/vqASuSyX2F0" target="_blank" rel="noopener" aria-label="Valresa Esfera – Intermob 2025 videosunu YouTube'da izle">
+        <div class="vcard-media">
+          <img src="img/video-vqASuSyX2F0.jpg" alt="Valresa Esfera – Intermob 2025" loading="lazy">
+          <span class="vcard-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard-yt"><svg viewBox="0 0 24 24" fill="#fff"><path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C21.53 3.55 12 3.55 12 3.55s-9.53 0-11.39.53A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12C4.47 20.45 12 20.45 12 20.45s9.53 0 11.39-.53A3 3 0 0 0 23.5 17.8 31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>YouTube</span>
+        </div>
+        <div class="vcard-title">Intermob 2025</div>
+      </a>
+      <a class="vcard" href="https://youtu.be/LOSSA_iJbO8" target="_blank" rel="noopener" aria-label="Valresa Esfera – Intermob 2024 videosunu YouTube'da izle">
+        <div class="vcard-media">
+          <img src="img/video-LOSSA_iJbO8.jpg" alt="Valresa Esfera – Intermob 2024" loading="lazy">
+          <span class="vcard-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard-yt"><svg viewBox="0 0 24 24" fill="#fff"><path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C21.53 3.55 12 3.55 12 3.55s-9.53 0-11.39.53A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12C4.47 20.45 12 20.45 12 20.45s9.53 0 11.39-.53A3 3 0 0 0 23.5 17.8 31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>YouTube</span>
+        </div>
+        <div class="vcard-title">Intermob 2024</div>
+      </a>
+      <a class="vcard" href="https://youtu.be/wF0PTn4JEls" target="_blank" rel="noopener" aria-label="Valresa Esfera – Intermob 2023 videosunu YouTube'da izle">
+        <div class="vcard-media">
+          <img src="img/video-wF0PTn4JEls.jpg" alt="Valresa Esfera – Intermob 2023" loading="lazy">
+          <span class="vcard-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard-yt"><svg viewBox="0 0 24 24" fill="#fff"><path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C21.53 3.55 12 3.55 12 3.55s-9.53 0-11.39.53A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12C4.47 20.45 12 20.45 12 20.45s9.53 0 11.39-.53A3 3 0 0 0 23.5 17.8 31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>YouTube</span>
+        </div>
+        <div class="vcard-title">Intermob 2023</div>
+      </a>
+      <a class="vcard" href="https://youtu.be/-M_WfGk22eA" target="_blank" rel="noopener" aria-label="Valresa Intermob 2022 videosunu YouTube'da izle">
+        <div class="vcard-media">
+          <img src="img/video--M_WfGk22eA.jpg" alt="Valresa Intermob 2022" loading="lazy">
+          <span class="vcard-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard-yt"><svg viewBox="0 0 24 24" fill="#fff"><path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C21.53 3.55 12 3.55 12 3.55s-9.53 0-11.39.53A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12C4.47 20.45 12 20.45 12 20.45s9.53 0 11.39-.53A3 3 0 0 0 23.5 17.8 31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>YouTube</span>
+        </div>
+        <div class="vcard-title">Intermob 2022</div>
+      </a>
+      <a class="vcard" href="https://youtu.be/A3fAc0UuURo" target="_blank" rel="noopener" aria-label="Valresa Milan Design Week videosunu YouTube'da izle">
+        <div class="vcard-media">
+          <img src="img/video-A3fAc0UuURo.jpg" alt="Valresa Milan Design Week" loading="lazy">
+          <span class="vcard-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard-yt"><svg viewBox="0 0 24 24" fill="#fff"><path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C21.53 3.55 12 3.55 12 3.55s-9.53 0-11.39.53A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12C4.47 20.45 12 20.45 12 20.45s9.53 0 11.39-.53A3 3 0 0 0 23.5 17.8 31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>YouTube</span>
+        </div>
+        <div class="vcard-title">Milan Design Week</div>
+      </a>
+      <a class="vcard" href="https://youtu.be/U3ZzUA0uIKY" target="_blank" rel="noopener" aria-label="Valresa 50. Yıl Kutlaması videosunu YouTube'da izle">
+        <div class="vcard-media">
+          <img src="img/video-U3ZzUA0uIKY.jpg" alt="Valresa 50. Yıl Kutlaması" loading="lazy">
+          <span class="vcard-play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard-yt"><svg viewBox="0 0 24 24" fill="#fff"><path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C21.53 3.55 12 3.55 12 3.55s-9.53 0-11.39.53A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12C4.47 20.45 12 20.45 12 20.45s9.53 0 11.39-.53A3 3 0 0 0 23.5 17.8 31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>YouTube</span>
+        </div>
+        <div class="vcard-title">Valresa 50. Yıl Kutlaması</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── SLOGAN ── -->
+<section class="about-section" style="padding-top:0;border-top:none;">
+  <div class="section-inner">
+    <div class="about-pull reveal">
+      <p><em>Siparişten sahaya,</em> her adımda yanınızda.</p>
     </div>
   </div>
 </section>
@@ -2195,6 +2384,14 @@ footer img[alt="ibavalresa"] { filter: none !important; }
     </div>
   </div>
 </section>
+
+<!-- ── VİDEO LIGHTBOX ── -->
+<div class="vmodal" id="vmodal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Video oynatıcı">
+  <div class="vmodal-inner">
+    <button class="vmodal-close" id="vmodalClose" aria-label="Kapat">&#10005;</button>
+    <div class="vmodal-frame" id="vmodalFrame"></div>
+  </div>
+</div>
 
 <!-- ── FOOTER ── -->
 <footer>
@@ -2235,7 +2432,8 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <ul>
         <li><a href="iletisim.html" style="text-decoration:underline;">Bize Ulaşın</a></li>
         <li style="margin-top:10px;"><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/17623" target="_blank" style="font-size:11px;">Bilgi Toplumu Hizmetleri</a></li>
-        <li><a href="https://ibavalresa.com.tr/demo/kvkk-aydinlatma-metni/" style="font-size:11px;">KVKK Aydınlatma Metni</a></li>
+        <li><a href="kvkk-aydinlatma-metni.html" style="font-size:11px;">KVKK Aydınlatma Metni</a></li>
+        <li><a href="cerez-politikasi.html" style="font-size:11px;">Çerez Politikası</a></li>
       </ul>
     </div>
   </div>
@@ -2478,36 +2676,25 @@ function toggleLang() {
 
 function selectLang(lang) {
   currentLang = lang;
-  // update button label
   document.getElementById('lang-current').textContent = lang;
-  // update active state
   document.querySelectorAll('.lang-option').forEach(el => {
     const isActive = el.dataset.lang === lang;
     el.classList.toggle('active', isActive);
-    el.querySelector('.lang-check').style.opacity = isActive ? '1' : '0';
+    const chk = el.querySelector('.lang-check'); if (chk) chk.style.opacity = isActive ? '1' : '0';
   });
-  // close dropdown
+  document.querySelectorAll('.mobile-menu-langs button').forEach(b => b.classList.toggle('active', b.textContent.trim().endsWith(lang)));
   document.getElementById('lang-switcher').classList.remove('open');
-  // apply content
-  const c = LANG_CONTENT[lang];
-  document.querySelectorAll('.nav-links a').forEach((a, i) => { if(c.navLinks[i]) a.textContent = c.navLinks[i]; });
-  document.getElementById('nav-cta').textContent = c.navCta;
-  const heroBadge = document.querySelector('.hero-badge');
-  if (heroBadge) heroBadge.innerHTML = `<span></span>${c.badge}`;
-  const heroTitle = document.getElementById('hero-title');
-  if (heroTitle) heroTitle.innerHTML = c.heroTitle;
-  const heroSub = document.querySelector('.hero-sub');
-  if (heroSub) heroSub.textContent = c.heroSub;
-  const btns = document.querySelectorAll('.hero-actions .btn-primary, .hero-actions .btn-secondary');
-  if(btns[0]) btns[0].childNodes[0].textContent = c.btn1 + ' ';
-  if(btns[1]) btns[1].textContent = c.btn2;
-  document.querySelectorAll('.hero-stat-label').forEach((el, i) => {
-    const labels = [c.s1, c.s2, c.s3, c.s4];
-    if(labels[i]) el.textContent = labels[i];
+  document.documentElement.lang = lang === 'EN' ? 'en' : (lang === 'RU' ? 'ru' : (lang === 'ES' ? 'es' : 'tr'));
+  // Tüm sayfa: TR <-> EN (data-en öznitelikleri). Çeviri eklenmemiş sayfalarda no-op.
+  document.querySelectorAll('[data-en]').forEach(el => {
+    if (el.__tr == null) el.__tr = el.innerHTML;
+    el.innerHTML = (lang === 'EN') ? el.getAttribute('data-en') : el.__tr;
   });
-  const ctaBtn = document.querySelector('.finalcta .btn-primary');
-  if (ctaBtn && ctaBtn.childNodes[0]) ctaBtn.childNodes[0].textContent = c.cta + ' ';
+  try { localStorage.setItem('ibav_lang', lang); } catch (e) {}
 }
+document.addEventListener('DOMContentLoaded', () => {
+  try { const l = localStorage.getItem('ibav_lang'); if (l && l !== 'TR') selectLang(l); } catch (e) {}
+});
 
 // Close dropdown on outside click
 document.addEventListener('click', e => {
@@ -2520,6 +2707,77 @@ window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
   nav.style.borderBottomColor = window.scrollY > 40 ? 'rgba(0,0,0,0.12)' : 'rgba(0,0,0,0.07)';
 });
+</script>
+<!-- ── ÇEREZ BİLDİRİMİ ── -->
+<style>
+.cookie-bar {
+  position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%);
+  z-index: 300; width: min(680px, calc(100% - 32px));
+  display: flex; align-items: center; gap: 16px;
+  background: #0d0d10; color: #fff;
+  border: 1px solid rgba(255,255,255,0.12); border-radius: 14px;
+  padding: 16px 20px; box-shadow: 0 16px 50px rgba(0,0,0,0.3);
+  font-size: 13.5px; line-height: 1.55;
+}
+.cookie-bar[hidden] { display: none; }
+.cookie-bar-text { margin: 0; flex: 1; color: rgba(255,255,255,0.85); }
+.cookie-bar-text a { color: #fff; text-decoration: underline; }
+.cookie-bar-btn {
+  flex-shrink: 0; background: var(--accent, #26358C); color: #fff;
+  border: none; border-radius: 8px; padding: 10px 20px;
+  font-size: 13.5px; font-weight: 600; cursor: pointer; font-family: inherit;
+}
+.cookie-bar-btn:hover { opacity: .92; }
+@media (max-width: 560px) {
+  .cookie-bar { flex-direction: column; align-items: stretch; bottom: 12px; gap: 12px; }
+  .cookie-bar-btn { width: 100%; }
+}
+</style>
+<div class="cookie-bar" id="cookieBar" role="region" aria-label="Çerez bildirimi" hidden>
+  <p class="cookie-bar-text">Bu web sitesinde, siteyi düzgün çalıştırmak ve deneyiminizi iyileştirmek için zorunlu çerezler kullanılmaktadır. Ayrıntılar için <a href="cerez-politikasi.html">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
+  <button class="cookie-bar-btn" id="cookieAccept" type="button">Tamam</button>
+</div>
+<script>
+(function(){
+  try { if (localStorage.getItem('ibav_cookieNotice') === '1') return; } catch(e){}
+  var bar = document.getElementById('cookieBar');
+  if (!bar) return;
+  bar.hidden = false;
+  var btn = document.getElementById('cookieAccept');
+  btn && btn.addEventListener('click', function(){
+    bar.hidden = true;
+    try { localStorage.setItem('ibav_cookieNotice','1'); } catch(e){}
+  });
+})();
+</script>
+
+<!-- ── VİDEO LIGHTBOX ── -->
+<script>
+(function(){
+  var modal = document.getElementById('vmodal');
+  if (!modal) return;
+  var frame = document.getElementById('vmodalFrame');
+  function idFrom(href){ var m = (href||'').match(/youtu\.be\/([^?&#]+)/); return m ? m[1] : null; }
+  function openVid(id){
+    frame.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id +
+      '?autoplay=1&rel=0" title="Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+    modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeVid(){
+    modal.classList.remove('open'); modal.setAttribute('aria-hidden','true');
+    frame.innerHTML = ''; document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.vcard').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = idFrom(a.getAttribute('href'));
+      if (id){ e.preventDefault(); openVid(id); }
+    });
+  });
+  document.getElementById('vmodalClose').addEventListener('click', closeVid);
+  modal.addEventListener('click', function(e){ if (e.target === modal) closeVid(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && modal.classList.contains('open')) closeVid(); });
+})();
 </script>
 </body>
 </html>

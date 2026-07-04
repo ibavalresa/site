@@ -3,7 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kalite Yönetimi ve Sertifikalar — İbavalresa</title>
+<title>Kalite Yönetimi ve Sertifikalar — İBAVALRESA</title>
+<link rel="canonical" href="https://www.ibavalresa.com.tr/kalite-sertifikalar.html">
+<meta name="description" content="İBAVALRESA kalite yönetim sistemi, uluslararası standartlar ve sahip olunan sertifikalar; yüksek ve tekrarlanabilir ürün kalitesi taahhüdü.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="İBAVALRESA">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Kalite Yönetimi ve Sertifikalar — İBAVALRESA">
+<meta property="og:description" content="İBAVALRESA kalite yönetim sistemi, uluslararası standartlar ve sahip olunan sertifikalar; yüksek ve tekrarlanabilir ürün kalitesi taahhüdü.">
+<meta property="og:url" content="https://www.ibavalresa.com.tr/kalite-sertifikalar.html">
+<meta property="og:image" content="https://www.ibavalresa.com.tr/img/kampus-havadan.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kalite Yönetimi ve Sertifikalar — İBAVALRESA">
+<meta name="twitter:description" content="İBAVALRESA kalite yönetim sistemi, uluslararası standartlar ve sahip olunan sertifikalar; yüksek ve tekrarlanabilir ürün kalitesi taahhüdü.">
+<meta name="twitter:image" content="https://www.ibavalresa.com.tr/img/kampus-havadan.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBA VALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
+</script>
+
 <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>" type="image/svg+xml">
 <link rel="shortcut icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -280,6 +297,7 @@ nav {
   color: var(--text); cursor: pointer;
 }
 .mobile-menu-langs button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.mobile-menu-langs button:disabled { opacity: .4; cursor: default; }
 
 body.menu-open { overflow: hidden; }
 
@@ -938,6 +956,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 }
 .lang-option:hover { background: rgba(0,0,0,.05); color: var(--text); }
 .lang-option.active { color: var(--text); }
+.lang-option:disabled { opacity: .4; cursor: default; }
 
 .lang-flag { font-size: 15px; line-height: 1; }
 .lang-name { flex: 1; }
@@ -2253,8 +2272,12 @@ footer img[alt="ibavalresa"] { filter: none !important; }
           <span class="lang-flag">🇬🇧</span><span class="lang-name">English</span>
           <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
         </button>
-        <button class="lang-option" data-lang="RU" onclick="selectLang('RU')">
+        <button class="lang-option" data-lang="RU" disabled title="Çok yakında">
           <span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span>
+          <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
+        </button>
+        <button class="lang-option" data-lang="ES" disabled title="Çok yakında">
+          <span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span>
           <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
         </button>
       </div>
@@ -2312,7 +2335,8 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="mobile-menu-langs">
     <button class="active" onclick="selectLang('TR')">🇹🇷 TR</button>
     <button onclick="selectLang('EN')">🇬🇧 EN</button>
-    <button onclick="selectLang('RU')">🇷🇺 RU</button>
+    <button disabled title="Çok yakında">🇷🇺 RU</button>
+    <button disabled title="Çok yakında">🇪🇸 ES</button>
   </div>
 </div>
 
@@ -2336,14 +2360,14 @@ footer img[alt="ibavalresa"] { filter: none !important; }
         <div class="cert-badge">ISO 9001:2015</div>
         <h2 class="cert-title">ISO Üretim Kalite Belgesi</h2>
         <p class="cert-desc">İbavalresa ISO 9001:2015 Üretim Kalite Belgesi — kalite yönetim sistemimizin uluslararası standartlara uygunluğunu belgeler.</p>
-        <a class="cert-link" href="https://ibavalresa.com.tr/demo/wp-content/uploads/2025/02/ISO.9001.Belgesi.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Belgeyi Görüntüle</a>
+        <a class="cert-link" href="belgeler/ISO-9001-Belgesi.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Belgeyi Görüntüle</a>
       </div>
       <div class="cert-card reveal">
         <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
         <div class="cert-badge">EN 71-3 · AIDIMA</div>
         <h2 class="cert-title">Kalite Sertifikaları</h2>
         <p class="cert-desc">Valresa ürünlerinin İspanyol AIDIMA laboratuvarları tarafından test edilerek verilen EN71-3 standardına uygunluk sertifikaları.</p>
-        <a class="cert-link" href="https://ibavalresa.com.tr/demo/wp-content/uploads/sertifika-2019/Valresa_EN71-3.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Belgeyi Görüntüle</a>
+        <a class="cert-link" href="belgeler/Valresa_EN71-3.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Belgeyi Görüntüle</a>
       </div>
     </div>
   </div>
@@ -2355,13 +2379,20 @@ footer img[alt="ibavalresa"] { filter: none !important; }
     <div class="policy-grid">
       <div class="reveal">
         <div class="policy-eyebrow">Kalite Politikamız</div>
-        <h2 class="policy-title">Kaliteyi bir süreç değil, kültür olarak görüyoruz.</h2>
         <p class="policy-text">Müşteri memnuniyetini, sürekli iyileştirmeyi ve çevreye duyarlı üretimi kalite anlayışımızın merkezine koyuyoruz. Tüm çalışanlarımız, belirlenen kalite hedeflerine ulaşmak için ortak bir sorumluluk taşır.</p>
-        <p class="policy-text">2024 Kalite Politikamızın tamamını yandaki belgede inceleyebilirsiniz.</p>
       </div>
       <figure class="policy-figure reveal">
         <img src="img/kalite-politikasi.jpg" alt="İbavalresa Kalite Politikası 2024">
       </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ── PULL QUOTE ── -->
+<section class="about-section" style="padding-top:0;border-top:none;">
+  <div class="section-inner">
+    <div class="about-pull reveal">
+      <p><em>Kaliteyi bir süreç değil,</em> kültür olarak görüyoruz.</p>
     </div>
   </div>
 </section>
@@ -2429,7 +2460,8 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <ul>
         <li><a href="iletisim.html">Bize Ulaşın</a></li>
         <li style="margin-top:10px;"><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/17623" target="_blank" style="font-size:11px;">Bilgi Toplumu Hizmetleri</a></li>
-        <li><a href="https://ibavalresa.com.tr/demo/kvkk-aydinlatma-metni/" style="font-size:11px;">KVKK Aydınlatma Metni</a></li>
+        <li><a href="kvkk-aydinlatma-metni.html" style="font-size:11px;">KVKK Aydınlatma Metni</a></li>
+        <li><a href="cerez-politikasi.html" style="font-size:11px;">Çerez Politikası</a></li>
       </ul>
     </div>
   </div>
@@ -2662,36 +2694,25 @@ function toggleLang() {
 
 function selectLang(lang) {
   currentLang = lang;
-  // update button label
   document.getElementById('lang-current').textContent = lang;
-  // update active state
   document.querySelectorAll('.lang-option').forEach(el => {
     const isActive = el.dataset.lang === lang;
     el.classList.toggle('active', isActive);
-    el.querySelector('.lang-check').style.opacity = isActive ? '1' : '0';
+    const chk = el.querySelector('.lang-check'); if (chk) chk.style.opacity = isActive ? '1' : '0';
   });
-  // close dropdown
+  document.querySelectorAll('.mobile-menu-langs button').forEach(b => b.classList.toggle('active', b.textContent.trim().endsWith(lang)));
   document.getElementById('lang-switcher').classList.remove('open');
-  // apply content
-  const c = LANG_CONTENT[lang];
-  document.querySelectorAll('.nav-links a').forEach((a, i) => { if(c.navLinks[i]) a.textContent = c.navLinks[i]; });
-  document.getElementById('nav-cta').textContent = c.navCta;
-  const heroBadge = document.querySelector('.hero-badge');
-  if (heroBadge) heroBadge.innerHTML = `<span></span>${c.badge}`;
-  const heroTitle = document.getElementById('hero-title');
-  if (heroTitle) heroTitle.innerHTML = c.heroTitle;
-  const heroSub = document.querySelector('.hero-sub');
-  if (heroSub) heroSub.textContent = c.heroSub;
-  const btns = document.querySelectorAll('.hero-actions .btn-primary, .hero-actions .btn-secondary');
-  if(btns[0]) btns[0].childNodes[0].textContent = c.btn1 + ' ';
-  if(btns[1]) btns[1].textContent = c.btn2;
-  document.querySelectorAll('.hero-stat-label').forEach((el, i) => {
-    const labels = [c.s1, c.s2, c.s3, c.s4];
-    if(labels[i]) el.textContent = labels[i];
+  document.documentElement.lang = lang === 'EN' ? 'en' : (lang === 'RU' ? 'ru' : (lang === 'ES' ? 'es' : 'tr'));
+  // Tüm sayfa: TR <-> EN (data-en öznitelikleri). Çeviri eklenmemiş sayfalarda no-op.
+  document.querySelectorAll('[data-en]').forEach(el => {
+    if (el.__tr == null) el.__tr = el.innerHTML;
+    el.innerHTML = (lang === 'EN') ? el.getAttribute('data-en') : el.__tr;
   });
-  const ctaBtn = document.querySelector('.finalcta .btn-primary');
-  if (ctaBtn && ctaBtn.childNodes[0]) ctaBtn.childNodes[0].textContent = c.cta + ' ';
+  try { localStorage.setItem('ibav_lang', lang); } catch (e) {}
 }
+document.addEventListener('DOMContentLoaded', () => {
+  try { const l = localStorage.getItem('ibav_lang'); if (l && l !== 'TR') selectLang(l); } catch (e) {}
+});
 
 // Close dropdown on outside click
 document.addEventListener('click', e => {
@@ -2732,6 +2753,48 @@ window.addEventListener('scroll', () => {
         });
       }
     });
+  });
+})();
+</script>
+<!-- ── ÇEREZ BİLDİRİMİ ── -->
+<style>
+.cookie-bar {
+  position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%);
+  z-index: 300; width: min(680px, calc(100% - 32px));
+  display: flex; align-items: center; gap: 16px;
+  background: #0d0d10; color: #fff;
+  border: 1px solid rgba(255,255,255,0.12); border-radius: 14px;
+  padding: 16px 20px; box-shadow: 0 16px 50px rgba(0,0,0,0.3);
+  font-size: 13.5px; line-height: 1.55;
+}
+.cookie-bar[hidden] { display: none; }
+.cookie-bar-text { margin: 0; flex: 1; color: rgba(255,255,255,0.85); }
+.cookie-bar-text a { color: #fff; text-decoration: underline; }
+.cookie-bar-btn {
+  flex-shrink: 0; background: var(--accent, #26358C); color: #fff;
+  border: none; border-radius: 8px; padding: 10px 20px;
+  font-size: 13.5px; font-weight: 600; cursor: pointer; font-family: inherit;
+}
+.cookie-bar-btn:hover { opacity: .92; }
+@media (max-width: 560px) {
+  .cookie-bar { flex-direction: column; align-items: stretch; bottom: 12px; gap: 12px; }
+  .cookie-bar-btn { width: 100%; }
+}
+</style>
+<div class="cookie-bar" id="cookieBar" role="region" aria-label="Çerez bildirimi" hidden>
+  <p class="cookie-bar-text">Bu web sitesinde, siteyi düzgün çalıştırmak ve deneyiminizi iyileştirmek için zorunlu çerezler kullanılmaktadır. Ayrıntılar için <a href="cerez-politikasi.html">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
+  <button class="cookie-bar-btn" id="cookieAccept" type="button">Tamam</button>
+</div>
+<script>
+(function(){
+  try { if (localStorage.getItem('ibav_cookieNotice') === '1') return; } catch(e){}
+  var bar = document.getElementById('cookieBar');
+  if (!bar) return;
+  bar.hidden = false;
+  var btn = document.getElementById('cookieAccept');
+  btn && btn.addEventListener('click', function(){
+    bar.hidden = true;
+    try { localStorage.setItem('ibav_cookieNotice','1'); } catch(e){}
   });
 })();
 </script>

@@ -3,7 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hakkımızda — İbavalresa</title>
+<title>Hakkımızda — İBAVALRESA</title>
+<link rel="canonical" href="https://www.ibavalresa.com.tr/hakkimizda.html">
+<meta name="description" content="İBAVALRESA hakkında: veriyle yönetilen, dijitalleşen ve sürdürülebilir üretim anlayışıyla 5 kıtada 6.000'i aşkın müşteriye hizmet veren boya ve kimya kuruluşu.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="İBAVALRESA">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Hakkımızda — İBAVALRESA">
+<meta property="og:description" content="İBAVALRESA hakkında: veriyle yönetilen, dijitalleşen ve sürdürülebilir üretim anlayışıyla 5 kıtada 6.000'i aşkın müşteriye hizmet veren boya ve kimya kuruluşu.">
+<meta property="og:url" content="https://www.ibavalresa.com.tr/hakkimizda.html">
+<meta property="og:image" content="https://www.ibavalresa.com.tr/img/kampus-havadan.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hakkımızda — İBAVALRESA">
+<meta name="twitter:description" content="İBAVALRESA hakkında: veriyle yönetilen, dijitalleşen ve sürdürülebilir üretim anlayışıyla 5 kıtada 6.000'i aşkın müşteriye hizmet veren boya ve kimya kuruluşu.">
+<meta name="twitter:image" content="https://www.ibavalresa.com.tr/img/kampus-havadan.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBA VALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
+</script>
+
 <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>" type="image/svg+xml">
 <link rel="shortcut icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -280,6 +297,7 @@ nav {
   color: var(--text); cursor: pointer;
 }
 .mobile-menu-langs button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.mobile-menu-langs button:disabled { opacity: .4; cursor: default; }
 
 body.menu-open { overflow: hidden; }
 
@@ -938,6 +956,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 }
 .lang-option:hover { background: rgba(0,0,0,.05); color: var(--text); }
 .lang-option.active { color: var(--text); }
+.lang-option:disabled { opacity: .4; cursor: default; }
 
 .lang-flag { font-size: 15px; line-height: 1; }
 .lang-name { flex: 1; }
@@ -1665,7 +1684,46 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 }
 .about-pull p em { font-style: normal; color: var(--accent); }
 
+.about-founding {
+  position: relative;
+  margin-top: 10px;
+  padding: 44px 48px 40px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(38,53,140,0.055) 0%, rgba(38,53,140,0) 62%);
+  overflow: hidden;
+}
+.about-founding::before {
+  content: '\201C';
+  position: absolute;
+  top: 2px; left: 24px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 120px; line-height: 1;
+  color: var(--accent); opacity: 0.15;
+  pointer-events: none;
+}
+.about-founding p {
+  position: relative;
+  margin: 0;
+  font-size: clamp(18px, 1.85vw, 23px);
+  font-weight: 500; line-height: 1.45;
+  color: var(--text); letter-spacing: -.5px;
+  text-wrap: pretty;
+}
+.about-founding strong { color: var(--accent); font-weight: 700; }
+@media (max-width: 720px) {
+  .about-founding { padding: 34px 24px 30px; }
+  .about-founding::before { font-size: 86px; left: 14px; }
+}
+
 /* ── ABOUT TABS ── */
+.about-tab-panel .section-tag {
+  display: inline-flex; align-items: center; gap: 12px;
+  color: var(--accent); font-weight: 600;
+}
+.about-tab-panel .section-tag::before {
+  content: ""; width: 24px; height: 1px; background: var(--accent); opacity: .55;
+}
 .about-tabs-wrap {
   border-top: 1px solid var(--border);
   background: var(--bg);
@@ -1710,7 +1768,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   cursor: default;
 }
 .about-tab-panel {
-  animation: tabFade .35s ease;
+  scroll-margin-top: 128px;
 }
 .about-tab-panel[hidden] { display: none; }
 @keyframes tabFade {
@@ -1727,6 +1785,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   }
   .about-tabs::-webkit-scrollbar { display: none; }
   .about-tab { padding: 12px 16px; font-size: 14px; }
+  .about-tab-panel { scroll-margin-top: 76px; }
 }
 
 /* Mini-stat grid (dijital metrics) */
@@ -1914,8 +1973,12 @@ footer img[alt="ibavalresa"] { filter: none !important; }
           <span class="lang-flag">🇬🇧</span><span class="lang-name">English</span>
           <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
         </button>
-        <button class="lang-option" data-lang="RU" onclick="selectLang('RU')">
+        <button class="lang-option" data-lang="RU" disabled title="Çok yakında">
           <span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span>
+          <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
+        </button>
+        <button class="lang-option" data-lang="ES" disabled title="Çok yakında">
+          <span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span>
           <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
         </button>
       </div>
@@ -1973,7 +2036,8 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="mobile-menu-langs">
     <button class="active" onclick="selectLang('TR')">🇹🇷 TR</button>
     <button onclick="selectLang('EN')">🇬🇧 EN</button>
-    <button onclick="selectLang('RU')">🇷🇺 RU</button>
+    <button disabled title="Çok yakında">🇷🇺 RU</button>
+    <button disabled title="Çok yakında">🇪🇸 ES</button>
   </div>
 </div>
 
@@ -1985,18 +2049,8 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 <!-- ── INTRO (sekmesiz, her zaman görünür) ── -->
 <section class="about-section">
   <div class="section-inner">
-    <p class="about-lead reveal">İba Valresa Boya ve Kimya A.Ş., Türk-İspanyol ortaklığı ile ahşap ve sanayi boya ve vernik tasarımı, imalatı ve pazarlanması konularında hizmet vermek üzere İBA Kimya A.Ş. ve VALRESA SA. firmaları tarafından 2005 yılında Ankara'da kurulmuştur.</p>
-  </div>
-</section>
-
-<!-- ── APPROACH (sekmesiz) ── -->
-<section class="about-section">
-  <div class="section-inner">
-    <div class="section-tag reveal" style="margin-bottom: 16px;">İbavalresa Yaklaşımı</div>
-    <h2 class="about-h2 reveal">Veriyle karar alan, dijitalle yöneten, sürdürülebilirliği merkezine koyan bir üretim anlayışı.</h2>
-    <p class="about-p reveal">Veriyle karar alan, dijitalle yöneten, otomasyonla güçlenen ve sürdürülebilirliği merkezine koyan bir üretim anlayışıyla çalışıyoruz.</p>
-    <div class="about-pull reveal">
-      <p><em>Bugünü yönetirken,</em> geleceği tasarlıyoruz.</p>
+    <div class="about-founding reveal">
+      <p>İBAVALRESA Boya ve Kimya A.Ş., <strong>Türk–İspanyol ortaklığı</strong> ile ahşap ve sanayi boya ve vernik tasarımı, imalatı ve pazarlanması konularında hizmet vermek üzere İBA Kimya A.Ş. ve VALRESA SA. firmaları tarafından <strong>2005 yılında Ankara'da</strong> kurulmuştur.</p>
     </div>
   </div>
 </section>
@@ -2005,9 +2059,9 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 <section class="about-tabs-wrap">
   <div class="section-inner">
     <div class="about-tabs" role="tablist" aria-label="Hakkımızda bölümleri">
-      <button class="about-tab active" role="tab" aria-selected="true" data-tab="uretim">Üretim ve Operasyon</button>
-      <button class="about-tab" role="tab" aria-selected="false" data-tab="global">Global ve Miras</button>
-      <button class="about-tab" role="tab" aria-selected="false" data-tab="surdur">Sürdürülebilirlik</button>
+      <button class="about-tab active" role="tab" aria-selected="true" data-tab="ortaklik">Ortaklık Yapısı</button>
+      <button class="about-tab" role="tab" aria-selected="false" data-tab="nedir">Ne Yapıyoruz</button>
+      <button class="about-tab" role="tab" aria-selected="false" data-tab="tesis">Kampüs &amp; Tesis</button>
       <button class="about-tab" role="tab" aria-selected="false" data-tab="tarihce">Tarihçe</button>
     </div>
   </div>
@@ -2015,134 +2069,61 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 
 <div class="about-tab-panels">
 
-<div class="about-tab-panel active" data-panel="uretim" role="tabpanel">
-<!-- ── MODERN PRODUCTION ── -->
+<div class="about-tab-panel active" data-panel="ortaklik" role="tabpanel">
 <section class="about-section">
   <div class="section-inner">
-    <h2 class="about-h2 reveal">Avrupa ve Türkiye'nin en modern boya üretim tesislerinden biriyiz</h2>
-    <p class="about-p reveal">1977'den bu yana ahşap boya ve vernikleri ve sanayi boyaları alanında uzmanlaşmış bir üreticiyiz. Ankara Sincan OSB'de 37.000 m² alana kurulu modern tesisimizde, yıllık <strong>30.000 ton</strong> üretim kapasitesiyle çalışıyor; Türkiye ahşap boyaları pazarında lider üreticiler arasında yer alıyoruz.</p>
-    <p class="about-p reveal">Bugün İbavalresa; güçlü üretim altyapısı, çoklu marka stratejisi, dijitalleşmiş operasyonları ve ihracat odaklı yapısıyla hem yerel hem uluslararası pazarlarda güvenilir bir çözüm ortağı olarak konumlanmaktadır.</p>
+    <div class="section-tag reveal" style="margin-bottom:16px;">Ortaklık Yapısı</div>
+    <h2 class="about-h2 reveal">Türk–İspanyol ortaklığından doğan bir güç.</h2>
+    <p class="about-p reveal">Boya ve vernik üretim faaliyetlerine 1977 yılında Ankara'da başlayan <strong>İba Kimya Sanayi ve Ticaret A.Ş.</strong>, boya üretimine ilave olarak 1995 yılında toz boya üretim tesislerini kurarak Türkiye toz boya sektöründe lider üretici konumuna ulaşmıştır.</p>
+    <p class="about-p reveal"><strong>Valresa SA</strong>, mobilya boyaları ve vernikleri üretimine 1965 yılında Valencia-İspanya'da başlamış olup ikinci tesisleri 2004 yılında Meksika'da faaliyete geçmiştir. Valresa markalı boyalar 5 kıtada 6.000 müşteriye ulaşarak global anlamda kabul gören markalar arasında yer almaktadır.</p>
+    <p class="about-p reveal">Farklı ülkelerde kendi sektörlerinde lider konumunda olan İba Kimya ve Valresa SA, üretim alanındaki bilgi ve deneyimlerini ortak potada birleştirerek <strong>2005 yılında Ankara'da İba Valresa Boya ve Kimya A.Ş.</strong>'yi kurmuş; sektördeki konumlarını daha da güçlendirmiştir. Şirket, ISO 9001:2015 Kalite Yönetim Sistemi çerçevesinde faaliyet göstermektedir.</p>
+    <p class="about-p reveal">Bu ortaklığın gücüyle bugün ihracatımız toplam satışlarımızın <strong>%50'lerine</strong> ulaşmış; Valresa markasıyla <strong>5 kıtada 6.000'den fazla müşteriye</strong> ulaşan global ağın Türkiye ayağını temsil eder duruma gelmiştir.</p>
+  </div>
+</section>
+</div>
 
+<div class="about-tab-panel" data-panel="nedir" role="tabpanel">
+<section class="about-section">
+  <div class="section-inner">
+    <div class="section-tag reveal" style="margin-bottom:16px;">Ne Yapıyoruz</div>
+    <h2 class="about-h2 reveal">Ahşap ve sanayi boyalarında uçtan uca çözüm.</h2>
+    <p class="about-p reveal">1977'den bu yana ahşap boya ve vernikleri ile sanayi boyaları alanında uzmanlaşmış bir üreticiyiz. Türkiye ahşap boyaları pazarında lider üreticiler arasında yer alıyoruz.</p>
+    <ul class="about-bullets reveal">
+      <li><span><strong>Faaliyet Alanı:</strong> Ahşap boyaları ve vernikleri, Genel Sanayi Boyaları</span></li>
+      <li><span><strong>Ürün Gamı:</strong> Akrilik, Poliüretan, Selülozik, Su bazlı, UV, Polyester, Epoksi sistemler. Hem iç mekan hem dış mekan uygulamalarına yönelik çözümler.</span></li>
+      <li><span><strong>Markalar:</strong> Valresa, Esfera, İbavet, İba Sanayi Boyaları</span></li>
+      <li><span><strong>Pazar Konumu:</strong> Türkiye ahşap boyaları pazarında en büyük üreticiler arasında</span></li>
+    </ul>
+  </div>
+</section>
+</div>
+
+<div class="about-tab-panel" data-panel="tesis" role="tabpanel">
+<section class="about-section">
+  <div class="section-inner">
+    <div class="section-tag reveal" style="margin-bottom:16px;">Kampüs &amp; Tesis</div>
+    <h2 class="about-h2 reveal">Ankara Sincan'da modern üretim kampüsü.</h2>
+    <p class="about-p reveal">Ankara Sincan OSB'de 37.000 m² alana kurulu modern tesisimizde, yıllık <strong>30.000 ton</strong> üretim kapasitesiyle çalışıyoruz. Güçlü üretim altyapımız, ISO 9001:2015 ve SAP entegre proses yönetimiyle desteklenmektedir.</p>
     <ul class="about-bullets reveal">
       <li><span><strong>Kuruluş:</strong> 1977, Ankara – Türkiye</span></li>
       <li><span><strong>Üretim Tesisi:</strong> Ankara Sincan OSB – 37.000 m²</span></li>
       <li><span><strong>Yıllık Üretim Kapasitesi:</strong> 30.000 ton</span></li>
       <li><span><strong>Çalışan Sayısı:</strong> Yaklaşık 150</span></li>
-      <li><span><strong>Faaliyet Alanı:</strong> Ahşap boyaları ve vernikleri, Genel Sanayi Boyaları</span></li>
-      <li><span><strong>Ürün Grubu:</strong> Astarlar, son kat boyalar, vernikler, tinerler, sertleştiriciler</span></li>
-      <li><span><strong>Markalar:</strong> Valresa, Esfera, İbavet, İba Sanayi Boyaları</span></li>
-      <li><span><strong>Pazar Konumu:</strong> Türkiye ahşap boyaları pazarında en büyük üreticiler arasında</span></li>
       <li><span><strong>Kalite Yönetimi:</strong> ISO 9001:2015, SAP entegre kalite ve proses yönetimi</span></li>
     </ul>
-
     <figure class="about-figure reveal">
       <img src="img/kampus.jpg" alt="İbavalresa Kampüs — Sincan OSB">
       <figcaption class="about-figure-caption">İBA VALRESA fabrika — Ankara Sincan OSB, 37.000 m²</figcaption>
     </figure>
-  </div>
-</section>
-
-<!-- ── PRODUCTION APPROACH ── -->
-<section class="about-section">
-  <div class="section-inner">
-    <div class="about-grid-2 reveal">
-      <div>
-        <div class="section-tag" style="margin-bottom: 16px;">Üretim ve Operasyon Yaklaşımımız</div>
-        <h2 class="about-h2">Proaktif güvenlik, akıllı operasyon.</h2>
-      </div>
-      <div>
-        <p class="about-p">Tesisimiz, kurulum aşamasından itibaren İspanyol ortaklığıyla projelendirilmiş; iş güvenliği ve proses emniyeti tasarımın merkezine alınmıştır. Reaktif değil, <strong>proaktif güvenlik anlayışı</strong> ile çalışıyoruz.</p>
-        <p class="about-p">Otomasyon, SCADA ve SAP entegrasyonu sayesinde üretimden kaliteye, lojistikten güvenliğe kadar tüm kritik süreçler anlık olarak izlenebilir durumdadır.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── DIGITAL / DATA ── -->
-<section class="about-section">
-  <div class="section-inner">
-    <div class="section-tag reveal" style="margin-bottom: 16px;">Dijital ve Veri Odaklı Yapı</div>
-    <h2 class="about-h2 reveal">Aylık raporlar değil, anlık veriler konuşur.</h2>
-
-    <div class="about-metrics reveal">
-      <div class="about-metric">
-        <div class="about-metric-val">190<span>+</span></div>
-        <div class="about-metric-label">aktif dijital iş süreci (yakında 200+)</div>
-      </div>
-      <div class="about-metric">
-        <div class="about-metric-val">%80</div>
-        <div class="about-metric-label">kağıt kullanımında azalma</div>
-      </div>
-      <div class="about-metric">
-        <div class="about-metric-val">~100</div>
-        <div class="about-metric-label">BI dashboard ile anlık yönetim</div>
-      </div>
-      <div class="about-metric">
-        <div class="about-metric-val">AI</div>
-        <div class="about-metric-label">karar destek mekanizması olarak veri ve yapay zeka</div>
-      </div>
-    </div>
-
-    <div class="about-pull reveal">
-      <p>Bizde aylık raporlar değil, <em>anlık veriler</em> konuşur.</p>
-    </div>
+    <a href="uretim-ve-teknoloji.html" class="reveal" style="color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:6px;margin-top:28px;text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:3px;">
+      Üretim ve teknoloji altyapımız hakkında daha fazla bilgi
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
   </div>
 </section>
 </div>
 
-<div class="about-tab-panel" data-panel="global" role="tabpanel" hidden>
-<!-- ── GLOBAL & EXPORT ── -->
-<section class="about-section">
-  <div class="section-inner">
-    <div class="about-grid-2 reveal">
-      <div>
-        <div class="section-tag" style="margin-bottom: 16px;">Global Yapı ve İhracat</div>
-        <h2 class="about-h2">5 kıtada, 6.000+ müşteri.</h2>
-      </div>
-      <div>
-        <p class="about-p">İhracatımız toplam satışlarımızın <strong>%50'sini</strong> aşmış durumdadır. Doğu Avrupa, Orta Doğu ve Türki Cumhuriyetler başta olmak üzere birçok pazarda aktif olarak faaliyet gösteriyoruz.</p>
-        <p class="about-p">Valresa markasıyla, 5 kıtada <strong>6.000'den fazla müşteriye</strong> ulaşan global bir ağın Türkiye ayağını temsil ediyoruz. Uluslararası kalite standartları, yerel pazar bilgisiyle birleşiyor.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── HERITAGE: IBA + VALRESA ── -->
-<section class="about-section">
-  <div class="section-inner">
-    <h2 class="about-h2 reveal">Boya ve vernik üretim faaliyetlerine 1977 yılında Ankara'da başlayan İba Kimya Sanayi ve Ticaret A.Ş. boya üretimine ilave olarak 1995 yılında toz boya üretim tesislerini kurarak Türkiye toz boya sektöründe lider üretici konumuna ulaşmıştır.</h2>
-    <p class="about-p reveal">Valresa SA, mobilya boyaları ve vernikleri üretimine 1965 yılında Valencia-İspanya'da başlamış olup ikinci tesisleri 2004 yılında Meksika'da faaliyete geçmiştir. Valresa markalı boyalar 5 kıtada 6000 müşteriye ulaşarak global anlamda kabul gören markalar arasında yer almaktadır.</p>
-    <p class="about-p reveal">Boya sektöründe 2017 yılında kuruluşunun 40. Yılını kutlayan İba Kimya Sanayi ve Ticaret AŞ, araştırmacı ve dinamik kadrosu ile planlı ve programlı bir ilerleyiş içerisindedir.</p>
-    <p class="about-p reveal">Farklı ülkelerde kendi sektörlerinde lider konumunda olan İba Kimya Sanayi ve Ticaret A.Ş. ve Valresa SA üretim alanındaki bilgi ve deneyimlerini ortak potada birleştirerek sektördeki konumlarını daha da güçlendirmişlerdir.</p>
-    <p class="about-p reveal">Müşterilerine her zaman daha yakın olmayı hedefleyen İba Valresa Boya ve Kimya A.Ş. ISO 9001:2015 Kalite Yönetim Sistemi çerçevesinde faaliyetlerini sürdürmektedir.</p>
-  </div>
-</section>
-</div>
-
-<div class="about-tab-panel" data-panel="surdur" role="tabpanel" hidden>
-<!-- ── SUSTAINABILITY ── -->
-<section class="about-section">
-  <div class="section-inner">
-    <div class="about-grid-2 reveal">
-      <div>
-        <div class="section-tag" style="margin-bottom: 16px;">Sürdürülebilirlik ve Çevre</div>
-        <h2 class="about-h2">Çevreye duyarlı üretim, kurumsal sorumluluk.</h2>
-      </div>
-      <div>
-        <p class="about-p">Çevreye duyarlı üretimi bir yükümlülük değil, kurumsal sorumluluk olarak görüyoruz.</p>
-        <ul class="about-bullets" style="grid-template-columns: 1fr;">
-          <li><span>Enerji ihtiyacının <strong>%70'i güneşten</strong></span></li>
-          <li><span>Kimyasal atıkların tamamı lisanslı firmalarla bertaraf</span></li>
-          <li><span>Kağıtsız üretim ve döngüsel ekonomi uygulamaları</span></li>
-          <li><span>1000'den fazla bitkiden oluşan yeşil kampüs</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-</div>
-
-<div class="about-tab-panel" data-panel="tarihce" role="tabpanel" hidden>
+<div class="about-tab-panel" data-panel="tarihce" role="tabpanel">
 <!-- ── TIMELINE ── -->
 <section class="about-section timeline-section">
   <div class="section-inner">
@@ -2268,7 +2249,8 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <ul>
         <li><a href="iletisim.html">Bize Ulaşın</a></li>
         <li style="margin-top:10px;"><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/17623" target="_blank" style="font-size:11px;">Bilgi Toplumu Hizmetleri</a></li>
-        <li><a href="https://ibavalresa.com.tr/demo/kvkk-aydinlatma-metni/" style="font-size:11px;">KVKK Aydınlatma Metni</a></li>
+        <li><a href="kvkk-aydinlatma-metni.html" style="font-size:11px;">KVKK Aydınlatma Metni</a></li>
+        <li><a href="cerez-politikasi.html" style="font-size:11px;">Çerez Politikası</a></li>
       </ul>
     </div>
   </div>
@@ -2487,36 +2469,25 @@ function toggleLang() {
 
 function selectLang(lang) {
   currentLang = lang;
-  // update button label
   document.getElementById('lang-current').textContent = lang;
-  // update active state
   document.querySelectorAll('.lang-option').forEach(el => {
     const isActive = el.dataset.lang === lang;
     el.classList.toggle('active', isActive);
-    el.querySelector('.lang-check').style.opacity = isActive ? '1' : '0';
+    const chk = el.querySelector('.lang-check'); if (chk) chk.style.opacity = isActive ? '1' : '0';
   });
-  // close dropdown
+  document.querySelectorAll('.mobile-menu-langs button').forEach(b => b.classList.toggle('active', b.textContent.trim().endsWith(lang)));
   document.getElementById('lang-switcher').classList.remove('open');
-  // apply content
-  const c = LANG_CONTENT[lang];
-  document.querySelectorAll('.nav-links a').forEach((a, i) => { if(c.navLinks[i]) a.textContent = c.navLinks[i]; });
-  document.getElementById('nav-cta').textContent = c.navCta;
-  const heroBadge = document.querySelector('.hero-badge');
-  if (heroBadge) heroBadge.innerHTML = `<span></span>${c.badge}`;
-  const heroTitle = document.getElementById('hero-title');
-  if (heroTitle) heroTitle.innerHTML = c.heroTitle;
-  const heroSub = document.querySelector('.hero-sub');
-  if (heroSub) heroSub.textContent = c.heroSub;
-  const btns = document.querySelectorAll('.hero-actions .btn-primary, .hero-actions .btn-secondary');
-  if(btns[0]) btns[0].childNodes[0].textContent = c.btn1 + ' ';
-  if(btns[1]) btns[1].textContent = c.btn2;
-  document.querySelectorAll('.hero-stat-label').forEach((el, i) => {
-    const labels = [c.s1, c.s2, c.s3, c.s4];
-    if(labels[i]) el.textContent = labels[i];
+  document.documentElement.lang = lang === 'EN' ? 'en' : (lang === 'RU' ? 'ru' : (lang === 'ES' ? 'es' : 'tr'));
+  // Tüm sayfa: TR <-> EN (data-en öznitelikleri). Çeviri eklenmemiş sayfalarda no-op.
+  document.querySelectorAll('[data-en]').forEach(el => {
+    if (el.__tr == null) el.__tr = el.innerHTML;
+    el.innerHTML = (lang === 'EN') ? el.getAttribute('data-en') : el.__tr;
   });
-  const ctaBtn = document.querySelector('.finalcta .btn-primary');
-  if (ctaBtn && ctaBtn.childNodes[0]) ctaBtn.childNodes[0].textContent = c.cta + ' ';
+  try { localStorage.setItem('ibav_lang', lang); } catch (e) {}
 }
+document.addEventListener('DOMContentLoaded', () => {
+  try { const l = localStorage.getItem('ibav_lang'); if (l && l !== 'TR') selectLang(l); } catch (e) {}
+});
 
 // Close dropdown on outside click
 document.addEventListener('click', e => {
@@ -2530,33 +2501,86 @@ window.addEventListener('scroll', () => {
   nav.style.borderBottomColor = window.scrollY > 40 ? 'rgba(0,0,0,0.12)' : 'rgba(0,0,0,0.07)';
 });
 
-// ── ABOUT TABS ──
+// ── ABOUT TABS (scroll-spy) ──
 (function initAboutTabs() {
-  const tabs = document.querySelectorAll('.about-tab');
-  const panels = document.querySelectorAll('.about-tab-panel');
-  if (!tabs.length) return;
+  const tabs = [...document.querySelectorAll('.about-tab')];
+  const panels = [...document.querySelectorAll('.about-tab-panel')];
+  const wrap = document.querySelector('.about-tabs-wrap');
+  if (!tabs.length || !panels.length || !wrap) return;
+
+  function setActive(id) {
+    tabs.forEach(t => {
+      const on = t.dataset.tab === id;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+  }
+
+  // Sekmeye tıkla → ilgili panele yumuşak kaydır
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      const id = tab.dataset.tab;
-      tabs.forEach(t => {
-        const isActive = t === tab;
-        t.classList.toggle('active', isActive);
-        t.setAttribute('aria-selected', isActive ? 'true' : 'false');
-      });
-      panels.forEach(p => {
-        const isActive = p.dataset.panel === id;
-        if (isActive) { p.removeAttribute('hidden'); }
-        else { p.setAttribute('hidden', ''); }
-      });
-      // Trigger reveal animation re-run on newly visible panel
-      const activePanel = document.querySelector(`.about-tab-panel[data-panel="${id}"]`);
-      if (activePanel) {
-        activePanel.querySelectorAll('.reveal').forEach(el => {
-          el.classList.remove('visible');
-          requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('visible')));
-        });
-      }
+      const p = panels.find(pp => pp.dataset.panel === tab.dataset.tab);
+      if (p) p.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setActive(tab.dataset.tab);
     });
+  });
+
+  // Scroll-spy: o an görünen panele göre aktif sekmeyi güncelle
+  let ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const line = Math.max(wrap.getBoundingClientRect().bottom, 0) + 24;
+      let current = panels[0];
+      panels.forEach(p => { if (p.getBoundingClientRect().top <= line) current = p; });
+      setActive(current.dataset.panel);
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+<!-- ── ÇEREZ BİLDİRİMİ ── -->
+<style>
+.cookie-bar {
+  position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%);
+  z-index: 300; width: min(680px, calc(100% - 32px));
+  display: flex; align-items: center; gap: 16px;
+  background: #0d0d10; color: #fff;
+  border: 1px solid rgba(255,255,255,0.12); border-radius: 14px;
+  padding: 16px 20px; box-shadow: 0 16px 50px rgba(0,0,0,0.3);
+  font-size: 13.5px; line-height: 1.55;
+}
+.cookie-bar[hidden] { display: none; }
+.cookie-bar-text { margin: 0; flex: 1; color: rgba(255,255,255,0.85); }
+.cookie-bar-text a { color: #fff; text-decoration: underline; }
+.cookie-bar-btn {
+  flex-shrink: 0; background: var(--accent, #26358C); color: #fff;
+  border: none; border-radius: 8px; padding: 10px 20px;
+  font-size: 13.5px; font-weight: 600; cursor: pointer; font-family: inherit;
+}
+.cookie-bar-btn:hover { opacity: .92; }
+@media (max-width: 560px) {
+  .cookie-bar { flex-direction: column; align-items: stretch; bottom: 12px; gap: 12px; }
+  .cookie-bar-btn { width: 100%; }
+}
+</style>
+<div class="cookie-bar" id="cookieBar" role="region" aria-label="Çerez bildirimi" hidden>
+  <p class="cookie-bar-text">Bu web sitesinde, siteyi düzgün çalıştırmak ve deneyiminizi iyileştirmek için zorunlu çerezler kullanılmaktadır. Ayrıntılar için <a href="cerez-politikasi.html">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
+  <button class="cookie-bar-btn" id="cookieAccept" type="button">Tamam</button>
+</div>
+<script>
+(function(){
+  try { if (localStorage.getItem('ibav_cookieNotice') === '1') return; } catch(e){}
+  var bar = document.getElementById('cookieBar');
+  if (!bar) return;
+  bar.hidden = false;
+  var btn = document.getElementById('cookieAccept');
+  btn && btn.addEventListener('click', function(){
+    bar.hidden = true;
+    try { localStorage.setItem('ibav_cookieNotice','1'); } catch(e){}
   });
 })();
 </script>
