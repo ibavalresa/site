@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="37.000 m²'yi aşan üretim alanı, SAP entegre ileri otomasyon ve baştan sona denetlenen süreçlerle İBAVALRESA üretim ve teknoloji altyapısı.">
 <meta name="twitter:image" content="https://www.ibavalresa.com.tr/img/kampus-havadan.jpg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBA VALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
+{"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBAVALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
 </script>
 
 <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>" type="image/svg+xml">
@@ -1577,10 +1577,31 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   font-style: normal; color: var(--accent);
 }
 
+/* ── PAGE INTRO (kalite tarzı başlık — görsel sonrası) ── */
+.contact-hero {
+  padding: 64px 0 56px;
+  border-bottom: 1px solid var(--border);
+  background: radial-gradient(ellipse 70% 90% at 85% 0%, rgba(38,53,140,0.05) 0%, transparent 60%);
+}
+.contact-hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 20px;
+}
+.contact-hero-eyebrow::before {
+  content: ""; width: 28px; height: 1px; background: var(--accent); opacity: .5;
+}
+.contact-hero-title {
+  font-size: clamp(44px, 6.5vw, 88px);
+  font-weight: 800; letter-spacing: -3px; line-height: 1;
+  color: var(--text); margin-bottom: 0;
+}
+.contact-hero-title em { font-style: normal; color: var(--accent); }
+
 /* About sections */
 .about-section { padding: 60px 0; border-top: 1px solid var(--border); }
 .about-section:first-of-type { border-top: none; }
-.about-section .section-inner { max-width: 1080px; }
+.about-section .section-inner { max-width: 1100px; }
 .section-tag {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
@@ -1803,7 +1824,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
     <rect width="1200" height="800" fill="#ffffff"/>
     <g transform="translate(600,400)" text-anchor="middle" font-family="Inter, sans-serif">
       <text y="-20" font-size="96" font-weight="800" fill="#0d0d10" letter-spacing="-3">Üretim &amp; Teknoloji</text>
-      <text y="60" font-size="36" font-weight="600" fill="#26358C" letter-spacing="2">İBA VALRESA</text>
+      <text y="60" font-size="36" font-weight="600" fill="#26358C" letter-spacing="2">İBAVALRESA</text>
     </g>
   </svg>
 </template>
@@ -1978,11 +1999,14 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 
 <!-- ── PAGE HERO ── -->
 <section class="page-hero" id="hero">
-  <img class="page-hero-img" src="img/kampus-havadan.jpg" alt="İbavalresa Üretim Tesisi — Ankara Sincan 1. OSB" style="max-height:80vh;object-fit:cover;">
-  <div class="page-hero-overlay"></div>
-  <div class="page-hero-content" style="max-width:1100px;">
-    <div class="page-hero-eyebrow">İba.Valresa</div>
-    <h1 class="page-hero-title">Üretim ve <em>Teknoloji</em></h1>
+  <img class="page-hero-img" src="img/uretim-havadan.jpg" alt="İbavalresa Üretim Tesisi — Ankara Sincan 1. OSB">
+</section>
+
+<!-- ── PAGE INTRO (başlık) ── -->
+<section class="contact-hero" id="intro">
+  <div class="section-inner">
+    <div class="contact-hero-eyebrow reveal">İBAVALRESA</div>
+    <h1 class="contact-hero-title reveal">Üretim ve <em>Teknoloji</em></h1>
   </div>
 </section>
 
@@ -2004,7 +2028,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
     <div class="about-metrics reveal">
       <div class="about-metric">
         <div class="about-metric-val">37.000<span> m²</span></div>
-        <div class="about-metric-label">Toplam tesis alanı — Sincan 1. OSB</div>
+        <div class="about-metric-label">Kampüs içinde İBAVALRESA tesis alanı</div>
       </div>
       <div class="about-metric">
         <div class="about-metric-val">30.000<span> t</span></div>
@@ -2443,26 +2467,40 @@ window.addEventListener('scroll', () => {
   font-size: 13.5px; font-weight: 600; cursor: pointer; font-family: inherit;
 }
 .cookie-bar-btn:hover { opacity: .92; }
+.cookie-bar-btns { flex-shrink: 0; display: flex; gap: 8px; }
+.cookie-bar-btn.ghost { background: transparent; color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.28); }
+.cookie-bar-btn.ghost:hover { background: rgba(255,255,255,0.08); opacity: 1; }
 @media (max-width: 560px) {
   .cookie-bar { flex-direction: column; align-items: stretch; bottom: 12px; gap: 12px; }
-  .cookie-bar-btn { width: 100%; }
+  .cookie-bar-btns { width: 100%; }
+  .cookie-bar-btn { flex: 1; }
 }
 </style>
 <div class="cookie-bar" id="cookieBar" role="region" aria-label="Çerez bildirimi" hidden>
-  <p class="cookie-bar-text">Bu web sitesinde, siteyi düzgün çalıştırmak ve deneyiminizi iyileştirmek için zorunlu çerezler kullanılmaktadır. Ayrıntılar için <a href="cerez-politikasi.html">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
-  <button class="cookie-bar-btn" id="cookieAccept" type="button">Tamam</button>
+  <p class="cookie-bar-text">Bu web sitesinde sitenin çalışması için zorunlu çerezler kullanılır. Gömülü YouTube videolarını sitede oynatmak için üçüncü taraf (YouTube) çerezlerine izin vermeniz gerekir. Ayrıntılar için <a href="cerez-politikasi.html">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
+  <div class="cookie-bar-btns">
+    <button class="cookie-bar-btn ghost" id="cookieReject" type="button">Reddet</button>
+    <button class="cookie-bar-btn" id="cookieAccept" type="button">Kabul Et</button>
+  </div>
 </div>
 <script>
 (function(){
-  try { if (localStorage.getItem('ibav_cookieNotice') === '1') return; } catch(e){}
+  var stored = null;
+  try { stored = localStorage.getItem('ibav_cookieConsent'); } catch(e){}
+  window.ibavConsent = stored;
   var bar = document.getElementById('cookieBar');
   if (!bar) return;
-  bar.hidden = false;
-  var btn = document.getElementById('cookieAccept');
-  btn && btn.addEventListener('click', function(){
+  function set(v){
+    window.ibavConsent = v;
+    try { localStorage.setItem('ibav_cookieConsent', v); } catch(e){}
     bar.hidden = true;
-    try { localStorage.setItem('ibav_cookieNotice','1'); } catch(e){}
-  });
+    try { document.dispatchEvent(new CustomEvent('ibav:consent', { detail: v })); } catch(e){}
+  }
+  bar.hidden = (stored === 'accepted' || stored === 'rejected');
+  var a = document.getElementById('cookieAccept');
+  var r = document.getElementById('cookieReject');
+  a && a.addEventListener('click', function(){ set('accepted'); });
+  r && r.addEventListener('click', function(){ set('rejected'); });
 })();
 </script>
 </body>

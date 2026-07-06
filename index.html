@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Türk–İspanyol ortaklığıyla yüksek kaliteli ahşap boya, vernik ve endüstriyel boya üreten İBAVALRESA; +60 yıl tecrübe, güçlü Ar-Ge, geniş bayi ağı ve +25 ülkeye ihracat.">
 <meta name="twitter:image" content="https://www.ibavalresa.com.tr/img/kampus-havadan.jpg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBA VALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
+{"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBAVALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
 </script>
 
 <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>" type="image/svg+xml">
@@ -101,7 +101,7 @@ body {
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
   text-align: center;
-  padding: 56px 40px 80px;
+  padding: 56px 40px 44px;
   overflow: hidden;
 }
 .hero-text-section .hero-grid,
@@ -115,6 +115,7 @@ body {
 .hero-text-section .hero-stats {
   position: relative; z-index: 2;
 }
+.hero-text-section .hero-actions { margin-bottom: 0; }
 
 /* ── NOISE TEXTURE ── */
 body::before {
@@ -638,12 +639,6 @@ section { position: relative; z-index: 1; }
 .brand-name span { color: var(--accent); }
 
 /* ── BIG STATS ── */
-.bigstats {
-  padding: 56px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  background: var(--bg2);
-}
 .bigstats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -655,22 +650,23 @@ section { position: relative; z-index: 1; }
 }
 .bigstat {
   background: var(--bg2);
-  padding: 40px 32px;
+  padding: 40px 18px;
   text-align: center;
   transition: background .2s;
 }
 .bigstat:hover { background: var(--bg3); }
 .bigstat-num {
-  font-size: 52px; font-weight: 800; letter-spacing: -3px;
+  font-size: clamp(30px, 3.2vw, 48px); font-weight: 800; letter-spacing: -2px;
   color: var(--text); line-height: 1;
   margin-bottom: 10px;
+  white-space: nowrap;
 }
-.bigstat-num sup { font-size: 28px; color: var(--accent); vertical-align: super; }
+.bigstat-num sup { font-size: 0.52em; color: var(--accent); vertical-align: super; }
 .bigstat-label { font-size: 13px; color: var(--text2); font-weight: 500; }
 
 /* ── FINAL CTA ── */
 .finalcta {
-  padding: 56px 0 32px;
+  padding: 40px 0 40px;
   text-align: center;
   position: relative; overflow: hidden;
 }
@@ -689,10 +685,10 @@ section { position: relative; z-index: 1; }
 }
 .finalcta p {
   font-size: 17px; color: var(--text2); max-width: 460px;
-  margin: 0 auto 40px;
+  margin: 0 auto 28px;
   position: relative; z-index:1;
 }
-.finalcta .hero-actions { position: relative; z-index:1; }
+.finalcta .hero-actions { position: relative; z-index:1; margin-bottom: 0; }
 
 /* ── FOOTER (DARK) ── */
 footer {
@@ -1399,10 +1395,13 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 }
 .fcard-link {
   display: inline-flex; align-items: center; gap: 6px;
+  align-self: flex-start;
   font-size: 13.5px; font-weight: 600; color: var(--accent);
+  text-decoration: none;
   transition: gap .2s;
 }
 .fcard:hover .fcard-link { gap: 10px; }
+.fcard-link:hover { gap: 10px; }
 
 /* stats variant — sayı paneli (fotoğraf yerine) */
 .fcard-img.fcard-stats {
@@ -1599,7 +1598,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   .feature-grid { grid-template-columns: 1fr; gap: 40px; }
   .feature-grid.reverse { direction: ltr; }
   .pillars-list { grid-template-columns: 1fr; }
-  .bigstats-grid { grid-template-columns: 1fr 1fr; }
+  .bigstats-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-inner { grid-template-columns: 1fr 1fr; gap: 40px; }
   .hero-stats { gap: 28px; }
 }
@@ -1838,12 +1837,9 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   </p>
 
   <div class="hero-actions">
-    <a href="#markalar" class="btn-primary">
-      <span data-en="Our Brands">Markalarımız</span>
+    <a href="hakkimizda.html" class="btn-primary">
+      <span data-en="About Us">Hakkımızda</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-    <a href="hakkimizda.html" class="btn-secondary" data-en="About Us">
-      Hakkımızda
     </a>
   </div>
 </section>
@@ -1858,6 +1854,26 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 
     <div class="feature-cards reveal">
 
+      <!-- İSTATİSTİKLER (kampüs öncesi) -->
+      <div class="bigstats-grid reveal" style="margin-bottom: 44px;">
+        <div class="bigstat">
+          <div class="bigstat-num">60<sup>+</sup></div>
+          <div class="bigstat-label" data-en="Years of Experience">Yıl Tecrübe</div>
+        </div>
+        <div class="bigstat">
+          <div class="bigstat-num">50<sup>+</sup></div>
+          <div class="bigstat-label" data-en="Domestic Dealers">Yurtiçi Bayilik</div>
+        </div>
+        <div class="bigstat">
+          <div class="bigstat-num">25<sup>+</sup></div>
+          <div class="bigstat-label" data-en="Countries Exported">Ülkeye İhracat</div>
+        </div>
+        <div class="bigstat">
+          <div class="bigstat-num">30.000<sup>+</sup></div>
+          <div class="bigstat-label" data-en="Tons Annual Capacity">ton Yıllık Üretim Kapasitesi</div>
+        </div>
+      </div>
+
       <!-- KAMPÜS -->
       <figure class="kampus-figure" style="margin:0;padding:0;border-radius:16px;overflow:hidden;background:#f7f7f9;border:0;display:block;width:100%;">
         <img src="img/kampus-havadan.jpg" alt="İbavalresa Kampüsü — Ankara Sincan OSB" style="display:block;width:100%;height:auto;margin:0;padding:0;border:0;vertical-align:top;"/>
@@ -1868,7 +1884,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       </figure>
 
       <!-- ÜRETİM -->
-      <a class="fcard" href="uretim-ve-teknoloji.html">
+      <div class="fcard">
         <div class="fcard-img">
           <img src="img/uretim.jpg" alt="Üretim Teknolojisi"/>
         </div>
@@ -1876,31 +1892,31 @@ footer img[alt="ibavalresa"] { filter: none !important; }
           <div class="fcard-eyebrow" data-en="High-Quality Production">Yüksek Kaliteli Üretim</div>
           <div class="fcard-title" data-en="Production technology.">Üretim teknolojisi.</div>
           <p class="fcard-desc" data-en="By closely following technological developments and investing in our production infrastructure, we build a strong and standardized production structure. Thanks to our SAP-integrated system, we manage our processes end-to-end in a traceable and controlled way. We keep improving our highly repeatable production processes with a continuous-improvement approach.">Teknolojik gelişmeleri yakından takip ederek üretim altyapımıza yaptığımız yatırımlarla güçlü ve standartlaştırılmış bir üretim yapısı oluşturuyoruz. SAP entegre sistemimiz sayesinde süreçlerimizi uçtan uca izlenebilir ve kontrollü şekilde yönetiyoruz. Yüksek tekrarlanabilirlik seviyesine ulaşan üretim süreçlerimizi ise sürekli iyileştirme yaklaşımıyla geliştirmeye devam ediyoruz.</p>
-          <span class="fcard-link">
+          <a class="fcard-link" href="uretim-ve-teknoloji.html">
             <span data-en="Learn more">Daha fazla bilgi</span>
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </span>
+          </a>
         </div>
-      </a>
+      </div>
 
       <!-- AR-GE -->
-      <a class="fcard" href="arge.html">
+      <div class="fcard">
         <div class="fcard-img">
           <img src="img/arge.jpg" alt="Ar-Ge"/>
         </div>
         <div class="fcard-body">
           <div class="fcard-eyebrow" data-en="Turkish–Spanish R&D Power">Türk–İspanyol Ar-Ge Gücü</div>
           <div class="fcard-title" data-en="Research & Development.">Araştırma - Geliştirme.</div>
-          <p class="fcard-desc" data-en="İBA VALRESA R&amp;amp;D, nourished by global know-how, develops technological products and innovative formulations; producing value-adding solutions that put customer needs at the center. Focused on sustainable and eco-friendly technologies, our products combine high performance, aesthetic surface quality and global quality standards. Our R&amp;amp;D approach is not limited to product development; it also works actively on application techniques, process compatibility and field solutions that create added value, directly contributing to our customers&amp;rsquo; production processes.">İBA VALRESA Ar-Ge, global bilgi birikimiyle beslenen, teknolojik ürünler ve yenilikçi formülasyonlar geliştiren bir yapı olarak; müşteri ihtiyaçlarını merkeze alan, uygulamaya değer çözümler üretir. Sürdürülebilir ve çevre dostu teknolojiler odağında geliştirilen ürünlerimiz; yüksek performans, estetik yüzey kalitesi ve global kalite standartlarını bir arada sunar. Ar-Ge yaklaşımımız yalnızca ürün geliştirmekle sınırlı değildir; farklı uygulama teknikleri, proses uyumluluğu ve sahada katma değer yaratan uygulama çözümleri üzerinde de aktif olarak çalışır, müşterilerimizin üretim süreçlerine doğrudan katkı sağlar.</p>
-          <span class="fcard-link">
+          <p class="fcard-desc" data-en="İBAVALRESA R&amp;amp;D, nourished by global know-how, develops technological products and innovative formulations; producing value-adding solutions that put customer needs at the center. Focused on sustainable and eco-friendly technologies, our products combine high performance, aesthetic surface quality and global quality standards. Our R&amp;amp;D approach is not limited to product development; it also works actively on application techniques, process compatibility and field solutions that create added value, directly contributing to our customers&amp;rsquo; production processes.">İBAVALRESA Ar-Ge, global bilgi birikimiyle beslenen, teknolojik ürünler ve yenilikçi formülasyonlar geliştiren bir yapı olarak; müşteri ihtiyaçlarını merkeze alan, uygulamaya değer çözümler üretir. Sürdürülebilir ve çevre dostu teknolojiler odağında geliştirilen ürünlerimiz; yüksek performans, estetik yüzey kalitesi ve global kalite standartlarını bir arada sunar. Ar-Ge yaklaşımımız yalnızca ürün geliştirmekle sınırlı değildir; farklı uygulama teknikleri, proses uyumluluğu ve sahada katma değer yaratan uygulama çözümleri üzerinde de aktif olarak çalışır, müşterilerimizin üretim süreçlerine doğrudan katkı sağlar.</p>
+          <a class="fcard-link" href="arge.html">
             <span data-en="Learn more">Daha fazla bilgi</span>
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </span>
+          </a>
         </div>
-      </a>
+      </div>
 
       <!-- GÜÇLÜ SATIŞ & TEKNİK DESTEK -->
-      <a class="fcard" href="hizmetlerimiz.html">
+      <div class="fcard">
         <div class="fcard-img fcard-stats">
           <div class="fcard-stat"><span class="fcard-stat-num">50<sup>+</sup></span><span class="fcard-stat-lbl" data-en="Domestic Dealers">Yurtiçi Bayilik</span></div>
           <div class="fcard-stat"><span class="fcard-stat-num">25<sup>+</sup></span><span class="fcard-stat-lbl" data-en="Countries Exported">Ülkeye İhracat</span></div>
@@ -1908,17 +1924,17 @@ footer img[alt="ibavalresa"] { filter: none !important; }
         </div>
         <div class="fcard-body">
           <div class="fcard-eyebrow" data-en="Sales & Technical Support">Satış & Teknik Destek</div>
-          <div class="fcard-title" data-en="Strong sales & technical support network.">Güçlü satış ve teknik destek ağı.</div>
-          <p class="fcard-desc" data-en="With our global business partnerships making up nearly half of our total sales, our export network reaching more than 25 countries and our widespread dealer organization across Türkiye, we provide fast, on-site and sustainable support. With our sales and technical teams operating in 6 different regions, we act as the trusted solution partner of Türkiye&amp;rsquo;s leading furniture manufacturers.">Toplam satışlarımızın yaklaşık yarısını oluşturan global iş ortaklıklarımız, 25'ten fazla ülkeye ulaşan ihracat ağımız ve Türkiye genelindeki yaygın bayi organizasyonumuzla müşterilerimize hızlı, yerinde ve sürdürülebilir destek sunuyoruz. 6 farklı bölgede görev yapan satış ve teknik ekiplerimiz ile Türkiye'nin önde gelen mobilya üreticilerinin güvenilir çözüm ortağı olarak faaliyet gösteriyoruz.</p>
-          <span class="fcard-link">
+          <div class="fcard-title" data-en="We add strength to our business partners.">İş Ortaklarımızın Gücüne Güç Katıyoruz.</div>
+          <p class="fcard-desc" data-en="Beyond product supply; across Türkiye and in more than 25 countries, we add value to our customers' production processes with our sales, technical support and coloring services. Discover how our strong field organization works.">Ürün tedarikinin ötesinde; Türkiye'nin dört bir yanında ve 25'ten fazla ülkede müşterilerimizin üretim süreçlerine satış, teknik destek ve renklendirme hizmetlerimizle değer katıyoruz. Güçlü saha organizasyonumuzun nasıl çalıştığını keşfedin.</p>
+          <a class="fcard-link" href="hizmetlerimiz.html">
             <span data-en="Learn more">Daha fazla bilgi</span>
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </span>
+          </a>
         </div>
-      </a>
+      </div>
 
       <!-- LOJİSTİK GÜÇ -->
-      <a class="fcard" href="hakkimizda.html" target="_blank">
+      <div class="fcard">
         <div class="fcard-img fcard-slideshow" data-slideshow>
           <img src="img/lojistik-1.jpeg" alt="Lojistik Güç - Yüksek Depo" class="active"/>
           <img src="img/lojistik-2.jpeg" alt="Lojistik Güç - Otomatik Raf Sistemi"/>
@@ -1933,12 +1949,8 @@ footer img[alt="ibavalresa"] { filter: none !important; }
           <div class="fcard-eyebrow" data-en="Logistics Power">Lojistik Güç</div>
           <div class="fcard-title" data-en="Automated warehouse, smart dispatch.">Otomatik depo, akıllı sevkiyat.</div>
           <p class="fcard-desc" data-en="With our high-bay automated storage system and integrated logistics infrastructure, we manage thousands of products quickly, traceably and error-free. Thanks to the automated racking and transfer systems running on SAP integration, stock movements are tracked in real time; every stage from order to dispatch is optimized. This infrastructure guarantees our customers &lt;strong&gt;uninterrupted supply&lt;/strong&gt; and &lt;strong&gt;on-time delivery&lt;/strong&gt;.">Yüksek raflı otomatik depolama sistemimiz ve entegre lojistik altyapımız ile binlerce ürünü hızlı, izlenebilir ve hatasız biçimde yönetiyoruz. SAP entegrasyonu üzerinden çalışan otomatik raf ve transfer sistemleri sayesinde stok hareketleri gerçek zamanlı takip edilir; siparişten sevkiyata kadar her aşama optimize edilir. Bu altyapı, müşterilerimize <strong>kesintisiz tedarik</strong> ve <strong>zamanında teslimat</strong> garantisi sağlar.</p>
-          <span class="fcard-link">
-            <span data-en="Learn more">Daha fazla bilgi</span>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </span>
         </div>
-      </a>
+      </div>
 
     </div>
   </div>
@@ -2037,7 +2049,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="whyus-top reveal">
       <div class="whyus-lead">
-        <div class="section-tag"><span class="hl-marker" data-en="Why İBA VALRESA?">Neden İBA VALRESA?</span></div>
+        <div class="section-tag"><span class="hl-marker" data-en="Why İBAVALRESA?">Neden İBAVALRESA?</span></div>
         <h2 class="whyus-title" data-en="Why customers choose us.">Müşterilerimizin bizi tercih etme nedenleri.</h2>
         <p class="whyus-desc" data-en="By working in close and transparent collaboration with our customers, we achieve the best results. This approach ensures our work is delivered to the highest quality standards and our customers&rsquo; goals are met at every step.">Müşterilerimizle yakın ve şeffaf bir iş birliği içinde çalışarak en iyi sonuçlara ulaşıyoruz. Bu yaklaşım; işlerimizin en yüksek kalite standartlarında teslim edilmesini ve müşterilerimizin hedeflerinin her adımda gerçekleştirilmesini sağlıyor.</p>
         <a href="hakkimizda.html" class="feature-link" style="margin-top:8px;">
@@ -2071,29 +2083,6 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   </div>
 </section>
 
-<!-- ── BIG STATS ── -->
-<section class="bigstats">
-  <div class="section-inner">
-    <div class="bigstats-grid reveal">
-      <div class="bigstat">
-        <div class="bigstat-num">60<sup>+</sup></div>
-        <div class="bigstat-label" data-en="Years of Experience">Yıl Tecrübe</div>
-      </div>
-      <div class="bigstat">
-        <div class="bigstat-num">90<sup>K</sup></div>
-        <div class="bigstat-label" data-en="m² Campus Area">m² Kampüs Alanı</div>
-      </div>
-      <div class="bigstat">
-        <div class="bigstat-num">3<sup>+</sup></div>
-        <div class="bigstat-label" data-en="Continents Served">Kıtada Satış</div>
-      </div>
-      <div class="bigstat">
-        <div class="bigstat-num">4<sup>+</sup></div>
-        <div class="bigstat-label" data-en="Strong Brands">Güçlü Marka</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ── BRANDS ── -->
 <section class="brands" id="markalar" style="min-height: 300px">
@@ -2398,37 +2387,12 @@ document.addEventListener('click', () => {
   document.querySelectorAll('.has-dropdown').forEach(i => i.classList.remove('open'));
 });
 
-// Language switcher
+// Language switcher — RU (pasif) için kısmi hero çevirisi; yalnızca selectLang('RU') içinde kullanılır
 const LANG_CONTENT = {
-  TR: {
-    navLinks: ["Kurumsal","Markalar","Ar-Ge","İletişim"],
-    navCta: "Online Sipariş →",
-    badge: "+60 Yıl Tecrübe",
-    heroTitle: "Kalite.<br><em>Her Zaman.</em>",
-    heroSub: "Türk–İspanyol ortaklığından doğan üretim ve Ar-Ge gücümüzle, dünya pazarlarına yüksek kaliteli ahşap boya, vernik ve endüstriyel boya çözümleri sunuyoruz.",
-    btn1: "Markalarımız", btn2: "Hakkımızda",
-    s1:"Yıl Tecrübe", s2:"m² Kampüs", s3:"Marka", s4:"Kıta",
-    cta: "İletişime Geçin",
-  },
-  EN: {
-    navLinks: ["Corporate","Brands","R&D","Contact"],
-    navCta: "Order Online →",
-    badge: "+60 Years Experience",
-    heroTitle: "From Concept<br><em>to Product.</em>",
-    heroSub: "High-quality wood paint and varnish solutions for global markets, powered by Turkish–Spanish partnership.",
-    btn1: "Our Brands", btn2: "About Us",
-    s1:"Years Exp.", s2:"m² Campus", s3:"Brands", s4:"Continents",
-    cta: "Get in Touch",
-  },
   RU: {
-    navLinks: ["Корпоративно","Бренды","Услуги","Контакт"],
-    navCta: "Заказать онлайн →",
     badge: "+60 лет опыта",
     heroTitle: "От идеи<br><em>к продукту.</em>",
     heroSub: "Высококачественные решения для окраски и лакировки древесины для мировых рынков.",
-    btn1: "Наши бренды", btn2: "О нас",
-    s1:"Лет опыта", s2:"м² Кампус", s3:"Бренды", s4:"Континенты",
-    cta: "Связаться",
   }
 };
 
@@ -2505,26 +2469,40 @@ window.addEventListener('scroll', () => {
   font-size: 13.5px; font-weight: 600; cursor: pointer; font-family: inherit;
 }
 .cookie-bar-btn:hover { opacity: .92; }
+.cookie-bar-btns { flex-shrink: 0; display: flex; gap: 8px; }
+.cookie-bar-btn.ghost { background: transparent; color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.28); }
+.cookie-bar-btn.ghost:hover { background: rgba(255,255,255,0.08); opacity: 1; }
 @media (max-width: 560px) {
   .cookie-bar { flex-direction: column; align-items: stretch; bottom: 12px; gap: 12px; }
-  .cookie-bar-btn { width: 100%; }
+  .cookie-bar-btns { width: 100%; }
+  .cookie-bar-btn { flex: 1; }
 }
 </style>
 <div class="cookie-bar" id="cookieBar" role="region" aria-label="Çerez bildirimi" hidden>
-  <p class="cookie-bar-text" data-en="This website uses essential cookies to run properly and improve your experience. For details, see our &lt;a href=&quot;cerez-politikasi.html&quot;&gt;Cookie Policy&lt;/a&gt;.">Bu web sitesinde, siteyi düzgün çalıştırmak ve deneyiminizi iyileştirmek için zorunlu çerezler kullanılmaktadır. Ayrıntılar için <a href="cerez-politikasi.html" data-en="Cookie Policy">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
-  <button class="cookie-bar-btn" id="cookieAccept" type="button" data-en="OK">Tamam</button>
+  <p class="cookie-bar-text" data-en="This website uses essential cookies to run properly. To play embedded YouTube videos on the site, you must allow third-party (YouTube) cookies. For details, see our &lt;a href=&quot;cerez-politikasi.html&quot;&gt;Cookie Policy&lt;/a&gt;.">Bu web sitesinde sitenin çalışması için zorunlu çerezler kullanılır. Gömülü YouTube videolarını sitede oynatmak için üçüncü taraf (YouTube) çerezlerine izin vermeniz gerekir. Ayrıntılar için <a href="cerez-politikasi.html" data-en="Cookie Policy">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
+  <div class="cookie-bar-btns">
+    <button class="cookie-bar-btn ghost" id="cookieReject" type="button" data-en="Reject">Reddet</button>
+    <button class="cookie-bar-btn" id="cookieAccept" type="button" data-en="Accept">Kabul Et</button>
+  </div>
 </div>
 <script>
 (function(){
-  try { if (localStorage.getItem('ibav_cookieNotice') === '1') return; } catch(e){}
+  var stored = null;
+  try { stored = localStorage.getItem('ibav_cookieConsent'); } catch(e){}
+  window.ibavConsent = stored;
   var bar = document.getElementById('cookieBar');
   if (!bar) return;
-  bar.hidden = false;
-  var btn = document.getElementById('cookieAccept');
-  btn && btn.addEventListener('click', function(){
+  function set(v){
+    window.ibavConsent = v;
+    try { localStorage.setItem('ibav_cookieConsent', v); } catch(e){}
     bar.hidden = true;
-    try { localStorage.setItem('ibav_cookieNotice','1'); } catch(e){}
-  });
+    try { document.dispatchEvent(new CustomEvent('ibav:consent', { detail: v })); } catch(e){}
+  }
+  bar.hidden = (stored === 'accepted' || stored === 'rejected');
+  var a = document.getElementById('cookieAccept');
+  var r = document.getElementById('cookieReject');
+  a && a.addEventListener('click', function(){ set('accepted'); });
+  r && r.addEventListener('click', function(){ set('rejected'); });
 })();
 </script>
 </body>

@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="İBAVALRESA kariyer fırsatları: staj, proje mühendisliği ve iş imkânları. Birlikte gelişen, sorumluluk alan ve değer katan bir takımın parçası olun.">
 <meta name="twitter:image" content="https://www.ibavalresa.com.tr/img/kampus-havadan.jpg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBA VALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
+{"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBAVALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
 </script>
 
 <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>" type="image/svg+xml">
@@ -1580,7 +1580,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 /* About sections */
 .about-section { padding: 60px 0; border-top: 1px solid var(--border); }
 .about-section:first-of-type { border-top: none; }
-.about-section .section-inner { max-width: 1080px; }
+.about-section .section-inner { max-width: 1100px; }
 .about-lead {
   font-size: clamp(20px, 2vw, 26px);
   font-weight: 400; line-height: 1.5;
@@ -1617,6 +1617,26 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   align-items: start;
 }
 .about-grid-2 .about-p { max-width: none; }
+/* Bölüm etiketleri — hakkımızda "Ortaklık Yapısı" gibi: mavi + sol çizgi */
+.about-grid-2 .section-tag {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 16px; font-weight: 600; text-transform: none; letter-spacing: normal;
+  color: var(--accent);
+}
+.about-grid-2 .section-tag::before {
+  content: ""; width: 24px; height: 1px; background: var(--accent); opacity: .55;
+}
+/* Eyebrow'lar (hero intro + Değerlerimiz) — sürdürülebilirlik "Uygulamalar" gibi: mavi + sol çizgi (üstünde büyük h2) */
+#etik .section-tag,
+#hr-intro .section-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--accent);
+}
+#etik .section-tag::before,
+#hr-intro .section-tag::before {
+  content: ""; width: 22px; height: 1px; background: var(--accent); opacity: .5;
+}
 
 /* Stat list (bullet list with strong values) */
 .about-bullets {
@@ -2045,7 +2065,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 </section>
 
 <!-- ── INTRO + JUMP NAV ── -->
-<section class="about-section">
+<section class="about-section" id="hr-intro">
   <div class="section-inner">
     <div class="section-tag reveal" style="margin-bottom: 16px;">İBAVALRESA Kariyer</div>
     <h2 class="about-h2 reveal">Birlikte büyüyen bir takım</h2>
@@ -2065,9 +2085,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">İBAVALRESA — Staj Programı</div>
-        <h2 class="about-h2">Öğrenciler</h2>
-        <p class="about-p" style="margin-top:8px;"><em>Çalışarak Öğren.</em></p>
+        <div class="section-tag" style="margin-bottom: 16px;">Öğrenciler Staj Programı</div>
       </div>
       <div>
         <p class="about-p">İş birliği içinde olduğumuz okullarda öğrenim gören <strong>lise ve ön lisans öğrencilerine</strong>, uzun dönemli ve uygulama ağırlıklı staj imkânları sunarak iş hayatını yakından tanıyabilecekleri bir gelişim süreci sağlıyoruz.</p>
@@ -2083,8 +2101,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">İBAVALRESA</div>
-        <h2 class="about-h2">Proje Mühendislerimiz</h2>
+        <div class="section-tag" style="margin-bottom: 16px;">Proje Mühendislerimiz</div>
       </div>
       <div>
         <p class="about-p"><strong>Son sınıf</strong> veya <strong>yüksek lisans</strong> öğrencilerine, belirli bir süre boyunca yürütülen projelerimizde görev alabilecekleri kısmi süreli çalışma imkânı sunuyoruz. Bu uygulama ile kendini geliştirmeye açık ve kariyerine güçlü bir başlangıç yapmak isteyen öğrencilere iş deneyimi fırsatı sunuyoruz.</p>
@@ -2099,8 +2116,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">İBAVALRESA</div>
-        <h2 class="about-h2">İş İmkânlarımız</h2>
+        <div class="section-tag" style="margin-bottom: 16px;">İş İmkânlarımız</div>
       </div>
       <div>
         <p class="about-p">Yeni mezunlar ve deneyimli profesyoneller için; eğitim, deneyim ve kişisel yetkinliklere uygun çeşitli kariyer fırsatları sunuyoruz. İşe alım süreçlerimizde adayların bilgi, deneyim ve yetkinliklerini doğru araçlarla değerlendiriyor; karşılıklı ihtiyaç ve beklentilere uygun, sürdürülebilir yerleştirmeler hedefliyoruz.</p>
@@ -2117,8 +2133,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">İBAVALRESA</div>
-        <h2 class="about-h2">Çalışanlarımız</h2>
+        <div class="section-tag" style="margin-bottom: 16px;">Çalışanlarımız</div>
       </div>
       <div>
         <p class="about-p">İşe alım sonrasında, çalışmaya başlayacağınız bölümün ihtiyaçlarına göre yapılandırılmış <strong>oryantasyon programlarımız</strong> ile işe hızlı ve kolay uyum sağlamanız desteklenir. Bilgiyi paylaşmaya açık çalışma ortamımız ve dijitalleşmeye verdiğimiz önem sayesinde, yeni görevinize adapte olurken ihtiyaç duyduğunuz bilgiye, desteğe ve yönlendirmeye daha kolay ulaşabilirsiniz.</p>
@@ -2148,7 +2163,6 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="hr-cta-card reveal">
       <div class="hr-cta-text">
-        <div class="section-tag" style="margin-bottom: 14px;">İBAVALRESA Takımı</div>
         <h2 class="about-h2" style="margin-bottom:18px;">Bize Katılmak İster Misiniz?</h2>
         <p class="about-p">İBAVALRESA Takımı'na katılmak isterseniz aşağıdaki butona tıklayarak güncel iş ilânlarımızı inceleyebilirsiniz.</p>
         <p class="about-p" style="font-size:14px;color:var(--text3);font-style:italic;">KVKK kanunu gereğince, iş ve staj başvurularınızı sadece kariyer.net ilânlarımız üzerinden yapmanızı rica ederiz. Sitemizdeki iletişim formları ve mail üzerinden yapılan başvurular silinecek ve değerlendirmeye alınmayacaktır.</p>
@@ -2499,26 +2513,40 @@ window.addEventListener('scroll', () => {
   font-size: 13.5px; font-weight: 600; cursor: pointer; font-family: inherit;
 }
 .cookie-bar-btn:hover { opacity: .92; }
+.cookie-bar-btns { flex-shrink: 0; display: flex; gap: 8px; }
+.cookie-bar-btn.ghost { background: transparent; color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.28); }
+.cookie-bar-btn.ghost:hover { background: rgba(255,255,255,0.08); opacity: 1; }
 @media (max-width: 560px) {
   .cookie-bar { flex-direction: column; align-items: stretch; bottom: 12px; gap: 12px; }
-  .cookie-bar-btn { width: 100%; }
+  .cookie-bar-btns { width: 100%; }
+  .cookie-bar-btn { flex: 1; }
 }
 </style>
 <div class="cookie-bar" id="cookieBar" role="region" aria-label="Çerez bildirimi" hidden>
-  <p class="cookie-bar-text">Bu web sitesinde, siteyi düzgün çalıştırmak ve deneyiminizi iyileştirmek için zorunlu çerezler kullanılmaktadır. Ayrıntılar için <a href="cerez-politikasi.html">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
-  <button class="cookie-bar-btn" id="cookieAccept" type="button">Tamam</button>
+  <p class="cookie-bar-text">Bu web sitesinde sitenin çalışması için zorunlu çerezler kullanılır. Gömülü YouTube videolarını sitede oynatmak için üçüncü taraf (YouTube) çerezlerine izin vermeniz gerekir. Ayrıntılar için <a href="cerez-politikasi.html">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
+  <div class="cookie-bar-btns">
+    <button class="cookie-bar-btn ghost" id="cookieReject" type="button">Reddet</button>
+    <button class="cookie-bar-btn" id="cookieAccept" type="button">Kabul Et</button>
+  </div>
 </div>
 <script>
 (function(){
-  try { if (localStorage.getItem('ibav_cookieNotice') === '1') return; } catch(e){}
+  var stored = null;
+  try { stored = localStorage.getItem('ibav_cookieConsent'); } catch(e){}
+  window.ibavConsent = stored;
   var bar = document.getElementById('cookieBar');
   if (!bar) return;
-  bar.hidden = false;
-  var btn = document.getElementById('cookieAccept');
-  btn && btn.addEventListener('click', function(){
+  function set(v){
+    window.ibavConsent = v;
+    try { localStorage.setItem('ibav_cookieConsent', v); } catch(e){}
     bar.hidden = true;
-    try { localStorage.setItem('ibav_cookieNotice','1'); } catch(e){}
-  });
+    try { document.dispatchEvent(new CustomEvent('ibav:consent', { detail: v })); } catch(e){}
+  }
+  bar.hidden = (stored === 'accepted' || stored === 'rejected');
+  var a = document.getElementById('cookieAccept');
+  var r = document.getElementById('cookieReject');
+  a && a.addEventListener('click', function(){ set('accepted'); });
+  r && r.addEventListener('click', function(){ set('rejected'); });
 })();
 </script>
 </body>

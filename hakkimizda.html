@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="İBAVALRESA hakkında: veriyle yönetilen, dijitalleşen ve sürdürülebilir üretim anlayışıyla 5 kıtada 6.000'i aşkın müşteriye hizmet veren boya ve kimya kuruluşu.">
 <meta name="twitter:image" content="https://www.ibavalresa.com.tr/img/kampus-havadan.jpg">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBA VALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
+{"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBAVALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
 </script>
 
 <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>" type="image/svg+xml">
@@ -1580,7 +1580,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 /* About sections */
 .about-section { padding: 60px 0; border-top: 1px solid var(--border); }
 .about-section:first-of-type { border-top: none; }
-.about-section .section-inner { max-width: 1080px; }
+.about-section .section-inner { max-width: 1100px; }
 .about-lead {
   font-size: clamp(20px, 2vw, 26px);
   font-weight: 400; line-height: 1.5;
@@ -1715,6 +1715,27 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   .about-founding { padding: 34px 24px 30px; }
   .about-founding::before { font-size: 86px; left: 14px; }
 }
+
+/* ── ORTAKLIK BAYRAK ROZETİ ── */
+.partner-flags {
+  display: inline-flex; align-items: center; gap: 14px;
+  margin: 2px 0 26px;
+  padding: 9px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg2, #fafafa);
+}
+.pf-item {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 14.5px; font-weight: 600; color: var(--text);
+  letter-spacing: -.2px;
+}
+.pf-flag {
+  width: 24px; height: 16px; border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+  display: block; flex-shrink: 0;
+}
+.pf-x { color: var(--text3); font-size: 15px; font-weight: 500; }
 
 /* ── ABOUT TABS ── */
 .about-tab-panel .section-tag {
@@ -2074,9 +2095,28 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="section-tag reveal" style="margin-bottom:16px;">Ortaklık Yapısı</div>
     <h2 class="about-h2 reveal">Türk–İspanyol ortaklığından doğan bir güç.</h2>
+    <div class="partner-flags reveal">
+      <span class="pf-item">
+        <svg class="pf-flag" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="30" height="20" fill="#E30A17"/>
+          <circle cx="11" cy="10" r="5" fill="#fff"/>
+          <circle cx="12.6" cy="10" r="4" fill="#E30A17"/>
+          <path fill="#fff" d="M18 7.2 18.68 9.07 20.66 9.13 19.09 10.36 19.65 12.27 18 11.15 16.35 12.27 16.91 10.36 15.34 9.13 17.32 9.07Z"/>
+        </svg>
+        Türkiye
+      </span>
+      <span class="pf-x">+</span>
+      <span class="pf-item">
+        <svg class="pf-flag" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="30" height="20" fill="#AA151B"/>
+          <rect y="5" width="30" height="10" fill="#F1BF00"/>
+        </svg>
+        İspanya
+      </span>
+    </div>
     <p class="about-p reveal">Boya ve vernik üretim faaliyetlerine 1977 yılında Ankara'da başlayan <strong>İba Kimya Sanayi ve Ticaret A.Ş.</strong>, boya üretimine ilave olarak 1995 yılında toz boya üretim tesislerini kurarak Türkiye toz boya sektöründe lider üretici konumuna ulaşmıştır.</p>
     <p class="about-p reveal"><strong>Valresa SA</strong>, mobilya boyaları ve vernikleri üretimine 1965 yılında Valencia-İspanya'da başlamış olup ikinci tesisleri 2004 yılında Meksika'da faaliyete geçmiştir. Valresa markalı boyalar 5 kıtada 6.000 müşteriye ulaşarak global anlamda kabul gören markalar arasında yer almaktadır.</p>
-    <p class="about-p reveal">Farklı ülkelerde kendi sektörlerinde lider konumunda olan İba Kimya ve Valresa SA, üretim alanındaki bilgi ve deneyimlerini ortak potada birleştirerek <strong>2005 yılında Ankara'da İba Valresa Boya ve Kimya A.Ş.</strong>'yi kurmuş; sektördeki konumlarını daha da güçlendirmiştir. Şirket, ISO 9001:2015 Kalite Yönetim Sistemi çerçevesinde faaliyet göstermektedir.</p>
+    <p class="about-p reveal">Farklı ülkelerde kendi sektörlerinde lider konumunda olan İba Kimya ve Valresa SA, üretim alanındaki bilgi ve deneyimlerini ortak potada birleştirerek <strong>2005 yılında Ankara'da İBAVALRESA Boya ve Kimya A.Ş.</strong>'yi kurmuş; sektördeki konumlarını daha da güçlendirmiştir. Şirket, ISO 9001:2015 Kalite Yönetim Sistemi çerçevesinde faaliyet göstermektedir.</p>
     <p class="about-p reveal">Bu ortaklığın gücüyle bugün ihracatımız toplam satışlarımızın <strong>%50'lerine</strong> ulaşmış; Valresa markasıyla <strong>5 kıtada 6.000'den fazla müşteriye</strong> ulaşan global ağın Türkiye ayağını temsil eder duruma gelmiştir.</p>
   </div>
 </section>
@@ -2113,7 +2153,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
     </ul>
     <figure class="about-figure reveal">
       <img src="img/kampus.jpg" alt="İbavalresa Kampüs — Sincan OSB">
-      <figcaption class="about-figure-caption">İBA VALRESA fabrika — Ankara Sincan OSB, 37.000 m²</figcaption>
+      <figcaption class="about-figure-caption">İBAVALRESA fabrika — Ankara Sincan OSB, 37.000 m²</figcaption>
     </figure>
     <a href="uretim-ve-teknoloji.html" class="reveal" style="color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:6px;margin-top:28px;text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:3px;">
       Üretim ve teknoloji altyapımız hakkında daha fazla bilgi
@@ -2562,26 +2602,40 @@ window.addEventListener('scroll', () => {
   font-size: 13.5px; font-weight: 600; cursor: pointer; font-family: inherit;
 }
 .cookie-bar-btn:hover { opacity: .92; }
+.cookie-bar-btns { flex-shrink: 0; display: flex; gap: 8px; }
+.cookie-bar-btn.ghost { background: transparent; color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.28); }
+.cookie-bar-btn.ghost:hover { background: rgba(255,255,255,0.08); opacity: 1; }
 @media (max-width: 560px) {
   .cookie-bar { flex-direction: column; align-items: stretch; bottom: 12px; gap: 12px; }
-  .cookie-bar-btn { width: 100%; }
+  .cookie-bar-btns { width: 100%; }
+  .cookie-bar-btn { flex: 1; }
 }
 </style>
 <div class="cookie-bar" id="cookieBar" role="region" aria-label="Çerez bildirimi" hidden>
-  <p class="cookie-bar-text">Bu web sitesinde, siteyi düzgün çalıştırmak ve deneyiminizi iyileştirmek için zorunlu çerezler kullanılmaktadır. Ayrıntılar için <a href="cerez-politikasi.html">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
-  <button class="cookie-bar-btn" id="cookieAccept" type="button">Tamam</button>
+  <p class="cookie-bar-text">Bu web sitesinde sitenin çalışması için zorunlu çerezler kullanılır. Gömülü YouTube videolarını sitede oynatmak için üçüncü taraf (YouTube) çerezlerine izin vermeniz gerekir. Ayrıntılar için <a href="cerez-politikasi.html">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
+  <div class="cookie-bar-btns">
+    <button class="cookie-bar-btn ghost" id="cookieReject" type="button">Reddet</button>
+    <button class="cookie-bar-btn" id="cookieAccept" type="button">Kabul Et</button>
+  </div>
 </div>
 <script>
 (function(){
-  try { if (localStorage.getItem('ibav_cookieNotice') === '1') return; } catch(e){}
+  var stored = null;
+  try { stored = localStorage.getItem('ibav_cookieConsent'); } catch(e){}
+  window.ibavConsent = stored;
   var bar = document.getElementById('cookieBar');
   if (!bar) return;
-  bar.hidden = false;
-  var btn = document.getElementById('cookieAccept');
-  btn && btn.addEventListener('click', function(){
+  function set(v){
+    window.ibavConsent = v;
+    try { localStorage.setItem('ibav_cookieConsent', v); } catch(e){}
     bar.hidden = true;
-    try { localStorage.setItem('ibav_cookieNotice','1'); } catch(e){}
-  });
+    try { document.dispatchEvent(new CustomEvent('ibav:consent', { detail: v })); } catch(e){}
+  }
+  bar.hidden = (stored === 'accepted' || stored === 'rejected');
+  var a = document.getElementById('cookieAccept');
+  var r = document.getElementById('cookieReject');
+  a && a.addEventListener('click', function(){ set('accepted'); });
+  r && r.addEventListener('click', function(){ set('rejected'); });
 })();
 </script>
 </body>
