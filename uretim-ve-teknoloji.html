@@ -21,8 +21,9 @@
 {"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBAVALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
 </script>
 
-<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>" type="image/svg+xml">
-<link rel="shortcut icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192x192.png">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/json" id="tweak-defaults">
@@ -596,6 +597,15 @@ section { position: relative; z-index: 1; }
   padding: 56px 0;
   border-top: 1px solid var(--border);
 }
+.next-page { display: flex; justify-content: flex-end; margin-top: -14px; margin-bottom: 42px; }
+.next-page a {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 14px; color: var(--text3); text-decoration: none;
+  transition: color .15s ease;
+}
+.next-page .np-sep { color: var(--text3); opacity: .55; }
+.next-page .np-name { color: var(--text2); font-weight: 500; }
+.next-page a:hover, .next-page a:hover .np-name, .next-page a:hover .np-sep { color: var(--accent); opacity: 1; }
 .brands-label {
   text-align: center;
   font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
@@ -1585,18 +1595,23 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 }
 .contact-hero-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
-  font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  font-size: clamp(12px, 1.0vw, 14px); font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 20px;
 }
 .contact-hero-eyebrow::before {
   content: ""; width: 28px; height: 1px; background: var(--accent); opacity: .5;
 }
 .contact-hero-title {
-  font-size: clamp(44px, 6.5vw, 88px);
-  font-weight: 800; letter-spacing: -3px; line-height: 1;
-  color: var(--text); margin-bottom: 0;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800; letter-spacing: -1.5px; line-height: 1.05;
+  color: var(--text); margin-bottom: 22px;
+  max-width: 672px;
 }
 .contact-hero-title em { font-style: normal; color: var(--accent); }
+.contact-hero-sub {
+  font-size: clamp(14px, 1.3vw, 18px); color: var(--text2);
+  line-height: 1.6; max-width: 672px; text-wrap: pretty;
+}
 
 /* About sections */
 .about-section { padding: 60px 0; border-top: 1px solid var(--border); }
@@ -1613,13 +1628,14 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 .about-lead {
   font-size: clamp(20px, 2vw, 26px);
   font-weight: 400; line-height: 1.5;
-  color: var(--text);
+  color: var(--text2);
   max-width: 880px;
   letter-spacing: -.3px;
   text-wrap: pretty;
 }
+.about-lead strong { color: var(--text); font-weight: 700; }
 .about-h2 {
-  font-size: clamp(28px, 3.4vw, 44px);
+  font-size: clamp(24px, 3vw, 36px);
   font-weight: 700; letter-spacing: -1.5px;
   line-height: 1.1; color: var(--text);
   margin-bottom: 28px; max-width: 820px;
@@ -1717,7 +1733,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 .about-founding p {
   position: relative;
   margin: 0;
-  font-size: clamp(18px, 1.85vw, 23px);
+  font-size: 18px;
   font-weight: 500; line-height: 1.55;
   color: var(--text); letter-spacing: -.5px;
   text-wrap: pretty;
@@ -1845,39 +1861,39 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <ul class="nav-links">
 
     <li class="nav-item has-dropdown">
-      <button class="nav-link-btn">Kurumsal <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <button class="nav-link-btn"><span data-en="Corporate">Kurumsal</span> <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="nav-dropdown">
         <div class="nav-dropdown-inner nav-dropdown-simple">
-          <a href="hakkimizda.html" class="nav-drop-simple">Hakkımızda</a>
-          <a href="uretim-ve-teknoloji.html" class="nav-drop-simple">Üretim ve Teknoloji</a>
-          <a href="arge.html" class="nav-drop-simple">Araştırma Geliştirme</a>
-          <a href="insan-kaynaklari.html" class="nav-drop-simple">İnsan Kaynakları</a>
-          <a href="surdurulebilirlik.html" class="nav-drop-simple">Sürdürülebilirlik</a>
-          <a href="kalite-sertifikalar.html" class="nav-drop-simple">Kalite & Sertifikalar</a>
+          <a href="hakkimizda.html" class="nav-drop-simple" data-en="About Us">Hakkımızda</a>
+          <a href="uretim-ve-teknoloji.html" class="nav-drop-simple" data-en="Production & Technology">Üretim ve Teknoloji</a>
+          <a href="arge.html" class="nav-drop-simple" data-en="Research & Development">Araştırma Geliştirme</a>
+          <a href="insan-kaynaklari.html" class="nav-drop-simple" data-en="Human Resources">İnsan Kaynakları</a>
+          <a href="surdurulebilirlik.html" class="nav-drop-simple" data-en="Sustainability">Sürdürülebilirlik</a>
+          <a href="kalite-sertifikalar.html" class="nav-drop-simple" data-en="Quality & Certificates">Kalite & Sertifikalar</a>
         </div>
       </div>
     </li>
 
-    <li class="nav-item"><a href="markalar.html" class="nav-link-a">Markalar</a></li>
+    <li class="nav-item"><a href="markalar.html" class="nav-link-a" data-en="Brands">Markalar</a></li>
 
-    <li class="nav-item"><a href="hizmetlerimiz.html" class="nav-link-a">Hizmetlerimiz</a></li>
+    <li class="nav-item"><a href="hizmetlerimiz.html" class="nav-link-a" data-en="Our Services">Hizmetlerimiz</a></li>
 
     <li class="nav-item has-dropdown">
-      <button class="nav-link-btn">İletişim <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <button class="nav-link-btn"><span data-en="Contact">İletişim</span> <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="nav-dropdown nav-mega">
         <div class="nav-mega-inner">
           <a class="nav-mega-promo" href="http://www.youtube.com/@ibavalresaboyavekimya" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
             <img src="img/iletisim-youtube.jpg" alt="İbavalresa YouTube" class="nav-mega-img" style="object-fit:cover;"/>
           </a>
           <div class="nav-mega-links">
-            <a href="iletisim.html" class="nav-drop-item">
-              <div><div class="nav-drop-title">Bize Ulaşın</div><div class="nav-drop-sub">İletişim bilgilerimiz</div></div>
+            <a class="nav-drop-item" style="opacity:.45;cursor:default;pointer-events:none;" title="Çok yakında">
+              <div><div class="nav-drop-title" data-en="Technical Complaint / Suggestion">Teknik Şikayet / Öneri</div><div class="nav-drop-sub" data-en="Feedback form">Geri bildirim formu</div></div>
             </a>
             <a href="bolge-mudurlukleri.html" class="nav-drop-item">
-              <div><div class="nav-drop-title">Bölge Müdürlükleri</div><div class="nav-drop-sub">Tüm satış noktaları</div></div>
+              <div><div class="nav-drop-title" data-en="Regional Offices">Bölge Müdürlükleri</div><div class="nav-drop-sub" data-en="All sales points">Tüm satış noktaları</div></div>
             </a>
-            <a class="nav-drop-item" style="opacity:.45;cursor:default;pointer-events:none;" title="Çok yakında">
-              <div><div class="nav-drop-title">Teknik Şikayet / Öneri</div><div class="nav-drop-sub">Geri bildirim formu</div></div>
+            <a href="iletisim.html" class="nav-drop-item">
+              <div><div class="nav-drop-title" data-en="Get in Touch">Bize Ulaşın</div><div class="nav-drop-sub" data-en="Our contact details">İletişim bilgilerimiz</div></div>
             </a>
           </div>
         </div>
@@ -1888,7 +1904,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <!-- Online İşlemler mega dropdown -->
   <div class="nav-item has-dropdown online-drop" style="position:relative;margin-left:8px;">
     <button class="nav-cta" id="nav-cta" style="display:flex;align-items:center;gap:6px;">
-      Online İşlemler
+      <span data-en="Online Services">Online İşlemler</span>
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="nav-dropdown nav-mega" style="right:0;left:auto;">
@@ -1901,11 +1917,11 @@ footer img[alt="ibavalresa"] { filter: none !important; }
         <div class="nav-mega-links">
           <a href="https://weborder.ibavalresa.com.tr" class="nav-drop-item" target="_blank">
             <div class="nav-drop-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-            <div><div class="nav-drop-title">Online Sipariş</div><div class="nav-drop-sub">weborder.ibavalresa.com.tr</div></div>
+            <div><div class="nav-drop-title" data-en="Online Order">Online Sipariş</div><div class="nav-drop-sub">weborder.ibavalresa.com.tr</div></div>
           </a>
           <a href="https://tahsilat.ibavalresa.com.tr/" class="nav-drop-item" target="_blank">
             <div class="nav-drop-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-            <div><div class="nav-drop-title">Tahsilat</div><div class="nav-drop-sub">tahsilat.ibavalresa.com.tr</div></div>
+            <div><div class="nav-drop-title" data-en="Payment Collection">Tahsilat</div><div class="nav-drop-sub">tahsilat.ibavalresa.com.tr</div></div>
           </a>
         </div>
       </div>
@@ -1913,7 +1929,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   </div>
 
   <!-- Dil seçici — EN SAĞDA -->
-  <div class="lang-switcher" id="lang-switcher" style="margin-left:8px;">
+  <div class="lang-switcher" id="lang-switcher" style="margin-left:-22px;">
     <button class="lang-btn" id="lang-toggle" aria-label="Dil seç" onclick="toggleLang()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
       <span id="lang-current">TR</span>
@@ -1952,41 +1968,41 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   </a>
   <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Menüyü kapat" type="button"></button>
   <div class="mobile-menu-group">
-    <button class="mobile-menu-head" data-toggle>Kurumsal
+    <button class="mobile-menu-head" data-toggle><span data-en="Corporate">Kurumsal</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="mobile-menu-sub">
-      <a href="hakkimizda.html">Hakkımızda</a>
-      <a href="uretim-ve-teknoloji.html">Üretim ve Teknoloji</a>
-      <a href="arge.html">Araştırma Geliştirme</a>
-      <a href="insan-kaynaklari.html">İnsan Kaynakları</a>
-      <a href="surdurulebilirlik.html">Sürdürülebilirlik</a>
-      <a href="kalite-sertifikalar.html">Kalite & Sertifikalar</a>
+      <a href="hakkimizda.html" data-en="About Us">Hakkımızda</a>
+      <a href="uretim-ve-teknoloji.html" data-en="Production & Technology">Üretim ve Teknoloji</a>
+      <a href="arge.html" data-en="Research & Development">Araştırma Geliştirme</a>
+      <a href="insan-kaynaklari.html" data-en="Human Resources">İnsan Kaynakları</a>
+      <a href="surdurulebilirlik.html" data-en="Sustainability">Sürdürülebilirlik</a>
+      <a href="kalite-sertifikalar.html" data-en="Quality & Certificates">Kalite & Sertifikalar</a>
     </div>
   </div>
   <div class="mobile-menu-group">
-    <a class="mobile-menu-link" href="markalar.html">Markalar</a>
+    <a class="mobile-menu-link" href="markalar.html" data-en="Brands">Markalar</a>
   </div>
   <div class="mobile-menu-group">
-    <a class="mobile-menu-link" href="hizmetlerimiz.html">Hizmetlerimiz</a>
+    <a class="mobile-menu-link" href="hizmetlerimiz.html" data-en="Our Services">Hizmetlerimiz</a>
   </div>
   <div class="mobile-menu-group">
-    <button class="mobile-menu-head" data-toggle>İletişim
+    <button class="mobile-menu-head" data-toggle><span data-en="Contact">İletişim</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="mobile-menu-sub">
-      <a href="iletisim.html">Bize Ulaşın</a>
-      <a href="bolge-mudurlukleri.html">Bölge Müdürlükleri</a>
-      <a style="opacity:.45;cursor:default;pointer-events:none;" title="Çok yakında">Teknik Şikayet / Öneri</a>
+      <a style="opacity:.45;cursor:default;pointer-events:none;" title="Çok yakında" data-en="Technical Complaint / Suggestion">Teknik Şikayet / Öneri</a>
+      <a href="bolge-mudurlukleri.html" data-en="Regional Offices">Bölge Müdürlükleri</a>
+      <a href="iletisim.html" data-en="Get in Touch">Bize Ulaşın</a>
     </div>
   </div>
   <div class="mobile-menu-group">
-    <button class="mobile-menu-head" data-toggle>Online İşlemler
+    <button class="mobile-menu-head" data-toggle><span data-en="Online Services">Online İşlemler</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="mobile-menu-sub">
-      <a href="https://weborder.ibavalresa.com.tr" target="_blank">Online Sipariş</a>
-      <a href="https://tahsilat.ibavalresa.com.tr/" target="_blank">Tahsilat</a>
+      <a href="https://weborder.ibavalresa.com.tr" target="_blank" data-en="Online Order">Online Sipariş</a>
+      <a href="https://tahsilat.ibavalresa.com.tr/" target="_blank" data-en="Payment Collection">Tahsilat</a>
     </div>
   </div>
   <div class="mobile-menu-langs">
@@ -2005,8 +2021,9 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 <!-- ── PAGE INTRO (başlık) ── -->
 <section class="contact-hero" id="intro">
   <div class="section-inner">
-    <div class="contact-hero-eyebrow reveal">İBAVALRESA</div>
-    <h1 class="contact-hero-title reveal">Üretim ve <em>Teknoloji</em></h1>
+    <div class="contact-hero-eyebrow reveal" data-en="Production &amp; Technology">Üretim ve Teknoloji</div>
+    <h1 class="contact-hero-title reveal" data-en="Every stage &lt;em&gt;under control.&lt;/em&gt;">Her aşaması <em>kontrol altında.</em></h1>
+    <p class="contact-hero-sub reveal" data-en="At our modern facility, every step from raw material to dispatch is tracked digitally; the same quality is produced repeatably in every batch.">Modern tesisimizde hammaddeden sevkiyata kadar her adım dijital olarak izlenir; aynı kalite, her partide tekrarlanabilir şekilde üretilir.</p>
   </div>
 </section>
 
@@ -2014,33 +2031,30 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 <section class="about-section">
   <div class="section-inner">
     <div class="about-founding reveal">
-      <p>Veriyle karar alan, dijitalle yöneten, otomasyonla güçlenen ve <strong>sürdürülebilirliği merkezine koyan</strong> bir üretim anlayışıyla çalışıyoruz.</p>
+      <p data-en="We work with a production approach that decides with data, manages digitally, is powered by automation and &lt;strong&gt;puts sustainability at its core&lt;/strong&gt;.">Veriyle karar alan, dijitalle yöneten, otomasyonla güçlenen ve <strong>sürdürülebilirliği merkezine koyan</strong> bir üretim anlayışıyla çalışıyoruz.</p>
     </div>
   </div>
 </section>
 
-<!-- ── INTRO ── -->
+<!-- ── METRİKLER ── -->
 <section class="about-section">
   <div class="section-inner">
-    <div class="section-tag reveal" style="margin-bottom: 16px;">Modern Üretim Tesisi</div>
-    <h2 class="about-h2 reveal">37.000 m² üzerinde, kontrollü üretim.</h2>
-    <p class="about-lead reveal">Modern yeni tesisimiz, Ankara Sincan 1. Organize Sanayi Bölgesi'nde <strong>37.000 m²</strong> alan üzerinde, <strong>30.000 ton/yıl</strong> kapasite ile 2007 yılında faaliyete geçmiştir.</p>
-    <div class="about-metrics reveal">
+    <div class="about-metrics reveal" style="margin-top: 0;">
       <div class="about-metric">
         <div class="about-metric-val">37.000<span> m²</span></div>
-        <div class="about-metric-label">Kampüs içinde İBAVALRESA tesis alanı</div>
+        <div class="about-metric-label" data-en="İBAVALRESA facility area within the campus">Kampüs içinde İBAVALRESA tesis alanı</div>
       </div>
       <div class="about-metric">
         <div class="about-metric-val">30.000<span> t</span></div>
-        <div class="about-metric-label">Yıllık üretim kapasitesi</div>
+        <div class="about-metric-label" data-en="Annual production capacity">Yıllık üretim kapasitesi</div>
       </div>
       <div class="about-metric">
         <div class="about-metric-val">2007</div>
-        <div class="about-metric-label">Tesisin faaliyete geçtiği yıl</div>
+        <div class="about-metric-label" data-en="Year the facility opened">Tesisin faaliyete geçtiği yıl</div>
       </div>
       <div class="about-metric">
         <div class="about-metric-val">SAP</div>
-        <div class="about-metric-label">Uçtan uca entegre üretim kontrolü</div>
+        <div class="about-metric-label" data-en="End-to-end integrated production control">Uçtan uca entegre üretim kontrolü</div>
       </div>
     </div>
   </div>
@@ -2051,17 +2065,17 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">01 — Üretim</div>
-        <h2 class="about-h2">İleri teknoloji otomasyon sistemi.</h2>
+        <div class="section-tag" style="margin-bottom: 16px;" data-en="01 — Production">01 — Üretim</div>
+        <h2 class="about-h2" data-en="Advanced automation system.">İleri teknoloji otomasyon sistemi.</h2>
       </div>
       <div>
-        <p class="about-p">Yeni tesisimizle beraber kurulumu yapılan <strong>ileri teknoloji otomasyon sistemi</strong> sayesinde, ahşap boya ve vernik ile sanayi boyaları sektöründe hizmet verilmektedir.</p>
+        <p class="about-p" data-en="Thanks to the &lt;strong&gt;advanced automation system&lt;/strong&gt; installed together with our new facility, we serve the wood paint &amp; varnish and industrial coatings sectors.">Yeni tesisimizle beraber kurulumu yapılan <strong>ileri teknoloji otomasyon sistemi</strong> sayesinde, ahşap boya ve vernik ile sanayi boyaları sektöründe hizmet verilmektedir.</p>
         <ul class="about-bullets" style="grid-template-columns: 1fr;">
           <li><span><strong>Ahşap boya ve vernik</strong> üretim hatları</span></li>
           <li><span><strong>Sanayi boyaları</strong> için özel proses çözümleri</span></li>
           <li><span>Otomasyon destekli, <strong>tekrarlanabilir reçete</strong> üretimi</span></li>
         </ul>
-        <p class="about-p" style="margin-top:16px;">Tesisimiz, kurulum aşamasından itibaren <strong>İspanyol ortaklığıyla</strong> projelendirilmiş; iş güvenliği ve proses emniyeti tasarımın merkezine alınmıştır. Reaktif değil, <strong>proaktif güvenlik anlayışı</strong> ile çalışıyoruz.</p>
+        <p class="about-p" style="margin-top:16px;" data-en="Our facility was engineered from the outset &lt;strong&gt;with our Spanish partnership&lt;/strong&gt;; occupational safety and process safety were placed at the center of the design. We work with a &lt;strong&gt;proactive safety approach&lt;/strong&gt;, not a reactive one.">Tesisimiz, kurulum aşamasından itibaren <strong>İspanyol ortaklığıyla</strong> projelendirilmiş; iş güvenliği ve proses emniyeti tasarımın merkezine alınmıştır. Reaktif değil, <strong>proaktif güvenlik anlayışı</strong> ile çalışıyoruz.</p>
       </div>
     </div>
   </div>
@@ -2072,31 +2086,31 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">02 — Teknoloji</div>
-        <h2 class="about-h2">SAP'a entegre, baştan sona denetlenen süreç.</h2>
+        <div class="section-tag" style="margin-bottom: 16px;" data-en="02 — Technology">02 — Teknoloji</div>
+        <h2 class="about-h2" data-en="A SAP-integrated, end-to-end audited process.">SAP'a entegre, baştan sona denetlenen süreç.</h2>
       </div>
       <div>
-        <p class="about-p">Teknolojik gelişmeler yakından takip edilerek fabrikamıza yapılan yatırımlarla her geçen gün daha da gelişen üretim ağımız sayesinde, ürünlerimizin <strong>aynı standartta ve kalitede</strong> üretilmesi sağlanmaktadır.</p>
-        <p class="about-p"><strong>SAP sistemine adapte edilen</strong> üretim sistemimiz sayesinde, ürünlerin baştan sona kontrollü bir şekilde denetimleri yapılabilmektedir.</p>
-        <p class="about-p">Otomasyon, SCADA ve SAP entegrasyonu sayesinde üretimden kaliteye, lojistikten güvenliğe kadar tüm kritik süreçler <strong>anlık olarak izlenebilir</strong>; kararlarımızı aylık raporlar yerine anlık verilerle alıyoruz.</p>
+        <p class="about-p" data-en="Thanks to our production network that keeps improving through investments in our factory and close monitoring of technological developments, our products are manufactured to &lt;strong&gt;the same standard and quality&lt;/strong&gt;.">Teknolojik gelişmeler yakından takip edilerek fabrikamıza yapılan yatırımlarla her geçen gün daha da gelişen üretim ağımız sayesinde, ürünlerimizin <strong>aynı standartta ve kalitede</strong> üretilmesi sağlanmaktadır.</p>
+        <p class="about-p" data-en="Thanks to our production system &lt;strong&gt;adapted to SAP&lt;/strong&gt;, products can be inspected in a controlled way from start to finish."><strong>SAP sistemine adapte edilen</strong> üretim sistemimiz sayesinde, ürünlerin baştan sona kontrollü bir şekilde denetimleri yapılabilmektedir.</p>
+        <p class="about-p" data-en="Thanks to automation, SCADA and SAP integration, all critical processes — from production to quality and logistics to safety — can be &lt;strong&gt;monitored in real time&lt;/strong&gt;; we make decisions with live data instead of monthly reports.">Otomasyon, SCADA ve SAP entegrasyonu sayesinde üretimden kaliteye, lojistikten güvenliğe kadar tüm kritik süreçler <strong>anlık olarak izlenebilir</strong>; kararlarımızı aylık raporlar yerine anlık verilerle alıyoruz.</p>
       </div>
     </div>
     <div class="about-metrics reveal" style="margin-top:40px;">
       <div class="about-metric">
         <div class="about-metric-val">190<span>+</span></div>
-        <div class="about-metric-label">aktif dijital iş süreci (yakında 200+)</div>
+        <div class="about-metric-label" data-en="active digital business processes (soon 200+)">aktif dijital iş süreci (yakında 200+)</div>
       </div>
       <div class="about-metric">
         <div class="about-metric-val">%80</div>
-        <div class="about-metric-label">kağıt kullanımında azalma</div>
+        <div class="about-metric-label" data-en="reduction in paper use">kağıt kullanımında azalma</div>
       </div>
       <div class="about-metric">
         <div class="about-metric-val">~100</div>
-        <div class="about-metric-label">BI dashboard ile anlık yönetim</div>
+        <div class="about-metric-label" data-en="real-time management with BI dashboards">BI dashboard ile anlık yönetim</div>
       </div>
       <div class="about-metric">
         <div class="about-metric-val">AI</div>
-        <div class="about-metric-label">karar destek mekanizması olarak veri ve yapay zeka</div>
+        <div class="about-metric-label" data-en="data &amp; AI as a decision-support mechanism">karar destek mekanizması olarak veri ve yapay zeka</div>
       </div>
     </div>
   </div>
@@ -2112,16 +2126,16 @@ footer img[alt="ibavalresa"] { filter: none !important; }
         style="display:block;width:100%;height:auto;object-fit:cover;"
         aria-label="Üretim teknolojimizi görüntüleyin"
       ></video>
-      <figcaption class="about-figure-caption">Üretim hattımız — hammaddeden dolum ve sevkiyata kadar kontrollü süreç.</figcaption>
+      <figcaption class="about-figure-caption" data-en="Our production line — a controlled process from raw material to filling and dispatch.">Üretim hattımız — hammaddeden dolum ve sevkiyata kadar kontrollü süreç.</figcaption>
     </figure>
   </div>
 </section>
 
 <!-- ── PULL QUOTE ── -->
-<section class="about-section" style="padding-top:0;border-top:none;">
+<section class="about-section" style="padding-top:0;padding-bottom:32px;margin-top:-12px;border-top:none;">
   <div class="section-inner">
     <div class="about-pull reveal">
-      <p><em>Bugünü yönetirken,</em> geleceği tasarlıyoruz.</p>
+      <p data-en="&lt;em&gt;Managing today,&lt;/em&gt; we design tomorrow."><em>Bugünü yönetirken,</em> geleceği tasarlıyoruz.</p>
     </div>
   </div>
 </section>
@@ -2129,7 +2143,10 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 <!-- ── BRANDS ── -->
 <section class="brands" id="markalar" style="min-height: 300px">
   <div class="section-inner">
-    <div class="brands-label reveal">Logolarımız</div>
+    <div class="next-page reveal">
+      <a href="arge.html"><span data-en="Next page">Sonraki sayfa</span> <span class="np-sep">&rsaquo;</span> <span class="np-name" data-en="Research &amp; Development">Araştırma Geliştirme</span></a>
+    </div>
+    <div class="brands-label reveal" data-en="Our Brands">Logolarımız</div>
     <div class="brands-grid reveal">
       <a class="brand-item" href="https://www.valresa.com.tr/" target="_blank">
         <img src="assets/logos/valresa.png" alt="Valresa" class="brand-logo-img">
@@ -2160,42 +2177,42 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <p class="footer-tagline" style="margin-top:4px;font-size:12px;color:var(--text3);">+90 312 267 56 22</p>
     </div>
     <div class="footer-col">
-      <h4>Kurumsal</h4>
+      <h4 data-en="Corporate">Kurumsal</h4>
       <ul>
-        <li><a href="hakkimizda.html">Hakkımızda</a></li>
-        <li><a href="uretim-ve-teknoloji.html">Üretim ve Teknoloji</a></li>
-        <li><a href="arge.html">Araştırma Geliştirme</a></li>
-        <li><a href="insan-kaynaklari.html">İnsan Kaynakları</a></li>
-        <li><a href="surdurulebilirlik.html">Sürdürülebilirlik</a></li>
-        <li><a href="kalite-sertifikalar.html">Kalite & Sertifikalar</a></li>
+        <li><a href="hakkimizda.html" data-en="About Us">Hakkımızda</a></li>
+        <li><a href="uretim-ve-teknoloji.html" data-en="Production & Technology">Üretim ve Teknoloji</a></li>
+        <li><a href="arge.html" data-en="Research & Development">Araştırma Geliştirme</a></li>
+        <li><a href="insan-kaynaklari.html" data-en="Human Resources">İnsan Kaynakları</a></li>
+        <li><a href="surdurulebilirlik.html" data-en="Sustainability">Sürdürülebilirlik</a></li>
+        <li><a href="kalite-sertifikalar.html" data-en="Quality & Certificates">Kalite & Sertifikalar</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Kataloglar</h4>
+      <h4 data-en="Catalogs">Kataloglar</h4>
       <ul>
         <li><a href="https://renkpaleti.ibavalresa.com.tr/?lang=tr">RAL-NCS-Nova Kartela</a></li>
-        <li><a href="https://www.valresa.com.tr/urunkatalogu/">Valresa Kataloğu</a></li>
-        <li><a href="https://www.ibavet.com.tr/urunkatalogu/">İbavet Kataloğu</a></li>
+        <li><a href="https://www.valresa.com.tr/urunkatalogu/" data-en="Valresa Catalog">Valresa Kataloğu</a></li>
+        <li><a href="https://www.ibavet.com.tr/urunkatalogu/" data-en="İbavet Catalog">İbavet Kataloğu</a></li>
       </ul>
       <div style="margin-top:40px;"></div>
       <h4>Online İşlemler</h4>
       <ul>
-        <li><a href="https://weborder.ibavalresa.com.tr" target="_blank">Sipariş</a></li>
-        <li><a href="https://tahsilat.ibavalresa.com.tr/" target="_blank">Tahsilat</a></li>
+        <li><a href="https://weborder.ibavalresa.com.tr" target="_blank" data-en="Order">Sipariş</a></li>
+        <li><a href="https://tahsilat.ibavalresa.com.tr/" target="_blank" data-en="Payment Collection">Tahsilat</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4 style="opacity:0;pointer-events:none;">—</h4>
       <ul>
-        <li><a href="iletisim.html">Bize Ulaşın</a></li>
-        <li style="margin-top:10px;"><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/17623" target="_blank" style="font-size:11px;">Bilgi Toplumu Hizmetleri</a></li>
-        <li><a href="kvkk-aydinlatma-metni.html" style="font-size:11px;">KVKK Aydınlatma Metni</a></li>
-        <li><a href="cerez-politikasi.html" style="font-size:11px;">Çerez Politikası</a></li>
+        <li><a href="iletisim.html" data-en="Get in Touch">Bize Ulaşın</a></li>
+        <li style="margin-top:10px;"><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/17623" target="_blank" style="font-size:11px;" data-en="Information Society Services">Bilgi Toplumu Hizmetleri</a></li>
+        <li><a href="kvkk-aydinlatma-metni.html" style="font-size:11px;" data-en="Personal Data Protection Notice">KVKK Aydınlatma Metni</a></li>
+        <li><a href="cerez-politikasi.html" style="font-size:11px;" data-en="Cookie Policy">Çerez Politikası</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 Tüm hakları saklıdır.</div>
+    <div class="footer-copy" data-en="© 2026 All rights reserved.">© 2026 Tüm hakları saklıdır.</div>
     <div class="footer-social">
       <a href="https://www.facebook.com/ibavalresa/" class="footer-social-btn" title="Facebook" target="_blank">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -2477,10 +2494,10 @@ window.addEventListener('scroll', () => {
 }
 </style>
 <div class="cookie-bar" id="cookieBar" role="region" aria-label="Çerez bildirimi" hidden>
-  <p class="cookie-bar-text">Bu web sitesinde sitenin çalışması için zorunlu çerezler kullanılır. Gömülü YouTube videolarını sitede oynatmak için üçüncü taraf (YouTube) çerezlerine izin vermeniz gerekir. Ayrıntılar için <a href="cerez-politikasi.html">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
+  <p class="cookie-bar-text" data-en="This website uses essential cookies to run properly. To play embedded YouTube videos on the site, you must allow third-party (YouTube) cookies. For details, see our &lt;a href=&quot;cerez-politikasi.html&quot;&gt;Cookie Policy&lt;/a&gt;.">Bu web sitesinde sitenin çalışması için zorunlu çerezler kullanılır. Gömülü YouTube videolarını sitede oynatmak için üçüncü taraf (YouTube) çerezlerine izin vermeniz gerekir. Ayrıntılar için <a href="cerez-politikasi.html" data-en="Cookie Policy">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
   <div class="cookie-bar-btns">
-    <button class="cookie-bar-btn ghost" id="cookieReject" type="button">Reddet</button>
-    <button class="cookie-bar-btn" id="cookieAccept" type="button">Kabul Et</button>
+    <button class="cookie-bar-btn ghost" id="cookieReject" type="button" data-en="Reject">Reddet</button>
+    <button class="cookie-bar-btn" id="cookieAccept" type="button" data-en="Accept">Kabul Et</button>
   </div>
 </div>
 <script>

@@ -21,8 +21,9 @@
 {"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBAVALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
 </script>
 
-<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>" type="image/svg+xml">
-<link rel="shortcut icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192x192.png">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/json" id="tweak-defaults">
@@ -596,6 +597,15 @@ section { position: relative; z-index: 1; }
   padding: 56px 0;
   border-top: 1px solid var(--border);
 }
+.next-page { display: flex; justify-content: flex-end; margin-top: -14px; margin-bottom: 42px; }
+.next-page a {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 14px; color: var(--text3); text-decoration: none;
+  transition: color .15s ease;
+}
+.next-page .np-sep { color: var(--text3); opacity: .55; }
+.next-page .np-name { color: var(--text2); font-weight: 500; }
+.next-page a:hover, .next-page a:hover .np-name, .next-page a:hover .np-sep { color: var(--accent); opacity: 1; }
 .brands-label {
   text-align: center;
   font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
@@ -1666,13 +1676,14 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 .about-lead {
   font-size: clamp(20px, 2vw, 26px);
   font-weight: 400; line-height: 1.5;
-  color: var(--text);
+  color: var(--text2);
   max-width: 880px;
   letter-spacing: -.3px;
   text-wrap: pretty;
 }
+.about-lead strong { color: var(--text); font-weight: 700; }
 .about-h2 {
-  font-size: clamp(28px, 3.4vw, 44px);
+  font-size: clamp(24px, 3vw, 36px);
   font-weight: 700; letter-spacing: -1.5px;
   line-height: 1.1; color: var(--text);
   margin-bottom: 28px; max-width: 820px;
@@ -1867,39 +1878,39 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <ul class="nav-links">
 
     <li class="nav-item has-dropdown">
-      <button class="nav-link-btn">Kurumsal <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <button class="nav-link-btn"><span data-en="Corporate">Kurumsal</span> <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="nav-dropdown">
         <div class="nav-dropdown-inner nav-dropdown-simple">
-          <a href="hakkimizda.html" class="nav-drop-simple">Hakkımızda</a>
-          <a href="uretim-ve-teknoloji.html" class="nav-drop-simple">Üretim ve Teknoloji</a>
-          <a href="arge.html" class="nav-drop-simple">Araştırma Geliştirme</a>
-          <a href="insan-kaynaklari.html" class="nav-drop-simple">İnsan Kaynakları</a>
-          <a href="surdurulebilirlik.html" class="nav-drop-simple">Sürdürülebilirlik</a>
-          <a href="kalite-sertifikalar.html" class="nav-drop-simple">Kalite & Sertifikalar</a>
+          <a href="hakkimizda.html" class="nav-drop-simple" data-en="About Us">Hakkımızda</a>
+          <a href="uretim-ve-teknoloji.html" class="nav-drop-simple" data-en="Production & Technology">Üretim ve Teknoloji</a>
+          <a href="arge.html" class="nav-drop-simple" data-en="Research & Development">Araştırma Geliştirme</a>
+          <a href="insan-kaynaklari.html" class="nav-drop-simple" data-en="Human Resources">İnsan Kaynakları</a>
+          <a href="surdurulebilirlik.html" class="nav-drop-simple" data-en="Sustainability">Sürdürülebilirlik</a>
+          <a href="kalite-sertifikalar.html" class="nav-drop-simple" data-en="Quality & Certificates">Kalite & Sertifikalar</a>
         </div>
       </div>
     </li>
 
-    <li class="nav-item"><a href="markalar.html" class="nav-link-a">Markalar</a></li>
+    <li class="nav-item"><a href="markalar.html" class="nav-link-a" data-en="Brands">Markalar</a></li>
 
-    <li class="nav-item"><a href="hizmetlerimiz.html" class="nav-link-a">Hizmetlerimiz</a></li>
+    <li class="nav-item"><a href="hizmetlerimiz.html" class="nav-link-a" data-en="Our Services">Hizmetlerimiz</a></li>
 
     <li class="nav-item has-dropdown">
-      <button class="nav-link-btn">İletişim <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <button class="nav-link-btn"><span data-en="Contact">İletişim</span> <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="nav-dropdown nav-mega">
         <div class="nav-mega-inner">
           <a class="nav-mega-promo" href="http://www.youtube.com/@ibavalresaboyavekimya" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
             <img src="img/iletisim-youtube.jpg" alt="İbavalresa YouTube" class="nav-mega-img" style="object-fit:cover;"/>
           </a>
           <div class="nav-mega-links">
-            <a href="iletisim.html" class="nav-drop-item">
-              <div><div class="nav-drop-title">Bize Ulaşın</div><div class="nav-drop-sub">İletişim bilgilerimiz</div></div>
+            <a class="nav-drop-item" style="opacity:.45;cursor:default;pointer-events:none;" title="Çok yakında">
+              <div><div class="nav-drop-title" data-en="Technical Complaint / Suggestion">Teknik Şikayet / Öneri</div><div class="nav-drop-sub" data-en="Feedback form">Geri bildirim formu</div></div>
             </a>
             <a href="bolge-mudurlukleri.html" class="nav-drop-item">
-              <div><div class="nav-drop-title">Bölge Müdürlükleri</div><div class="nav-drop-sub">Tüm satış noktaları</div></div>
+              <div><div class="nav-drop-title" data-en="Regional Offices">Bölge Müdürlükleri</div><div class="nav-drop-sub" data-en="All sales points">Tüm satış noktaları</div></div>
             </a>
-            <a class="nav-drop-item" style="opacity:.45;cursor:default;pointer-events:none;" title="Çok yakında">
-              <div><div class="nav-drop-title">Teknik Şikayet / Öneri</div><div class="nav-drop-sub">Geri bildirim formu</div></div>
+            <a href="iletisim.html" class="nav-drop-item">
+              <div><div class="nav-drop-title" data-en="Get in Touch">Bize Ulaşın</div><div class="nav-drop-sub" data-en="Our contact details">İletişim bilgilerimiz</div></div>
             </a>
           </div>
         </div>
@@ -1910,7 +1921,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <!-- Online İşlemler mega dropdown -->
   <div class="nav-item has-dropdown online-drop" style="position:relative;margin-left:8px;">
     <button class="nav-cta" id="nav-cta" style="display:flex;align-items:center;gap:6px;">
-      Online İşlemler
+      <span data-en="Online Services">Online İşlemler</span>
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="nav-dropdown nav-mega" style="right:0;left:auto;">
@@ -1923,11 +1934,11 @@ footer img[alt="ibavalresa"] { filter: none !important; }
         <div class="nav-mega-links">
           <a href="https://weborder.ibavalresa.com.tr" class="nav-drop-item" target="_blank">
             <div class="nav-drop-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-            <div><div class="nav-drop-title">Online Sipariş</div><div class="nav-drop-sub">weborder.ibavalresa.com.tr</div></div>
+            <div><div class="nav-drop-title" data-en="Online Order">Online Sipariş</div><div class="nav-drop-sub">weborder.ibavalresa.com.tr</div></div>
           </a>
           <a href="https://tahsilat.ibavalresa.com.tr/" class="nav-drop-item" target="_blank">
             <div class="nav-drop-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-            <div><div class="nav-drop-title">Tahsilat</div><div class="nav-drop-sub">tahsilat.ibavalresa.com.tr</div></div>
+            <div><div class="nav-drop-title" data-en="Payment Collection">Tahsilat</div><div class="nav-drop-sub">tahsilat.ibavalresa.com.tr</div></div>
           </a>
         </div>
       </div>
@@ -1935,7 +1946,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   </div>
 
   <!-- Dil seçici — EN SAĞDA -->
-  <div class="lang-switcher" id="lang-switcher" style="margin-left:8px;">
+  <div class="lang-switcher" id="lang-switcher" style="margin-left:-22px;">
     <button class="lang-btn" id="lang-toggle" aria-label="Dil seç" onclick="toggleLang()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
       <span id="lang-current">TR</span>
@@ -1974,41 +1985,41 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   </a>
   <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Menüyü kapat" type="button"></button>
   <div class="mobile-menu-group">
-    <button class="mobile-menu-head" data-toggle>Kurumsal
+    <button class="mobile-menu-head" data-toggle><span data-en="Corporate">Kurumsal</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="mobile-menu-sub">
-      <a href="hakkimizda.html">Hakkımızda</a>
-      <a href="uretim-ve-teknoloji.html">Üretim ve Teknoloji</a>
-      <a href="arge.html">Araştırma Geliştirme</a>
-      <a href="insan-kaynaklari.html">İnsan Kaynakları</a>
-      <a href="surdurulebilirlik.html">Sürdürülebilirlik</a>
-      <a href="kalite-sertifikalar.html">Kalite & Sertifikalar</a>
+      <a href="hakkimizda.html" data-en="About Us">Hakkımızda</a>
+      <a href="uretim-ve-teknoloji.html" data-en="Production & Technology">Üretim ve Teknoloji</a>
+      <a href="arge.html" data-en="Research & Development">Araştırma Geliştirme</a>
+      <a href="insan-kaynaklari.html" data-en="Human Resources">İnsan Kaynakları</a>
+      <a href="surdurulebilirlik.html" data-en="Sustainability">Sürdürülebilirlik</a>
+      <a href="kalite-sertifikalar.html" data-en="Quality & Certificates">Kalite & Sertifikalar</a>
     </div>
   </div>
   <div class="mobile-menu-group">
-    <a class="mobile-menu-link" href="markalar.html">Markalar</a>
+    <a class="mobile-menu-link" href="markalar.html" data-en="Brands">Markalar</a>
   </div>
   <div class="mobile-menu-group">
-    <a class="mobile-menu-link" href="hizmetlerimiz.html">Hizmetlerimiz</a>
+    <a class="mobile-menu-link" href="hizmetlerimiz.html" data-en="Our Services">Hizmetlerimiz</a>
   </div>
   <div class="mobile-menu-group">
-    <button class="mobile-menu-head" data-toggle>İletişim
+    <button class="mobile-menu-head" data-toggle><span data-en="Contact">İletişim</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="mobile-menu-sub">
-      <a href="iletisim.html">Bize Ulaşın</a>
-      <a href="bolge-mudurlukleri.html">Bölge Müdürlükleri</a>
-      <a style="opacity:.45;cursor:default;pointer-events:none;" title="Çok yakında">Teknik Şikayet / Öneri</a>
+      <a style="opacity:.45;cursor:default;pointer-events:none;" title="Çok yakında" data-en="Technical Complaint / Suggestion">Teknik Şikayet / Öneri</a>
+      <a href="bolge-mudurlukleri.html" data-en="Regional Offices">Bölge Müdürlükleri</a>
+      <a href="iletisim.html" data-en="Get in Touch">Bize Ulaşın</a>
     </div>
   </div>
   <div class="mobile-menu-group">
-    <button class="mobile-menu-head" data-toggle>Online İşlemler
+    <button class="mobile-menu-head" data-toggle><span data-en="Online Services">Online İşlemler</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="mobile-menu-sub">
-      <a href="https://weborder.ibavalresa.com.tr" target="_blank">Online Sipariş</a>
-      <a href="https://tahsilat.ibavalresa.com.tr/" target="_blank">Tahsilat</a>
+      <a href="https://weborder.ibavalresa.com.tr" target="_blank" data-en="Online Order">Online Sipariş</a>
+      <a href="https://tahsilat.ibavalresa.com.tr/" target="_blank" data-en="Payment Collection">Tahsilat</a>
     </div>
   </div>
   <div class="mobile-menu-langs">
@@ -2022,9 +2033,9 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 <!-- ── PAGE HERO (text) ── -->
 <section class="about-section" style="padding-top:140px;padding-bottom:64px;border-top:none;">
   <div class="section-inner">
-    <div class="section-tag reveal" style="margin-bottom:20px;">İbavalresa</div>
-    <h1 class="reveal" style="font-size:clamp(48px,7.5vw,92px);font-weight:800;letter-spacing:-3px;line-height:1;color:var(--text);margin-bottom:26px;">Sürdürülebilirlik</h1>
-    <p class="about-lead reveal" style="max-width:760px;">Çevre, İş Sağlığı ve Güvenliği politikamızın temelinde, <strong>gelecek nesillere yaşanabilir bir dünya bırakma hedefi</strong> yer almaktadır. Çevresel sorumluluk, çalışan sağlığı, güvenli çalışma ortamı ve sürdürülebilir üretim anlayışını esas alarak, kimya sektörüne örnek teşkil edecek uygulamaları planlıyor ve kararlılıkla hayata geçiriyoruz.</p>
+    <div class="section-tag reveal" style="margin-bottom:20px;font-size:clamp(12px,1.0vw,14px);">İbavalresa</div>
+    <h1 class="reveal" style="font-size:clamp(32px,4vw,48px);font-weight:800;letter-spacing:-1.5px;line-height:1.05;color:var(--text);margin-bottom:26px;max-width:672px;" data-en="Sustainability">Sürdürülebilirlik</h1>
+    <p class="about-lead reveal" style="max-width:672px;font-size:clamp(14px, 1.3vw, 18px);" data-en="At the heart of our Environment, Occupational Health and Safety policy lies the goal of leaving a livable world for future generations. Grounded in environmental responsibility, employee health, a safe working environment and a sustainable production approach, we plan and resolutely implement practices that set an example for the chemical industry.">Çevre, İş Sağlığı ve Güvenliği politikamızın temelinde, gelecek nesillere yaşanabilir bir dünya bırakma hedefi yer almaktadır. Çevresel sorumluluk, çalışan sağlığı, güvenli çalışma ortamı ve sürdürülebilir üretim anlayışını esas alarak, kimya sektörüne örnek teşkil edecek uygulamaları planlıyor ve kararlılıkla hayata geçiriyoruz.</p>
   </div>
 </section>
 
@@ -2033,12 +2044,12 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">01 — Çevre</div>
-        <h2 class="about-h2">Çevreyle dost bir üretim.</h2>
+        <div class="section-tag" style="margin-bottom: 16px;" data-en="01 — Environment">01 — Çevre</div>
+        <h2 class="about-h2" data-en="Environmentally friendly production.">Çevreyle dost bir üretim.</h2>
       </div>
       <div>
-        <p class="about-p">İBAVALRESA Boya ve Kimya A.Ş. olarak, üretimin yalnızca bugünü değil geleceği de etkilediğinin bilinciyle hareket ediyor; çevre politikamızı <strong>doğal kaynakların korunması, çevresel etkilerin azaltılması ve yasal yükümlülüklere tam uyum</strong> anlayışı üzerine kuruyoruz.</p>
-        <p class="about-p">Faaliyetlerimizin her aşamasında çevreye duyarlı, sorumlu ve sürdürülebilir bir üretim yaklaşımını benimsiyor; çevreyle dost uygulamaların sürekliliğini sağlamayı önemsiyoruz.</p>
+        <p class="about-p" data-en="As İBAVALRESA Boya ve Kimya A.Ş., we act with the awareness that production affects not only today but also the future; we build our environmental policy on &lt;strong&gt;protecting natural resources, reducing environmental impact and full compliance with legal obligations&lt;/strong&gt;.">İBAVALRESA Boya ve Kimya A.Ş. olarak, üretimin yalnızca bugünü değil geleceği de etkilediğinin bilinciyle hareket ediyor; çevre politikamızı <strong>doğal kaynakların korunması, çevresel etkilerin azaltılması ve yasal yükümlülüklere tam uyum</strong> anlayışı üzerine kuruyoruz.</p>
+        <p class="about-p" data-en="At every stage of our operations we adopt an environmentally conscious, responsible and sustainable production approach, and we care about ensuring the continuity of eco-friendly practices.">Faaliyetlerimizin her aşamasında çevreye duyarlı, sorumlu ve sürdürülebilir bir üretim yaklaşımını benimsiyor; çevreyle dost uygulamaların sürekliliğini sağlamayı önemsiyoruz.</p>
         <ul class="about-bullets" style="grid-template-columns: 1fr; margin-top:8px;">
           <li><span>Enerji ihtiyacının <strong>%70'i güneşten</strong> karşılanmaktadır</span></li>
           <li><span>Kimyasal atıkların tamamı <strong>lisanslı firmalarla</strong> bertaraf edilir</span></li>
@@ -2055,12 +2066,12 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">02 — Sağlık</div>
-        <h2 class="about-h2">İnsan sağlığı ve çevresel etki kontrolü.</h2>
+        <div class="section-tag" style="margin-bottom: 16px;" data-en="02 — Health">02 — Sağlık</div>
+        <h2 class="about-h2" data-en="Human health and environmental impact control.">İnsan sağlığı ve çevresel etki kontrolü.</h2>
       </div>
       <div>
-        <p class="about-p">İş Sağlığı ve Güvenliği yaklaşımımız kapsamında, <strong>çalışan sağlığının korunması ve çevresel etkilerin kontrol altına alınması</strong> temel önceliklerimiz arasında yer almaktadır. Bu doğrultuda, iş süreçlerimizde insan sağlığına ve çevreye yönelik riskler dikkatle değerlendirilmekte; gerekli önleyici uygulamalar kararlılıkla hayata geçirilmektedir.</p>
-        <p class="about-p">Proses atıklarının toprağa, suya ve havaya karışmasının önlenmesi, insan sağlığına ve çevreye zararlı ya da kullanımı yasaklanmış kimyasalların kullanılmaması, kısıtlı izinli kimyasalların ise belirlenen sınır değerler çerçevesinde yönetilmesi bu yaklaşımın temel unsurlarını oluşturmaktadır. Tüm süreçlerimizde <strong>yasal gerekliliklere ve ilgili yönetmeliklere tam uyum</strong> esas alınmaktadır.</p>
+        <p class="about-p" data-en="Within our Occupational Health and Safety approach, &lt;strong&gt;protecting employee health and keeping environmental impacts under control&lt;/strong&gt; are among our core priorities. Accordingly, risks to human health and the environment are carefully assessed in our processes, and the necessary preventive measures are resolutely implemented.">İş Sağlığı ve Güvenliği yaklaşımımız kapsamında, <strong>çalışan sağlığının korunması ve çevresel etkilerin kontrol altına alınması</strong> temel önceliklerimiz arasında yer almaktadır. Bu doğrultuda, iş süreçlerimizde insan sağlığına ve çevreye yönelik riskler dikkatle değerlendirilmekte; gerekli önleyici uygulamalar kararlılıkla hayata geçirilmektedir.</p>
+        <p class="about-p" data-en="Preventing process waste from mixing into soil, water and air; not using chemicals harmful to human health and the environment or banned from use; and managing restricted chemicals within defined limit values form the core elements of this approach. &lt;strong&gt;Full compliance with legal requirements and relevant regulations&lt;/strong&gt; is the basis of all our processes.">Proses atıklarının toprağa, suya ve havaya karışmasının önlenmesi, insan sağlığına ve çevreye zararlı ya da kullanımı yasaklanmış kimyasalların kullanılmaması, kısıtlı izinli kimyasalların ise belirlenen sınır değerler çerçevesinde yönetilmesi bu yaklaşımın temel unsurlarını oluşturmaktadır. Tüm süreçlerimizde <strong>yasal gerekliliklere ve ilgili yönetmeliklere tam uyum</strong> esas alınmaktadır.</p>
       </div>
     </div>
   </div>
@@ -2071,12 +2082,12 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">03 — İş Güvenliği</div>
-        <h2 class="about-h2">Önce çalışan güvenliği.</h2>
+        <div class="section-tag" style="margin-bottom: 16px;" data-en="03 — Occupational Safety">03 — İş Güvenliği</div>
+        <h2 class="about-h2" data-en="Employee safety first.">Önce çalışan güvenliği.</h2>
       </div>
       <div>
-        <p class="about-p">Üretim süreçlerimizde çalışanlarımızın maruz kalabileceği olası tehlikeler, <strong>düzenli risk analizleriyle</strong> belirlenmekte ve gerekli önleyici tedbirler hayata geçirilmektedir. Çalışan güvenliğini yalnızca yasal bir zorunluluk olarak değil, iş yapış biçimimizin temel bir parçası olarak görüyoruz.</p>
-        <p class="about-p">Bu kapsamda, tehlike işaretlemeleri ve alınması gereken önlemler ürün ambalajları üzerinde açık şekilde belirtilmekte; kişisel koruyucu donanımlar <strong>Avrupa standartlarına</strong> uygun olarak seçilmektedir. Ayrıca İSG, çevre, acil durum ve yangın konularında periyodik eğitimler düzenlenmekte, olası risklere hazırlıklı olmak amacıyla düzenli acil durum tatbikatları gerçekleştirilmektedir.</p>
+        <p class="about-p" data-en="Potential hazards our employees may be exposed to in our production processes are identified through &lt;strong&gt;regular risk assessments&lt;/strong&gt;, and the necessary preventive measures are put in place. We see employee safety not merely as a legal obligation but as a fundamental part of how we work.">Üretim süreçlerimizde çalışanlarımızın maruz kalabileceği olası tehlikeler, <strong>düzenli risk analizleriyle</strong> belirlenmekte ve gerekli önleyici tedbirler hayata geçirilmektedir. Çalışan güvenliğini yalnızca yasal bir zorunluluk olarak değil, iş yapış biçimimizin temel bir parçası olarak görüyoruz.</p>
+        <p class="about-p" data-en="To this end, hazard markings and the precautions to be taken are clearly stated on product packaging, and personal protective equipment is selected in accordance with &lt;strong&gt;European standards&lt;/strong&gt;. In addition, periodic trainings on OHS, environment, emergencies and fire are held, and regular emergency drills are carried out to stay prepared for potential risks.">Bu kapsamda, tehlike işaretlemeleri ve alınması gereken önlemler ürün ambalajları üzerinde açık şekilde belirtilmekte; kişisel koruyucu donanımlar <strong>Avrupa standartlarına</strong> uygun olarak seçilmektedir. Ayrıca İSG, çevre, acil durum ve yangın konularında periyodik eğitimler düzenlenmekte, olası risklere hazırlıklı olmak amacıyla düzenli acil durum tatbikatları gerçekleştirilmektedir.</p>
       </div>
     </div>
   </div>
@@ -2085,8 +2096,8 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 <!-- ── VİDEO ── -->
 <section class="about-section">
   <div class="section-inner">
-    <div class="section-tag reveal" style="margin-bottom:16px;">04 — Uygulamalar</div>
-    <h2 class="about-h2 reveal" style="margin-bottom:32px;">İyi çevre uygulamaları.</h2>
+    <div class="section-tag reveal" style="margin-bottom:16px;" data-en="04 — Applications">04 — Uygulamalar</div>
+    <h2 class="about-h2 reveal" style="margin-bottom:32px;" data-en="Good environmental practices.">İyi çevre uygulamaları.</h2>
     <div class="video-frame reveal" id="surdVideo" data-video-id="IUfvlvY51NM" role="button" tabindex="0" aria-label="İyi çevre uygulamaları videosunu oynat">
       <img class="video-poster" src="img/iyi-cevre-uygulamalari.jpg" alt="İBAVALRESA — İyi Çevre Uygulamaları">
       <div class="video-overlay">
@@ -2096,15 +2107,15 @@ footer img[alt="ibavalresa"] { filter: none !important; }
         <div class="video-overlay-label">İyi Çevre Uygulamaları</div>
       </div>
     </div>
-    <p class="video-caption reveal">İzlemek için tıklayın.</p>
+    <p class="video-caption reveal" data-en="Click to watch.">İzlemek için tıklayın.</p>
   </div>
 </section>
 
 <!-- ── PULL QUOTE ── -->
-<section class="about-section" style="padding-top:0;border-top:none;">
+<section class="about-section" style="padding-top:0;padding-bottom:32px;margin-top:-12px;border-top:none;">
   <div class="section-inner">
     <div class="about-pull reveal">
-      <p><em>Çevreye duyarlı, sürdürülebilir</em> ve örnek bir üretim anlayışı.</p>
+      <p data-en="&lt;em&gt;An environmentally conscious, sustainable&lt;/em&gt; and exemplary approach to production."><em>Çevreye duyarlı, sürdürülebilir</em> ve örnek bir üretim anlayışı.</p>
     </div>
   </div>
 </section>
@@ -2112,7 +2123,10 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 <!-- ── BRANDS ── -->
 <section class="brands" id="markalar" style="min-height: 300px">
   <div class="section-inner">
-    <div class="brands-label reveal">Logolarımız</div>
+    <div class="next-page reveal">
+      <a href="kalite-sertifikalar.html"><span data-en="Next page">Sonraki sayfa</span> <span class="np-sep">&rsaquo;</span> <span class="np-name" data-en="Quality &amp; Certificates">Kalite & Sertifikalar</span></a>
+    </div>
+    <div class="brands-label reveal" data-en="Our Brands">Logolarımız</div>
     <div class="brands-grid reveal">
       <a class="brand-item" href="https://www.valresa.com.tr/" target="_blank">
         <img src="assets/logos/valresa.png" alt="Valresa" class="brand-logo-img">
@@ -2151,42 +2165,42 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <p class="footer-tagline" style="margin-top:4px;font-size:12px;color:var(--text3);">+90 312 267 56 22</p>
     </div>
     <div class="footer-col">
-      <h4>Kurumsal</h4>
+      <h4 data-en="Corporate">Kurumsal</h4>
       <ul>
-        <li><a href="hakkimizda.html">Hakkımızda</a></li>
-        <li><a href="uretim-ve-teknoloji.html">Üretim ve Teknoloji</a></li>
-        <li><a href="arge.html">Araştırma Geliştirme</a></li>
-        <li><a href="insan-kaynaklari.html">İnsan Kaynakları</a></li>
-        <li><a href="surdurulebilirlik.html">Sürdürülebilirlik</a></li>
-        <li><a href="kalite-sertifikalar.html">Kalite & Sertifikalar</a></li>
+        <li><a href="hakkimizda.html" data-en="About Us">Hakkımızda</a></li>
+        <li><a href="uretim-ve-teknoloji.html" data-en="Production & Technology">Üretim ve Teknoloji</a></li>
+        <li><a href="arge.html" data-en="Research & Development">Araştırma Geliştirme</a></li>
+        <li><a href="insan-kaynaklari.html" data-en="Human Resources">İnsan Kaynakları</a></li>
+        <li><a href="surdurulebilirlik.html" data-en="Sustainability">Sürdürülebilirlik</a></li>
+        <li><a href="kalite-sertifikalar.html" data-en="Quality & Certificates">Kalite & Sertifikalar</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Kataloglar</h4>
+      <h4 data-en="Catalogs">Kataloglar</h4>
       <ul>
         <li><a href="https://renkpaleti.ibavalresa.com.tr/?lang=tr">RAL-NCS-Nova Kartela</a></li>
-        <li><a href="https://www.valresa.com.tr/urunkatalogu/">Valresa Kataloğu</a></li>
-        <li><a href="https://www.ibavet.com.tr/urunkatalogu/">İbavet Kataloğu</a></li>
+        <li><a href="https://www.valresa.com.tr/urunkatalogu/" data-en="Valresa Catalog">Valresa Kataloğu</a></li>
+        <li><a href="https://www.ibavet.com.tr/urunkatalogu/" data-en="İbavet Catalog">İbavet Kataloğu</a></li>
       </ul>
       <div style="margin-top:40px;"></div>
       <h4>Online İşlemler</h4>
       <ul>
-        <li><a href="https://weborder.ibavalresa.com.tr" target="_blank">Sipariş</a></li>
-        <li><a href="https://tahsilat.ibavalresa.com.tr/" target="_blank">Tahsilat</a></li>
+        <li><a href="https://weborder.ibavalresa.com.tr" target="_blank" data-en="Order">Sipariş</a></li>
+        <li><a href="https://tahsilat.ibavalresa.com.tr/" target="_blank" data-en="Payment Collection">Tahsilat</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4 style="opacity:0;pointer-events:none;">—</h4>
       <ul>
-        <li><a href="iletisim.html">Bize Ulaşın</a></li>
-        <li style="margin-top:10px;"><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/17623" target="_blank" style="font-size:11px;">Bilgi Toplumu Hizmetleri</a></li>
-        <li><a href="kvkk-aydinlatma-metni.html" style="font-size:11px;">KVKK Aydınlatma Metni</a></li>
-        <li><a href="cerez-politikasi.html" style="font-size:11px;">Çerez Politikası</a></li>
+        <li><a href="iletisim.html" data-en="Get in Touch">Bize Ulaşın</a></li>
+        <li style="margin-top:10px;"><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/17623" target="_blank" style="font-size:11px;" data-en="Information Society Services">Bilgi Toplumu Hizmetleri</a></li>
+        <li><a href="kvkk-aydinlatma-metni.html" style="font-size:11px;" data-en="Personal Data Protection Notice">KVKK Aydınlatma Metni</a></li>
+        <li><a href="cerez-politikasi.html" style="font-size:11px;" data-en="Cookie Policy">Çerez Politikası</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 Tüm hakları saklıdır.</div>
+    <div class="footer-copy" data-en="© 2026 All rights reserved.">© 2026 Tüm hakları saklıdır.</div>
     <div class="footer-social">
       <a href="https://www.facebook.com/ibavalresa/" class="footer-social-btn" title="Facebook" target="_blank">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -2509,10 +2523,10 @@ window.addEventListener('scroll', () => {
 }
 </style>
 <div class="cookie-bar" id="cookieBar" role="region" aria-label="Çerez bildirimi" hidden>
-  <p class="cookie-bar-text">Bu web sitesinde sitenin çalışması için zorunlu çerezler kullanılır. Gömülü YouTube videolarını sitede oynatmak için üçüncü taraf (YouTube) çerezlerine izin vermeniz gerekir. Ayrıntılar için <a href="cerez-politikasi.html">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
+  <p class="cookie-bar-text" data-en="This website uses essential cookies to run properly. To play embedded YouTube videos on the site, you must allow third-party (YouTube) cookies. For details, see our &lt;a href=&quot;cerez-politikasi.html&quot;&gt;Cookie Policy&lt;/a&gt;.">Bu web sitesinde sitenin çalışması için zorunlu çerezler kullanılır. Gömülü YouTube videolarını sitede oynatmak için üçüncü taraf (YouTube) çerezlerine izin vermeniz gerekir. Ayrıntılar için <a href="cerez-politikasi.html" data-en="Cookie Policy">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
   <div class="cookie-bar-btns">
-    <button class="cookie-bar-btn ghost" id="cookieReject" type="button">Reddet</button>
-    <button class="cookie-bar-btn" id="cookieAccept" type="button">Kabul Et</button>
+    <button class="cookie-bar-btn ghost" id="cookieReject" type="button" data-en="Reject">Reddet</button>
+    <button class="cookie-bar-btn" id="cookieAccept" type="button" data-en="Accept">Kabul Et</button>
   </div>
 </div>
 <script>

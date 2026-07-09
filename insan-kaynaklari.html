@@ -21,8 +21,9 @@
 {"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBAVALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
 </script>
 
-<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>" type="image/svg+xml">
-<link rel="shortcut icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192x192.png">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/json" id="tweak-defaults">
@@ -596,6 +597,15 @@ section { position: relative; z-index: 1; }
   padding: 56px 0;
   border-top: 1px solid var(--border);
 }
+.next-page { display: flex; justify-content: flex-end; margin-top: -14px; margin-bottom: 42px; }
+.next-page a {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 14px; color: var(--text3); text-decoration: none;
+  transition: color .15s ease;
+}
+.next-page .np-sep { color: var(--text3); opacity: .55; }
+.next-page .np-name { color: var(--text2); font-weight: 500; }
+.next-page a:hover, .next-page a:hover .np-name, .next-page a:hover .np-sep { color: var(--accent); opacity: 1; }
 .brands-label {
   text-align: center;
   font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
@@ -1584,13 +1594,14 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 .about-lead {
   font-size: clamp(20px, 2vw, 26px);
   font-weight: 400; line-height: 1.5;
-  color: var(--text);
+  color: var(--text2);
   max-width: 880px;
   letter-spacing: -.3px;
   text-wrap: pretty;
 }
+.about-lead strong { color: var(--text); font-weight: 700; }
 .about-h2 {
-  font-size: clamp(28px, 3.4vw, 44px);
+  font-size: clamp(24px, 3vw, 36px);
   font-weight: 700; letter-spacing: -1.5px;
   line-height: 1.1; color: var(--text);
   margin-bottom: 28px; max-width: 820px;
@@ -1744,7 +1755,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 }
 .about-inline-link:hover { opacity: .75; }
 
-.hr-cta { padding-top: 24px; padding-bottom: 80px; }
+.hr-cta { padding-top: 52px; padding-bottom: 52px; }
 .hr-cta-card {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -1907,39 +1918,39 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <ul class="nav-links">
 
     <li class="nav-item has-dropdown">
-      <button class="nav-link-btn">Kurumsal <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <button class="nav-link-btn"><span data-en="Corporate">Kurumsal</span> <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="nav-dropdown">
         <div class="nav-dropdown-inner nav-dropdown-simple">
-          <a href="hakkimizda.html" class="nav-drop-simple">Hakkımızda</a>
-          <a href="uretim-ve-teknoloji.html" class="nav-drop-simple">Üretim ve Teknoloji</a>
-          <a href="arge.html" class="nav-drop-simple">Araştırma Geliştirme</a>
-          <a href="insan-kaynaklari.html" class="nav-drop-simple">İnsan Kaynakları</a>
-          <a href="surdurulebilirlik.html" class="nav-drop-simple">Sürdürülebilirlik</a>
-          <a href="kalite-sertifikalar.html" class="nav-drop-simple">Kalite & Sertifikalar</a>
+          <a href="hakkimizda.html" class="nav-drop-simple" data-en="About Us">Hakkımızda</a>
+          <a href="uretim-ve-teknoloji.html" class="nav-drop-simple" data-en="Production & Technology">Üretim ve Teknoloji</a>
+          <a href="arge.html" class="nav-drop-simple" data-en="Research & Development">Araştırma Geliştirme</a>
+          <a href="insan-kaynaklari.html" class="nav-drop-simple" data-en="Human Resources">İnsan Kaynakları</a>
+          <a href="surdurulebilirlik.html" class="nav-drop-simple" data-en="Sustainability">Sürdürülebilirlik</a>
+          <a href="kalite-sertifikalar.html" class="nav-drop-simple" data-en="Quality & Certificates">Kalite & Sertifikalar</a>
         </div>
       </div>
     </li>
 
-    <li class="nav-item"><a href="markalar.html" class="nav-link-a">Markalar</a></li>
+    <li class="nav-item"><a href="markalar.html" class="nav-link-a" data-en="Brands">Markalar</a></li>
 
-    <li class="nav-item"><a href="hizmetlerimiz.html" class="nav-link-a">Hizmetlerimiz</a></li>
+    <li class="nav-item"><a href="hizmetlerimiz.html" class="nav-link-a" data-en="Our Services">Hizmetlerimiz</a></li>
 
     <li class="nav-item has-dropdown">
-      <button class="nav-link-btn">İletişim <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <button class="nav-link-btn"><span data-en="Contact">İletişim</span> <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="nav-dropdown nav-mega">
         <div class="nav-mega-inner">
           <a class="nav-mega-promo" href="http://www.youtube.com/@ibavalresaboyavekimya" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
             <img src="img/iletisim-youtube.jpg" alt="İbavalresa YouTube" class="nav-mega-img" style="object-fit:cover;"/>
           </a>
           <div class="nav-mega-links">
-            <a href="iletisim.html" class="nav-drop-item">
-              <div><div class="nav-drop-title">Bize Ulaşın</div><div class="nav-drop-sub">İletişim bilgilerimiz</div></div>
+            <a class="nav-drop-item" style="opacity:.45;cursor:default;pointer-events:none;" title="Çok yakında">
+              <div><div class="nav-drop-title" data-en="Technical Complaint / Suggestion">Teknik Şikayet / Öneri</div><div class="nav-drop-sub" data-en="Feedback form">Geri bildirim formu</div></div>
             </a>
             <a href="bolge-mudurlukleri.html" class="nav-drop-item">
-              <div><div class="nav-drop-title">Bölge Müdürlükleri</div><div class="nav-drop-sub">Tüm satış noktaları</div></div>
+              <div><div class="nav-drop-title" data-en="Regional Offices">Bölge Müdürlükleri</div><div class="nav-drop-sub" data-en="All sales points">Tüm satış noktaları</div></div>
             </a>
-            <a class="nav-drop-item" style="opacity:.45;cursor:default;pointer-events:none;" title="Çok yakında">
-              <div><div class="nav-drop-title">Teknik Şikayet / Öneri</div><div class="nav-drop-sub">Geri bildirim formu</div></div>
+            <a href="iletisim.html" class="nav-drop-item">
+              <div><div class="nav-drop-title" data-en="Get in Touch">Bize Ulaşın</div><div class="nav-drop-sub" data-en="Our contact details">İletişim bilgilerimiz</div></div>
             </a>
           </div>
         </div>
@@ -1950,7 +1961,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <!-- Online İşlemler mega dropdown -->
   <div class="nav-item has-dropdown online-drop" style="position:relative;margin-left:8px;">
     <button class="nav-cta" id="nav-cta" style="display:flex;align-items:center;gap:6px;">
-      Online İşlemler
+      <span data-en="Online Services">Online İşlemler</span>
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="nav-dropdown nav-mega" style="right:0;left:auto;">
@@ -1963,11 +1974,11 @@ footer img[alt="ibavalresa"] { filter: none !important; }
         <div class="nav-mega-links">
           <a href="https://weborder.ibavalresa.com.tr" class="nav-drop-item" target="_blank">
             <div class="nav-drop-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-            <div><div class="nav-drop-title">Online Sipariş</div><div class="nav-drop-sub">weborder.ibavalresa.com.tr</div></div>
+            <div><div class="nav-drop-title" data-en="Online Order">Online Sipariş</div><div class="nav-drop-sub">weborder.ibavalresa.com.tr</div></div>
           </a>
           <a href="https://tahsilat.ibavalresa.com.tr/" class="nav-drop-item" target="_blank">
             <div class="nav-drop-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-            <div><div class="nav-drop-title">Tahsilat</div><div class="nav-drop-sub">tahsilat.ibavalresa.com.tr</div></div>
+            <div><div class="nav-drop-title" data-en="Payment Collection">Tahsilat</div><div class="nav-drop-sub">tahsilat.ibavalresa.com.tr</div></div>
           </a>
         </div>
       </div>
@@ -1975,7 +1986,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   </div>
 
   <!-- Dil seçici — EN SAĞDA -->
-  <div class="lang-switcher" id="lang-switcher" style="margin-left:8px;">
+  <div class="lang-switcher" id="lang-switcher" style="margin-left:-22px;">
     <button class="lang-btn" id="lang-toggle" aria-label="Dil seç" onclick="toggleLang()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
       <span id="lang-current">TR</span>
@@ -2014,41 +2025,41 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   </a>
   <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Menüyü kapat" type="button"></button>
   <div class="mobile-menu-group">
-    <button class="mobile-menu-head" data-toggle>Kurumsal
+    <button class="mobile-menu-head" data-toggle><span data-en="Corporate">Kurumsal</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="mobile-menu-sub">
-      <a href="hakkimizda.html">Hakkımızda</a>
-      <a href="uretim-ve-teknoloji.html">Üretim ve Teknoloji</a>
-      <a href="arge.html">Araştırma Geliştirme</a>
-      <a href="insan-kaynaklari.html">İnsan Kaynakları</a>
-      <a href="surdurulebilirlik.html">Sürdürülebilirlik</a>
-      <a href="kalite-sertifikalar.html">Kalite & Sertifikalar</a>
+      <a href="hakkimizda.html" data-en="About Us">Hakkımızda</a>
+      <a href="uretim-ve-teknoloji.html" data-en="Production & Technology">Üretim ve Teknoloji</a>
+      <a href="arge.html" data-en="Research & Development">Araştırma Geliştirme</a>
+      <a href="insan-kaynaklari.html" data-en="Human Resources">İnsan Kaynakları</a>
+      <a href="surdurulebilirlik.html" data-en="Sustainability">Sürdürülebilirlik</a>
+      <a href="kalite-sertifikalar.html" data-en="Quality & Certificates">Kalite & Sertifikalar</a>
     </div>
   </div>
   <div class="mobile-menu-group">
-    <a class="mobile-menu-link" href="markalar.html">Markalar</a>
+    <a class="mobile-menu-link" href="markalar.html" data-en="Brands">Markalar</a>
   </div>
   <div class="mobile-menu-group">
-    <a class="mobile-menu-link" href="hizmetlerimiz.html">Hizmetlerimiz</a>
+    <a class="mobile-menu-link" href="hizmetlerimiz.html" data-en="Our Services">Hizmetlerimiz</a>
   </div>
   <div class="mobile-menu-group">
-    <button class="mobile-menu-head" data-toggle>İletişim
+    <button class="mobile-menu-head" data-toggle><span data-en="Contact">İletişim</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="mobile-menu-sub">
-      <a href="iletisim.html">Bize Ulaşın</a>
-      <a href="bolge-mudurlukleri.html">Bölge Müdürlükleri</a>
-      <a style="opacity:.45;cursor:default;pointer-events:none;" title="Çok yakında">Teknik Şikayet / Öneri</a>
+      <a style="opacity:.45;cursor:default;pointer-events:none;" title="Çok yakında" data-en="Technical Complaint / Suggestion">Teknik Şikayet / Öneri</a>
+      <a href="bolge-mudurlukleri.html" data-en="Regional Offices">Bölge Müdürlükleri</a>
+      <a href="iletisim.html" data-en="Get in Touch">Bize Ulaşın</a>
     </div>
   </div>
   <div class="mobile-menu-group">
-    <button class="mobile-menu-head" data-toggle>Online İşlemler
+    <button class="mobile-menu-head" data-toggle><span data-en="Online Services">Online İşlemler</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="mobile-menu-sub">
-      <a href="https://weborder.ibavalresa.com.tr" target="_blank">Online Sipariş</a>
-      <a href="https://tahsilat.ibavalresa.com.tr/" target="_blank">Tahsilat</a>
+      <a href="https://weborder.ibavalresa.com.tr" target="_blank" data-en="Online Order">Online Sipariş</a>
+      <a href="https://tahsilat.ibavalresa.com.tr/" target="_blank" data-en="Payment Collection">Tahsilat</a>
     </div>
   </div>
   <div class="mobile-menu-langs">
@@ -2067,15 +2078,15 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 <!-- ── INTRO + JUMP NAV ── -->
 <section class="about-section" id="hr-intro">
   <div class="section-inner">
-    <div class="section-tag reveal" style="margin-bottom: 16px;">İBAVALRESA Kariyer</div>
-    <h2 class="about-h2 reveal">Birlikte büyüyen bir takım</h2>
-    <p class="about-lead reveal">İBAVALRESA olarak; stajdan tam zamanlı işe, yeni mezunluktan deneyimli profesyonelliğe uzanan her kariyer aşamasında çalışanlarımızın yanında yer alıyor; bilgi, deneyim ve yetkinliklerini doğru araçlar ve gelişim fırsatlarıyla buluşturuyoruz.</p>
+    <div class="section-tag reveal" style="margin-bottom: 20px; font-size: clamp(12px, 1.0vw, 14px);" data-en="İBAVALRESA Careers">İBAVALRESA Kariyer</div>
+    <h2 class="about-h2 reveal" style="font-size: clamp(32px, 4vw, 48px); font-weight: 800; line-height: 1.05; max-width: 672px;" data-en="A team that grows &lt;em style=&quot;font-style:normal;color:var(--accent);&quot;&gt;together.&lt;/em&gt;">Birlikte büyüyen bir <em style="font-style:normal;color:var(--accent);">takım.</em></h2>
+    <p class="about-lead reveal" style="font-size: clamp(14px, 1.3vw, 18px); line-height: 1.6; max-width: 672px;" data-en="At İBAVALRESA, we stand by our employees at every career stage — from internship to full-time work, from new graduate to experienced professional — connecting their knowledge, experience and skills with the right tools and development opportunities.">İBAVALRESA olarak; stajdan tam zamanlı işe, yeni mezunluktan deneyimli profesyonelliğe uzanan her kariyer aşamasında çalışanlarımızın yanında yer alıyor; bilgi, deneyim ve yetkinliklerini doğru araçlar ve gelişim fırsatlarıyla buluşturuyoruz.</p>
     <div class="hr-jumps reveal">
-      <a href="#ogrenciler" class="hr-jump">Öğrenciler</a>
-      <a href="#muhendis" class="hr-jump">Proje Mühendislerimiz</a>
-      <a href="#is-imkanlari" class="hr-jump">İş İmkânlarımız</a>
-      <a href="#calisanlarimiz" class="hr-jump">Çalışanlarımız</a>
-      <a href="#etik" class="hr-jump">Doğruluk ve Etik</a>
+      <a href="#ogrenciler" class="hr-jump" data-en="Students">Öğrenciler</a>
+      <a href="#muhendis" class="hr-jump" data-en="Project Engineers">Proje Mühendislerimiz</a>
+      <a href="#is-imkanlari" class="hr-jump" data-en="Job Opportunities">İş İmkânlarımız</a>
+      <a href="#calisanlarimiz" class="hr-jump" data-en="Our Employees">Çalışanlarımız</a>
+      <a href="#etik" class="hr-jump" data-en="Integrity &amp; Ethics">Doğruluk ve Etik</a>
     </div>
   </div>
 </section>
@@ -2085,12 +2096,12 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">Öğrenciler Staj Programı</div>
+        <div class="section-tag" style="margin-bottom: 16px;" data-en="Student Internship Program">Öğrenciler Staj Programı</div>
       </div>
       <div>
-        <p class="about-p">İş birliği içinde olduğumuz okullarda öğrenim gören <strong>lise ve ön lisans öğrencilerine</strong>, uzun dönemli ve uygulama ağırlıklı staj imkânları sunarak iş hayatını yakından tanıyabilecekleri bir gelişim süreci sağlıyoruz.</p>
-        <p class="about-p"><strong>Lisans</strong> eğitimine devam eden ilgili bölüm öğrencilerinin zorunlu staj taleplerini değerlendiriyor; yaz dönemlerinde ise nitelikli staj programlarıyla öğrencilerin mesleki gelişimlerini destekliyoruz. Stajyerlerimizin, eğitim hayatlarında edindikleri teorik bilgileri iş hayatında pratiğe dönüştürebilmeleri ve kariyerlerine daha donanımlı bir başlangıç yapabilmeleri için gelişim yolculuklarının her aşamasında yanlarında oluyoruz. Bu kapsamda, okullar ve üniversitelerle protokol bazlı iş birlikleri yürütüyor; okul–üniversite–sanayi iş birliğini geleceğin yeteneklerinin yetişmesi açısından önemli bir değer olarak görüyoruz.</p>
-        <p class="about-p" style="font-size:14px;color:var(--text3);font-style:italic;">* Staj kontenjanlarımız, ağırlıklı olarak iş birliği içinde olduğumuz okullara ayrılan kontenjanlar kapsamında kısa sürede dolabilmektedir. Bununla birlikte, farklı başvurular için ayrılan sınırlı kontenjanlarımız da bulunmaktadır. Bu kapsamda, zorunlu staj taleplerinin değerlendirmeye alınabilmesi için İnsan Kaynakları departmanımıza başvuru yapılması gerekmektedir.</p>
+        <p class="about-p" data-en="We provide &lt;strong&gt;high-school and associate-degree students&lt;/strong&gt; at our partner schools with long-term, practice-oriented internships that let them get to know working life closely.">İş birliği içinde olduğumuz okullarda öğrenim gören <strong>lise ve ön lisans öğrencilerine</strong>, uzun dönemli ve uygulama ağırlıklı staj imkânları sunarak iş hayatını yakından tanıyabilecekleri bir gelişim süreci sağlıyoruz.</p>
+        <p class="about-p" data-en="We evaluate the mandatory-internship requests of relevant &lt;strong&gt;undergraduate&lt;/strong&gt; students, and in the summer we support their professional development with quality internship programs. We stand by our interns at every stage of their journey so they can turn theoretical knowledge into practice and start their careers better equipped. To this end we run protocol-based collaborations with schools and universities; we see school–university–industry cooperation as an important value for raising the talents of the future."><strong>Lisans</strong> eğitimine devam eden ilgili bölüm öğrencilerinin zorunlu staj taleplerini değerlendiriyor; yaz dönemlerinde ise nitelikli staj programlarıyla öğrencilerin mesleki gelişimlerini destekliyoruz. Stajyerlerimizin, eğitim hayatlarında edindikleri teorik bilgileri iş hayatında pratiğe dönüştürebilmeleri ve kariyerlerine daha donanımlı bir başlangıç yapabilmeleri için gelişim yolculuklarının her aşamasında yanlarında oluyoruz. Bu kapsamda, okullar ve üniversitelerle protokol bazlı iş birlikleri yürütüyor; okul–üniversite–sanayi iş birliğini geleceğin yeteneklerinin yetişmesi açısından önemli bir değer olarak görüyoruz.</p>
+        <p class="about-p" style="font-size:14px;color:var(--text3);font-style:italic;" data-en="* Our internship quotas fill quickly, mostly within the allocations reserved for our partner schools. That said, we also have limited quotas for other applications. In this context, an application to our Human Resources department is required for mandatory-internship requests to be considered.">* Staj kontenjanlarımız, ağırlıklı olarak iş birliği içinde olduğumuz okullara ayrılan kontenjanlar kapsamında kısa sürede dolabilmektedir. Bununla birlikte, farklı başvurular için ayrılan sınırlı kontenjanlarımız da bulunmaktadır. Bu kapsamda, zorunlu staj taleplerinin değerlendirmeye alınabilmesi için İnsan Kaynakları departmanımıza başvuru yapılması gerekmektedir.</p>
       </div>
     </div>
   </div>
@@ -2101,11 +2112,11 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">Proje Mühendislerimiz</div>
+        <div class="section-tag" style="margin-bottom: 16px;" data-en="Project Engineers">Proje Mühendislerimiz</div>
       </div>
       <div>
-        <p class="about-p"><strong>Son sınıf</strong> veya <strong>yüksek lisans</strong> öğrencilerine, belirli bir süre boyunca yürütülen projelerimizde görev alabilecekleri kısmi süreli çalışma imkânı sunuyoruz. Bu uygulama ile kendini geliştirmeye açık ve kariyerine güçlü bir başlangıç yapmak isteyen öğrencilere iş deneyimi fırsatı sunuyoruz.</p>
-        <p class="about-p">Bu kapsamda görev alan proje mühendislerimiz, ileride oluşabilecek uygun pozisyonlarda <strong>öncelikli olarak değerlendirilme</strong> fırsatı da elde etmektedir.</p>
+        <p class="about-p" data-en="We offer &lt;strong&gt;final-year&lt;/strong&gt; or &lt;strong&gt;master's&lt;/strong&gt; students part-time roles in our projects for a defined period. Through this, we provide work experience to students who are eager to develop themselves and want a strong start to their careers."><strong>Son sınıf</strong> veya <strong>yüksek lisans</strong> öğrencilerine, belirli bir süre boyunca yürütülen projelerimizde görev alabilecekleri kısmi süreli çalışma imkânı sunuyoruz. Bu uygulama ile kendini geliştirmeye açık ve kariyerine güçlü bir başlangıç yapmak isteyen öğrencilere iş deneyimi fırsatı sunuyoruz.</p>
+        <p class="about-p" data-en="Project engineers who take part in this program also gain the opportunity to be &lt;strong&gt;given priority&lt;/strong&gt; for suitable positions that may arise in the future.">Bu kapsamda görev alan proje mühendislerimiz, ileride oluşabilecek uygun pozisyonlarda <strong>öncelikli olarak değerlendirilme</strong> fırsatı da elde etmektedir.</p>
       </div>
     </div>
   </div>
@@ -2116,13 +2127,13 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">İş İmkânlarımız</div>
+        <div class="section-tag" style="margin-bottom: 16px;" data-en="Job Opportunities">İş İmkânlarımız</div>
       </div>
       <div>
-        <p class="about-p">Yeni mezunlar ve deneyimli profesyoneller için; eğitim, deneyim ve kişisel yetkinliklere uygun çeşitli kariyer fırsatları sunuyoruz. İşe alım süreçlerimizde adayların bilgi, deneyim ve yetkinliklerini doğru araçlarla değerlendiriyor; karşılıklı ihtiyaç ve beklentilere uygun, sürdürülebilir yerleştirmeler hedefliyoruz.</p>
-        <p class="about-p">İşe alım süreçlerinde ve mevcut çalışanlarımızın gelişim yolculuklarında odağımız; şirketimizin yapısına, çalışma kültürüne ve başarı anlayışına uygun olarak tanımlanmış <strong>yetkinliklerdir</strong>. Çalışanlarımızın güçlü yönlerini doğru alanlarda değerlendirebilecekleri, potansiyellerini geliştirebilecekleri ve uzun vadeli katkı sağlayabilecekleri bir çalışma yapısı oluşturmayı önemsiyoruz.</p>
-        <a href="#bize-katil" class="about-inline-link">Açık ilânlarımızı inceleyin →</a>
-        <p class="about-p" style="margin-top:18px;font-size:14px;color:var(--text3);font-style:italic;">* İnternet sitesi üzerinden yapılan başvurular KVKK gereğince değerlendirmeye alınmayacak ve silinecektir.</p>
+        <p class="about-p" data-en="We offer new graduates and experienced professionals a variety of career opportunities suited to their education, experience and personal skills. In our recruitment we assess candidates' knowledge, experience and competencies with the right tools, aiming for sustainable placements that fit mutual needs and expectations.">Yeni mezunlar ve deneyimli profesyoneller için; eğitim, deneyim ve kişisel yetkinliklere uygun çeşitli kariyer fırsatları sunuyoruz. İşe alım süreçlerimizde adayların bilgi, deneyim ve yetkinliklerini doğru araçlarla değerlendiriyor; karşılıklı ihtiyaç ve beklentilere uygun, sürdürülebilir yerleştirmeler hedefliyoruz.</p>
+        <p class="about-p" data-en="Our focus in recruitment and in the development journeys of our current employees is on &lt;strong&gt;competencies&lt;/strong&gt; defined to fit our company structure, working culture and understanding of success. We care about building a work environment where employees can apply their strengths in the right areas, develop their potential and make long-term contributions.">İşe alım süreçlerinde ve mevcut çalışanlarımızın gelişim yolculuklarında odağımız; şirketimizin yapısına, çalışma kültürüne ve başarı anlayışına uygun olarak tanımlanmış <strong>yetkinliklerdir</strong>. Çalışanlarımızın güçlü yönlerini doğru alanlarda değerlendirebilecekleri, potansiyellerini geliştirebilecekleri ve uzun vadeli katkı sağlayabilecekleri bir çalışma yapısı oluşturmayı önemsiyoruz.</p>
+        <a href="#bize-katil" class="about-inline-link" data-en="Browse our open positions →">Açık ilânlarımızı inceleyin →</a>
+        <p class="about-p" style="margin-top:18px;font-size:14px;color:var(--text3);font-style:italic;" data-en="* Applications made through the website will not be considered and will be deleted in accordance with the Personal Data Protection Law (KVKK).">* İnternet sitesi üzerinden yapılan başvurular KVKK gereğince değerlendirmeye alınmayacak ve silinecektir.</p>
       </div>
     </div>
   </div>
@@ -2133,12 +2144,12 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="about-grid-2 reveal">
       <div>
-        <div class="section-tag" style="margin-bottom: 16px;">Çalışanlarımız</div>
+        <div class="section-tag" style="margin-bottom: 16px;" data-en="Our Employees">Çalışanlarımız</div>
       </div>
       <div>
-        <p class="about-p">İşe alım sonrasında, çalışmaya başlayacağınız bölümün ihtiyaçlarına göre yapılandırılmış <strong>oryantasyon programlarımız</strong> ile işe hızlı ve kolay uyum sağlamanız desteklenir. Bilgiyi paylaşmaya açık çalışma ortamımız ve dijitalleşmeye verdiğimiz önem sayesinde, yeni görevinize adapte olurken ihtiyaç duyduğunuz bilgiye, desteğe ve yönlendirmeye daha kolay ulaşabilirsiniz.</p>
-        <p class="about-p">Sürekli gelişim prensibiyle, çalışanlarımızın eğitim ihtiyaçları takip edilir; her bir çalışanımızın gelişimi farklı eğitim ve uygulamalarla desteklenir.</p>
-        <p class="about-p">Bilimin ve teknolojinin ışığında kendinizi geliştirebileceğiniz, <strong>mutlu ve sıcak bir çalışma ortamında</strong> kariyerinizi daha ileri seviyelere taşıyabileceğiniz bir takımın parçası olursunuz.</p>
+        <p class="about-p" data-en="After hiring, our &lt;strong&gt;orientation programs&lt;/strong&gt;, structured around the needs of the department you will join, help you adapt quickly and easily. Thanks to our knowledge-sharing work environment and the importance we place on digitalization, you can more easily reach the information, support and guidance you need while settling into your new role.">İşe alım sonrasında, çalışmaya başlayacağınız bölümün ihtiyaçlarına göre yapılandırılmış <strong>oryantasyon programlarımız</strong> ile işe hızlı ve kolay uyum sağlamanız desteklenir. Bilgiyi paylaşmaya açık çalışma ortamımız ve dijitalleşmeye verdiğimiz önem sayesinde, yeni görevinize adapte olurken ihtiyaç duyduğunuz bilgiye, desteğe ve yönlendirmeye daha kolay ulaşabilirsiniz.</p>
+        <p class="about-p" data-en="With a principle of continuous development, our employees' training needs are tracked; each employee's growth is supported with different trainings and practices.">Sürekli gelişim prensibiyle, çalışanlarımızın eğitim ihtiyaçları takip edilir; her bir çalışanımızın gelişimi farklı eğitim ve uygulamalarla desteklenir.</p>
+        <p class="about-p" data-en="You become part of a team where you can develop yourself in the light of science and technology and take your career to higher levels in a &lt;strong&gt;happy and warm work environment&lt;/strong&gt;.">Bilimin ve teknolojinin ışığında kendinizi geliştirebileceğiniz, <strong>mutlu ve sıcak bir çalışma ortamında</strong> kariyerinizi daha ileri seviyelere taşıyabileceğiniz bir takımın parçası olursunuz.</p>
       </div>
     </div>
   </div>
@@ -2147,13 +2158,13 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 <!-- ── DOĞRULUK VE ETİK ── -->
 <section class="about-section" id="etik">
   <div class="section-inner">
-    <div class="section-tag reveal" style="margin-bottom: 16px;">Değerlerimiz</div>
-    <h2 class="about-h2 reveal">Doğruluk ve Etik Kurallarımız</h2>
-    <p class="about-p reveal">Hedeflerimize ulaşmak için; yaptığı işi <strong>liderlik, adalet ve dürüstlük</strong> çerçevesinde sunmaya hevesli çalışanlarımız olmasını önemsiyoruz. Birbirimize ve müşterilerimize karşı taşıdığımız sorumluluğun farkındayız.</p>
-    <p class="about-p reveal">Markalarımızın ve itibarının bekçileriyiz; piyasada temsil ettiği değerleri savunmak için işimizi olması gerektiği gibi ve dürüstçe yapıyoruz. Olumsuz bir geri dönüş korkusu olmadan fikir ve bilgi alışverişinde bulunabileceğimiz <strong>açık iletişim ortamını</strong> destekliyoruz.</p>
-    <p class="about-p reveal">İBAVALRESA çalışanları olarak <strong>doğruluk ve hesap verilebilirliğe</strong> azami değer veriyor; tüm uygulamalarımızın şeffaf, dürüst ve etik olduğundan emin olmak için birbirimize destek oluyoruz.</p>
+    <div class="section-tag reveal" style="margin-bottom: 16px;" data-en="Our Values">Değerlerimiz</div>
+    <h2 class="about-h2 reveal" data-en="Our Integrity and Code of Ethics">Doğruluk ve Etik Kurallarımız</h2>
+    <p class="about-p reveal" data-en="To reach our goals, we value having employees eager to do their work within a framework of &lt;strong&gt;leadership, fairness and honesty&lt;/strong&gt;. We are aware of the responsibility we carry toward one another and our customers.">Hedeflerimize ulaşmak için; yaptığı işi <strong>liderlik, adalet ve dürüstlük</strong> çerçevesinde sunmaya hevesli çalışanlarımız olmasını önemsiyoruz. Birbirimize ve müşterilerimize karşı taşıdığımız sorumluluğun farkındayız.</p>
+    <p class="about-p reveal" data-en="We are the guardians of our brands and their reputation; we do our work properly and honestly to defend the values they represent in the market. We support an &lt;strong&gt;open communication environment&lt;/strong&gt; where we can exchange ideas and information without fear of negative feedback.">Markalarımızın ve itibarının bekçileriyiz; piyasada temsil ettiği değerleri savunmak için işimizi olması gerektiği gibi ve dürüstçe yapıyoruz. Olumsuz bir geri dönüş korkusu olmadan fikir ve bilgi alışverişinde bulunabileceğimiz <strong>açık iletişim ortamını</strong> destekliyoruz.</p>
+    <p class="about-p reveal" data-en="As İBAVALRESA employees we place the utmost value on &lt;strong&gt;integrity and accountability&lt;/strong&gt;; we support one another to ensure all our practices are transparent, honest and ethical.">İBAVALRESA çalışanları olarak <strong>doğruluk ve hesap verilebilirliğe</strong> azami değer veriyor; tüm uygulamalarımızın şeffaf, dürüst ve etik olduğundan emin olmak için birbirimize destek oluyoruz.</p>
     <div class="about-pull reveal">
-      <p><em>Birlikte gelişir,</em> sorumluluk alır, değer katarız.</p>
+      <p data-en="&lt;em&gt;We grow together,&lt;/em&gt; take responsibility and add value."><em>Birlikte gelişir,</em> sorumluluk alır, değer katarız.</p>
     </div>
   </div>
 </section>
@@ -2163,16 +2174,16 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="section-inner">
     <div class="hr-cta-card reveal">
       <div class="hr-cta-text">
-        <h2 class="about-h2" style="margin-bottom:18px;">Bize Katılmak İster Misiniz?</h2>
-        <p class="about-p">İBAVALRESA Takımı'na katılmak isterseniz aşağıdaki butona tıklayarak güncel iş ilânlarımızı inceleyebilirsiniz.</p>
-        <p class="about-p" style="font-size:14px;color:var(--text3);font-style:italic;">KVKK kanunu gereğince, iş ve staj başvurularınızı sadece kariyer.net ilânlarımız üzerinden yapmanızı rica ederiz. Sitemizdeki iletişim formları ve mail üzerinden yapılan başvurular silinecek ve değerlendirmeye alınmayacaktır.</p>
+        <h2 class="about-h2" style="margin-bottom:18px;" data-en="Would You Like to Join Us?">Bize Katılmak İster Misiniz?</h2>
+        <p class="about-p" data-en="If you'd like to join the İBAVALRESA team, click the button below to browse our current job postings.">İBAVALRESA Takımı'na katılmak isterseniz aşağıdaki butona tıklayarak güncel iş ilânlarımızı inceleyebilirsiniz.</p>
+        <p class="about-p" style="font-size:14px;color:var(--text3);font-style:italic;" data-en="In accordance with the Personal Data Protection Law (KVKK), please make your job and internship applications only through our kariyer.net postings. Applications made via the contact forms or email on our site will be deleted and will not be considered.">KVKK kanunu gereğince, iş ve staj başvurularınızı sadece kariyer.net ilânlarımız üzerinden yapmanızı rica ederiz. Sitemizdeki iletişim formları ve mail üzerinden yapılan başvurular silinecek ve değerlendirmeye alınmayacaktır.</p>
       </div>
       <div class="hr-cta-action">
         <a class="hr-cta-btn" href="https://www.kariyer.net/firma-profil/ibavalresa-boya-ve-kimya-san-tic-a-s-153850-119593" target="_blank" rel="noopener">
-          Buradan Başla
+          <span data-en="Start Here">Buradan Başla</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 5l7 7-7 7"/></svg>
         </a>
-        <p class="hr-cta-meta">kariyer.net üzerinden başvuru</p>
+        <p class="hr-cta-meta" data-en="Apply via kariyer.net">kariyer.net üzerinden başvuru</p>
       </div>
     </div>
   </div>
@@ -2181,7 +2192,10 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 <!-- ── BRANDS ── -->
 <section class="brands" id="markalar" style="min-height: 300px">
   <div class="section-inner">
-    <div class="brands-label reveal">Logolarımız</div>
+    <div class="next-page reveal">
+      <a href="surdurulebilirlik.html"><span data-en="Next page">Sonraki sayfa</span> <span class="np-sep">&rsaquo;</span> <span class="np-name" data-en="Sustainability">Sürdürülebilirlik</span></a>
+    </div>
+    <div class="brands-label reveal" data-en="Our Brands">Logolarımız</div>
     <div class="brands-grid reveal">
       <a class="brand-item" href="https://www.valresa.com.tr/" target="_blank">
         <img src="assets/logos/valresa.png" alt="Valresa" class="brand-logo-img">
@@ -2212,42 +2226,42 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <p class="footer-tagline" style="margin-top:4px;font-size:12px;color:var(--text3);">+90 312 267 56 22</p>
     </div>
     <div class="footer-col">
-      <h4>Kurumsal</h4>
+      <h4 data-en="Corporate">Kurumsal</h4>
       <ul>
-        <li><a href="hakkimizda.html">Hakkımızda</a></li>
-        <li><a href="uretim-ve-teknoloji.html">Üretim ve Teknoloji</a></li>
-        <li><a href="arge.html">Araştırma Geliştirme</a></li>
-        <li><a href="insan-kaynaklari.html">İnsan Kaynakları</a></li>
-        <li><a href="surdurulebilirlik.html">Sürdürülebilirlik</a></li>
-        <li><a href="kalite-sertifikalar.html">Kalite & Sertifikalar</a></li>
+        <li><a href="hakkimizda.html" data-en="About Us">Hakkımızda</a></li>
+        <li><a href="uretim-ve-teknoloji.html" data-en="Production & Technology">Üretim ve Teknoloji</a></li>
+        <li><a href="arge.html" data-en="Research & Development">Araştırma Geliştirme</a></li>
+        <li><a href="insan-kaynaklari.html" data-en="Human Resources">İnsan Kaynakları</a></li>
+        <li><a href="surdurulebilirlik.html" data-en="Sustainability">Sürdürülebilirlik</a></li>
+        <li><a href="kalite-sertifikalar.html" data-en="Quality & Certificates">Kalite & Sertifikalar</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Kataloglar</h4>
+      <h4 data-en="Catalogs">Kataloglar</h4>
       <ul>
         <li><a href="https://renkpaleti.ibavalresa.com.tr/?lang=tr">RAL-NCS-Nova Kartela</a></li>
-        <li><a href="https://www.valresa.com.tr/urunkatalogu/">Valresa Kataloğu</a></li>
-        <li><a href="https://www.ibavet.com.tr/urunkatalogu/">İbavet Kataloğu</a></li>
+        <li><a href="https://www.valresa.com.tr/urunkatalogu/" data-en="Valresa Catalog">Valresa Kataloğu</a></li>
+        <li><a href="https://www.ibavet.com.tr/urunkatalogu/" data-en="İbavet Catalog">İbavet Kataloğu</a></li>
       </ul>
       <div style="margin-top:40px;"></div>
       <h4>Online İşlemler</h4>
       <ul>
-        <li><a href="https://weborder.ibavalresa.com.tr" target="_blank">Sipariş</a></li>
-        <li><a href="https://tahsilat.ibavalresa.com.tr/" target="_blank">Tahsilat</a></li>
+        <li><a href="https://weborder.ibavalresa.com.tr" target="_blank" data-en="Order">Sipariş</a></li>
+        <li><a href="https://tahsilat.ibavalresa.com.tr/" target="_blank" data-en="Payment Collection">Tahsilat</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4 style="opacity:0;pointer-events:none;">—</h4>
       <ul>
-        <li><a href="iletisim.html">Bize Ulaşın</a></li>
-        <li style="margin-top:10px;"><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/17623" target="_blank" style="font-size:11px;">Bilgi Toplumu Hizmetleri</a></li>
-        <li><a href="kvkk-aydinlatma-metni.html" style="font-size:11px;">KVKK Aydınlatma Metni</a></li>
-        <li><a href="cerez-politikasi.html" style="font-size:11px;">Çerez Politikası</a></li>
+        <li><a href="iletisim.html" data-en="Get in Touch">Bize Ulaşın</a></li>
+        <li style="margin-top:10px;"><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/17623" target="_blank" style="font-size:11px;" data-en="Information Society Services">Bilgi Toplumu Hizmetleri</a></li>
+        <li><a href="kvkk-aydinlatma-metni.html" style="font-size:11px;" data-en="Personal Data Protection Notice">KVKK Aydınlatma Metni</a></li>
+        <li><a href="cerez-politikasi.html" style="font-size:11px;" data-en="Cookie Policy">Çerez Politikası</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 Tüm hakları saklıdır.</div>
+    <div class="footer-copy" data-en="© 2026 All rights reserved.">© 2026 Tüm hakları saklıdır.</div>
     <div class="footer-social">
       <a href="https://www.facebook.com/ibavalresa/" class="footer-social-btn" title="Facebook" target="_blank">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -2523,10 +2537,10 @@ window.addEventListener('scroll', () => {
 }
 </style>
 <div class="cookie-bar" id="cookieBar" role="region" aria-label="Çerez bildirimi" hidden>
-  <p class="cookie-bar-text">Bu web sitesinde sitenin çalışması için zorunlu çerezler kullanılır. Gömülü YouTube videolarını sitede oynatmak için üçüncü taraf (YouTube) çerezlerine izin vermeniz gerekir. Ayrıntılar için <a href="cerez-politikasi.html">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
+  <p class="cookie-bar-text" data-en="This website uses essential cookies to run properly. To play embedded YouTube videos on the site, you must allow third-party (YouTube) cookies. For details, see our &lt;a href=&quot;cerez-politikasi.html&quot;&gt;Cookie Policy&lt;/a&gt;.">Bu web sitesinde sitenin çalışması için zorunlu çerezler kullanılır. Gömülü YouTube videolarını sitede oynatmak için üçüncü taraf (YouTube) çerezlerine izin vermeniz gerekir. Ayrıntılar için <a href="cerez-politikasi.html" data-en="Cookie Policy">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
   <div class="cookie-bar-btns">
-    <button class="cookie-bar-btn ghost" id="cookieReject" type="button">Reddet</button>
-    <button class="cookie-bar-btn" id="cookieAccept" type="button">Kabul Et</button>
+    <button class="cookie-bar-btn ghost" id="cookieReject" type="button" data-en="Reject">Reddet</button>
+    <button class="cookie-bar-btn" id="cookieAccept" type="button" data-en="Accept">Kabul Et</button>
   </div>
 </div>
 <script>

@@ -21,8 +21,9 @@
 {"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBAVALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
 </script>
 
-<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>" type="image/svg+xml">
-<link rel="shortcut icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23000'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Inter,Arial,sans-serif' font-size='30' font-weight='800' fill='%23fff' letter-spacing='-1'>iv</text></svg>">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/favicon-192x192.png">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/json" id="tweak-defaults">
@@ -1393,6 +1394,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   font-size: 14.5px; color: var(--text2); line-height: 1.7;
   max-width: 520px; margin-bottom: 20px;
 }
+.fcard-desc strong { color: var(--text); font-weight: 700; }
 .fcard-link {
   display: inline-flex; align-items: center; gap: 6px;
   align-self: flex-start;
@@ -1674,14 +1676,14 @@ footer img[alt="ibavalresa"] { filter: none !important; }
             <img src="img/iletisim-youtube.jpg" alt="İbavalresa YouTube" class="nav-mega-img" style="object-fit:cover;"/>
           </a>
           <div class="nav-mega-links">
-            <a href="iletisim.html" class="nav-drop-item">
-              <div><div class="nav-drop-title" data-en="Get in Touch">Bize Ulaşın</div><div class="nav-drop-sub" data-en="Our contact details">İletişim bilgilerimiz</div></div>
+            <a class="nav-drop-item" style="opacity:.45;cursor:default;pointer-events:none;" title="Çok yakında">
+              <div><div class="nav-drop-title" data-en="Technical Complaint / Suggestion">Teknik Şikayet / Öneri</div><div class="nav-drop-sub" data-en="Feedback form">Geri bildirim formu</div></div>
             </a>
             <a href="bolge-mudurlukleri.html" class="nav-drop-item">
               <div><div class="nav-drop-title" data-en="Regional Offices">Bölge Müdürlükleri</div><div class="nav-drop-sub" data-en="All sales points">Tüm satış noktaları</div></div>
             </a>
-            <a class="nav-drop-item" style="opacity:.45;cursor:default;pointer-events:none;" title="Çok yakında">
-              <div><div class="nav-drop-title" data-en="Technical Complaint / Suggestion">Teknik Şikayet / Öneri</div><div class="nav-drop-sub" data-en="Feedback form">Geri bildirim formu</div></div>
+            <a href="iletisim.html" class="nav-drop-item">
+              <div><div class="nav-drop-title" data-en="Get in Touch">Bize Ulaşın</div><div class="nav-drop-sub" data-en="Our contact details">İletişim bilgilerimiz</div></div>
             </a>
           </div>
         </div>
@@ -1717,7 +1719,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   </div>
 
   <!-- Dil seçici — EN SAĞDA -->
-  <div class="lang-switcher" id="lang-switcher" style="margin-left:8px;">
+  <div class="lang-switcher" id="lang-switcher" style="margin-left:-22px;">
     <button class="lang-btn" id="lang-toggle" aria-label="Dil seç" onclick="toggleLang()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
       <span id="lang-current">TR</span>
@@ -1779,9 +1781,9 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="mobile-menu-sub">
-      <a href="iletisim.html" data-en="Get in Touch">Bize Ulaşın</a>
-      <a href="bolge-mudurlukleri.html" data-en="Regional Offices">Bölge Müdürlükleri</a>
       <a style="opacity:.45;cursor:default;pointer-events:none;" title="Çok yakında" data-en="Technical Complaint / Suggestion">Teknik Şikayet / Öneri</a>
+      <a href="bolge-mudurlukleri.html" data-en="Regional Offices">Bölge Müdürlükleri</a>
+      <a href="iletisim.html" data-en="Get in Touch">Bize Ulaşın</a>
     </div>
   </div>
   <div class="mobile-menu-group">
@@ -1891,7 +1893,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
         <div class="fcard-body">
           <div class="fcard-eyebrow" data-en="High-Quality Production">Yüksek Kaliteli Üretim</div>
           <div class="fcard-title" data-en="Production technology.">Üretim teknolojisi.</div>
-          <p class="fcard-desc" data-en="By closely following technological developments and investing in our production infrastructure, we build a strong and standardized production structure. Thanks to our SAP-integrated system, we manage our processes end-to-end in a traceable and controlled way. We keep improving our highly repeatable production processes with a continuous-improvement approach.">Teknolojik gelişmeleri yakından takip ederek üretim altyapımıza yaptığımız yatırımlarla güçlü ve standartlaştırılmış bir üretim yapısı oluşturuyoruz. SAP entegre sistemimiz sayesinde süreçlerimizi uçtan uca izlenebilir ve kontrollü şekilde yönetiyoruz. Yüksek tekrarlanabilirlik seviyesine ulaşan üretim süreçlerimizi ise sürekli iyileştirme yaklaşımıyla geliştirmeye devam ediyoruz.</p>
+          <p class="fcard-desc" data-en="By closely following technological developments and investing in our production infrastructure, we build a &lt;strong&gt;strong and standardized production structure&lt;/strong&gt;. Thanks to our SAP-integrated system, we manage our processes &lt;strong&gt;end-to-end in a traceable and controlled&lt;/strong&gt; way. We keep improving our highly repeatable production processes with a continuous-improvement approach.">Teknolojik gelişmeleri yakından takip ederek üretim altyapımıza yaptığımız yatırımlarla <strong>güçlü ve standartlaştırılmış bir üretim yapısı</strong> oluşturuyoruz. SAP entegre sistemimiz sayesinde süreçlerimizi <strong>uçtan uca izlenebilir ve kontrollü</strong> şekilde yönetiyoruz. Yüksek tekrarlanabilirlik seviyesine ulaşan üretim süreçlerimizi ise sürekli iyileştirme yaklaşımıyla geliştirmeye devam ediyoruz.</p>
           <a class="fcard-link" href="uretim-ve-teknoloji.html">
             <span data-en="Learn more">Daha fazla bilgi</span>
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1907,7 +1909,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
         <div class="fcard-body">
           <div class="fcard-eyebrow" data-en="Turkish–Spanish R&D Power">Türk–İspanyol Ar-Ge Gücü</div>
           <div class="fcard-title" data-en="Research & Development.">Araştırma - Geliştirme.</div>
-          <p class="fcard-desc" data-en="İBAVALRESA R&amp;amp;D, nourished by global know-how, develops technological products and innovative formulations; producing value-adding solutions that put customer needs at the center. Focused on sustainable and eco-friendly technologies, our products combine high performance, aesthetic surface quality and global quality standards. Our R&amp;amp;D approach is not limited to product development; it also works actively on application techniques, process compatibility and field solutions that create added value, directly contributing to our customers&amp;rsquo; production processes.">İBAVALRESA Ar-Ge, global bilgi birikimiyle beslenen, teknolojik ürünler ve yenilikçi formülasyonlar geliştiren bir yapı olarak; müşteri ihtiyaçlarını merkeze alan, uygulamaya değer çözümler üretir. Sürdürülebilir ve çevre dostu teknolojiler odağında geliştirilen ürünlerimiz; yüksek performans, estetik yüzey kalitesi ve global kalite standartlarını bir arada sunar. Ar-Ge yaklaşımımız yalnızca ürün geliştirmekle sınırlı değildir; farklı uygulama teknikleri, proses uyumluluğu ve sahada katma değer yaratan uygulama çözümleri üzerinde de aktif olarak çalışır, müşterilerimizin üretim süreçlerine doğrudan katkı sağlar.</p>
+          <p class="fcard-desc" data-en="İBAVALRESA R&amp;amp;D, nourished by global know-how, develops technological products and &lt;strong&gt;innovative formulations&lt;/strong&gt;; producing value-adding solutions that put customer needs at the center. Focused on sustainable and eco-friendly technologies, our products combine &lt;strong&gt;high performance, aesthetic surface quality and global quality standards&lt;/strong&gt;. Our R&amp;amp;D approach is not limited to product development; it also works actively on application techniques, process compatibility and field solutions that create added value, directly contributing to our customers&amp;rsquo; production processes.">İBAVALRESA Ar-Ge, global bilgi birikimiyle beslenen, teknolojik ürünler ve <strong>yenilikçi formülasyonlar</strong> geliştiren bir yapı olarak; müşteri ihtiyaçlarını merkeze alan, uygulamaya değer çözümler üretir. Sürdürülebilir ve çevre dostu teknolojiler odağında geliştirilen ürünlerimiz; <strong>yüksek performans, estetik yüzey kalitesi ve global kalite standartlarını</strong> bir arada sunar. Ar-Ge yaklaşımımız yalnızca ürün geliştirmekle sınırlı değildir; farklı uygulama teknikleri, proses uyumluluğu ve sahada katma değer yaratan uygulama çözümleri üzerinde de aktif olarak çalışır, müşterilerimizin üretim süreçlerine doğrudan katkı sağlar.</p>
           <a class="fcard-link" href="arge.html">
             <span data-en="Learn more">Daha fazla bilgi</span>
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1925,7 +1927,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
         <div class="fcard-body">
           <div class="fcard-eyebrow" data-en="Sales & Technical Support">Satış & Teknik Destek</div>
           <div class="fcard-title" data-en="We add strength to our business partners.">İş Ortaklarımızın Gücüne Güç Katıyoruz.</div>
-          <p class="fcard-desc" data-en="Beyond product supply; across Türkiye and in more than 25 countries, we add value to our customers' production processes with our sales, technical support and coloring services. Discover how our strong field organization works.">Ürün tedarikinin ötesinde; Türkiye'nin dört bir yanında ve 25'ten fazla ülkede müşterilerimizin üretim süreçlerine satış, teknik destek ve renklendirme hizmetlerimizle değer katıyoruz. Güçlü saha organizasyonumuzun nasıl çalıştığını keşfedin.</p>
+          <p class="fcard-desc" data-en="Beyond product supply; across Türkiye and in &lt;strong&gt;more than 25 countries&lt;/strong&gt;, we add value to our customers' production processes with our &lt;strong&gt;sales, technical support and coloring services&lt;/strong&gt;. Discover how our strong field organization works.">Ürün tedarikinin ötesinde; Türkiye'nin dört bir yanında ve <strong>25'ten fazla ülkede</strong> müşterilerimizin üretim süreçlerine <strong>satış, teknik destek ve renklendirme hizmetlerimizle</strong> değer katıyoruz. Güçlü saha organizasyonumuzun nasıl çalıştığını keşfedin.</p>
           <a class="fcard-link" href="hizmetlerimiz.html">
             <span data-en="Learn more">Daha fazla bilgi</span>
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
