@@ -2068,6 +2068,32 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 .region-link svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
 .region-link:hover { color: var(--accent); }
 
+.export-bar {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  flex-wrap: wrap;
+  border: 1px solid rgba(38,53,140,0.18);
+  background: #f4f5fb;
+  border-radius: 14px;
+  padding: 22px 28px;
+  margin-bottom: 22px;
+}
+.export-head { display: flex; align-items: center; gap: 18px; }
+.export-icon {
+  flex-shrink: 0;
+  width: 46px; height: 46px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--accent); color: #fff;
+}
+.export-icon svg { width: 24px; height: 24px; }
+.export-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 4px;
+}
+.export-title { font-size: 18px; font-weight: 700; letter-spacing: -.4px; color: var(--text); }
+.export-info { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.export-person { font-size: 15px; font-weight: 600; color: var(--text); }
+.export-bar .region-links { flex-direction: row; gap: 22px; }
+
 @media (max-width: 860px) {
   .offices-grid { grid-template-columns: 1fr; }
   .regions-grid { grid-template-columns: 1fr 1fr; }
@@ -2260,7 +2286,32 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 <!-- ── REGIONAL MANAGERS ── -->
 <section class="regions-section">
   <div class="section-inner">
+    <div class="export-bar reveal">
+      <div class="export-head">
+        <div class="export-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <div>
+          <div class="export-eyebrow" data-en="Export">İhracat</div>
+          <div class="export-title" data-en="International Sales &amp; Export">Yurt Dışı Satış ve İhracat</div>
+        </div>
+      </div>
+      <div class="export-info">
+        <div class="export-person">Samet Avcı</div>
+        <div class="region-links">
+          <a class="region-link" href="mailto:samet.avci@ibavalresa.com.tr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg><span>samet.avci@ibavalresa.com.tr</span></a>
+          <a class="region-link" href="tel:+90 534 890 48 52"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+90 534 890 48 52</span></a>
+        </div>
+      </div>
+    </div>
     <div class="regions-grid">
+      <div class="region-card reveal">
+        <div class="region-badge" data-en="Regional Office">Bölge Müdürlüğü</div>
+        <div class="region-name">Ankara</div>
+        <div class="region-person">Şahin Çağlar</div>
+        <div class="region-links">
+          <a class="region-link" href="mailto:sahin.caglar@ibavalresa.com.tr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg><span>sahin.caglar@ibavalresa.com.tr</span></a>
+          <a class="region-link" href="tel:+90 533 512 68 40"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+90 533 512 68 40</span></a>
+        </div>
+      </div>
       <div class="region-card reveal">
         <div class="region-badge" data-en="Regional Office">Bölge Müdürlüğü</div>
         <div class="region-name" data-en="İstanbul (Europe)">İstanbul Avrupa</div>
@@ -2281,15 +2332,6 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       </div>
       <div class="region-card reveal">
         <div class="region-badge" data-en="Regional Office">Bölge Müdürlüğü</div>
-        <div class="region-name" data-en="Aegean &amp; Mediterranean">Ege ve Akdeniz</div>
-        <div class="region-person">Osman Yılmaz</div>
-        <div class="region-links">
-          <a class="region-link" href="mailto:osman.yilmaz@ibavalresa.com.tr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg><span>osman.yilmaz@ibavalresa.com.tr</span></a>
-          <a class="region-link" href="tel:+90 533 086 09 84"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+90 533 086 09 84</span></a>
-        </div>
-      </div>
-      <div class="region-card reveal">
-        <div class="region-badge" data-en="Regional Office">Bölge Müdürlüğü</div>
         <div class="region-name">Bursa</div>
         <div class="region-person">Oktay Özkan</div>
         <div class="region-links">
@@ -2299,11 +2341,11 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       </div>
       <div class="region-card reveal">
         <div class="region-badge" data-en="Regional Office">Bölge Müdürlüğü</div>
-        <div class="region-name">Ankara</div>
-        <div class="region-person">Şahin Çağlar</div>
+        <div class="region-name" data-en="Aegean &amp; Mediterranean">Ege ve Akdeniz</div>
+        <div class="region-person">Osman Yılmaz</div>
         <div class="region-links">
-          <a class="region-link" href="mailto:sahin.caglar@ibavalresa.com.tr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg><span>sahin.caglar@ibavalresa.com.tr</span></a>
-          <a class="region-link" href="tel:+90 533 512 68 40"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+90 533 512 68 40</span></a>
+          <a class="region-link" href="mailto:osman.yilmaz@ibavalresa.com.tr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg><span>osman.yilmaz@ibavalresa.com.tr</span></a>
+          <a class="region-link" href="tel:+90 533 086 09 84"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+90 533 086 09 84</span></a>
         </div>
       </div>
       <div class="region-card reveal">

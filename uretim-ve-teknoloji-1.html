@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kalite Yönetimi ve Sertifikalar — İBAVALRESA</title>
-<link rel="canonical" href="https://www.ibavalresa.com.tr/kalite-sertifikalar.html">
-<meta name="description" content="İBAVALRESA kalite yönetim sistemi, uluslararası standartlar ve sahip olunan sertifikalar; yüksek ve tekrarlanabilir ürün kalitesi taahhüdü.">
+<title>Üretim ve Teknoloji — İBAVALRESA</title>
+<link rel="canonical" href="https://www.ibavalresa.com.tr/uretim-ve-teknoloji.html">
+<meta name="description" content="37.000 m²'yi aşan üretim alanı, SAP entegre ileri otomasyon ve baştan sona denetlenen süreçlerle İBAVALRESA üretim ve teknoloji altyapısı.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="İBAVALRESA">
 <meta property="og:locale" content="tr_TR">
-<meta property="og:title" content="Kalite Yönetimi ve Sertifikalar — İBAVALRESA">
-<meta property="og:description" content="İBAVALRESA kalite yönetim sistemi, uluslararası standartlar ve sahip olunan sertifikalar; yüksek ve tekrarlanabilir ürün kalitesi taahhüdü.">
-<meta property="og:url" content="https://www.ibavalresa.com.tr/kalite-sertifikalar.html">
+<meta property="og:title" content="Üretim ve Teknoloji — İBAVALRESA">
+<meta property="og:description" content="37.000 m²'yi aşan üretim alanı, SAP entegre ileri otomasyon ve baştan sona denetlenen süreçlerle İBAVALRESA üretim ve teknoloji altyapısı.">
+<meta property="og:url" content="https://www.ibavalresa.com.tr/uretim-ve-teknoloji.html">
 <meta property="og:image" content="https://www.ibavalresa.com.tr/img/kampus-havadan.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kalite Yönetimi ve Sertifikalar — İBAVALRESA">
-<meta name="twitter:description" content="İBAVALRESA kalite yönetim sistemi, uluslararası standartlar ve sahip olunan sertifikalar; yüksek ve tekrarlanabilir ürün kalitesi taahhüdü.">
+<meta name="twitter:title" content="Üretim ve Teknoloji — İBAVALRESA">
+<meta name="twitter:description" content="37.000 m²'yi aşan üretim alanı, SAP entegre ileri otomasyon ve baştan sona denetlenen süreçlerle İBAVALRESA üretim ve teknoloji altyapısı.">
 <meta name="twitter:image" content="https://www.ibavalresa.com.tr/img/kampus-havadan.jpg">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBAVALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"]}
@@ -1587,10 +1587,44 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   font-style: normal; color: var(--accent);
 }
 
+/* ── PAGE INTRO (kalite tarzı başlık — görsel sonrası) ── */
+.contact-hero {
+  padding: 64px 0 56px;
+  border-bottom: 1px solid var(--border);
+  background: radial-gradient(ellipse 70% 90% at 85% 0%, rgba(38,53,140,0.05) 0%, transparent 60%);
+}
+.contact-hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: clamp(12px, 1.0vw, 14px); font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 20px;
+}
+.contact-hero-eyebrow::before {
+  content: ""; width: 28px; height: 1px; background: var(--accent); opacity: .5;
+}
+.contact-hero-title {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800; letter-spacing: -1.5px; line-height: 1.05;
+  color: var(--text); margin-bottom: 22px;
+  max-width: 672px;
+}
+.contact-hero-title em { font-style: normal; color: var(--accent); }
+.contact-hero-sub {
+  font-size: clamp(14px, 1.3vw, 18px); color: var(--text2);
+  line-height: 1.6; max-width: 672px; text-wrap: pretty;
+}
+
 /* About sections */
 .about-section { padding: 60px 0; border-top: 1px solid var(--border); }
 .about-section:first-of-type { border-top: none; }
 .about-section .section-inner { max-width: 1100px; }
+.section-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--accent);
+}
+.section-tag::before {
+  content: ""; width: 22px; height: 1px; background: var(--accent); opacity: .5;
+}
 .about-lead {
   font-size: clamp(20px, 2vw, 26px);
   font-weight: 400; line-height: 1.5;
@@ -1678,6 +1712,37 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 }
 
 /* Pull quote */
+.about-founding {
+  position: relative;
+  margin-top: 10px;
+  padding: 44px 48px 40px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(38,53,140,0.055) 0%, rgba(38,53,140,0) 62%);
+  overflow: hidden;
+}
+.about-founding::before {
+  content: '\201C';
+  position: absolute;
+  top: 2px; left: 24px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 120px; line-height: 1;
+  color: var(--accent); opacity: 0.15;
+  pointer-events: none;
+}
+.about-founding p {
+  position: relative;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500; line-height: 1.55;
+  color: var(--text); letter-spacing: -.5px;
+  text-wrap: pretty;
+}
+.about-founding strong { color: var(--accent); font-weight: 700; }
+@media (max-width: 720px) {
+  .about-founding { padding: 34px 24px 30px; }
+  .about-founding::before { font-size: 86px; left: 14px; }
+}
 .about-pull {
   margin: 48px 0;
   padding: 48px 40px;
@@ -1694,70 +1759,6 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   text-wrap: balance;
 }
 .about-pull p em { font-style: normal; color: var(--accent); }
-
-/* ── ABOUT TABS ── */
-.about-tabs-wrap {
-  border-top: 1px solid var(--border);
-  background: var(--bg);
-  position: sticky;
-  top: 60px;
-  z-index: 50;
-  backdrop-filter: saturate(160%) blur(8px);
-  background-color: rgba(255,255,255,0.85);
-}
-.about-tabs {
-  display: flex;
-  gap: 4px;
-  flex-wrap: wrap;
-  padding: 18px 0 0;
-  border-bottom: 1px solid var(--border);
-}
-.about-tab {
-  font: inherit;
-  background: transparent;
-  border: 1px solid transparent;
-  border-bottom: none;
-  border-radius: 10px 10px 0 0;
-  padding: 14px 22px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--accent);
-  letter-spacing: -0.01em;
-  position: relative;
-  bottom: -1px;
-  transition: background .15s ease, color .15s ease;
-  white-space: nowrap;
-}
-.about-tab:hover {
-  background: var(--accent-dim);
-}
-.about-tab.active {
-  background: var(--bg);
-  color: var(--text);
-  border-color: var(--border);
-  border-bottom: 1px solid var(--bg);
-  cursor: default;
-}
-.about-tab-panel {
-  animation: tabFade .35s ease;
-}
-.about-tab-panel[hidden] { display: none; }
-@keyframes tabFade {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@media (max-width: 720px) {
-  .about-tabs-wrap { position: static; }
-  .about-tabs {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-  .about-tabs::-webkit-scrollbar { display: none; }
-  .about-tab { padding: 12px 16px; font-size: 14px; }
-}
 
 /* Mini-stat grid (dijital metrics) */
 .about-metrics {
@@ -1838,390 +1839,11 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
     <rect width="1200" height="800" fill="#ffffff"/>
     <g transform="translate(600,400)" text-anchor="middle" font-family="Inter, sans-serif">
-      <text y="-20" font-size="120" font-weight="800" fill="#0d0d10" letter-spacing="-3">iba.valresa</text>
-      <text y="60" font-size="36" font-weight="600" fill="#26358C" letter-spacing="2">HIGH QUALITY PRODUCTION</text>
+      <text y="-20" font-size="96" font-weight="800" fill="#0d0d10" letter-spacing="-3">Üretim &amp; Teknoloji</text>
+      <text y="60" font-size="36" font-weight="600" fill="#26358C" letter-spacing="2">İBAVALRESA</text>
     </g>
   </svg>
 </template>
-
-<style>
-/* ── CONTACT PAGE ── */
-.contact-hero {
-  padding: 140px 0 56px;
-  border-bottom: 1px solid var(--border);
-  background:
-    radial-gradient(ellipse 70% 90% at 85% 0%, rgba(38,53,140,0.05) 0%, transparent 60%);
-}
-.contact-hero .section-inner { max-width: 1100px; }
-.contact-hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: clamp(12px, 1.0vw, 14px); font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--accent); margin-bottom: 20px;
-}
-.contact-hero-eyebrow::before {
-  content: ""; width: 28px; height: 1px; background: var(--accent); opacity: .5;
-}
-.contact-hero-title {
-  font-size: clamp(32px, 4vw, 48px);
-  font-weight: 800; letter-spacing: -1.5px; line-height: 1.05;
-  color: var(--text); margin-bottom: 22px;
-  max-width: 672px;
-}
-.contact-hero-title em { font-style: normal; color: var(--accent); }
-.contact-hero-sub {
-  font-size: clamp(14px, 1.3vw, 18px); color: var(--text2);
-  line-height: 1.6; max-width: 672px; text-wrap: pretty;
-}
-
-/* KVKK notice — örnek görseldeki mavi bilgilendirme kutusu */
-.kvkk-section { padding: 56px 0; }
-.kvkk-section .section-inner { max-width: 1100px; }
-.kvkk-callout {
-  display: flex; gap: 16px;
-  padding: 20px 24px;
-  background: #e9f1fb;
-  border: 1px solid #cfe0f4;
-  border-left: 5px solid var(--accent);
-  border-radius: 4px;
-}
-.kvkk-callout-icon {
-  flex-shrink: 0;
-  width: 30px; height: 30px; border-radius: 50%;
-  border: 1.5px solid var(--accent);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--accent);
-  margin-top: 1px;
-}
-.kvkk-callout-body {
-  font-size: 14px; line-height: 1.6; color: #1a1d24;
-  text-wrap: pretty;
-}
-.kvkk-callout-body strong { font-weight: 700; color: #1a1d24; }
-.kvkk-callout-body a { color: var(--accent); font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(38,53,140,0.35); }
-.kvkk-callout-body a:hover { border-bottom-color: var(--accent); }
-
-/* Office cards (Türkiye / España) */
-.offices-section { padding: 72px 0; }
-.offices-section .section-inner { max-width: 1100px; }
-.offices-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-  margin-top: 8px;
-}
-.office-card {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 36px 34px;
-  background: #fff;
-  transition: border-color .2s, box-shadow .2s;
-}
-.office-card > * { position: relative; z-index: 1; }
-.office-card:hover { border-color: rgba(38,53,140,0.25); box-shadow: 0 12px 40px rgba(38,53,140,0.07); }
-.office-flag-bg {
-  position: absolute;
-  z-index: 0 !important;
-  top: -28px; right: -24px;
-  font-size: 220px; line-height: 1;
-  opacity: 0.10;
-  filter: saturate(0.85);
-  pointer-events: none;
-  user-select: none;
-  transform: rotate(-6deg);
-  -webkit-mask: radial-gradient(120% 120% at 78% 22%, #000 18%, transparent 70%);
-          mask: radial-gradient(120% 120% at 78% 22%, #000 18%, transparent 70%);
-  transition: transform .5s cubic-bezier(.22,.68,0,1), opacity .3s;
-}
-.office-card:hover .office-flag-bg { transform: rotate(-3deg) scale(1.04); opacity: 0.14; }
-.office-flag {
-  font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-  color: var(--accent); margin-bottom: 10px;
-}
-.office-name {
-  font-size: 24px; font-weight: 800; letter-spacing: -.8px; color: var(--text);
-  margin-bottom: 18px;
-}
-.office-addr {
-  font-size: 15.5px; line-height: 1.7; color: var(--text2);
-  padding-bottom: 20px; margin-bottom: 20px;
-  border-bottom: 1px solid var(--border);
-  text-wrap: pretty;
-}
-.office-map-link {
-  display: inline-flex; align-items: center; gap: 7px;
-  margin-top: 12px;
-  font-size: 13.5px; font-weight: 600; color: var(--accent);
-  text-decoration: none;
-  transition: gap .2s;
-}
-.office-map-link svg { width: 15px; height: 15px; flex-shrink: 0; }
-.office-map-link:hover { gap: 11px; }
-.office-contact { display: flex; flex-direction: column; gap: 12px; }
-.office-contact-row {
-  display: flex; align-items: center; gap: 12px;
-  font-size: 15px; color: var(--text2);
-}
-.office-contact-row svg { width: 17px; height: 17px; color: var(--accent); flex-shrink: 0; }
-.office-contact-row a { color: var(--text); text-decoration: none; font-weight: 500; }
-.office-contact-row a:hover { color: var(--accent); }
-.office-contact-row .oc-label { color: var(--text3); width: 54px; flex-shrink: 0; font-size: 13px; }
-
-/* Contact form */
-.form-section { padding: 0 0 24px; }
-.form-section .section-inner { max-width: 1100px; }
-.form-card {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  overflow: hidden;
-  background: #fff;
-}
-.form-aside {
-  padding: 44px 40px;
-  background: #0d0d10;
-  color: #fff;
-  display: flex; flex-direction: column;
-}
-.form-aside-eyebrow {
-  font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-  color: var(--accent); margin-bottom: 16px;
-}
-.form-aside-title {
-  font-size: 30px; font-weight: 800; letter-spacing: -1.2px; line-height: 1.1;
-  margin-bottom: 16px; color: #fff;
-}
-.form-aside-text {
-  font-size: 14.5px; line-height: 1.7; color: rgba(240,239,244,0.66);
-  margin-bottom: 28px; text-wrap: pretty;
-}
-.form-aside-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: auto; }
-.form-aside-list li { display: flex; align-items: center; gap: 12px; font-size: 14px; color: rgba(240,239,244,0.82); }
-.form-aside-list svg { width: 17px; height: 17px; color: var(--accent); flex-shrink: 0; }
-.form-aside-list a { color: inherit; text-decoration: none; }
-.form-aside-list a:hover { color: #fff; }
-
-.form-body { padding: 40px 40px 36px; }
-.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 18px; }
-.form-field { display: flex; flex-direction: column; gap: 7px; }
-.form-field.full { grid-column: 1 / -1; }
-.form-field label { font-size: 12px; font-weight: 600; color: var(--text2); letter-spacing: .01em; }
-.form-field label span { color: var(--accent); }
-.form-field input,
-.form-field select,
-.form-field textarea {
-  font-family: var(--font);
-  font-size: 14px; color: var(--text);
-  background: #fafafb;
-  border: 1px solid var(--border);
-  border-radius: 9px;
-  padding: 11px 13px;
-  transition: border-color .18s, background .18s, box-shadow .18s;
-}
-.form-field textarea { resize: vertical; min-height: 110px; }
-.form-field input:focus,
-.form-field select:focus,
-.form-field textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-  background: #fff;
-  box-shadow: 0 0 0 3px var(--accent-dim);
-}
-.form-consent {
-  display: flex; align-items: flex-start; gap: 10px;
-  margin-top: 18px;
-  font-size: 12.5px; line-height: 1.55; color: var(--text2);
-}
-.form-consent input { margin-top: 2px; width: 16px; height: 16px; accent-color: var(--accent); flex-shrink: 0; }
-.form-consent a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(38,53,140,0.3); }
-.form-actions { display: flex; align-items: center; gap: 16px; margin-top: 22px; flex-wrap: wrap; }
-.form-submit {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--accent); color: #fff;
-  border: none; border-radius: 10px;
-  padding: 13px 26px; font-size: 14.5px; font-weight: 600;
-  font-family: var(--font); cursor: pointer;
-  transition: opacity .2s, box-shadow .2s, transform .1s;
-}
-.form-submit:hover { opacity: .9; box-shadow: 0 8px 28px var(--accent-glow); transform: translateY(-1px); }
-.form-status { font-size: 13.5px; font-weight: 600; color: #1f8a5b; opacity: 0; transition: opacity .25s; }
-.form-status.show { opacity: 1; }
-
-@media (max-width: 860px) {
-  .form-card { grid-template-columns: 1fr; }
-  .form-aside { padding: 32px 28px; }
-}
-@media (max-width: 520px) {
-  .form-grid { grid-template-columns: 1fr; }
-  .form-body { padding: 28px 22px; }
-}
-
-/* Regional managers */
-.regions-section { padding: 0 0 96px; }
-.regions-section .section-inner { max-width: 1100px; }
-.regions-head { margin-bottom: 36px; }
-.regions-title {
-  font-size: clamp(28px, 3.2vw, 40px);
-  font-weight: 700; letter-spacing: -1.4px; line-height: 1.1; color: var(--text);
-  margin-bottom: 12px; text-wrap: balance;
-}
-.regions-sub { font-size: 16px; color: var(--text2); max-width: 560px; }
-.regions-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
-}
-.region-card {
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 28px 26px;
-  background: #fff;
-  display: flex; flex-direction: column;
-  transition: border-color .2s, transform .2s, box-shadow .2s;
-}
-.region-card:hover { border-color: rgba(38,53,140,0.25); transform: translateY(-3px); box-shadow: 0 14px 40px rgba(38,53,140,0.08); }
-.region-badge {
-  font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  color: var(--accent); margin-bottom: 14px;
-}
-.region-name {
-  font-size: 19px; font-weight: 700; letter-spacing: -.4px; color: var(--text);
-  margin-bottom: 4px;
-}
-.region-person { font-size: 14.5px; color: var(--text2); margin-bottom: 20px; }
-.region-links { display: flex; flex-direction: column; gap: 10px; margin-top: auto; }
-.region-link {
-  display: flex; align-items: center; gap: 10px;
-  font-size: 14px; color: var(--text2); text-decoration: none;
-  transition: color .2s;
-}
-.region-link svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
-.region-link:hover { color: var(--accent); }
-
-@media (max-width: 860px) {
-  .offices-grid { grid-template-columns: 1fr; }
-  .regions-grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 560px) {
-  .regions-grid { grid-template-columns: 1fr; }
-  .kvkk-callout { padding: 16px 16px; gap: 12px; }
-  .kvkk-callout-body { font-size: 13px; }
-  .contact-hero { padding: 110px 0 44px; }
-}
-
-/* ── QUALITY & CERTIFICATES ── */
-.quality-section { padding: 72px 0; border-top: 1px solid var(--border); }
-.quality-section .section-inner { max-width: 1100px; }
-.quality-lead {
-  font-size: 18px; font-weight: 400; line-height: 1.7;
-  color: var(--text2); max-width: none; letter-spacing: -.3px; text-wrap: pretty;
-}
-.quality-lead strong { font-weight: 700; color: var(--text); }
-
-/* ── FOUNDING (tırnaklı gri vurgu kutusu) ── */
-.about-founding {
-  position: relative;
-  margin-top: 10px;
-  padding: 44px 48px 40px;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  background: linear-gradient(135deg, rgba(38,53,140,0.055) 0%, rgba(38,53,140,0) 62%);
-  overflow: hidden;
-}
-.about-founding::before {
-  content: '\201C';
-  position: absolute;
-  top: 2px; left: 24px;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 120px; line-height: 1;
-  color: var(--accent); opacity: 0.15;
-  pointer-events: none;
-}
-.about-founding p {
-  position: relative;
-  margin: 0;
-  font-size: 18px;
-  font-weight: 500; line-height: 1.45;
-  color: var(--text); letter-spacing: -.5px;
-  text-wrap: pretty;
-}
-.about-founding strong { color: var(--accent); font-weight: 700; }
-@media (max-width: 720px) {
-  .about-founding { padding: 34px 24px 30px; }
-  .about-founding::before { font-size: 86px; left: 14px; }
-}
-
-.cert-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
-}
-.cert-card {
-  display: flex; flex-direction: column;
-  border: 1px solid var(--border); border-radius: 18px;
-  padding: 34px 32px; background: #fff;
-  transition: border-color .2s, box-shadow .2s, transform .2s;
-}
-.cert-card:hover { border-color: rgba(38,53,140,0.25); box-shadow: 0 14px 44px rgba(38,53,140,0.08); transform: translateY(-3px); }
-.cert-icon {
-  width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center;
-  background: var(--accent-dim); border: 1px solid rgba(38,53,140,0.15);
-  color: var(--accent); margin-bottom: 22px;
-}
-.cert-icon svg { width: 24px; height: 24px; }
-.cert-badge {
-  display: inline-flex; align-self: flex-start; align-items: center;
-  font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  color: var(--accent); background: var(--accent-dim);
-  border-radius: 100px; padding: 5px 12px; margin-bottom: 14px;
-}
-.cert-title {
-  font-size: 22px; font-weight: 800; letter-spacing: -.6px; color: var(--text);
-  line-height: 1.2; margin-bottom: 12px;
-}
-.cert-desc {
-  font-size: 15px; line-height: 1.7; color: var(--text2);
-  margin-bottom: 26px; text-wrap: pretty; flex: 1;
-}
-.cert-link {
-  display: inline-flex; align-self: flex-start; align-items: center; gap: 9px;
-  background: var(--accent); color: #fff;
-  border-radius: 10px; padding: 12px 22px;
-  font-size: 14px; font-weight: 600; text-decoration: none;
-  transition: opacity .2s, box-shadow .2s, transform .1s;
-}
-.cert-link svg { width: 16px; height: 16px; }
-.cert-link:hover { opacity: .9; box-shadow: 0 8px 28px var(--accent-glow); transform: translateY(-1px); }
-
-/* Quality policy figure */
-.policy-section { padding: 72px 0; border-top: 1px solid var(--border); }
-.policy-section .section-inner { max-width: 1100px; }
-.policy-grid {
-  display: grid; grid-template-columns: 1fr 1.25fr; gap: 48px; align-items: center;
-}
-.policy-eyebrow {
-  font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--accent); margin-bottom: 14px;
-}
-.policy-title {
-  font-size: clamp(26px, 3vw, 38px); font-weight: 700; letter-spacing: -1.2px;
-  line-height: 1.1; color: var(--text); margin-bottom: 18px; text-wrap: balance;
-}
-.policy-text { font-size: 16px; line-height: 1.7; color: var(--text2); margin-bottom: 14px; text-wrap: pretty; }
-.policy-figure {
-  border: 1px solid var(--border); border-radius: 16px; overflow: hidden;
-  background: #f7f7f9; box-shadow: 0 18px 50px rgba(13,13,16,0.08);
-}
-.policy-figure img { display: block; width: 100%; height: auto; }
-.policy-intro { max-width: 760px; margin-bottom: 40px; }
-.policy-figures { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.policy-figures .policy-figure { height: 600px; display: flex; align-items: center; justify-content: center; padding: 22px; }
-.policy-figures .policy-figure img { max-width: 100%; max-height: 100%; width: auto; height: auto; }
-
-@media (max-width: 860px) {
-  .cert-grid { grid-template-columns: 1fr; }
-  .policy-grid { grid-template-columns: 1fr; gap: 28px; }
-  .policy-figures { grid-template-columns: 1fr; }
-}
-</style>
 </head>
 <body>
 
@@ -2391,91 +2013,129 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   </div>
 </div>
 
-<!-- ── QUALITY HERO ── -->
-<section class="contact-hero" id="hero">
+<!-- ── PAGE HERO ── -->
+<section class="page-hero" id="hero">
+  <img class="page-hero-img" src="img/uretim-havadan.jpg" alt="İbavalresa Üretim Tesisi — Ankara Sincan 1. OSB">
+</section>
+
+<!-- ── PAGE INTRO (başlık) ── -->
+<section class="contact-hero" id="intro">
   <div class="section-inner">
-    <div class="contact-hero-eyebrow reveal" data-en="Corporate">Kurumsal</div>
-    <h1 class="contact-hero-title reveal" data-en="Quality Management &amp; &lt;em&gt;Certificates&lt;/em&gt;">Kalite Yönetimi &amp; <em>Sertifikalar</em></h1>
-    <p class="contact-hero-sub reveal" data-en="İBAVALRESA Boya ve Kimya A.Ş. carries out all its activities within the framework of the ISO 9001:2015 Quality Management System. Our products are tested in independent laboratories and certified to international conformity standards.">İBAVALRESA Boya ve Kimya A.Ş., tüm faaliyetlerini ISO 9001:2015 Kalite Yönetim Sistemi çerçevesinde sürdürmektedir. Ürünlerimiz, bağımsız laboratuvarlarda test edilerek uluslararası uygunluk standartlarıyla belgelenmektedir.</p>
+    <div class="contact-hero-eyebrow reveal" data-en="Production &amp; Technology">Üretim ve Teknoloji</div>
+    <h1 class="contact-hero-title reveal" data-en="Every stage &lt;em&gt;under control.&lt;/em&gt;">Her aşaması <em>kontrol altında.</em></h1>
+    <p class="contact-hero-sub reveal" data-en="At our modern facility, every step from raw material to dispatch is tracked digitally; the same quality is produced repeatably in every batch.">Modern tesisimizde hammaddeden sevkiyata kadar her adım dijital olarak izlenir; aynı kalite, her partide tekrarlanabilir şekilde üretilir.</p>
   </div>
 </section>
 
-<!-- ── KALİTE YÖNETİM ANLAYIŞI ── -->
+<!-- ── İBAVALRESA YAKLAŞIMI (vizyon) ── -->
 <section class="about-section">
   <div class="section-inner">
-    <div class="about-founding reveal" style="margin-bottom: 40px;">
-      <p data-en="Quality is the value that shapes our entire corporate culture, guides our processes, forms the basis of the trust we offer our customers and feeds our continuous-improvement mindset — &lt;strong&gt;our most fundamental value&lt;/strong&gt;.">Kalite, tüm kurumsal kültürümüzü şekillendiren, süreçlerimize yön veren, müşterilerimize sunduğumuz güvenin temelini oluşturan ve sürekli gelişim anlayışımızı besleyen <strong>en temel değerimizdir</strong>.</p>
-    </div>
-    <div class="policy-eyebrow reveal" data-en="Our Approach">Yaklaşımımız</div>
-    <h2 class="about-h2 reveal" data-en="Our Quality Management Approach">Kalite Yönetim Anlayışımız</h2>
-    <p class="about-p reveal" data-en="Our understanding of quality is not limited to the products we manufacture; it &lt;strong&gt;forms the basis of all our activities&lt;/strong&gt; — from the service we offer our customers to our production processes, and from our supply chain to our continuous-improvement efforts. In line with the &lt;strong&gt;ISO 9001 Quality Management System&lt;/strong&gt; we have held for many years, we manage our processes in accordance with international standards, keeping customer satisfaction and sustainable development at the forefront.">Kalite anlayışımız; yalnızca ürettiğimiz ürünlerle sınırlı olmayıp, müşterilerimize sunduğumuz hizmetten üretim süreçlerimize, tedarik zincirimizden sürekli gelişim çalışmalarımıza kadar <strong>tüm faaliyetlerimizin temelini oluşturur</strong>. Uzun yıllardır sahip olduğumuz <strong>ISO 9001 Kalite Yönetim Sistemi</strong> doğrultusunda süreçlerimizi uluslararası standartlara uygun olarak yönetiyor, müşteri memnuniyetini ve sürdürülebilir gelişimi ön planda tutuyoruz.</p>
-    <p class="about-p reveal" style="margin-bottom:0;" data-en="To provide reliable products and services to our customers, we:">Müşterilerimize güvenilir ürün ve hizmet sunabilmek için;</p>
-    <ul class="about-bullets reveal" style="grid-template-columns:1fr; gap:12px;">
-      <li data-en="We effectively apply the requirements of the ISO 9001 Quality Management System and continuously improve the performance of our system.">ISO 9001 Kalite Yönetim Sistemi şartlarını etkin bir şekilde uyguluyor ve sistemimizin performansını sürekli geliştiriyoruz.</li>
-      <li data-en="We set measurable quality targets, monitor our performance regularly and evaluate the results we achieve.">Ölçülebilir kalite hedefleri belirliyor, performansımızı düzenli olarak izliyor ve elde ettiğimiz sonuçları değerlendiriyoruz.</li>
-      <li data-en="Through internal and external audits carried out regularly, we verify the effectiveness of our processes and turn identified improvement areas into opportunities.">Düzenli olarak gerçekleştirdiğimiz iç ve dış denetimler ile süreçlerimizin etkinliğini doğruluyor, tespit edilen gelişim alanlarını iyileştirme fırsatına dönüştürüyoruz.</li>
-      <li data-en="We regularly review the effectiveness of our quality management system through Management Review Meetings, process performance assessments and continuous-improvement efforts.">Yönetimin Gözden Geçirme Toplantıları, süreç performans değerlendirmeleri ve sürekli iyileştirme çalışmalarıyla kalite yönetim sistemimizin etkinliğini düzenli olarak gözden geçiriyoruz.</li>
-      <li data-en="We continuously improve our processes by systematically tracking customer feedback, complaint management, risk and opportunity assessments, and corrective and preventive actions.">Müşteri geri bildirimleri, şikâyet yönetimi, risk ve fırsat değerlendirmeleri ile düzeltici ve önleyici faaliyetleri sistematik olarak takip ederek süreçlerimizi sürekli geliştiriyoruz.</li>
-      <li data-en="In line with our digital-transformation vision, we deploy new infrastructures, software and management tools that support our quality management system, making our processes more effective, traceable and sustainable.">Dijital dönüşüm anlayışımız doğrultusunda kalite yönetim sistemimizi destekleyen yeni altyapılar, yazılımlar ve yönetim araçlarını devreye alarak süreçlerimizi daha etkin, izlenebilir ve sürdürülebilir hale getiriyoruz.</li>
-      <li data-en="We encourage the active participation of all our employees in quality processes and embrace quality awareness as an integral part of our corporate culture.">Tüm çalışanlarımızın kalite süreçlerine aktif katılımını teşvik ediyor, kalite bilincini kurum kültürümüzün ayrılmaz bir parçası olarak benimsiyoruz.</li>
-    </ul>
-    <p class="about-p reveal" style="margin-top:28px;" data-en="We see our Quality Management System not as a structure consisting merely of documents and procedures, but as a &lt;strong&gt;living management system that measures, analyses, audits, digitalises and continuously evolves&lt;/strong&gt;. Thanks to our culture of continuous improvement, we build more efficient processes every day and continue to offer our customers reliable, high-performance and sustainable products.">Kalite Yönetim Sistemimizi yalnızca belge ve prosedürlerden oluşan bir yapı olarak değil; <strong>ölçen, analiz eden, denetleyen, dijitalleşen ve sürekli gelişen yaşayan bir yönetim sistemi</strong> olarak görüyoruz. Sürekli iyileştirme kültürümüz sayesinde her geçen gün daha verimli süreçler oluşturuyor, müşterilerimize güvenilir, yüksek performanslı ve sürdürülebilir ürünler sunmaya devam ediyoruz.</p>
-    <p class="about-p reveal" style="margin-bottom:0;" data-en="Because for us, quality is not merely a standard that is reached, but a &lt;strong&gt;management approach that is improved every day&lt;/strong&gt;.">Çünkü bizim için kalite; yalnızca ulaşılan bir standart değil, <strong>her gün geliştirilen bir yönetim anlayışıdır</strong>.</p>
-  </div>
-</section>
-
-<!-- ── QUALITY POLICY ── -->
-<section class="policy-section">
-  <div class="section-inner">
-    <div class="policy-intro reveal">
-      <div class="policy-eyebrow" data-en="Our Policies">Politikalarımız</div>
-      <p class="policy-text" data-en="We place customer satisfaction, continuous improvement and environmentally conscious production at the center of our understanding of quality. All our employees share a common responsibility to reach the defined quality goals.">Müşteri memnuniyetini, sürekli iyileştirmeyi ve çevreye duyarlı üretimi kalite anlayışımızın merkezine koyuyoruz. Tüm çalışanlarımız, belirlenen kalite hedeflerine ulaşmak için ortak bir sorumluluk taşır.</p>
-    </div>
-    <div class="policy-figures reveal">
-      <figure class="policy-figure">
-        <img src="img/kalite-politikasi.jpg" alt="İbavalresa Kalite Politikası">
-      </figure>
-      <figure class="policy-figure">
-        <img src="img/cevre-politikasi.jpg" alt="İbavalresa Çevre Politikası">
-      </figure>
+    <div class="about-founding reveal">
+      <p data-en="We work with a production approach that decides with data, manages digitally, is powered by automation and &lt;strong&gt;puts sustainability at its core&lt;/strong&gt;.">Veriyle karar alan, dijitalle yöneten, otomasyonla güçlenen ve <strong>sürdürülebilirliği merkezine koyan</strong> bir üretim anlayışıyla çalışıyoruz.</p>
     </div>
   </div>
 </section>
 
-<!-- ── QUALITY INTRO + CERTIFICATES ── -->
-<section class="quality-section">
+<!-- ── METRİKLER ── -->
+<section class="about-section">
   <div class="section-inner">
-    <div class="cert-grid">
-      <div class="cert-card reveal">
-        <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
-        <div class="cert-badge">ISO 9001:2015</div>
-        <h2 class="cert-title" data-en="ISO Quality Certificate">ISO Kalite Belgesi</h2>
-        <p class="cert-desc" data-en="İbavalresa ISO 9001:2015 Quality Certificate — certifies that our quality management system conforms to international standards.">İbavalresa ISO 9001:2015 Kalite Belgesi — kalite yönetim sistemimizin uluslararası standartlara uygunluğunu belgeler.</p>
-        <a class="cert-link" href="belgeler/ISO-9001-Belgesi.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span data-en="View Certificate">Belgeyi Görüntüle</span></a>
+    <div class="about-metrics reveal" style="margin-top: 0;">
+      <div class="about-metric">
+        <div class="about-metric-val">37.000<span> m²</span></div>
+        <div class="about-metric-label" data-en="İBAVALRESA facility area within the campus">Kampüs içinde İBAVALRESA tesis alanı</div>
       </div>
-      <div class="cert-card reveal">
-        <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-        <div class="cert-badge">EN 71-3 · AIDIMA</div>
-        <h2 class="cert-title" data-en="Quality Certificates">Kalite Sertifikaları</h2>
-        <p class="cert-desc" data-en="Certificates of conformity to the EN71-3 standard, issued after Valresa products were tested by the Spanish AIDIMA laboratories.">Valresa ürünlerinin İspanyol AIDIMA laboratuvarları tarafından test edilerek verilen EN71-3 standardına uygunluk sertifikaları.</p>
-        <a class="cert-link" href="belgeler/Valresa_EN71-3.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span data-en="View Certificate">Belgeyi Görüntüle</span></a>
+      <div class="about-metric">
+        <div class="about-metric-val">30.000<span> t</span></div>
+        <div class="about-metric-label" data-en="Annual production capacity">Yıllık üretim kapasitesi</div>
       </div>
-      <div class="cert-card reveal">
-        <div class="cert-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/></svg></div>
-        <div class="cert-badge">KALDER</div>
-        <h2 class="cert-title" data-en="KALDER Membership Certificate">KALDER Üyelik Sertifikası</h2>
-        <p class="cert-desc" data-en="Our membership certificate for KALDER (Turkish Society for Quality) — reflecting our commitment to a total quality management culture.">Türkiye Kalite Derneği (KALDER) üyeliğimizi belgeleyen sertifika; toplam kalite yönetimi kültürüne olan bağlılığımızı yansıtır.</p>
-        <a class="cert-link" href="belgeler/KALDER-Uyelik-Sertifikasi.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><span data-en="View Certificate">Belgeyi Görüntüle</span></a>
+      <div class="about-metric">
+        <div class="about-metric-val">2007</div>
+        <div class="about-metric-label" data-en="Year the facility opened">Tesisin faaliyete geçtiği yıl</div>
+      </div>
+      <div class="about-metric">
+        <div class="about-metric-val">SAP</div>
+        <div class="about-metric-label" data-en="End-to-end integrated production control">Uçtan uca entegre üretim kontrolü</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ── SECTION 01: ÜRETİM ── -->
+<section class="about-section">
+  <div class="section-inner">
+    <div class="about-grid-2 reveal">
+      <div>
+        <div class="section-tag" style="margin-bottom: 16px;" data-en="01 — Production">01 — Üretim</div>
+        <h2 class="about-h2" data-en="Advanced automation system.">İleri teknoloji otomasyon sistemi.</h2>
+      </div>
+      <div>
+        <p class="about-p" data-en="Thanks to the &lt;strong&gt;advanced automation system&lt;/strong&gt; installed together with our new facility, we serve the wood paint &amp; varnish and industrial coatings sectors.">Yeni tesisimizle beraber kurulumu yapılan <strong>ileri teknoloji otomasyon sistemi</strong> sayesinde, ahşap boya ve vernik ile sanayi boyaları sektöründe hizmet verilmektedir.</p>
+        <ul class="about-bullets" style="grid-template-columns: 1fr;">
+          <li><span><strong>Ahşap boya ve vernik</strong> üretim hatları</span></li>
+          <li><span><strong>Sanayi boyaları</strong> için özel proses çözümleri</span></li>
+          <li><span>Otomasyon destekli, <strong>tekrarlanabilir reçete</strong> üretimi</span></li>
+        </ul>
+        <p class="about-p" style="margin-top:16px;" data-en="Our facility was engineered from the outset &lt;strong&gt;with our Spanish partnership&lt;/strong&gt;; occupational safety and process safety were placed at the center of the design. We work with a &lt;strong&gt;proactive safety approach&lt;/strong&gt;, not a reactive one.">Tesisimiz, kurulum aşamasından itibaren <strong>İspanyol ortaklığıyla</strong> projelendirilmiş; iş güvenliği ve proses emniyeti tasarımın merkezine alınmıştır. Reaktif değil, <strong>proaktif güvenlik anlayışı</strong> ile çalışıyoruz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SECTION 02: TEKNOLOJİ ── -->
+<section class="about-section">
+  <div class="section-inner">
+    <div class="about-grid-2 reveal">
+      <div>
+        <div class="section-tag" style="margin-bottom: 16px;" data-en="02 — Technology">02 — Teknoloji</div>
+        <h2 class="about-h2" data-en="A SAP-integrated, end-to-end audited process.">SAP'a entegre, baştan sona denetlenen süreç.</h2>
+      </div>
+      <div>
+        <p class="about-p" data-en="Thanks to our production network that keeps improving through investments in our factory and close monitoring of technological developments, our products are manufactured to &lt;strong&gt;the same standard and quality&lt;/strong&gt;.">Teknolojik gelişmeler yakından takip edilerek fabrikamıza yapılan yatırımlarla her geçen gün daha da gelişen üretim ağımız sayesinde, ürünlerimizin <strong>aynı standartta ve kalitede</strong> üretilmesi sağlanmaktadır.</p>
+        <p class="about-p" data-en="Thanks to our production system &lt;strong&gt;adapted to SAP&lt;/strong&gt;, products can be inspected in a controlled way from start to finish."><strong>SAP sistemine adapte edilen</strong> üretim sistemimiz sayesinde, ürünlerin baştan sona kontrollü bir şekilde denetimleri yapılabilmektedir.</p>
+        <p class="about-p" data-en="Thanks to automation, SCADA and SAP integration, all critical processes — from production to quality and logistics to safety — can be &lt;strong&gt;monitored in real time&lt;/strong&gt;; we make decisions with live data instead of monthly reports.">Otomasyon, SCADA ve SAP entegrasyonu sayesinde üretimden kaliteye, lojistikten güvenliğe kadar tüm kritik süreçler <strong>anlık olarak izlenebilir</strong>; kararlarımızı aylık raporlar yerine anlık verilerle alıyoruz.</p>
+      </div>
+    </div>
+    <div class="about-metrics reveal" style="margin-top:40px;">
+      <div class="about-metric">
+        <div class="about-metric-val">190<span>+</span></div>
+        <div class="about-metric-label" data-en="active digital business processes (soon 200+)">aktif dijital iş süreci (yakında 200+)</div>
+      </div>
+      <div class="about-metric">
+        <div class="about-metric-val">%80</div>
+        <div class="about-metric-label" data-en="reduction in paper use">kağıt kullanımında azalma</div>
+      </div>
+      <div class="about-metric">
+        <div class="about-metric-val">~100</div>
+        <div class="about-metric-label" data-en="real-time management with BI dashboards">BI dashboard ile anlık yönetim</div>
+      </div>
+      <div class="about-metric">
+        <div class="about-metric-val">AI</div>
+        <div class="about-metric-label" data-en="data &amp; AI as a decision-support mechanism">karar destek mekanizması olarak veri ve yapay zeka</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VIDEO PROMO ── -->
+<section class="about-section">
+  <div class="section-inner">
+    <figure class="about-figure reveal" style="position:relative;overflow:hidden;border-radius:16px;">
+      <video
+        src="video/uretim-fabrika.mp4"
+        autoplay muted loop playsinline
+        style="display:block;width:100%;height:auto;object-fit:cover;"
+        aria-label="Üretim teknolojimizi görüntüleyin"
+      ></video>
+      <figcaption class="about-figure-caption" data-en="Our production line — a controlled process from raw material to filling and dispatch.">Üretim hattımız — hammaddeden dolum ve sevkiyata kadar kontrollü süreç.</figcaption>
+    </figure>
   </div>
 </section>
 
 <!-- ── PULL QUOTE ── -->
-<section class="about-section" style="padding-top:16px;padding-bottom:72px;margin-top:0;border-top:none;">
+<section class="about-section" style="padding-top:0;padding-bottom:32px;margin-top:-12px;border-top:none;">
   <div class="section-inner">
     <div class="about-pull reveal">
-      <p data-en="&lt;em&gt;We see quality not merely as a standard,&lt;/em&gt; but as a corporate culture that guides all our processes."><em>Kaliteyi yalnızca bir standart değil,</em> tüm süreçlerimize yön veren kurumsal bir kültür olarak görüyoruz.</p>
+      <p data-en="&lt;em&gt;Managing today,&lt;/em&gt; we design tomorrow."><em>Bugünü yönetirken,</em> geleceği tasarlıyoruz.</p>
     </div>
   </div>
 </section>
@@ -2484,9 +2144,9 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 <section class="brands" id="markalar" style="min-height: 300px">
   <div class="section-inner">
     <div class="next-page reveal">
-      <a href="markalar.html"><span data-en="Next page">Sonraki sayfa</span> <span class="np-sep">&rsaquo;</span> <span class="np-name" data-en="Brands">Markalar</span></a>
+      <a href="arge.html"><span data-en="Next page">Sonraki sayfa</span> <span class="np-sep">&rsaquo;</span> <span class="np-name" data-en="Research &amp; Development">Araştırma Geliştirme</span></a>
     </div>
-    <div class="brands-label reveal" data-en="Our Brands">Marka Logolarımız</div>
+    <div class="brands-label reveal" data-en="Our Brands">Logolarımız</div>
     <div class="brands-grid reveal">
       <a class="brand-item" href="https://www.valresa.com.tr/" target="_blank">
         <img src="assets/logos/valresa.png" alt="Valresa" class="brand-logo-img">
@@ -2604,20 +2264,12 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 revealEls.forEach(el => observer.observe(el));
-
-// Contact form (client-side demo)
-(function() {
-  const form = document.getElementById('contact-form');
-  const status = document.getElementById('cf-status');
-  if (!form) return;
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    if (!form.checkValidity()) { form.reportValidity(); return; }
-    status.classList.add('show');
-    form.reset();
-    setTimeout(() => status.classList.remove('show'), 6000);
-  });
-})();
+// Fallback: guarantee content is visible even if IntersectionObserver never fires
+// (e.g. offscreen preview/print contexts). Reveals shortly after load.
+window.addEventListener('load', () => setTimeout(() => revealEls.forEach(el => {
+  el.classList.add('visible');
+  if (getComputedStyle(el).opacity === '0') { el.style.transition = 'none'; el.style.opacity = '1'; el.style.transform = 'none'; }
+}), 400));
 
 // Apply saved tweaks on load
 (function() {
@@ -2811,36 +2463,6 @@ window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
   nav.style.borderBottomColor = window.scrollY > 40 ? 'rgba(0,0,0,0.12)' : 'rgba(0,0,0,0.07)';
 });
-
-// ── ABOUT TABS ──
-(function initAboutTabs() {
-  const tabs = document.querySelectorAll('.about-tab');
-  const panels = document.querySelectorAll('.about-tab-panel');
-  if (!tabs.length) return;
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const id = tab.dataset.tab;
-      tabs.forEach(t => {
-        const isActive = t === tab;
-        t.classList.toggle('active', isActive);
-        t.setAttribute('aria-selected', isActive ? 'true' : 'false');
-      });
-      panels.forEach(p => {
-        const isActive = p.dataset.panel === id;
-        if (isActive) { p.removeAttribute('hidden'); }
-        else { p.setAttribute('hidden', ''); }
-      });
-      // Trigger reveal animation re-run on newly visible panel
-      const activePanel = document.querySelector(`.about-tab-panel[data-panel="${id}"]`);
-      if (activePanel) {
-        activePanel.querySelectorAll('.reveal').forEach(el => {
-          el.classList.remove('visible');
-          requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('visible')));
-        });
-      }
-    });
-  });
-})();
 </script>
 <!-- ── ÇEREZ BİLDİRİMİ ── -->
 <style>
