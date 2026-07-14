@@ -2248,6 +2248,21 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 .doc-icon svg { width: 20px; height: 20px; }
 .doc-block .doc-p { padding-left: 53px; }
 @media (max-width: 560px){ .doc-block .doc-p { padding-left: 0; } }
+.palette-cta {
+  display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  border: 1px solid rgba(38,53,140,0.18); background: #f4f5fb;
+  border-radius: 14px; padding: 24px 28px; text-decoration: none;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.palette-cta:hover { border-color: rgba(38,53,140,0.4); box-shadow: 0 14px 40px rgba(38,53,140,0.10); transform: translateY(-2px); }
+.palette-cta-head { display: flex; align-items: center; gap: 18px; }
+.palette-cta-icon { flex-shrink: 0; width: 46px; height: 46px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: var(--accent); color: #fff; }
+.palette-cta-icon svg { width: 24px; height: 24px; }
+.palette-cta-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 4px; }
+.palette-cta-title { font-size: 18px; font-weight: 700; letter-spacing: -.4px; color: var(--text); }
+.palette-cta-action { display: inline-flex; align-items: center; gap: 8px; color: var(--accent); font-size: 15px; font-weight: 600; white-space: nowrap; }
+.palette-cta-action svg { width: 18px; height: 18px; transition: transform .2s; }
+.palette-cta:hover .palette-cta-action svg { transform: translateX(4px); }
 
 .doc-toc { position: sticky; top: 110px; }
 .doc-toc-inner { border-left: 1px solid var(--border); padding-left: 24px; }
@@ -2420,7 +2435,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <a href="iletisim.html" data-en="Get in Touch">Bize Ulaşın</a>
     </div>
   </div>
-  <div class="mobile-menu-group">
+  <div class="mobile-menu-group open">
     <button class="mobile-menu-head" data-toggle><span data-en="Online Services">Online İşlemler</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
@@ -2498,6 +2513,22 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   </div>
 </section>
 
+<!-- ── RENK PALETİ CTA ── -->
+<section style="padding: 0 0 72px;">
+  <div class="section-inner">
+    <a class="palette-cta reveal" href="renk-paleti.html">
+      <div class="palette-cta-head">
+        <div class="palette-cta-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+        <div>
+          <div class="palette-cta-eyebrow" data-en="Color Palette">Renk Paleti</div>
+          <div class="palette-cta-title" data-en="Browse the RAL · NCS · NOVA color charts">RAL · NCS · NOVA kartelalarını inceleyin</div>
+        </div>
+      </div>
+      <span class="palette-cta-action" data-en="View Color Palette">Renk Paletini Görüntüle <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </a>
+  </div>
+</section>
+
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-inner">
@@ -2521,7 +2552,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
     <div class="footer-col">
       <h4 data-en="Catalogs">Kataloglar</h4>
       <ul>
-        <li><a href="https://renkpaleti.ibavalresa.com.tr/?lang=tr">RAL-NCS-Nova Kartela</a></li>
+        <li><a href="renk-paleti.html">RAL-NCS-Nova Kartela</a></li>
         <li><a href="https://www.valresa.com.tr/urunkatalogu/" data-en="Valresa Catalog">Valresa Kataloğu</a></li>
         <li><a href="https://www.ibavet.com.tr/urunkatalogu/" data-en="İbavet Catalog">İbavet Kataloğu</a></li>
       </ul>

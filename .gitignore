@@ -2,3 +2,6 @@
 Thumbs.db
 *.log
 node_modules/
+
+# Yerel çalışma dosyaları — deploy edilmez (PDF/sunum kaynakları vb.)
+_*.html

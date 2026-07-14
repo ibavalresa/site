@@ -2093,6 +2093,13 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 .export-info { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
 .export-person { font-size: 15px; font-weight: 600; color: var(--text); }
 .export-bar .region-links { flex-direction: row; gap: 22px; }
+@media (max-width: 680px) {
+  .export-bar { flex-direction: column; align-items: flex-start; gap: 18px; padding: 22px 20px; }
+  .export-info { flex-direction: column; align-items: flex-start; gap: 12px; width: 100%; }
+  .export-bar .region-links { flex-direction: column; gap: 12px; }
+  .export-bar .region-link span { word-break: break-word; }
+  .export-bar .region-link[href^="tel"] span { white-space: nowrap; }
+}
 
 @media (max-width: 860px) {
   .offices-grid { grid-template-columns: 1fr; }
@@ -2257,7 +2264,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <a href="iletisim.html" data-en="Get in Touch">Bize Ulaşın</a>
     </div>
   </div>
-  <div class="mobile-menu-group">
+  <div class="mobile-menu-group open">
     <button class="mobile-menu-head" data-toggle><span data-en="Online Services">Online İşlemler</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
@@ -2411,7 +2418,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
     <div class="footer-col">
       <h4 data-en="Catalogs">Kataloglar</h4>
       <ul>
-        <li><a href="https://renkpaleti.ibavalresa.com.tr/?lang=tr">RAL-NCS-Nova Kartela</a></li>
+        <li><a href="renk-paleti.html">RAL-NCS-Nova Kartela</a></li>
         <li><a href="https://www.valresa.com.tr/urunkatalogu/" data-en="Valresa Catalog">Valresa Kataloğu</a></li>
         <li><a href="https://www.ibavet.com.tr/urunkatalogu/" data-en="İbavet Catalog">İbavet Kataloğu</a></li>
       </ul>

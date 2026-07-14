@@ -2279,7 +2279,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <a href="iletisim.html" data-en="Get in Touch">Bize Ulaşın</a>
     </div>
   </div>
-  <div class="mobile-menu-group">
+  <div class="mobile-menu-group open">
     <button class="mobile-menu-head" data-toggle><span data-en="Online Services">Online İşlemler</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
@@ -2359,9 +2359,13 @@ footer img[alt="ibavalresa"] { filter: none !important; }
         </ul>
       </aside>
       <div class="form-body">
-        <form id="contact-form" action="gonder.php" method="post" novalidate>
-          <!-- honeypot: botlar doldurur, insanlar görmez -->
-          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+        <form id="contact-form" action="https://formsubmit.co/ajax/info@ibavalresa.com.tr" method="post" novalidate>
+          <!-- honeypot: botlar doldurur, insanlar görmez (FormSubmit _honey alanını kullanır) -->
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+          <!-- FormSubmit ayarları -->
+          <input type="hidden" name="_subject" value="İbavalresa — Yeni İletişim Formu Mesajı">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
           <div class="form-grid">
             <div class="form-field">
               <label for="cf-name" data-en="Full Name &lt;span&gt;*&lt;/span&gt;">Ad Soyad <span>*</span></label>
@@ -2391,7 +2395,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
             </div>
             <div class="form-field full">
               <label for="cf-message" data-en="Your Message &lt;span&gt;*&lt;/span&gt;">Mesajınız <span>*</span></label>
-              <textarea id="cf-message" name="message" required placeholder="Size nasıl yardımcı olabiliriz?"></textarea>
+              <textarea id="cf-message" name="message" required placeholder="Size nasıl yardımcı olabiliriz?" data-en-ph="How can we help you?"></textarea>
             </div>
           </div>
           <label class="form-consent">
@@ -2473,7 +2477,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
     <div class="footer-col">
       <h4 data-en="Catalogs">Kataloglar</h4>
       <ul>
-        <li><a href="https://renkpaleti.ibavalresa.com.tr/?lang=tr">RAL-NCS-Nova Kartela</a></li>
+        <li><a href="renk-paleti.html">RAL-NCS-Nova Kartela</a></li>
         <li><a href="https://www.valresa.com.tr/urunkatalogu/" data-en="Valresa Catalog">Valresa Kataloğu</a></li>
         <li><a href="https://www.ibavet.com.tr/urunkatalogu/" data-en="İbavet Catalog">İbavet Kataloğu</a></li>
       </ul>
@@ -2562,16 +2566,17 @@ revealEls.forEach(el => observer.observe(el));
     if (btn) btn.disabled = true;
     status.classList.remove('show', 'error');
     try {
-      const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+      const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
       let data = {};
       try { data = await res.json(); } catch (_) {}
-      if (res.ok && data.ok) {
+      const ok = data.success === true || String(data.success) === 'true';
+      if (res.ok && ok) {
         status.textContent = okMsg;
         status.classList.remove('error');
         status.classList.add('show');
         form.reset();
       } else {
-        throw new Error((data && data.error) || 'Gönderilemedi');
+        throw new Error((data && (data.message || data.error)) || 'Gönderilemedi');
       }
     } catch (err) {
       status.textContent = errMsg;
@@ -2757,6 +2762,11 @@ function selectLang(lang) {
   document.querySelectorAll('[data-en]').forEach(el => {
     if (el.__tr == null) el.__tr = el.innerHTML;
     el.innerHTML = (lang === 'EN') ? el.getAttribute('data-en') : el.__tr;
+  });
+  // Placeholder çevirisi (data-en-ph)
+  document.querySelectorAll('[data-en-ph]').forEach(el => {
+    if (el.__trph == null) el.__trph = el.getAttribute('placeholder') || '';
+    el.setAttribute('placeholder', (lang === 'EN') ? el.getAttribute('data-en-ph') : el.__trph);
   });
   try { localStorage.setItem('ibav_lang', lang); } catch (e) {}
 }

@@ -1810,13 +1810,22 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 @media (max-width: 720px) {
   .about-tabs-wrap { position: static; }
   .about-tabs {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 16px 0 18px;
+    border-bottom: 1px solid var(--border);
   }
-  .about-tabs::-webkit-scrollbar { display: none; }
-  .about-tab { padding: 12px 16px; font-size: 14px; }
+  .about-tab {
+    padding: 9px 15px; font-size: 13px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    bottom: 0;
+  }
+  .about-tab.active {
+    background: var(--accent); color: #fff;
+    border-color: var(--accent);
+  }
+  .about-tab.active:hover { background: var(--accent); }
   .about-tab-panel { scroll-margin-top: 76px; }
 }
 
@@ -2056,7 +2065,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <a href="iletisim.html" data-en="Get in Touch">Bize Ulaşın</a>
     </div>
   </div>
-  <div class="mobile-menu-group">
+  <div class="mobile-menu-group open">
     <button class="mobile-menu-head" data-toggle><span data-en="Online Services">Online İşlemler</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
@@ -2287,7 +2296,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
     <div class="footer-col">
       <h4 data-en="Catalogs">Kataloglar</h4>
       <ul>
-        <li><a href="https://renkpaleti.ibavalresa.com.tr/?lang=tr">RAL-NCS-Nova Kartela</a></li>
+        <li><a href="renk-paleti.html">RAL-NCS-Nova Kartela</a></li>
         <li><a href="https://www.valresa.com.tr/urunkatalogu/" data-en="Valresa Catalog">Valresa Kataloğu</a></li>
         <li><a href="https://www.ibavet.com.tr/urunkatalogu/" data-en="İbavet Catalog">İbavet Kataloğu</a></li>
       </ul>
