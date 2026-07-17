@@ -29,7 +29,6 @@
 <script type="application/json" id="tweak-defaults">
 {
   "accentColor": "#26358C",
-  "heroTitle": "Kalite.\nHer Zaman.",
   "darkBg": "#ffffff"
 }
 </script>
@@ -2551,7 +2550,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="footer-inner">
     <div class="footer-brand">
       <img src="assets/logos/ibavalresa-white.png" alt="ibavalresa" style="height:28px;width:auto;display:block;object-fit:contain;margin-bottom:14px;opacity:0.85;filter:brightness(0);">
-      <p class="footer-tagline" style="font-size:15px;font-weight:800;letter-spacing:-0.3px;color:var(--accent);white-space:nowrap;">High Quality Production</p>
+      <p class="footer-tagline" data-en="High Quality Production" style="font-size:15px;font-weight:800;letter-spacing:-0.3px;color:var(--accent);white-space:nowrap;">Yüksek Kaliteli Üretim</p>
       <p class="footer-tagline" style="margin-top:6px;font-size:12px;color:var(--text3);white-space:nowrap;">Oğuz cd. NO:24 1.OSB Sincan / Ankara</p>
       <p class="footer-tagline" style="margin-top:4px;font-size:12px;color:var(--text3);">+90 312 267 56 22</p>
     </div>
@@ -2624,14 +2623,6 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <option value="warm">Koyu Sıcak</option>
     </select>
   </div>
-  <div class="tweak-row">
-    <div class="tweak-label">Hero Başlık</div>
-    <select id="tw-hero" onchange="applyTweak('hero', this.value)">
-      <option value="a">Düşünceden Ürüne.</option>
-      <option value="b">60 Yılın Gücü.</option>
-      <option value="c">Kalite. Her Zaman.</option>
-    </select>
-  </div>
 </div>
 
 <script>
@@ -2689,11 +2680,6 @@ function applyTweak(key, val) {
     const map = { dark: '#ffffff', darker: '#fafafa', warm: '#fbf8f5' };
     document.documentElement.style.setProperty('--bg', map[val]);
     window.parent.postMessage({type:'__edit_mode_set_keys', edits:{darkBg: map[val]}}, '*');
-  }
-  if(key === 'hero') {
-    const titles = { a:'Düşünceden<br><em>Ürüne.</em>', b:'60 Yılın<br><em>Gücü.</em>', c:'Kalite.<br><em>Her Zaman.</em>' };
-    const ht = document.getElementById('hero-title');
-    if (ht) ht.innerHTML = titles[val];
   }
 }
 

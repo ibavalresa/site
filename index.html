@@ -29,7 +29,6 @@
 <script type="application/json" id="tweak-defaults">
 {
   "accentColor": "#26358C",
-  "heroTitle": "Kalite.\nHer Zaman.",
   "darkBg": "#ffffff"
 }
 </script>
@@ -389,6 +388,20 @@ body.menu-open { overflow: hidden; }
   font-size: 18px; color: var(--text2); line-height: 1.65;
   position: relative; z-index: 1;
   margin-bottom: 40px;
+}
+/* Fosforlu kalem vurgusu — metnin alt kısmını mavi bir kalem darbesi gibi boyar */
+.hl {
+  font-weight: 700; color: var(--text);
+  background-image: linear-gradient(102deg,
+    rgba(45,110,240,0) 0.5%, rgba(45,110,240,.42) 2%,
+    rgba(45,110,240,.42) 98%, rgba(45,110,240,0) 99.6%);
+  background-repeat: no-repeat;
+  background-size: 100% 45%;
+  background-position: 0 92%;
+  border-radius: 3px;
+  padding: 0 .16em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .hero-actions {
@@ -1833,8 +1846,8 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 
   <h1 id="hero-title" data-en="Quality.<br><em>Always.</em>">Kalite.<br><em>Her Zaman.</em></h1>
 
-  <p class="hero-sub" data-en="With the production and R&amp;D strength born from our Turkish–Spanish partnership, we deliver high-quality wood paint, varnish and industrial coating solutions to global markets.">
-    Türk–İspanyol ortaklığından doğan üretim ve Ar-Ge gücümüzle, dünya pazarlarına yüksek kaliteli
+  <p class="hero-sub" data-en="With the production and R&amp;D strength born from our Turkish–Spanish partnership, we deliver &lt;span class=&quot;hl&quot;&gt;high-quality&lt;/span&gt; wood paint, varnish and industrial coating solutions to global markets.">
+    Türk–İspanyol ortaklığından doğan üretim ve Ar-Ge gücümüzle, dünya pazarlarına <span class="hl">yüksek kaliteli</span>
     ahşap boya, vernik ve endüstriyel boya çözümleri sunuyoruz.
   </p>
 
@@ -2165,7 +2178,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="footer-inner">
     <div class="footer-brand">
       <img src="assets/logos/ibavalresa-white.png" alt="ibavalresa" style="height:28px;width:auto;display:block;object-fit:contain;margin-bottom:14px;opacity:0.85;filter:brightness(0);">
-      <p class="footer-tagline" style="font-size:15px;font-weight:800;letter-spacing:-0.3px;color:var(--accent);white-space:nowrap;">High Quality Production</p>
+      <p class="footer-tagline" data-en="High Quality Production" style="font-size:15px;font-weight:800;letter-spacing:-0.3px;color:var(--accent);white-space:nowrap;">Yüksek Kaliteli Üretim</p>
       <p class="footer-tagline" style="margin-top:6px;font-size:12px;color:var(--text3);white-space:nowrap;">Oğuz cd. NO:24 1.OSB Sincan / Ankara</p>
       <p class="footer-tagline" style="margin-top:4px;font-size:12px;color:var(--text3);">+90 312 267 56 22</p>
     </div>
@@ -2238,14 +2251,6 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <option value="warm">Koyu Sıcak</option>
     </select>
   </div>
-  <div class="tweak-row">
-    <div class="tweak-label">Hero Başlık</div>
-    <select id="tw-hero" onchange="applyTweak('hero', this.value)">
-      <option value="a">Düşünceden Ürüne.</option>
-      <option value="b">60 Yılın Gücü.</option>
-      <option value="c">Kalite. Her Zaman.</option>
-    </select>
-  </div>
 </div>
 
 <script>
@@ -2304,10 +2309,6 @@ function applyTweak(key, val) {
     const map = { dark: '#ffffff', darker: '#fafafa', warm: '#fbf8f5' };
     document.documentElement.style.setProperty('--bg', map[val]);
     window.parent.postMessage({type:'__edit_mode_set_keys', edits:{darkBg: map[val]}}, '*');
-  }
-  if(key === 'hero') {
-    const titles = { a:'Düşünceden<br><em>Ürüne.</em>', b:'60 Yılın<br><em>Gücü.</em>', c:'Kalite.<br><em>Her Zaman.</em>' };
-    document.getElementById('hero-title').innerHTML = titles[val];
   }
 }
 

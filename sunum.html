@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<title>İBAVALRESA — Kurumsal Tanıtım (Yatay)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent:#26358C; --accent2:#3a4bb3; --ink:#0d0d10; --ink2:#3a3950; --muted:#8a8898;
+    --paper:#ffffff; --soft:#f4f5fb; --line:#e7e7ee; --green:#1E5945;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  /* 16:9 — 13.333in x 7.5in (sunum standardı) */
+  @page{ size:338.667mm 190.5mm; margin:0; }
+  html{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  body{ font-family:'Inter',system-ui,sans-serif; color:var(--ink); background:#555; }
+  .page{
+    width:338.667mm; height:190.5mm; position:relative; overflow:hidden;
+    background:var(--paper); page-break-after:always; break-after:page;
+  }
+  .pad{ position:absolute; inset:0; padding:14mm 18mm 20mm; display:flex; flex-direction:column; }
+
+  /* ── İSKELET: sabit başlık bandı + içerik alanı ───────────────────
+     .head her slaytta 40mm — başlık asla zıplamaz, çapa budur.
+     .body hep aynı çizgide başlar. Bu ikisini bozma.              */
+  .head{ flex:none; height:40mm; }
+  .head h2{ margin-top:4mm; max-width:215mm; }
+  .body{ flex:1; display:grid; grid-template-columns:1fr 1.12fr; gap:16mm; min-height:0; }
+  .body.full{ display:block; }
+  .col{ display:flex; flex-direction:column; min-height:0; }
+  /* Vurgu cümlesi: kolonun dibine sabitlenir → alt çapa */
+  .col .pull{ margin-top:auto; }
+
+  /* Tek etiket stili — chip yok (yükseklik farkı hizayı bozuyordu) */
+  .eyebrow{ font-size:9.5pt; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); }
+  .eyebrow.green{ color:var(--green); }
+
+  h1{ font-size:34pt; font-weight:800; letter-spacing:-1.4px; line-height:1.04; }
+  h2{ font-size:25pt; font-weight:800; letter-spacing:-.9px; line-height:1.12; color:var(--ink); }
+  h2 em{ font-style:normal; color:var(--accent); }
+  .lead{ font-size:11pt; line-height:1.65; color:var(--ink2); font-weight:400; }
+  .lead b{ color:var(--ink); font-weight:700; }
+  .lead + .lead{ margin-top:4mm; }
+
+  .pull{ font-size:15pt; font-weight:800; letter-spacing:-.5px; line-height:1.25; color:var(--ink); }
+  .pull em{ font-style:normal; color:var(--accent); }
+
+  .swatch-row{ display:flex; height:7mm; width:100%; border-radius:2mm; overflow:hidden; }
+  .swatch-row div{ flex:1; }
+  .page-no{ position:absolute; right:18mm; bottom:9mm; font-size:8.5pt; color:var(--muted); font-weight:600; letter-spacing:.05em; }
+  .brandline{ position:absolute; left:18mm; bottom:9mm; font-size:8.5pt; color:var(--muted); font-weight:600; letter-spacing:.02em; }
+  /* Footer ortası — slogan, her içerik slaytında */
+  .footer-slogan{ position:absolute; left:0; right:0; bottom:9mm; text-align:center; font-size:8.5pt; color:var(--muted); font-weight:600; font-style:italic; letter-spacing:.03em; }
+  /* Footer ayraç çizgisi — künye yazısıyla aynı renk, tek birim gibi okunsun.
+     Yalnızca footer'ı olan slaytlarda (kapak/kapanış hariç). */
+  .page:has(.brandline)::after{
+    content:''; position:absolute; left:18mm; right:18mm; bottom:15mm; height:1px; background:var(--muted);
+  }
+
+  /* Kapak — çizim 16:9 olduğu için tam ekran, soldan karartma */
+  .cover{ color:#fff; }
+  .cover .pad{ padding:14mm 18mm; justify-content:center; }
+  .cover-tag{ font-size:26pt; font-weight:800; letter-spacing:-1px; line-height:1.12; color:#fff; }
+  .cover-sub{ font-size:11pt; line-height:1.6; color:#c7ccf0; max-width:112mm; font-weight:400; margin-top:6mm; }
+  .cover-meta{ font-size:8.5pt; color:#aab1e6; letter-spacing:.04em; font-weight:600; }
+  .cover-badge{ display:inline-block; border:1px solid rgba(255,255,255,.35); border-radius:999px;
+                padding:4px 13px; font-size:8.5pt; letter-spacing:.2em; text-transform:uppercase; font-weight:700; color:#dfe3ff; }
+
+  /* Rakamlar */
+  .stat-grid{ display:grid; grid-template-columns:1fr 1fr; gap:9mm 8mm; }
+  .stat{ border-top:2px solid var(--accent); padding-top:4mm; }
+  .stat .num{ font-size:25pt; font-weight:800; letter-spacing:-1.4px; color:var(--accent); line-height:1; }
+  .stat .lbl{ font-size:9.5pt; color:var(--ink2); margin-top:2.5mm; line-height:1.4; font-weight:500; }
+
+  /* Yatay zaman çizelgesi — 5 kolon (yatayın doğal kazancı) */
+  .tlh{ display:grid; grid-template-columns:repeat(5,1fr); gap:7mm; }
+  .tlh-item{ border-top:2px solid var(--accent); padding-top:4.5mm; }
+  .tlh-year{ font-size:19pt; font-weight:800; color:var(--accent); letter-spacing:-1px; line-height:1; }
+  .tlh-item b{ display:block; font-size:10pt; color:var(--ink); margin:3mm 0 2mm; line-height:1.3; }
+  .tlh-item span{ font-size:8.5pt; color:var(--ink2); line-height:1.45; }
+
+  /* Kartlar */
+  .feat{ display:grid; grid-template-columns:1fr 1fr; gap:5mm; }
+  .card{ background:var(--soft); border:1px solid var(--line); border-radius:4mm; padding:6mm; }
+  .card .k{ font-size:10pt; font-weight:800; color:var(--accent); margin-bottom:2mm; }
+  .card .v{ font-size:9pt; color:var(--ink2); line-height:1.5; }
+
+  .bullets{ list-style:none; }
+  .bullets li{ font-size:10pt; color:var(--ink2); line-height:1.45; padding:3.4mm 0 3.4mm 8mm; position:relative; border-bottom:1px solid var(--line); }
+  .bullets li:first-child{ border-top:1px solid var(--line); }
+  .bullets li::before{ content:''; position:absolute; left:0; top:5mm; width:3.4mm; height:3.4mm; background:var(--accent); border-radius:50%; }
+  .bullets li b{ color:var(--ink); }
+
+  /* Markalar */
+  .brands{ display:grid; grid-template-columns:1fr 1fr; gap:5mm; }
+  .brand{ border:1px solid var(--line); border-radius:4mm; padding:5mm; display:flex; align-items:center; gap:4mm; }
+  .brand img{ height:13mm; width:36mm; object-fit:contain; object-position:left center; filter:brightness(0); opacity:.78; }
+  .brand span{ font-size:8.5pt; color:var(--ink2); line-height:1.4; }
+
+  /* Köken şeridi */
+  .origin{ display:flex; flex-direction:column; gap:8mm; }
+  .origin-item{ border-top:2px solid var(--accent); padding-top:4mm; }
+  .origin-item .y{ font-size:19pt; font-weight:800; color:var(--accent); letter-spacing:-1px; line-height:1; }
+  .origin-item .t{ font-size:9.5pt; color:var(--ink2); margin-top:2.5mm; line-height:1.45; font-weight:500; }
+  .origin-item .t b{ color:var(--ink); }
+
+  /* Kapanış */
+  .close{ background:radial-gradient(110% 120% at 15% 85%, #2c3ea0 0%, #1b2668 55%, #131a48 100%); color:#fff; }
+  .contact{ display:grid; grid-template-columns:1fr 1fr; gap:7mm 8mm; }
+  .contact .cl{ font-size:8pt; letter-spacing:.16em; text-transform:uppercase; color:#aab1e6; font-weight:700; margin-bottom:1.5mm; }
+  .contact .cv{ font-size:10.5pt; color:#fff; font-weight:500; line-height:1.4; }
+
+  /* ── EKRAN: slayt gösterici (PDF'i etkilemez) ── */
+  @media screen {
+    body{ background:#33333c; min-height:100vh; margin:0; overflow:hidden; }
+    .page{ display:none; }
+    .page.active{ display:block; position:fixed; top:calc(50% - 34px); left:50%;
+           transform:translate(-50%,-50%) scale(var(--s,1)); transform-origin:center center;
+           box-shadow:0 12px 50px rgba(0,0,0,.45); }
+    #nav{ position:fixed; left:24px; bottom:22px; z-index:99;
+          display:flex; align-items:center; gap:6px; padding:8px 10px;
+          background:rgba(18,18,26,.82); border:1px solid rgba(255,255,255,.12);
+          border-radius:999px; backdrop-filter:blur(10px); }
+    #nav button{ width:38px; height:38px; border:none; border-radius:50%; cursor:pointer;
+          background:rgba(255,255,255,.10); color:#fff; font-size:19px; line-height:1;
+          font-family:inherit; transition:background .15s; }
+    #nav button:hover:not(:disabled){ background:rgba(255,255,255,.24); }
+    #nav button:disabled{ opacity:.28; cursor:default; }
+    #counter{ color:#fff; font-size:12.5px; font-weight:600; letter-spacing:.06em;
+          min-width:58px; text-align:center; font-variant-numeric:tabular-nums; }
+    /* Dil seçici — sağ altta sabit */
+    #langsw{ position:fixed; right:24px; bottom:22px; z-index:99; display:flex; gap:3px;
+          padding:4px; background:rgba(18,18,26,.82); border:1px solid rgba(255,255,255,.12);
+          border-radius:999px; backdrop-filter:blur(10px); }
+    #langsw button{ min-width:42px; height:34px; padding:0 12px; border:none; border-radius:999px; cursor:pointer;
+          background:transparent; color:rgba(255,255,255,.6); font-size:12.5px; font-weight:700; letter-spacing:.06em;
+          font-family:inherit; transition:background .15s, color .15s; }
+    #langsw button.active{ background:#fff; color:#10223F; }
+    #langsw button:hover:not(.active){ color:#fff; }
+  }
+  /* ── BASKI ── */
+  @media print {
+    #nav, #langsw{ display:none !important; }
+    body{ background:#fff !important; display:block !important; overflow:visible !important; }
+    .page{ display:block !important; position:relative !important; top:auto !important; left:auto !important;
+           transform:none !important; box-shadow:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 1 · KAPAK — çizim 16:9 olduğu için tam ekran (kırpılmadan) -->
+<section class="page cover" style="background:
+    linear-gradient(100deg, rgba(16,34,63,.97) 0%, rgba(16,34,63,.93) 34%, rgba(16,34,63,.55) 58%, rgba(16,34,63,.18) 100%),
+    url('img/uretim-cizim.jpg') center center / cover no-repeat,
+    #10223F;">
+  <div class="pad">
+    <img src="assets/logos/ibavalresa-white.png" alt="İBAVALRESA" style="height:10mm; width:auto; align-self:flex-start;">
+    <div style="margin-top:6mm;"><span class="cover-badge" data-en="Corporate Presentation">Kurumsal Tanıtım</span></div>
+    <div style="flex:1;"></div>
+    <div class="cover-tag" data-en="From Idea to Product.&lt;br&gt;The Power of 60 Years.">Düşünceden Ürüne.<br>60 Yılın Gücü.</div>
+    <div class="cover-sub" data-en="The combined strength of two distinct cultures: Valencia's deep-rooted expertise met Ankara's market share and production discipline to grow together across a wider geography.">İki ayrı kültürün ortak gücü: Valencia'nın köklü bilgi birikimi ile Ankara'nın pazar payı ve üretim disiplini, daha geniş bir coğrafyada birlikte büyümek için birleşti.</div>
+    <div style="flex:1;"></div>
+  </div>
+  <div style="position:absolute; left:18mm; right:18mm; bottom:9mm; display:flex; justify-content:space-between;">
+    <span class="cover-meta">İBAVALRESA Boya ve Kimya San. ve Tic. A.Ş.</span>
+    <span class="cover-meta">ibavalresa.com.tr</span>
+  </div>
+</section>
+
+<!-- 2 · BİZ KİMİZ -->
+<section class="page">
+  <div class="pad">
+    <div class="head">
+      <div class="eyebrow" data-en="Who We Are">Biz Kimiz</div>
+      <h2 data-en="Two distinct cultures, &lt;em&gt;one shared strength.&lt;/em&gt;">Ayrı iki kültür, <em>ortak bir güç.</em></h2>
+    </div>
+    <div class="body">
+      <div class="col">
+        <p class="lead" data-en="Valencia's &lt;b&gt;deep-rooted expertise&lt;/b&gt; and Ankara's strong &lt;b&gt;market share and production discipline&lt;/b&gt; — two separate legacies, born independently. In 2005 these two cultures joined forces to grow together across a wider geography: &lt;b&gt;İBAVALRESA&lt;/b&gt;.">
+          Valencia'da <b>köklü bir bilgi birikimi</b>, Ankara'da güçlü bir <b>pazar payı ve üretim
+          disiplini</b> — birbirinden bağımsız doğan iki ayrı miras. 2005'te bu iki kültür, daha
+          geniş bir coğrafyada birlikte büyümek için güçlerini birleştirdi: <b>İBAVALRESA</b>.
+        </p>
+        <p class="lead" data-en="In this shared journey, Ankara became the base for growth and for gaining strength on a global scale.">
+          Ankara, bu ortak yolculukta büyümenin ve global ölçekte güçlenmenin üssü oldu.
+        </p>
+        <div class="pull" data-en="Quality. &lt;em&gt;Always.&lt;/em&gt;">Kalite. <em>Her zaman.</em></div>
+      </div>
+      <div class="col">
+        <div class="origin">
+          <div class="origin-item">
+            <div class="y">1965</div>
+            <div class="t" data-en="&lt;b&gt;Valresa&lt;/b&gt; founded in Valencia"><b>Valresa</b> Valencia'da kuruldu</div>
+          </div>
+          <div class="origin-item">
+            <div class="y">1977</div>
+            <div class="t" data-en="&lt;b&gt;İba Kimya&lt;/b&gt; founded in Ankara"><b>İba Kimya</b> Ankara'da kuruldu</div>
+          </div>
+          <div class="origin-item">
+            <div class="y">2005</div>
+            <div class="t" data-en="Two forces united — &lt;b&gt;İBAVALRESA&lt;/b&gt;">İki güç birleşti — <b>İBAVALRESA</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="brandline">İBAVALRESA Boya ve Kimya San. ve Tic. A.Ş.</div>
+  <div class="footer-slogan" data-en="&ldquo;High Quality Production&rdquo;">&ldquo;Yüksek Kaliteli Üretim&rdquo;</div>
+  <div class="page-no">02</div>
+</section>
+
+<!-- 3 · RAKAMLAR -->
+<section class="page">
+  <div class="pad">
+    <div class="head">
+      <div class="eyebrow" data-en="İBAVALRESA in Numbers">Rakamlarla İBAVALRESA</div>
+      <h2 data-en="Less talk, &lt;em&gt;more results.&lt;/em&gt;">Sözden çok, <em>sonuç.</em></h2>
+    </div>
+    <div class="body">
+      <div class="col">
+        <p class="lead" data-en="Indicators that describe us at a glance — the present-day scale of a deep-rooted legacy.">
+          Bir bakışta bizi anlatan göstergeler — köklü bir mirasın, bugünkü ölçeği.
+        </p>
+        <div class="pull" data-en="These numbers are the result of &lt;em&gt;the system we built.&lt;/em&gt;">Bu rakamlar, kurduğumuz <em>sistemin sonucu.</em></div>
+      </div>
+      <div class="col">
+        <div class="stat-grid">
+          <div class="stat"><div class="num">60+</div><div class="lbl" data-en="Years of paint &amp; varnish experience">Yıllık boya &amp; vernik tecrübesi</div></div>
+          <div class="stat"><div class="num">25+</div><div class="lbl" data-en="Countries exported to">Ülkeye ihracat</div></div>
+          <div class="stat"><div class="num">%50</div><div class="lbl" data-en="Export share of total sales">İhracatın toplam satıştaki payı</div></div>
+          <div class="stat"><div class="num">30.000</div><div class="lbl" data-en="Tons / year production capacity">Ton / yıl üretim kapasitesi</div></div>
+          <div class="stat"><div class="num">37.000</div><div class="lbl" data-en="m² modern production facility">m² modern üretim tesisi</div></div>
+          <div class="stat"><div class="num">100+</div><div class="lbl" data-en="Nationwide network of color machines">Renk makinesi ile ülke geneli ağ</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="brandline">İBAVALRESA Boya ve Kimya San. ve Tic. A.Ş.</div>
+  <div class="footer-slogan" data-en="&ldquo;High Quality Production&rdquo;">&ldquo;Yüksek Kaliteli Üretim&rdquo;</div>
+  <div class="page-no">03</div>
+</section>
+
+<!-- 4 · TARİHÇE — body tam genişlik (yatay çizelge) -->
+<section class="page">
+  <div class="pad">
+    <div class="head">
+      <div class="eyebrow" data-en="Our Story">Hikâyemiz</div>
+      <h2 data-en="Born apart, &lt;em&gt;grown together.&lt;/em&gt;">Ayrı doğduk, <em>birlikte büyüdük.</em></h2>
+    </div>
+    <div class="body full">
+      <div class="tlh">
+        <div class="tlh-item"><div class="tlh-year">1965</div><b data-en="Valresa founded — Valencia, Spain">Valresa kuruldu — Valencia, İspanya</b><span data-en="Furniture paint and varnish production began; over time it became a brand recognized across 5 continents.">Mobilya boyaları ve vernikleri üretimi başladı; zamanla 5 kıtada tanınan bir marka oldu.</span></div>
+        <div class="tlh-item"><div class="tlh-year">1977</div><b data-en="İba Kimya founded — Ankara">İba Kimya kuruldu — Ankara</b><span data-en="The journey in the Turkish market began with paint and varnish production.">Boya ve vernik üretimiyle Türkiye pazarında yolculuk başladı.</span></div>
+        <div class="tlh-item"><div class="tlh-year">1995</div><b data-en="Powder-coating plant established — İba Kimya">Toz boya üretim tesisi kuruldu — İba Kimya</b><span data-en="By commissioning its powder-coating plant, İba Kimya became one of the sector's leading producers.">İba Kimya, toz boya üretim tesisini devreye alarak sektörün lider üreticilerinden biri oldu.</span></div>
+        <div class="tlh-item"><div class="tlh-year">2005</div><b data-en="İBAVALRESA founded — Ankara">İBAVALRESA doğdu — Ankara</b><span data-en="Two leaders combined their knowledge and experience to form the joint company.">İki lider, bilgi ve deneyimlerini birleştirerek ortak şirketi kurdu.</span></div>
+        <div class="tlh-item"><div class="tlh-year">2007</div><b data-en="Modern production facility online">Modern üretim tesisi devrede</b><span data-en="The production facility went live with advanced automation and SAP integration.">İleri otomasyon ve SAP entegrasyonuyla üretim tesisi faaliyete geçti.</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="brandline">İBAVALRESA Boya ve Kimya San. ve Tic. A.Ş.</div>
+  <div class="footer-slogan" data-en="&ldquo;High Quality Production&rdquo;">&ldquo;Yüksek Kaliteli Üretim&rdquo;</div>
+  <div class="page-no">04</div>
+</section>
+
+<!-- 5 · NE YAPIYORUZ -->
+<section class="page">
+  <div class="pad">
+    <div class="head">
+      <div class="eyebrow" data-en="What We Do">Ne Yapıyoruz</div>
+      <h2 data-en="From wood to industry, &lt;em&gt;end-to-end solutions.&lt;/em&gt;">Ahşaptan sanayiye, <em>uçtan uca çözüm.</em></h2>
+    </div>
+    <div class="body">
+      <div class="col">
+        <p class="lead" data-en="Paints and varnishes for furniture and wood surfaces, and general industrial coating solutions — all with a single quality approach. We group our purpose-built ranges under four brands.">
+          Mobilya ve ahşap yüzeyler için boya ve vernikler, genel sanayi boyası çözümleri —
+          hepsi tek bir kalite anlayışıyla. İhtiyaca göre özelleşen serilerimizi dört marka
+          altında topluyoruz.
+        </p>
+        <div class="pull" data-en="The choice of &lt;em&gt;Turkey's&lt;/em&gt; leading kitchen, bathroom, panel, door and office furniture manufacturers."><em>Türkiye'nin</em> önde gelen mutfak, banyo, panel, kapı ve ofis mobilyası üreticilerinin tercihi.</div>
+      </div>
+      <div class="col">
+        <div class="brands">
+          <div class="brand"><img src="assets/logos/valresa.png" alt="Valresa"><span data-en="Furniture paints and varnishes — Spanish color heritage">Mobilya boyaları ve vernikleri — İspanyol renk mirası</span></div>
+          <div class="brand"><img src="assets/logos/esfera.png" alt="Esfera"><span data-en="Specialized surface solutions range">Özelleşmiş yüzey çözümleri serisi</span></div>
+          <div class="brand"><img src="assets/logos/ibavet.png" alt="İbavet"><span data-en="General industrial coating solutions">Genel sanayi ve endüstriyel boya çözümleri</span></div>
+          <div class="brand"><img src="assets/logos/ibaboya.png" alt="İba"><span data-en="Industrial group products">Sanayi grubu ürünler</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="brandline">İBAVALRESA Boya ve Kimya San. ve Tic. A.Ş.</div>
+  <div class="footer-slogan" data-en="&ldquo;High Quality Production&rdquo;">&ldquo;Yüksek Kaliteli Üretim&rdquo;</div>
+  <div class="page-no">05</div>
+</section>
+
+<!-- 6 · ÜRETİM & İZLENEBİLİRLİK (zirve) -->
+<section class="page">
+  <div class="pad">
+    <div class="head">
+      <div class="eyebrow" data-en="Production &amp; Traceability">Üretim &amp; İzlenebilirlik</div>
+      <h2 data-en="The same product, &lt;em&gt;the same every time.&lt;/em&gt;">Aynı ürün, <em>her seferinde aynı.</em></h2>
+    </div>
+    <div class="body">
+      <div class="col">
+        <p class="lead" data-en="Our greatest strength is &lt;b&gt;repeatability&lt;/b&gt;: once we have produced a paint, varnish or color, we make it at the same quality every time. What makes this possible is that every production step is recorded and &lt;b&gt;traceable backwards&lt;/b&gt; — from the finished product all the way to the raw-material batch.">
+          En güçlü yanımız <b>tekrarlanabilirlik</b>: bir boyayı, verniği ya da rengi bir kez
+          ürettiysek, onu her seferinde aynı kalitede üretiriz. Bunu mümkün kılan şey, üretimin
+          her adımının kayıt altına alınması ve <b>geriye doğru izlenebilmesidir</b> — bitmiş
+          üründen hammadde partisine kadar.
+        </p>
+        <div class="pull" data-en="Quality is no coincidence; &lt;em&gt;it is the result of a recorded, traceable system.&lt;/em&gt;">Kalite bir tesadüf değil; <em>kayıtlı, izlenebilir bir sistemin sonucudur.</em></div>
+      </div>
+      <div class="col">
+        <ul class="bullets">
+          <li data-en="&lt;b&gt;Repeatable production&lt;/b&gt; — same recipe, same parameters, same result in every batch"><b>Tekrarlanabilir üretim</b> — aynı reçete, aynı parametreler, her partide aynı sonuç</li>
+          <li data-en="&lt;b&gt;Backward traceability&lt;/b&gt; — the entire chain recorded, from finished product to raw-material batch"><b>Geriye doğru izlenebilirlik</b> — bitmiş üründen hammadde partisine kadar tüm zincir kayıtlı</li>
+          <li data-en="&lt;b&gt;End-to-end record system&lt;/b&gt; — every step logged in real time and digitally via SAP &amp; SCADA"><b>Uçtan uca kayıt sistemi</b> — SAP &amp; SCADA ile her adım anlık ve dijital kayıt altında</li>
+          <li data-en="&lt;b&gt;Data analysis&lt;/b&gt; — continuous improvement from process data, intervention before deviation"><b>Veri analizi</b> — süreç verileriyle sürekli iyileştirme, sapmadan önce müdahale</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="brandline">İBAVALRESA Boya ve Kimya San. ve Tic. A.Ş.</div>
+  <div class="footer-slogan" data-en="&ldquo;High Quality Production&rdquo;">&ldquo;Yüksek Kaliteli Üretim&rdquo;</div>
+  <div class="page-no">06</div>
+</section>
+
+<!-- 7 · RENK TEKNOLOJİSİ -->
+<section class="page">
+  <div class="pad">
+    <div class="head">
+      <div class="eyebrow" data-en="Color Technology">Renk Teknolojisi</div>
+      <h2 data-en="The color in your mind, &lt;em&gt;produced exactly.&lt;/em&gt;">Aklınızdaki rengi, <em>tam olarak üretiriz.</em></h2>
+    </div>
+    <div class="body">
+      <div class="col">
+        <p class="lead" data-en="Our central color-management system, backed by advanced &lt;b&gt;spectrophotometer&lt;/b&gt; technology, digitally analyzes a sample, a painted surface or a reference color and reproduces it with high precision.">
+          İleri <b>spektrofotometre</b> teknolojisiyle desteklenen merkezi renk yönetim sistemimiz;
+          bir numuneyi, boyalı bir yüzeyi ya da referans bir rengi dijital olarak analiz eder ve
+          yüksek hassasiyetle yeniden üretir.
+        </p>
+        <div class="swatch-row" style="margin-top:auto;">
+          <div style="background:#BEBD7F"></div><div style="background:#E5BE01"></div><div style="background:#CC2C24"></div><div style="background:#8A6642"></div>
+          <div style="background:#004B8D"></div><div style="background:#1E5945"></div><div style="background:#6C4675"></div><div style="background:#0d0d10"></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="feat">
+          <div class="card"><div class="k" data-en="100+ Color Machines">100+ Renk Makinesi</div><div class="v" data-en="Fast, on-site coloring through a widespread nationwide network of color machines.">Ülke genelinde yaygın renk makinesi ağıyla hızlı, yerinde renklendirme.</div></div>
+          <div class="card"><div class="k">RAL · NCS · NOVA</div><div class="v" data-en="Thousands of colors from standard fan decks, prepared with high accuracy.">Standart kartelalardaki binlerce renk, yüksek doğrulukla hazırlanır.</div></div>
+          <div class="card"><div class="k" data-en="Central Formula">Merkezi Formül</div><div class="v" data-en="The same color standard is maintained across all locations.">Tüm lokasyonlarda aynı renk standardı korunur.</div></div>
+          <div class="card"><div class="k" data-en="Repeatability">Tekrarlanabilirlik</div><div class="v" data-en="Every measurement reliable, every result standard, every production at the same level.">Her ölçüm güvenilir, her sonuç standart, her üretim aynı seviyede.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="brandline">İBAVALRESA Boya ve Kimya San. ve Tic. A.Ş.</div>
+  <div class="footer-slogan" data-en="&ldquo;High Quality Production&rdquo;">&ldquo;Yüksek Kaliteli Üretim&rdquo;</div>
+  <div class="page-no">07</div>
+</section>
+
+<!-- 8 · AR-GE -->
+<section class="page">
+  <div class="pad">
+    <div class="head">
+      <div class="eyebrow" data-en="Research &amp; Development">Araştırma &amp; Geliştirme</div>
+      <h2 data-en="Global knowledge, &lt;em&gt;local solutions.&lt;/em&gt;">Global bilgi, <em>yerel çözüm.</em></h2>
+    </div>
+    <div class="body">
+      <div class="col">
+        <p class="lead" data-en="With our Turkish–Spanish R&amp;D strength, we develop technological products and innovative formulations centered on customer needs. We deliver high performance, aesthetic surface quality and global standards together.">
+          Türk–İspanyol Ar-Ge gücümüzle, müşteri ihtiyaçlarını merkeze alan teknolojik ürünler ve
+          yenilikçi formülasyonlar geliştiriyoruz. Yüksek performans, estetik yüzey kalitesi ve
+          global standartları bir arada sunuyoruz.
+        </p>
+        <div class="pull" data-en="&lt;em&gt;Aesthetics&lt;/em&gt; and &lt;em&gt;industrial necessity&lt;/em&gt; in the same formula."><em>Estetik</em> ile <em>endüstriyel gereklilik</em> aynı formülde.</div>
+      </div>
+      <div class="col">
+        <ul class="bullets">
+          <li data-en="&lt;b&gt;Water-based systems &amp; low VOC&lt;/b&gt; — safer products for both applicator and end user"><b>Su bazlı sistemler &amp; düşük VOC</b> — uygulayıcı ve son kullanıcı için daha güvenli ürünler</li>
+          <li data-en="&lt;b&gt;Optimized drying times&lt;/b&gt; — high durability and surface quality"><b>Optimize kuruma süreleri</b> — yüksek dayanıklılık ve yüzey kalitesi</li>
+          <li data-en="&lt;b&gt;Sustainable formulation&lt;/b&gt; — long-term solutions that reduce environmental impact"><b>Sürdürülebilir formülasyon</b> — çevresel etkiyi azaltan, uzun vadeli çözümler</li>
+          <li data-en="&lt;b&gt;Application-focused design&lt;/b&gt; — for the real needs of the furniture and wood industry"><b>Uygulama odaklı tasarım</b> — mobilya ve ahşap endüstrisinin gerçek ihtiyaçlarına</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="brandline">İBAVALRESA Boya ve Kimya San. ve Tic. A.Ş.</div>
+  <div class="footer-slogan" data-en="&ldquo;High Quality Production&rdquo;">&ldquo;Yüksek Kaliteli Üretim&rdquo;</div>
+  <div class="page-no">08</div>
+</section>
+
+<!-- 9 · SÜRDÜRÜLEBİLİRLİK -->
+<section class="page">
+  <div class="pad">
+    <div class="head">
+      <div class="eyebrow green" data-en="Sustainability">Sürdürülebilirlik</div>
+      <h2 data-en="We produce not just today, &lt;em style=&quot;color:var(--green);&quot;&gt;but the future too.&lt;/em&gt;">Bugünü değil, <em style="color:var(--green);">geleceği de üretiyoruz.</em></h2>
+    </div>
+    <div class="body">
+      <div class="col">
+        <p class="lead" data-en="At the heart of our environmental, occupational health and safety policy lies the goal of leaving a livable world to future generations. We implement practices that set an example for the chemical industry with determination.">
+          Çevre, iş sağlığı ve güvenliği politikamızın temelinde gelecek nesillere yaşanabilir bir
+          dünya bırakma hedefi var. Kimya sektörüne örnek olacak uygulamaları kararlılıkla hayata geçiriyoruz.
+        </p>
+        <div class="pull" data-en="As we produce, &lt;em style=&quot;color:var(--green);&quot;&gt;we protect the future.&lt;/em&gt;">Üretirken, <em style="color:var(--green);">geleceği koruyoruz.</em></div>
+      </div>
+      <div class="col">
+        <div class="stat-grid">
+          <div class="stat" style="border-color:var(--green);"><div class="num" style="color:var(--green);">%70</div><div class="lbl" data-en="of energy needs met by solar">Enerji ihtiyacı güneşten karşılanır</div></div>
+          <div class="stat" style="border-color:var(--green);"><div class="num" style="color:var(--green);">1.000+</div><div class="lbl" data-en="Plants making up the green campus">Bitkiden oluşan yeşil kampüs</div></div>
+          <div class="stat" style="border-color:var(--green);"><div class="num" style="color:var(--green);">%100</div><div class="lbl" data-en="Licensed disposal of chemical waste">Kimyasal atık lisanslı bertaraf</div></div>
+          <div class="stat" style="border-color:var(--green);"><div class="num" style="color:var(--green);" data-en="Paperless">Kağıtsız</div><div class="lbl" data-en="Production &amp; circular-economy practices">Üretim &amp; döngüsel ekonomi uygulamaları</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="brandline">İBAVALRESA Boya ve Kimya San. ve Tic. A.Ş.</div>
+  <div class="footer-slogan" data-en="&ldquo;High Quality Production&rdquo;">&ldquo;Yüksek Kaliteli Üretim&rdquo;</div>
+  <div class="page-no">09</div>
+</section>
+
+<!-- 10 · KALİTE & GÜVEN -->
+<section class="page">
+  <div class="pad">
+    <div class="head">
+      <div class="eyebrow" data-en="Quality &amp; Trust">Kalite &amp; Güven</div>
+      <h2 data-en="Trust, &lt;em&gt;proven&lt;/em&gt; by certification.">Belgelerle <em>kanıtlanmış</em> güven.</h2>
+    </div>
+    <div class="body">
+      <div class="col">
+        <p class="lead" data-en="We see quality not as a standard but as a corporate culture that guides all our processes. Internationally accredited certificates are the assurance of this.">
+          Kaliteyi bir standart değil, tüm süreçlerimize yön veren bir kurum kültürü olarak görüyoruz.
+          Uluslararası akredite belgeler bunun güvencesi.
+        </p>
+        <div class="feat" style="grid-template-columns:1fr 1fr 1fr; margin-top:8mm;">
+          <div class="card" style="padding:5mm;"><div class="k" style="font-size:9pt;">ISO 9001:2015</div><div class="v" style="font-size:8pt;" data-en="Quality Management System">Kalite Yönetim Sistemi</div></div>
+          <div class="card" style="padding:5mm;"><div class="k" style="font-size:9pt;">KALDER</div><div class="v" style="font-size:8pt;" data-en="Turkish Quality Association membership">Türkiye Kalite Derneği üyeliği</div></div>
+          <div class="card" style="padding:5mm;"><div class="k" style="font-size:9pt;">EN 71-3</div><div class="v" style="font-size:8pt;" data-en="Spanish AIDIMA certifications">İspanyol AIDIMA sertifikaları</div></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="pull" style="margin-top:0;" data-en="We're with you &lt;em&gt;after the sale, too.&lt;/em&gt;">Satış sonrası da <em>yanınızdayız.</em></div>
+        <p class="lead" style="margin-top:5mm;" data-en="From order to the field, and from the field onwards; we stand by you with strong planning, fast shipping and the technical teams across our 60+ dealers and 6 regional offices. &lt;b&gt;With our export and sales network in 25+ countries&lt;/b&gt;, we sustain the same support across borders too. Before production begins, we test samples on site and approve the parameters together.">
+          Siparişten sahaya, sahadan sonrasına kadar; güçlü planlama, hızlı sevkiyat ve
+          60'ı aşkın bayi ile 6 bölge müdürlüğündeki teknik ekiplerimizle yanınızdayız.
+          <b>25+ ülkedeki ihracat ve satış ağımızla</b> aynı desteği sınır ötesinde de sürdürüyoruz.
+          Üretim başlamadan sahada numune test eder, parametreleri birlikte onaylarız.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="brandline">İBAVALRESA Boya ve Kimya San. ve Tic. A.Ş.</div>
+  <div class="footer-slogan" data-en="&ldquo;High Quality Production&rdquo;">&ldquo;Yüksek Kaliteli Üretim&rdquo;</div>
+  <div class="page-no">10</div>
+</section>
+
+<!-- 11 · KAPANIŞ -->
+<section class="page close">
+  <div class="pad">
+    <img src="assets/logos/ibavalresa-white.png" alt="İBAVALRESA" style="height:8mm; width:auto; align-self:flex-start;">
+    <div class="body" style="align-items:center; margin-top:6mm;">
+      <div>
+        <h1 style="color:#fff; font-size:30pt;" data-en="See you&lt;br&gt;at our factory.">Fabrikamızda<br>görüşmek üzere.</h1>
+        <p class="cover-sub" style="margin-top:5mm;" data-en="You're invited to get to know us better and see our production strength on site.">Bizi daha iyi tanımak ve üretim gücümüzü yerinde görmek için davetlisiniz.</p>
+      </div>
+      <div class="contact">
+        <div><div class="cl" data-en="Address">Adres</div><div class="cv">Oğuz Cd. No:24, 1. OSB Sincan / Ankara</div></div>
+        <div><div class="cl" data-en="Phone">Telefon</div><div class="cv">+90 312 267 56 22</div></div>
+        <div><div class="cl" data-en="Email">E-posta</div><div class="cv">info@ibavalresa.com.tr</div></div>
+        <div><div class="cl" data-en="Web">Web</div><div class="cv">ibavalresa.com.tr</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Slayt navigasyonu (yalnızca ekran; PDF'e girmez) ── -->
+<div id="nav">
+  <button id="prev" title="Önceki slayt (←)" aria-label="Önceki slayt">‹</button>
+  <span id="counter">1 / 11</span>
+  <button id="next" title="Sonraki slayt (→)" aria-label="Sonraki slayt">›</button>
+</div>
+
+<!-- ── Dil seçici TR/EN (yalnızca ekran; PDF'e girmez) ── -->
+<div id="langsw">
+  <button data-lang="TR" class="active" onclick="selectLang('TR')">TR</button>
+  <button data-lang="EN" onclick="selectLang('EN')">EN</button>
+</div>
+<script>
+// TR ⇄ EN — [data-en] taşıyan tüm metinleri değiştirir
+function selectLang(lang) {
+  document.querySelectorAll('[data-en]').forEach(function (el) {
+    if (el.__tr == null) el.__tr = el.innerHTML;
+    el.innerHTML = (lang === 'EN') ? el.getAttribute('data-en') : el.__tr;
+  });
+  document.querySelectorAll('#langsw button').forEach(function (b) {
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+  document.documentElement.lang = (lang === 'EN') ? 'en' : 'tr';
+  try { localStorage.setItem('ibav_sunum_lang', lang); } catch (e) {}
+}
+try { if (localStorage.getItem('ibav_sunum_lang') === 'EN') selectLang('EN'); } catch (e) {}
+</script>
+<script>
+(function () {
+  var pages = Array.prototype.slice.call(document.querySelectorAll('.page'));
+  var prev = document.getElementById('prev');
+  var next = document.getElementById('next');
+  var counter = document.getElementById('counter');
+  var i = 0;
+
+  function show(n) {
+    i = Math.max(0, Math.min(pages.length - 1, n));
+    for (var k = 0; k < pages.length; k++) pages[k].classList.toggle('active', k === i);
+    counter.textContent = (i + 1) + ' / ' + pages.length;
+    prev.disabled = (i === 0);
+    next.disabled = (i === pages.length - 1);
+    if (history.replaceState) history.replaceState(null, '', '#s' + (i + 1));
+  }
+
+  // 16:9 slayt = 1280x720 px @96dpi
+  function fit() {
+    var s = Math.min(window.innerWidth * 0.94 / 1280, (window.innerHeight - 96) / 720);
+    document.documentElement.style.setProperty('--s', s);
+    // Nav ve dil butonunu slaytın sol/sağ kenarına hizala (marja taşmasın)
+    var edge = Math.max(12, (window.innerWidth - 1280 * s) / 2 + 6);
+    var nav = document.getElementById('nav');
+    var lang = document.getElementById('langsw');
+    if (nav) nav.style.left = edge + 'px';
+    if (lang) lang.style.right = edge + 'px';
+  }
+
+  prev.addEventListener('click', function () { show(i - 1); });
+  next.addEventListener('click', function () { show(i + 1); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); show(i + 1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); show(i - 1); }
+    else if (e.key === 'Home') { show(0); }
+    else if (e.key === 'End') { show(pages.length - 1); }
+  });
+  window.addEventListener('resize', fit);
+
+  fit();
+  var m = (location.hash || '').match(/^#s(\d+)$/);
+  show(m ? parseInt(m[1], 10) - 1 : 0);
+})();
+</script>
+</body>
+</html>
