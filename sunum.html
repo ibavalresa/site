@@ -138,10 +138,21 @@
           font-family:inherit; transition:background .15s, color .15s; }
     #langsw button.active{ background:#fff; color:#10223F; }
     #langsw button:hover:not(.active){ color:#fff; }
+    /* Web sitesi linki — dil seçicinin solunda */
+    #sitelink{ position:fixed; bottom:22px; z-index:99; display:flex; align-items:center; justify-content:center;
+          width:42px; height:42px; border-radius:50%; text-decoration:none;
+          background:rgba(18,18,26,.82); border:1px solid rgba(255,255,255,.12); backdrop-filter:blur(10px);
+          color:rgba(255,255,255,.65); transition:background .15s, color .15s; }
+    #sitelink:hover{ background:rgba(255,255,255,.18); color:#fff; }
+    #sitelink::after{ content:attr(data-tip); position:absolute; bottom:calc(100% + 9px); right:0;
+          white-space:nowrap; padding:6px 11px; border-radius:8px; font-size:12px; font-weight:600; letter-spacing:.01em;
+          background:rgba(18,18,26,.95); color:#fff; border:1px solid rgba(255,255,255,.14);
+          box-shadow:0 6px 20px rgba(0,0,0,.35); opacity:0; transform:translateY(3px); pointer-events:none; transition:opacity .15s, transform .15s; }
+    #sitelink:hover::after{ opacity:1; transform:translateY(0); }
   }
   /* ── BASKI ── */
   @media print {
-    #nav, #langsw{ display:none !important; }
+    #nav, #langsw, #sitelink{ display:none !important; }
     body{ background:#fff !important; display:block !important; overflow:visible !important; }
     .page{ display:block !important; position:relative !important; top:auto !important; left:auto !important;
            transform:none !important; box-shadow:none !important; }
@@ -488,6 +499,10 @@
   <button data-lang="TR" class="active" onclick="selectLang('TR')">TR</button>
   <button data-lang="EN" onclick="selectLang('EN')">EN</button>
 </div>
+<!-- Web sitesi — yeni sekmede -->
+<a id="sitelink" href="index.html" target="_blank" rel="noopener" data-tip="ibavalresa.com.tr ana sayfayı aç" aria-label="ibavalresa.com.tr ana sayfayı yeni sekmede aç">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5"/><path d="M9.5 21v-6h5v6"/></svg>
+</a>
 <script>
 // TR ⇄ EN — [data-en] taşıyan tüm metinleri değiştirir
 function selectLang(lang) {
@@ -528,8 +543,11 @@ try { if (localStorage.getItem('ibav_sunum_lang') === 'EN') selectLang('EN'); } 
     var edge = Math.max(12, (window.innerWidth - 1280 * s) / 2 + 6);
     var nav = document.getElementById('nav');
     var lang = document.getElementById('langsw');
+    var site = document.getElementById('sitelink');
     if (nav) nav.style.left = edge + 'px';
     if (lang) lang.style.right = edge + 'px';
+    // Web ikonu dil seçicisinin hemen soluna
+    if (site && lang) site.style.right = (window.innerWidth - lang.getBoundingClientRect().left + 8) + 'px';
   }
 
   prev.addEventListener('click', function () { show(i - 1); });
