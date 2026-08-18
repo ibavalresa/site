@@ -16,7 +16,7 @@ FOLD = r'(?:assets|img|video|brands|belgeler|insta)'
 PAGES = {
  "index": (
    "Wood Coatings Manufacturer in Turkey — İBAVALRESA",
-   "Turkey-based wood & furniture coatings manufacturer — acrylic, polyurethane, water-based and UV-curing finishes. 60+ years of expertise, global exports."),
+   "Turkey-based wood coatings manufacturer — acrylic, polyurethane, water-based and UV-curing finishes. 60+ years of expertise, global exports."),
  "hakkimizda": (
    "About Us — Turkish–Spanish Coatings Manufacturer — İBAVALRESA",
    "İBAVALRESA is a Turkish–Spanish manufacturer of wood, furniture and industrial coatings. Data-driven, traceable and sustainable production."),
@@ -90,13 +90,23 @@ ALT_MAP = {
  "Üretim Teknolojisi": "Wood coating production technology",
  "Valresa 50. Yıl Kutlaması": "Valresa 50th Anniversary Celebration",
  "Spektrofotometre ile merkezi renk yönetim sistemi": "Central color management system with a spectrophotometer",
- "Ramazan Bayramı": "Ramadan Feast (Eid al-Fitr)",
- "Mutlu Yıllar 2026": "Happy New Year 2026",
  "Lojistik Güç - Yüksek Depo": "Logistics power — automated high-bay warehouse",
  "Lojistik Güç - Tesis Kurulumu": "Logistics power — facility installation",
  "Lojistik Güç - Otomatik Raf Sistemi": "Logistics power — automated racking system",
  "Ar-Ge": "R&D laboratory",
- "23 Nisan": "April 23rd National Sovereignty Day",
+ # Instagram bar görselleri (SEO adlı, açıklayıcı alt)
+ "İbavalresa — Dünya Kupası": "İbavalresa — World Cup",
+ "Valresa — Pantone 2026 yılın rengi": "Valresa — Pantone 2026 Color of the Year",
+ "İbavet ahşap boya ambalajları": "İbavet wood coating packaging",
+ "Valresa mobilya boyası renk paleti": "Valresa furniture coating color palette",
+ "İbavalresa — 1 Mayıs": "İbavalresa — May 1st",
+ "İbavalresa otomasyonlu boya üretim hattı": "İbavalresa automated coating production line",
+ "İbavalresa Ar-Ge ekibi — TURKCOAT Kongresi": "İbavalresa R&D team — TURKCOAT Congress",
+ "İbavalresa boya üretim tesisi (havadan)": "İbavalresa coating production facility (aerial)",
+ "İbavalresa bayi toplantısı": "İbavalresa dealer meeting",
+ "Esfera su bazlı mobilya boyası": "Esfera water-based furniture coating",
+ "Valresa — Tahran fuarı": "Valresa — Tehran exhibition",
+ "İbavalresa boya fabrikası — Ankara Sincan": "İbavalresa coating factory — Ankara Sincan",
 }
 
 def esc_attr(t):  # HTML attribute-safe (title/desc contain &, quotes)
@@ -176,7 +186,7 @@ JSONLD_REPL = [
  ('"description":"Türk–İspanyol ortaklığıyla ahşap, mobilya ve sanayi boyaları ile vernik üreten kuruluş."',
   '"description":"A Turkish–Spanish manufacturer of wood, furniture and industrial paints and varnishes."'),
  ('"knowsAbout":["Ahşap boyası","Mobilya boyası","Sanayi boyası","Ahşap verniği","Renk üretimi"]',
-  '"knowsAbout":["Wood coatings","Furniture coatings","Industrial coatings","Wood varnish","Color production"]'),
+  '"knowsAbout":["Wood coatings","Furniture finishes","Industrial coatings","Wood varnish","Color production"]'),
  # breadcrumb item adları (renk-paleti / renk-makinesi)
  ('"name":"Ana Sayfa"', '"name":"Home"'),
  ('"name":"Renk Makinesi"', '"name":"Color Machine"'),

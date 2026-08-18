@@ -947,14 +947,17 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 
 .insta-carousel-wrap {
   position: relative;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 52px;            /* okların oturduğu yan boşluklar */
   overflow: hidden;
 }
 .insta-carousel {
   display: flex;
   gap: 12px;
-  padding-left: max(40px, calc((100vw - 1020px) / 2));
-  padding-right: max(40px, calc((100vw - 1020px) / 2));
+  padding: 6px 0;            /* dikey: hover kalkması için */
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -983,15 +986,15 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 }
 .insta-card:hover img { transform: scale(1.04); }
 
-/* fade edges */
+/* kenar yumuşatma — kartlar ok boşluğuna değmeden yumuşak bitsin */
 .insta-carousel-wrap::before,
 .insta-carousel-wrap::after {
   content: '';
   position: absolute; top: 0; bottom: 0;
-  width: 80px; z-index: 2; pointer-events: none;
+  width: 28px; z-index: 2; pointer-events: none;
 }
-.insta-carousel-wrap::before { left: 0; background: linear-gradient(to right, var(--bg) 0%, transparent 100%); }
-.insta-carousel-wrap::after  { right: 0; background: linear-gradient(to left, var(--bg) 0%, transparent 100%); }
+.insta-carousel-wrap::before { left: 52px; background: linear-gradient(to right, var(--bg) 0%, transparent 100%); }
+.insta-carousel-wrap::after  { right: 52px; background: linear-gradient(to left, var(--bg) 0%, transparent 100%); }
 
 .insta-nav {
   position: absolute; top: 50%; transform: translateY(-50%);
@@ -1004,8 +1007,14 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   transition: background .2s, border-color .2s, transform .2s;
 }
 .insta-nav:hover { background: var(--bg3); border-color: var(--subtle); transform: translateY(-50%) scale(1.08); }
-.insta-prev { left: max(40px, calc((100vw - 1020px) / 2 - 48px)); }
-.insta-next { right: max(40px, calc((100vw - 1020px) / 2 - 48px)); }
+.insta-prev { left: 8px; }
+.insta-next { right: 8px; }
+@media (max-width: 640px) {
+  .insta-carousel-wrap { padding: 0 44px; }
+  .insta-carousel-wrap::before { left: 44px; }
+  .insta-carousel-wrap::after { right: 44px; }
+  .insta-card { flex-basis: 150px; max-width: 170px; }
+}
 
 /* ── INSTAGRAM ── */
 .insta-section {
@@ -1081,7 +1090,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   align-items: flex-start;
   gap: 18px;
   font-size: clamp(18px, 1.9vw, 24px);
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text);
   max-width: none;
   line-height: 1.35;
@@ -1970,7 +1979,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 <section class="brand-showcase">
   <div class="section-inner">
     <div class="brand-showcase-head reveal">
-      <p class="brand-showcase-sub"><span data-en="Customized series and solutions for your needs&lt;br&gt;in Wood Coatings, Furniture Coatings and General Industrial Coatings.">Mobilya Boyaları ve Genel Sanayi Boyalarında<br>ihtiyaçlarınıza göre özelleşmiş seriler ve çözümler.</span></p>
+      <p class="brand-showcase-sub"><span data-en="&lt;strong&gt;Wood Coatings and General Industrial Coatings&lt;/strong&gt;&lt;br&gt;Customized series and solutions for your needs."><strong>Mobilya Boyaları ve Genel Sanayi Boyaları</strong> için<br>ihtiyaçlarınıza göre özelleşmiş seriler ve çözümler.</span></p>
     </div>
     <div class="brand-showcase-grid reveal">
       <div class="brand-showcase-card">
@@ -1983,7 +1992,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
             </span>
           </div>
         </a>
-        <p class="brand-showcase-card-desc" data-en="A premium paint &amp; varnish series offering top-quality performance for the furniture segment.">Mobilya grubundan üst kalite performansı sunan premium boya vernik serisi.</p>
+        <p class="brand-showcase-card-desc" data-en="A premium paint &amp; varnish series offering top-quality performance for the furniture industry.">Mobilya boyaları üst kalite performans sunan premium boya vernik serisi.</p>
       </div>
       <div class="brand-showcase-card">
         <a class="brand-showcase-card-media-link" href="https://esfera.com.tr/" target="_blank" rel="noopener">
@@ -2094,7 +2103,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="finalcta-glow"></div>
   <div class="section-inner">
     <h2 class="reveal" data-en="Reliability.&lt;br&gt;&lt;em style=&quot;font-style:normal;color:var(--accent)&quot;&gt;Efficiency.&lt;/em&gt;&lt;br&gt;Quality.">Güvenilirlik.<br><em style="font-style:normal;color:var(--accent)">Verimlilik.</em><br>Kalite.</h2>
-    <p class="reveal" data-en="We&rsquo;re here to be your strong solution partner in global markets. Get in touch now.">Global pazarlarda güçlü çözüm ortağınız olmak için buradayız. Hemen iletişime geçin.</p>
+    <p class="reveal" data-en="We&rsquo;re your strong solution partner in wood, furniture and industrial coatings across global markets. Get in touch now.">Ahşap, mobilya boyaları ve sanayi boyalarında global pazarların güçlü çözüm ortağıyız. Hemen iletişime geçin.</p>
     <div class="hero-actions reveal">
       <a href="iletisim.html" class="btn-primary">
         <span data-en="Get in Touch">İletişime Geçin</span>
@@ -2115,19 +2124,43 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="insta-carousel-wrap">
     <div class="insta-carousel" id="instaCarousel">
       <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
-        <img src="insta/01.jpg" alt="23 Nisan"/>
+        <img src="insta/ibavalresa-dunya-kupasi.jpg" alt="İbavalresa — Dünya Kupası" loading="lazy"/>
       </a>
       <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
-        <img src="insta/02.jpg" alt="Mutlu Yıllar 2026"/>
+        <img src="insta/valresa-pantone-2026.jpg" alt="Valresa — Pantone 2026 yılın rengi" loading="lazy"/>
       </a>
       <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
-        <img src="insta/06.jpg" alt="Pantone 2026"/>
+        <img src="insta/ibavet-boya-ambalaj.jpg" alt="İbavet ahşap boya ambalajları" loading="lazy"/>
       </a>
       <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
-        <img src="insta/07.jpg" alt="Ramazan Bayramı"/>
+        <img src="insta/valresa-mobilya-renk-paleti.jpg" alt="Valresa mobilya boyası renk paleti" loading="lazy"/>
       </a>
       <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
-        <img src="insta/08.jpg" alt="Reel 01"/>
+        <img src="insta/ibavalresa-1-mayis.jpg" alt="İbavalresa — 1 Mayıs" loading="lazy"/>
+      </a>
+      <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
+        <img src="insta/ibavalresa-otomasyon-boya-uretim-hatti.jpg" alt="İbavalresa otomasyonlu boya üretim hattı" loading="lazy"/>
+      </a>
+      <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
+        <img src="insta/ibavalresa-arge-ekibi-turkcoat.jpg" alt="İbavalresa Ar-Ge ekibi — TURKCOAT Kongresi" loading="lazy"/>
+      </a>
+      <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
+        <img src="insta/ibavalresa-boya-uretim-tesisi-havadan.jpg" alt="İbavalresa boya üretim tesisi (havadan)" loading="lazy"/>
+      </a>
+      <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
+        <img src="insta/ibavalresa-bayi-toplantisi.jpg" alt="İbavalresa bayi toplantısı" loading="lazy"/>
+      </a>
+      <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
+        <img src="insta/esfera-su-bazli-mobilya-boyasi.jpg" alt="Esfera su bazlı mobilya boyası" loading="lazy"/>
+      </a>
+      <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
+        <img src="insta/valresa-tahran-fuari.jpg" alt="Valresa — Tahran fuarı" loading="lazy"/>
+      </a>
+      <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
+        <img src="insta/valresa-pantone-2025.jpg" alt="Valresa — Pantone 2025" loading="lazy"/>
+      </a>
+      <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
+        <img src="insta/ibavalresa-boya-fabrikasi-ankara.jpg" alt="İbavalresa boya fabrikası — Ankara Sincan" loading="lazy"/>
       </a>
     </div>
     <button class="insta-nav insta-prev" onclick="slideInsta(-1)">
@@ -2165,6 +2198,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <ul>
         <li><a href="renk-paleti.html">RAL-NCS-Nova Kartela</a></li>
         <li><a href="https://www.valresa.com.tr/urunkatalogu/" data-en="Valresa Catalog">Valresa Kataloğu</a></li>
+        <li><a href="https://esfera.com.tr/urun-katalogu/" data-en="Esfera Catalog">Esfera Kataloğu</a></li>
         <li><a href="https://www.ibavet.com.tr/urunkatalogu/" data-en="İbavet Catalog">İbavet Kataloğu</a></li>
       </ul>
       <div style="margin-top:40px;"></div>
@@ -2231,21 +2265,38 @@ document.querySelectorAll('[data-slideshow]').forEach(box => {
   }, 3000);
 });
 
-// Instagram carousel
-function slideInsta(dir) {
-  const c = document.getElementById('instaCarousel');
-  c.scrollBy({ left: dir * 200, behavior: 'smooth' });
-}
-
-// Drag to scroll
+// Instagram carousel — otomatik kayma + oklar; oklara/sürüklemeye/dokunmaya kadar otomatik akar
 (function() {
   const c = document.getElementById('instaCarousel');
   if (!c) return;
-  let isDown = false, startX, scrollLeft;
+  let auto = null;
+
+  function step() {
+    const card = c.querySelector('.insta-card');
+    return card ? Math.round(card.getBoundingClientRect().width + 12) : 200;
+  }
+  function advance() {
+    // sona ulaşıldıysa başa dön, aksi halde bir kart ilerle
+    if (c.scrollLeft + c.clientWidth >= c.scrollWidth - 4) {
+      c.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      c.scrollBy({ left: step(), behavior: 'smooth' });
+    }
+  }
+  function startAuto() { if (!auto) auto = setInterval(advance, 3000); }
+  function stopAuto() { if (auto) { clearInterval(auto); auto = null; } }
+
+  // Oklar — tıklayınca otomatik kaymayı durdur, kullanıcı elle gezsin
+  window.slideInsta = function(dir) {
+    stopAuto();
+    c.scrollBy({ left: dir * step(), behavior: 'smooth' });
+  };
+
+  // Fare ile sürükleyerek gezinme (otomatiği durdurur)
+  let isDown = false, startX = 0, scrollLeft = 0, moved = false;
   c.addEventListener('mousedown', e => {
-    isDown = true; c.classList.add('dragging');
-    startX = e.pageX - c.offsetLeft;
-    scrollLeft = c.scrollLeft;
+    isDown = true; moved = false; c.classList.add('dragging');
+    startX = e.pageX - c.offsetLeft; scrollLeft = c.scrollLeft;
   });
   c.addEventListener('mouseleave', () => { isDown = false; c.classList.remove('dragging'); });
   c.addEventListener('mouseup', () => { isDown = false; c.classList.remove('dragging'); });
@@ -2253,8 +2304,16 @@ function slideInsta(dir) {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - c.offsetLeft;
+    if (Math.abs(x - startX) > 4) { moved = true; stopAuto(); }
     c.scrollLeft = scrollLeft - (x - startX) * 1.5;
   });
+  // Sürükleme sonrası yanlışlıkla Instagram linkinin açılmasını engelle
+  c.addEventListener('click', e => { if (moved) { e.preventDefault(); moved = false; } }, true);
+
+  // Dokunmatik: kullanıcı barı elleyince otomatik dursun
+  c.addEventListener('touchstart', stopAuto, { passive: true });
+
+  startAuto();
 })();
 
 // Hamburger / mobile menu

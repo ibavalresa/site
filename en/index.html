@@ -10,19 +10,19 @@
 <link rel="alternate" hreflang="x-default" href="https://www.ibavalresa.com.tr/">
 
 
-<meta name="description" content="Turkey-based wood &amp; furniture coatings manufacturer — acrylic, polyurethane, water-based and UV-curing finishes. 60+ years of expertise, global exports.">
+<meta name="description" content="Turkey-based wood coatings manufacturer — acrylic, polyurethane, water-based and UV-curing finishes. 60+ years of expertise, global exports.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="İBAVALRESA">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Wood Coatings Manufacturer in Turkey — İBAVALRESA">
-<meta property="og:description" content="Turkey-based wood &amp; furniture coatings manufacturer — acrylic, polyurethane, water-based and UV-curing finishes. 60+ years of expertise, global exports.">
+<meta property="og:description" content="Turkey-based wood coatings manufacturer — acrylic, polyurethane, water-based and UV-curing finishes. 60+ years of expertise, global exports.">
 <meta property="og:url" content="https://www.ibavalresa.com.tr/en/">
 <meta property="og:image" content="https://www.ibavalresa.com.tr/img/kampus-havadan.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Wood Coatings Manufacturer in Turkey — İBAVALRESA">
-<meta name="twitter:description" content="Turkey-based wood &amp; furniture coatings manufacturer — acrylic, polyurethane, water-based and UV-curing finishes. 60+ years of expertise, global exports.">
+<meta name="twitter:description" content="Turkey-based wood coatings manufacturer — acrylic, polyurethane, water-based and UV-curing finishes. 60+ years of expertise, global exports.">
 <meta name="twitter:image" content="https://www.ibavalresa.com.tr/img/kampus-havadan.jpg">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBAVALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"],"description":"A Turkish–Spanish manufacturer of wood, furniture and industrial paints and varnishes.","foundingDate":"2005","foundingLocation":{"@type":"Place","name":"Ankara, Türkiye"},"knowsAbout":["Wood coatings","Furniture coatings","Industrial coatings","Wood varnish","Color production"],"brand":[{"@type":"Brand","name":"Valresa"},{"@type":"Brand","name":"Esfera"},{"@type":"Brand","name":"İbavet"},{"@type":"Brand","name":"İba Sanayi Boyaları"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"İBAVALRESA","alternateName":"İBAVALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/","logo":"https://www.ibavalresa.com.tr/assets/logos/ibavalresa-black.png","email":"info@ibavalresa.com.tr","telephone":"+90-312-267-56-22","address":{"@type":"PostalAddress","streetAddress":"Oğuz Cd. No:24, 1. OSB Sincan","addressLocality":"Ankara","addressCountry":"TR"},"sameAs":["https://www.facebook.com/ibavalresa/","https://www.linkedin.com/company/ibavalresa-boya-kimya/","https://www.instagram.com/ibavalresa/","https://www.youtube.com/@ibavalresaboyavekimya"],"description":"A Turkish–Spanish manufacturer of wood, furniture and industrial paints and varnishes.","foundingDate":"2005","foundingLocation":{"@type":"Place","name":"Ankara, Türkiye"},"knowsAbout":["Wood coatings","Furniture finishes","Industrial coatings","Wood varnish","Color production"],"brand":[{"@type":"Brand","name":"Valresa"},{"@type":"Brand","name":"Esfera"},{"@type":"Brand","name":"İbavet"},{"@type":"Brand","name":"İba Sanayi Boyaları"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"İBAVALRESA","alternateName":"İBAVALRESA Boya ve Kimya A.Ş.","url":"https://www.ibavalresa.com.tr/"}</script>
 
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -948,14 +948,17 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 
 .insta-carousel-wrap {
   position: relative;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 52px;            /* okların oturduğu yan boşluklar */
   overflow: hidden;
 }
 .insta-carousel {
   display: flex;
   gap: 12px;
-  padding-left: max(40px, calc((100vw - 1020px) / 2));
-  padding-right: max(40px, calc((100vw - 1020px) / 2));
+  padding: 6px 0;            /* dikey: hover kalkması için */
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -984,15 +987,15 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 }
 .insta-card:hover img { transform: scale(1.04); }
 
-/* fade edges */
+/* kenar yumuşatma — kartlar ok boşluğuna değmeden yumuşak bitsin */
 .insta-carousel-wrap::before,
 .insta-carousel-wrap::after {
   content: '';
   position: absolute; top: 0; bottom: 0;
-  width: 80px; z-index: 2; pointer-events: none;
+  width: 28px; z-index: 2; pointer-events: none;
 }
-.insta-carousel-wrap::before { left: 0; background: linear-gradient(to right, var(--bg) 0%, transparent 100%); }
-.insta-carousel-wrap::after  { right: 0; background: linear-gradient(to left, var(--bg) 0%, transparent 100%); }
+.insta-carousel-wrap::before { left: 52px; background: linear-gradient(to right, var(--bg) 0%, transparent 100%); }
+.insta-carousel-wrap::after  { right: 52px; background: linear-gradient(to left, var(--bg) 0%, transparent 100%); }
 
 .insta-nav {
   position: absolute; top: 50%; transform: translateY(-50%);
@@ -1005,8 +1008,14 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   transition: background .2s, border-color .2s, transform .2s;
 }
 .insta-nav:hover { background: var(--bg3); border-color: var(--subtle); transform: translateY(-50%) scale(1.08); }
-.insta-prev { left: max(40px, calc((100vw - 1020px) / 2 - 48px)); }
-.insta-next { right: max(40px, calc((100vw - 1020px) / 2 - 48px)); }
+.insta-prev { left: 8px; }
+.insta-next { right: 8px; }
+@media (max-width: 640px) {
+  .insta-carousel-wrap { padding: 0 44px; }
+  .insta-carousel-wrap::before { left: 44px; }
+  .insta-carousel-wrap::after { right: 44px; }
+  .insta-card { flex-basis: 150px; max-width: 170px; }
+}
 
 /* ── INSTAGRAM ── */
 .insta-section {
@@ -1082,7 +1091,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   align-items: flex-start;
   gap: 18px;
   font-size: clamp(18px, 1.9vw, 24px);
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text);
   max-width: none;
   line-height: 1.35;
@@ -1965,7 +1974,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 <section class="brand-showcase">
   <div class="section-inner">
     <div class="brand-showcase-head reveal">
-      <p class="brand-showcase-sub"><span>Customized series and solutions for your needs<br>in Wood Coatings, Furniture Coatings and General Industrial Coatings.</span></p>
+      <p class="brand-showcase-sub"><span><strong>Wood Coatings and General Industrial Coatings</strong><br>Customized series and solutions for your needs.</span></p>
     </div>
     <div class="brand-showcase-grid reveal">
       <div class="brand-showcase-card">
@@ -1978,7 +1987,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
             </span>
           </div>
         </a>
-        <p class="brand-showcase-card-desc">A premium paint & varnish series offering top-quality performance for the furniture segment.</p>
+        <p class="brand-showcase-card-desc">A premium paint & varnish series offering top-quality performance for the furniture industry.</p>
       </div>
       <div class="brand-showcase-card">
         <a class="brand-showcase-card-media-link" href="https://esfera.com.tr/" target="_blank" rel="noopener">
@@ -2089,7 +2098,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="finalcta-glow"></div>
   <div class="section-inner">
     <h2 class="reveal">Reliability.<br><em style="font-style:normal;color:var(--accent)">Efficiency.</em><br>Quality.</h2>
-    <p class="reveal">We’re here to be your strong solution partner in global markets. Get in touch now.</p>
+    <p class="reveal">We’re your strong solution partner in wood, furniture and industrial coatings across global markets. Get in touch now.</p>
     <div class="hero-actions reveal">
       <a href="/en/contact.html" class="btn-primary">
         <span>Get in Touch</span>
@@ -2110,19 +2119,43 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   <div class="insta-carousel-wrap">
     <div class="insta-carousel" id="instaCarousel">
       <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
-        <img src="/insta/01.jpg" alt="April 23rd National Sovereignty Day"/>
+        <img src="/insta/ibavalresa-dunya-kupasi.jpg" alt="İbavalresa — World Cup" loading="lazy"/>
       </a>
       <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
-        <img src="/insta/02.jpg" alt="Happy New Year 2026"/>
+        <img src="/insta/valresa-pantone-2026.jpg" alt="Valresa — Pantone 2026 Color of the Year" loading="lazy"/>
       </a>
       <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
-        <img src="/insta/06.jpg" alt="Pantone 2026"/>
+        <img src="/insta/ibavet-boya-ambalaj.jpg" alt="İbavet wood coating packaging" loading="lazy"/>
       </a>
       <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
-        <img src="/insta/07.jpg" alt="Ramadan Feast (Eid al-Fitr)"/>
+        <img src="/insta/valresa-mobilya-renk-paleti.jpg" alt="Valresa furniture coating color palette" loading="lazy"/>
       </a>
       <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
-        <img src="/insta/08.jpg" alt="Reel 01"/>
+        <img src="/insta/ibavalresa-1-mayis.jpg" alt="İbavalresa — May 1st" loading="lazy"/>
+      </a>
+      <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
+        <img src="/insta/ibavalresa-otomasyon-boya-uretim-hatti.jpg" alt="İbavalresa automated coating production line" loading="lazy"/>
+      </a>
+      <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
+        <img src="/insta/ibavalresa-arge-ekibi-turkcoat.jpg" alt="İbavalresa R&D team — TURKCOAT Congress" loading="lazy"/>
+      </a>
+      <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
+        <img src="/insta/ibavalresa-boya-uretim-tesisi-havadan.jpg" alt="İbavalresa coating production facility (aerial)" loading="lazy"/>
+      </a>
+      <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
+        <img src="/insta/ibavalresa-bayi-toplantisi.jpg" alt="İbavalresa dealer meeting" loading="lazy"/>
+      </a>
+      <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
+        <img src="/insta/esfera-su-bazli-mobilya-boyasi.jpg" alt="Esfera water-based furniture coating" loading="lazy"/>
+      </a>
+      <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
+        <img src="/insta/valresa-tahran-fuari.jpg" alt="Valresa — Tehran exhibition" loading="lazy"/>
+      </a>
+      <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
+        <img src="/insta/valresa-pantone-2025.jpg" alt="Valresa — Pantone 2025" loading="lazy"/>
+      </a>
+      <a href="https://www.instagram.com/ibavalresa/" target="_blank" class="insta-card">
+        <img src="/insta/ibavalresa-boya-fabrikasi-ankara.jpg" alt="İbavalresa coating factory — Ankara Sincan" loading="lazy"/>
       </a>
     </div>
     <button class="insta-nav insta-prev" onclick="slideInsta(-1)">
@@ -2160,6 +2193,7 @@ footer img[alt="ibavalresa"] { filter: none !important; }
       <ul>
         <li><a href="/en/color-charts.html">RAL-NCS-Nova Kartela</a></li>
         <li><a href="https://www.valresa.com.tr/urunkatalogu/">Valresa Catalog</a></li>
+        <li><a href="https://esfera.com.tr/urun-katalogu/">Esfera Catalog</a></li>
         <li><a href="https://www.ibavet.com.tr/urunkatalogu/">İbavet Catalog</a></li>
       </ul>
       <div style="margin-top:40px;"></div>
@@ -2226,21 +2260,38 @@ document.querySelectorAll('[data-slideshow]').forEach(box => {
   }, 3000);
 });
 
-// Instagram carousel
-function slideInsta(dir) {
-  const c = document.getElementById('instaCarousel');
-  c.scrollBy({ left: dir * 200, behavior: 'smooth' });
-}
-
-// Drag to scroll
+// Instagram carousel — otomatik kayma + oklar; oklara/sürüklemeye/dokunmaya kadar otomatik akar
 (function() {
   const c = document.getElementById('instaCarousel');
   if (!c) return;
-  let isDown = false, startX, scrollLeft;
+  let auto = null;
+
+  function step() {
+    const card = c.querySelector('.insta-card');
+    return card ? Math.round(card.getBoundingClientRect().width + 12) : 200;
+  }
+  function advance() {
+    // sona ulaşıldıysa başa dön, aksi halde bir kart ilerle
+    if (c.scrollLeft + c.clientWidth >= c.scrollWidth - 4) {
+      c.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      c.scrollBy({ left: step(), behavior: 'smooth' });
+    }
+  }
+  function startAuto() { if (!auto) auto = setInterval(advance, 3000); }
+  function stopAuto() { if (auto) { clearInterval(auto); auto = null; } }
+
+  // Oklar — tıklayınca otomatik kaymayı durdur, kullanıcı elle gezsin
+  window.slideInsta = function(dir) {
+    stopAuto();
+    c.scrollBy({ left: dir * step(), behavior: 'smooth' });
+  };
+
+  // Fare ile sürükleyerek gezinme (otomatiği durdurur)
+  let isDown = false, startX = 0, scrollLeft = 0, moved = false;
   c.addEventListener('mousedown', e => {
-    isDown = true; c.classList.add('dragging');
-    startX = e.pageX - c.offsetLeft;
-    scrollLeft = c.scrollLeft;
+    isDown = true; moved = false; c.classList.add('dragging');
+    startX = e.pageX - c.offsetLeft; scrollLeft = c.scrollLeft;
   });
   c.addEventListener('mouseleave', () => { isDown = false; c.classList.remove('dragging'); });
   c.addEventListener('mouseup', () => { isDown = false; c.classList.remove('dragging'); });
@@ -2248,8 +2299,16 @@ function slideInsta(dir) {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - c.offsetLeft;
+    if (Math.abs(x - startX) > 4) { moved = true; stopAuto(); }
     c.scrollLeft = scrollLeft - (x - startX) * 1.5;
   });
+  // Sürükleme sonrası yanlışlıkla Instagram linkinin açılmasını engelle
+  c.addEventListener('click', e => { if (moved) { e.preventDefault(); moved = false; } }, true);
+
+  // Dokunmatik: kullanıcı barı elleyince otomatik dursun
+  c.addEventListener('touchstart', stopAuto, { passive: true });
+
+  startAuto();
 })();
 
 // Hamburger / mobile menu
