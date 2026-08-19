@@ -1,0 +1,33 @@
+# İBAVALRESA — eski (WordPress dönemi) URL'lerden yeni statik .html sayfalara 301 yönlendirme
+# Amaç: Google'da indeksli kalan eski URL'lere tıklayan kullanıcı 404 yerine doğru sayfaya düşsün;
+# arama motoru eski URL'yi yenisiyle değiştirsin. (Apache / LiteSpeed için; Nginx isen söyle, çeviririm.)
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # --- Onaylanmış eski URL'ler (site: aramasından tespit edildi) ---
+  RewriteRule ^en/district-directorates/?$   /en/regional-offices.html   [R=301,L]
+  RewriteRule ^en/iba-valresa-career/?$       /en/careers.html            [R=301,L]
+  RewriteRule ^ar-ge-2/?$                      /arge.html                  [R=301,L]
+  RewriteRule ^kamera-kaydi-aydinlatma-metni/?$  /kvkk-aydinlatma-metni.html  [R=301,L]
+
+  # --- Buraya ekle: Search Console → Sayfalar raporundan çıkan diğer eski URL'ler ---
+  # Kalıp:  RewriteRule ^ESKI-SLUG/?$   /YENI-SAYFA.html   [R=301,L]
+  # Örnekler (eski slug'ı GSC'den doğrulayıp aç):
+  # RewriteRule ^hakkimizda/?$              /hakkimizda.html              [R=301,L]
+  # RewriteRule ^markalarimiz/?$            /markalar.html                [R=301,L]
+  # RewriteRule ^iletisim/?$               /iletisim.html                [R=301,L]
+  # RewriteRule ^en/about-us/?$            /en/about.html                [R=301,L]
+  # RewriteRule ^en/brands/?$             /en/brands.html               [R=301,L]
+
+  # --- WordPress arşiv/taksonomi artıkları (yeni sitede karşılığı yok) → anasayfa ---
+  # /category/ibavalresa, /type/gallery gibi tüm eski CMS arşivlerini tek seferde yakalar.
+  RewriteRule ^category/   /   [R=301,L]
+  RewriteRule ^type/       /   [R=301,L]
+  RewriteRule ^tag/        /   [R=301,L]
+  RewriteRule ^author/     /   [R=301,L]
+  RewriteRule ^feed/?$     /   [R=301,L]
+
+  # --- Tema artığı / anlamsız sayfalar için (eğer URL'lerini bulursan): kalıcı kaldır ---
+  # RewriteRule ^factory/?$   -  [G]   # 410 Gone
+</IfModule>
