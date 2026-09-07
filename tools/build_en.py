@@ -3,7 +3,7 @@
 """İBAVALRESA — TR içerik sayfalarından /en/ İngilizce sayfaları üretir (Method B).
 Çalıştır: python3 build_en.py   (site kökünden)
 """
-import re, html, os, sys
+import re, html, os, sys, json
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 # script scratchpad'te; site kökünü argümandan al
@@ -53,6 +53,9 @@ PAGES = {
  "renk-makinesi": (
    "On-Site Tinting with Color Machines — İBAVALRESA",
    "İBAVALRESA color-machine systems match RAL, NCS and NOVA colors with a spectrophotometer: high accuracy and repeatable color production."),
+ "sss": (
+   "Frequently Asked Questions (FAQ) — İBAVALRESA",
+   "Frequently asked questions about İBAVALRESA — a Turkey-based wood, furniture and industrial coatings manufacturer: products, exports, capacity, certifications and brands."),
 }
 CONTENT = set(PAGES.keys())
 
@@ -71,6 +74,7 @@ SLUG = {
  "iletisim": "contact",
  "renk-paleti": "color-charts",
  "renk-makinesi": "color-machines",
+ "sss": "faq",
 }
 
 # Görsel alt metinleri: Türkçe -> İngilizce (marka adları korunur; yalnız açıklayıcılar çevrilir)
@@ -261,6 +265,17 @@ def build(slug):
 
     # switcher init + override (</body>'den önce)
     s = s.replace('</body>', switcher_script(slug) + '</body>', 1)
+
+    # FAQ sayfası: FAQPage şemasını (TR) baked İngilizce Q&A'dan yeniden kur
+    if slug == "sss":
+        qa = re.findall(r'<h2 class="faq-q"[^>]*>(.*?)</h2>\s*<p class="faq-a"[^>]*>(.*?)</p>', s, re.S)
+        strip = lambda t: html.unescape(re.sub(r'<[^>]+>', '', t)).strip()
+        faq = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": strip(q),
+             "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in qa]}
+        s = re.sub(r'<script type="application/ld\+json">\{[^<]*"FAQPage"[^<]*\}</script>',
+                   '<script type="application/ld+json">' + json.dumps(faq, ensure_ascii=False) + '</script>',
+                   s, count=1)
 
     out = os.path.join(SITE, "en", SLUG[slug] + ".html")
     open(out, 'w', encoding='utf-8').write(s)
