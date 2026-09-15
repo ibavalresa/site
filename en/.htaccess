@@ -1,0 +1,4 @@
+# İBAVALRESA — /en/ altındaki eşleşmeyen URL'ler için İngilizce 404 sayfası.
+# Apache/LiteSpeed ErrorDocument ayarı dizin bazlıdır: bu dosya yalnız /en/ isteklerini etkiler,
+# kök dizin için geçerli olan /404.html kuralını ezmez.
+ErrorDocument 404 /en/404.html

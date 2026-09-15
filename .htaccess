@@ -2,6 +2,12 @@
 # Amaç: Google'da indeksli kalan eski URL'lere tıklayan kullanıcı 404 yerine doğru sayfaya düşsün;
 # arama motoru eski URL'yi yenisiyle değiştirsin. (Apache / LiteSpeed için; Nginx isen söyle, çeviririm.)
 
+# --- Özel 404 sayfası ---
+# Eşleşmeyen URL'ler markalı 404 sayfasına düşer; HTTP durumu 404 olarak KALIR
+# (yönlendirme yapılmaz — 404'ü anasayfaya 301'lemek "soft 404" sayılır).
+# İngilizce tarafı için ayrı kural: /en/.htaccess
+ErrorDocument 404 /404.html
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
