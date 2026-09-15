@@ -26,13 +26,25 @@ ErrorDocument 404 /404.html
   # RewriteRule ^en/about-us/?$            /en/about.html                [R=301,L]
   # RewriteRule ^en/brands/?$             /en/brands.html               [R=301,L]
 
-  # --- WordPress arşiv/taksonomi artıkları (yeni sitede karşılığı yok) → anasayfa ---
-  # /category/ibavalresa, /type/gallery gibi tüm eski CMS arşivlerini tek seferde yakalar.
-  RewriteRule ^category/   /   [R=301,L]
-  RewriteRule ^type/       /   [R=301,L]
-  RewriteRule ^tag/        /   [R=301,L]
-  RewriteRule ^author/     /   [R=301,L]
-  RewriteRule ^feed/?$     /   [R=301,L]
+  # --- WordPress arşiv/taksonomi artıkları (yeni sitede karşılığı yok) ---
+  # /category/ibavalresa, /tag/..., /author/..., /type/gallery, /feed gibi eski CMS
+  # adresleri BİLEREK yönlendirilmiyor: hiçbiri yok, doğal olarak 404'e düşüp
+  # markalı /404.html sayfasını gösteriyorlar.
+  #
+  # Aşağıdaki kurallar bu yüzden kapatıldı — yeniden AÇMAYIN:
+  # İçeriği kaldırılmış bir adresi anasayfaya 301'lemek Google tarafından
+  # "soft 404" sayılır (anasayfa, istenen içeriğin karşılığı değildir); hem eski
+  # URL indeksten düşmez hem de kullanıcı neden anasayfada olduğunu anlamaz.
+  # Doğru davranış: 404 dönmek ve kullanıcıya çıkış yolu sunmak.
+  #
+  # RewriteRule ^category/   /   [R=301,L]
+  # RewriteRule ^type/       /   [R=301,L]
+  # RewriteRule ^tag/        /   [R=301,L]
+  # RewriteRule ^author/     /   [R=301,L]
+  # RewriteRule ^feed/?$     /   [R=301,L]
+  #
+  # NOT: Eski bir adresin yeni sitede GERÇEK bir karşılığı varsa, onu yukarıdaki
+  # "Onaylanmış eski URL'ler" bölümüne tek tek 301 olarak ekleyin — asıl doğrusu budur.
 
   # --- Tema artığı / anlamsız sayfalar için (eğer URL'lerini bulursan): kalıcı kaldır ---
   # RewriteRule ^factory/?$   -  [G]   # 410 Gone
