@@ -313,6 +313,26 @@
   .bigstats-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-stats { gap: 28px; }
 }
+/* ── LOJİSTİK KARTI: görsel kırpılmasın ──────────────────────────────
+   Kutu 420x324 (oran 1.30), görseller 16:9. cover kullanılsaydı genişliğin
+   ~%27'si kesilirdi; contain ile görselin tamamı görünüyor, üstte ve altta
+   ~44px bant kalıyor. Bant beyaz: kart gövdesiyle birleşsin, görsel
+   boşlukta dursun diye. Noktalar bu yüzden koyu renge çevrildi —
+   beyaz kalsalardı beyaz bandın üzerinde kaybolurlardı.                 */
+
+.fcard-img.fcard-slideshow { background: #fff; }
+
+.fcard-img.fcard-slideshow img { object-fit: contain; }
+
+.fcard-slideshow-dots { gap: 8px; }
+
+.fcard-slideshow-dots span {
+  width: 9px; height: 9px;
+  background: rgba(13,13,16,0.22);
+  border-color: rgba(13,13,16,0.30);
+}
+
+.fcard-slideshow-dots span.active { background: #0d0d10; }
 </style>
 <template id="__bundler_thumbnail" data-bg-color="#ffffff">
   <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
@@ -624,11 +644,14 @@
       <!-- LOJİSTİK GÜÇ -->
       <div class="fcard">
         <div class="fcard-img fcard-slideshow" data-slideshow>
-          <img src="img/lojistik-1.jpeg" alt="Lojistik Güç - Yüksek Depo" class="active"/>
-          <img src="img/lojistik-2.jpeg" alt="Lojistik Güç - Otomatik Raf Sistemi"/>
-          <img src="img/lojistik-3.jpeg" alt="Lojistik Güç - Tesis Kurulumu"/>
+          <!-- ASRS Depo ve Ar-Ge Binası: önce 2 mimari render, sonra 2 saha fotoğrafı -->
+          <img src="img/lojistik-render-1.jpg" alt="İBAVALRESA ASRS Depo ve Ar-Ge Binası – mimari görselleştirme" class="active"/>
+          <img src="img/lojistik-render-2.jpg" alt="ASRS Depo ve Ar-Ge Binası – sevkiyat rampaları ve yükleme alanı, mimari görselleştirme"/>
+          <img src="img/lojistik-foto-1.jpg" alt="İBAVALRESA ASRS Depo ve Ar-Ge Binası – inşaat aşaması"/>
+          <img src="img/lojistik-foto-2.jpg" alt="ASRS Depo ve Ar-Ge Binası – cephe ve giriş bölümü, inşaat aşaması"/>
           <div class="fcard-slideshow-dots">
             <span class="active"></span>
+            <span></span>
             <span></span>
             <span></span>
           </div>
