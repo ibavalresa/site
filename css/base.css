@@ -761,15 +761,20 @@ footer .footer-copy { color: #5e5c6e; }
 
 footer .footer-social-btn { color: #9997a8; border-color: rgba(255,255,255,0.1); background: transparent; }
 
-/* Hover'da ikon beyaza değil marka rengine döner. Gualda, footer'ın
-   #0d0d10 zemininde 11.27:1 kontrast veriyor. Zemindeki sarı yıkama
-   bilerek çok hafif: YouTube ikonundaki oynat üçgeni #0d0d10 ile
-   "delik" açtığı için daha doygun bir zemin o üçgeni ortaya çıkarırdı. */
+/* Hover'da ikon beyaza değil marka rengine döner. Zemin siyah kalır:
+   buton dolmaz, yalnızca çerçevesi ve ikonu "yanar" — footer sakin bir
+   alan, dolu bir yüzey orada fazla gürültülü kalıyordu. Gualda, footer'ın
+   #0d0d10 zemininde 11.27:1 kontrast veriyor.
+
+   Zeminin şeffaf kalmasının yan faydası: YouTube ikonundaki oynat üçgeni
+   SVG'de fill="#0d0d10" ile sabitlenmiş, yani zeminle delik açıyor. Sarı
+   yıkama varken üçgen hafif sarıya çalan bir zeminin üzerinde kalıyordu;
+   şeffafla birebir oturuyor. */
 
 footer .footer-social-btn:hover {
   color: var(--gualda);
   border-color: rgba(241, 191, 0, 0.45);
-  background: rgba(241, 191, 0, 0.10);
+  background: transparent;
   transform: translateY(-2px);
 }
 
