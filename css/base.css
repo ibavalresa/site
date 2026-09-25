@@ -11,6 +11,8 @@
   --accent: #26358C;
   --accent-glow: rgba(38,53,140,0.22);
   --accent-dim: rgba(38,53,140,0.06);
+  --gualda: #F1BF00;            /* İspanyol bayrağı sarısı — Pantone 109 / RGB 241,191,0 */
+  --gualda-line: 3px;           /* nav alt çizgisinin kaydırıldığındaki kalınlığı */
   --font: 'Inter', sans-serif;
 }
 
@@ -92,6 +94,15 @@ nav {
   background: rgba(255,255,255,0.82);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
+  transition: border-bottom-color .4s ease, border-bottom-width .4s ease;
+}
+
+/* Sayfa başındayken çizgi yukarıdaki sade gri hali. Aşağı inildikçe
+   js/nav-line.js 'scrolled' sınıfını takar; çizgi kalınlaşıp gualdaya döner. */
+
+nav.scrolled {
+  border-bottom-width: var(--gualda-line);
+  border-bottom-color: var(--gualda);
 }
 
 .nav-inner {
@@ -750,10 +761,15 @@ footer .footer-copy { color: #5e5c6e; }
 
 footer .footer-social-btn { color: #9997a8; border-color: rgba(255,255,255,0.1); background: transparent; }
 
+/* Hover'da ikon beyaza değil marka rengine döner. Gualda, footer'ın
+   #0d0d10 zemininde 11.27:1 kontrast veriyor. Zemindeki sarı yıkama
+   bilerek çok hafif: YouTube ikonundaki oynat üçgeni #0d0d10 ile
+   "delik" açtığı için daha doygun bir zemin o üçgeni ortaya çıkarırdı. */
+
 footer .footer-social-btn:hover {
-  color: #f0eff4;
-  border-color: rgba(255,255,255,.18);
-  background: rgba(255,255,255,.06);
+  color: var(--gualda);
+  border-color: rgba(241, 191, 0, 0.45);
+  background: rgba(241, 191, 0, 0.10);
   transform: translateY(-2px);
 }
 
