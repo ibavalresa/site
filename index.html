@@ -333,6 +333,24 @@
 }
 
 .fcard-slideshow-dots span.active { background: #0d0d10; }
+
+/* Görsellerin üstünde contain'den kalan beyaz banda oturan açıklama.
+   Zemindeki beyaz→şeffaf geçiş mobil için: 900px altında kart görseli
+   220px'e düşüp neredeyse kutuyu doldurduğu için üst bant kayboluyor ve
+   yazı görselin üzerine biniyor; bu örtü onu okunur tutuyor. Masaüstünde
+   bant zaten beyaz olduğundan geçiş görünmüyor. */
+
+.fcard-slideshow-cap {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 2;
+  padding: 11px 16px 16px;
+  font-size: 12.5px; line-height: 1.3;
+  color: var(--text3);
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(255,255,255,.96) 40%, rgba(255,255,255,0));
+  pointer-events: none;
+}
 </style>
 <template id="__bundler_thumbnail" data-bg-color="#ffffff">
   <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
@@ -645,6 +663,7 @@
       <div class="fcard">
         <div class="fcard-img fcard-slideshow" data-slideshow>
           <!-- ASRS Depo ve Ar-Ge Binası: önce 2 mimari render, sonra 2 saha fotoğrafı -->
+          <div class="fcard-slideshow-cap" data-en="ASRS Warehouse and R&amp;D Building — opening November 2026">ASRS Depo ve Ar-Ge Binası — Kasım 2026'da açıyoruz</div>
           <img src="img/lojistik-render-1.jpg" alt="İBAVALRESA ASRS Depo ve Ar-Ge Binası – mimari görselleştirme" class="active"/>
           <img src="img/lojistik-render-2.jpg" alt="ASRS Depo ve Ar-Ge Binası – sevkiyat rampaları ve yükleme alanı, mimari görselleştirme"/>
           <img src="img/lojistik-foto-1.jpg" alt="İBAVALRESA ASRS Depo ve Ar-Ge Binası – inşaat aşaması"/>

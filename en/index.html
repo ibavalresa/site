@@ -315,6 +315,44 @@
   .hero-stats { gap: 28px; }
 }
 .hero-intro{max-width:640px;font-size:15px;color:var(--text2);line-height:1.7;position:relative;z-index:2;margin:0 auto 36px;}
+/* ── LOJİSTİK KARTI: görsel kırpılmasın ──────────────────────────────
+   Kutu 420x324 (oran 1.30), görseller 16:9. cover kullanılsaydı genişliğin
+   ~%27'si kesilirdi; contain ile görselin tamamı görünüyor, üstte ve altta
+   ~44px bant kalıyor. Bant beyaz: kart gövdesiyle birleşsin, görsel
+   boşlukta dursun diye. Noktalar bu yüzden koyu renge çevrildi —
+   beyaz kalsalardı beyaz bandın üzerinde kaybolurlardı.                 */
+
+.fcard-img.fcard-slideshow { background: #fff; }
+
+.fcard-img.fcard-slideshow img { object-fit: contain; }
+
+.fcard-slideshow-dots { gap: 8px; }
+
+.fcard-slideshow-dots span {
+  width: 9px; height: 9px;
+  background: rgba(13,13,16,0.22);
+  border-color: rgba(13,13,16,0.30);
+}
+
+.fcard-slideshow-dots span.active { background: #0d0d10; }
+
+/* Görsellerin üstünde contain'den kalan beyaz banda oturan açıklama.
+   Zemindeki beyaz→şeffaf geçiş mobil için: 900px altında kart görseli
+   220px'e düşüp neredeyse kutuyu doldurduğu için üst bant kayboluyor ve
+   yazı görselin üzerine biniyor; bu örtü onu okunur tutuyor. Masaüstünde
+   bant zaten beyaz olduğundan geçiş görünmüyor. */
+
+.fcard-slideshow-cap {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 2;
+  padding: 11px 16px 16px;
+  font-size: 12.5px; line-height: 1.3;
+  color: var(--text3);
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(255,255,255,.96) 40%, rgba(255,255,255,0));
+  pointer-events: none;
+}
 </style>
 <template id="__bundler_thumbnail" data-bg-color="#ffffff">
   <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
@@ -619,11 +657,15 @@
       <!-- LOJİSTİK GÜÇ -->
       <div class="fcard">
         <div class="fcard-img fcard-slideshow" data-slideshow>
-          <img src="/img/lojistik-1.jpeg" alt="Logistics power — automated high-bay warehouse" class="active"/>
-          <img src="/img/lojistik-2.jpeg" alt="Logistics power — automated racking system"/>
-          <img src="/img/lojistik-3.jpeg" alt="Logistics power — facility installation"/>
+          <!-- ASRS Warehouse and R&D Building: two architectural renders, then two site photos -->
+          <div class="fcard-slideshow-cap">ASRS Warehouse and R&amp;D Building — opening November 2026</div>
+          <img src="/img/lojistik-render-1.jpg" alt="İBAVALRESA ASRS Warehouse and R&amp;D Building — architectural visualisation" class="active"/>
+          <img src="/img/lojistik-render-2.jpg" alt="ASRS Warehouse and R&amp;D Building — dispatch ramps and loading area, architectural visualisation"/>
+          <img src="/img/lojistik-foto-1.jpg" alt="İBAVALRESA ASRS Warehouse and R&amp;D Building — under construction"/>
+          <img src="/img/lojistik-foto-2.jpg" alt="ASRS Warehouse and R&amp;D Building — façade and entrance section, under construction"/>
           <div class="fcard-slideshow-dots">
             <span class="active"></span>
+            <span></span>
             <span></span>
             <span></span>
           </div>
