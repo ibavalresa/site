@@ -561,9 +561,18 @@ function selectLang(lang) {
     b.classList.toggle('active', b.getAttribute('data-lang') === lang);
   });
   document.documentElement.lang = (lang === 'EN') ? 'en' : 'tr';
+  var home = document.getElementById('sitelink');
+  if (home) home.href = (lang === 'EN') ? 'en/index.html' : 'index.html';
   try { localStorage.setItem('ibav_sunum_lang', lang); } catch (e) {}
 }
-try { if (localStorage.getItem('ibav_sunum_lang') === 'EN') selectLang('EN'); } catch (e) {}
+// Dil önceliği: önce adresteki ?lang= (ör. İngilizce Hizmetler sayfasındaki banner
+// sunum.html?lang=en'e bağlanır), yoksa ziyaretçinin daha önceki seçimi.
+(function () {
+  var q = '';
+  try { q = (new URLSearchParams(location.search).get('lang') || '').toUpperCase(); } catch (e) {}
+  if (q === 'EN' || q === 'TR') { selectLang(q); return; }
+  try { if (localStorage.getItem('ibav_sunum_lang') === 'EN') selectLang('EN'); } catch (e) {}
+})();
 </script>
 <script>
 (function () {
