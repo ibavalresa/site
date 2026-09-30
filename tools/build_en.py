@@ -5,6 +5,24 @@
 """
 import re, html, os, sys, json
 
+# ── KULLANIM DIŞI (2026-09-30) ──────────────────────────────────────────────
+# Bu araç en/*.html sayfalarını TR sayfalardaki data-en notlarından ve aşağıdaki
+# PAGES tablosundan BAŞTAN üretip ÜZERİNE YAZAR. 2026-09'dan beri İngilizce
+# sayfalar doğrudan düzenleniyor (Cloudflare analitik, sunum banner'ı, lojistik
+# kartı, IBAVALRESA yazımı, SSS, başlıklar, erişilebilirlik etiketleri…).
+# Çalıştırılırsa bunların hepsi sessizce geri gider; aşağıdaki başlık ve
+# açıklamalar da eskidir.
+#
+# İngilizce değişiklikler doğrudan en/*.html'de yapılır. İki dilin birlikte
+# güncellendiğini denetlemek için: python3 tools/dil_kontrol.py
+# Yalnızca ne yaptığınızı kesin biliyorsanız: python3 tools/build_en.py --zorla
+if "--zorla" in sys.argv:
+    sys.argv.remove("--zorla")          # site yolu argümanıyla karışmasın
+else:
+    sys.exit("build_en.py KULLANIM DIŞI — en/ sayfalarının üzerine yazar ve son "
+             "değişiklikleri siler.\nDurduruldu; hiçbir dosya değişmedi. "
+             "Ayrıntı: tools/build_en.py dosyasının başı. Yerine: python3 tools/dil_kontrol.py")
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 # script scratchpad'te; site kökünü argümandan al
 SITE = sys.argv[1] if len(sys.argv) > 1 else os.getcwd()
