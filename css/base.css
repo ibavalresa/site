@@ -2117,3 +2117,33 @@ footer img[alt="ibavalresa"] { filter: none !important; }
   .deck-banner { grid-template-columns: 1fr; padding: 34px 28px; gap: 0; }
   .deck-banner-thumb { display: none; }
 }
+
+/* ── KATALOG BANNER'I (deck-banner varyantı) ─────────────────────────────
+   Valresa 2026 Renk Trendleri kataloğu. Yapı .deck-banner'dan gelir (açık
+   gri zemin, ızgara, bağlantı davranışı, rozet, gualda buton); burada
+   yalnızca kapak tanımlı.
+   Kapak yatay (2824x1456) ve zemini beyaz: gri banner zemininde beyaz bir
+   yayın olarak ayrılsın diye ince kenar + gölge alır, sunum kapağı gibi
+   hafif eğik durur, üzerine gelince düzleşir. Renk yelpazesi kapağın sağ
+   yarısında olduğu için kapak kırpılmaz, tamamı görünür. */
+
+.deck-banner-cover {
+  display: block;
+  width: 360px; max-width: 100%; height: auto;
+  aspect-ratio: 2824 / 1456;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 18px 40px rgba(16,34,63,.18), 0 0 0 1px rgba(16,34,63,.08);
+  transform: rotate(-2deg);
+  transition: transform .35s ease;
+}
+
+.deck-banner:hover .deck-banner-cover { transform: rotate(0) scale(1.02); }
+
+/* Telefonda kapak gizlenmez, metnin altına tam genişlikte iner: banner'ın
+   ne olduğunu kapak anlatıyor. Eğiklik dar alanda taşmasın diye kalkar. */
+@media (max-width: 820px) {
+  .deck-banner--catalog .deck-banner-cover {
+    width: 100%; margin-top: 26px; transform: none;
+  }
+}
