@@ -2140,6 +2140,15 @@ footer img[alt="ibavalresa"] { filter: none !important; }
 
 .deck-banner:hover .deck-banner-cover { transform: rotate(0) scale(1.02); }
 
+/* Katalog banner'ının butonu sitedeki birincil buton (.btn-primary). Kutunun
+   tamamı bağlantı olduğu için hover kutuya bağlanır: üzerine gelince buton
+   dolar. Sarı buton yalnızca kurumsal sunum banner'ında kalır. */
+.deck-banner:hover .btn-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 8px 32px var(--accent-glow);
+}
+
 /* Telefonda kapak gizlenmez, metnin altına tam genişlikte iner: banner'ın
    ne olduğunu kapak anlatıyor. Eğiklik dar alanda taşmasın diye kalkar. */
 @media (max-width: 820px) {
