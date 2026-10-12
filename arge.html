@@ -65,6 +65,18 @@
 .about-pull:first-child { margin-top: 0; }
 
 .about-pull:last-child { margin-bottom: 0; }
+
+/* Ar-Ge süreci: geniş ekranda adımlar soldan sağa (yatay zaman çizelgesi);
+   900px altında base.css'teki dikey düzen geçerli. */
+@media (min-width: 901px) {
+  .timeline.yatay { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; padding-left: 0; padding-top: 38px; }
+  .timeline.yatay::before { left: 0; right: 0; top: 6px; bottom: auto; width: auto; height: 2px;
+    background: linear-gradient(to right, var(--accent) 0%, rgba(38,53,140,0.2) 100%); }
+  .timeline.yatay .timeline-item { padding: 0; }
+  .timeline.yatay .timeline-item::before { left: 0; top: -38px; }
+  .timeline.yatay .timeline-year { min-height: 3.2em; }
+  .timeline.yatay .timeline-text { font-size: 15.5px; }
+}
 </style>
 <template id="__bundler_thumbnail" data-bg-color="#ffffff">
   <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
@@ -322,7 +334,7 @@
         <p class="about-p" data-en="We advance our R&amp;D work along the axes of &lt;strong&gt;surface function, regulatory compliance and sustainability&lt;/strong&gt;, developing today the solutions the industry will need tomorrow.">Ar-Ge çalışmalarımızı <strong>yüzey fonksiyonu, regülasyon uyumu ve sürdürülebilirlik</strong> ekseninde ilerletiyor; sektörün önündeki ihtiyaçlara bugünden çözüm geliştiriyoruz.</p>
       </div>
     </div>
-    <div class="timeline reveal">
+    <div class="timeline yatay reveal">
       <div class="timeline-item">
         <div class="timeline-year" data-en="01 — Defining the need">01 — İhtiyacın tanımlanması</div>
         <p class="timeline-text" data-en="The customer's surface, process and expectations are listened to on site; the problem is turned into a technical target.">Müşterinin yüzeyi, prosesi ve beklentisi sahada dinlenir; problem teknik bir hedefe çevrilir.</p>
