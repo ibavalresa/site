@@ -7,6 +7,8 @@
 <link rel="canonical" href="https://www.ibavalresa.com.tr/">
 <link rel="alternate" hreflang="tr" href="https://www.ibavalresa.com.tr/">
 <link rel="alternate" hreflang="en" href="https://www.ibavalresa.com.tr/en/">
+<link rel="alternate" hreflang="ru" href="https://www.ibavalresa.com.tr/ru/">
+<link rel="alternate" hreflang="es" href="https://www.ibavalresa.com.tr/es/">
 <link rel="alternate" hreflang="x-default" href="https://www.ibavalresa.com.tr/">
 
 <meta name="description" content="Türkiye'de ahşap, mobilya ve sanayi boyaları ile vernik üreten İBAVALRESA. Türk–İspanyol ortaklığı, +60 yıl tecrübe, güçlü Ar-Ge ve +25 ülkeye ihracat.">
@@ -29,7 +31,7 @@
 <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/css/base.css?v=9f90e086">
+<link rel="stylesheet" href="/css/base.css?v=5a6bf1a4">
 <style>
 .hero-video-section {
   position: relative;
@@ -382,13 +384,19 @@
     <li class="nav-item has-dropdown">
       <button class="nav-link-btn"><span data-en="Corporate">Kurumsal</span> <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="nav-dropdown">
-        <div class="nav-dropdown-inner nav-dropdown-simple">
+        <div class="nav-svc">
+          <div class="nav-svc-links">
           <a href="hakkimizda.html" class="nav-drop-simple" data-en="About Us">Hakkımızda</a>
           <a href="uretim-ve-teknoloji.html" class="nav-drop-simple" data-en="Production & Technology">Üretim ve Teknoloji</a>
           <a href="arge.html" class="nav-drop-simple" data-en="Research & Development">Araştırma Geliştirme</a>
           <a href="insan-kaynaklari.html" class="nav-drop-simple" data-en="Human Resources">İnsan Kaynakları</a>
           <a href="surdurulebilirlik.html" class="nav-drop-simple" data-en="Sustainability">Sürdürülebilirlik</a>
           <a href="kalite-sertifikalar.html" class="nav-drop-simple" data-en="Quality & Certificates">Kalite & Sertifikalar</a>
+          </div>
+          <a class="nav-svc-promo" href="sunum.html" target="_blank" rel="noopener nofollow">
+            <img loading="lazy" src="img/sunum-kapak.jpg" alt="" width="640" height="360">
+            <span class="nav-svc-promo-title">Firma sunumumuz <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
         </div>
       </div>
     </li>
@@ -465,11 +473,11 @@
           <span class="lang-flag">🇬🇧</span><span class="lang-name">English</span>
           <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
         </button>
-        <button class="lang-option" data-lang="RU" disabled title="Çok yakında">
+        <button class="lang-option" data-lang="RU" onclick="location.href='/ru/'">
           <span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span>
           <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
         </button>
-        <button class="lang-option" data-lang="ES" disabled title="Çok yakında">
+        <button class="lang-option" data-lang="ES" onclick="location.href='/es/'">
           <span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span>
           <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
         </button>
@@ -498,6 +506,7 @@
       <a href="insan-kaynaklari.html" data-en="Human Resources">İnsan Kaynakları</a>
       <a href="surdurulebilirlik.html" data-en="Sustainability">Sürdürülebilirlik</a>
       <a href="kalite-sertifikalar.html" data-en="Quality & Certificates">Kalite & Sertifikalar</a>
+      <a class="mobile-menu-sub-extra" href="sunum.html" target="_blank" rel="noopener nofollow">Firma sunumumuz ↗</a>
     </div>
   </div>
   <div class="mobile-menu-group">
@@ -528,8 +537,8 @@
   <div class="mobile-menu-langs">
     <button class="active" onclick="selectLang('TR')">🇹🇷 TR</button>
     <button onclick="location.href='/en/'">🇬🇧 EN</button>
-    <button disabled title="Çok yakında">🇷🇺 RU</button>
-    <button disabled title="Çok yakında">🇪🇸 ES</button>
+    <button onclick="location.href='/ru/'">🇷🇺 RU</button>
+    <button onclick="location.href='/es/'">🇪🇸 ES</button>
   </div>
 </div>
 
@@ -938,16 +947,16 @@
       <h4 data-en="Catalogs">Kataloglar</h4>
       <ul>
         <li><a href="renk-paleti.html" data-en="RAL-NCS-Nova Color Charts">RAL-NCS-Nova Kartela</a></li>
-        <li><a href="https://www.valresa.com.tr/urunkatalogu/" data-en="Valresa Catalog">Valresa Kataloğu</a></li>
-        <li><a href="https://esfera.com.tr/urun-katalogu/" data-en="Esfera Catalog">Esfera Kataloğu</a></li>
-        <li><a href="https://www.ibavet.com.tr/urunkatalogu/" data-en="İbavet Catalog">İbavet Kataloğu</a></li>
+        <li><a target="_blank" href="https://www.valresa.com.tr/urunkatalogu/" data-en="Valresa Catalog" rel="noopener">Valresa Kataloğu</a></li>
+        <li><a target="_blank" href="https://esfera.com.tr/urun-katalogu/" data-en="Esfera Catalog" rel="noopener">Esfera Kataloğu</a></li>
+        <li><a target="_blank" href="https://www.ibavet.com.tr/urunkatalogu/" data-en="İbavet Catalog" rel="noopener">İbavet Kataloğu</a></li>
       </ul>
       <div style="margin-top:40px;"></div>
       <h4 data-en="Online Services">Online İşlemler</h4>
       <ul>
         <li><a href="https://globalweborder.ibavalresa.com.tr:5555/" target="_blank" rel="noopener" data-en="Export Customer Portal">İhracat Müşteri Portalı</a></li>
-        <li><a href="https://weborder.ibavalresa.com.tr" target="_blank" data-en="Online Order">Online Sipariş</a></li>
-        <li><a href="https://tahsilat.ibavalresa.com.tr/" target="_blank" data-en="Payment Collection">Tahsilat</a></li>
+        <li><a href="https://weborder.ibavalresa.com.tr" target="_blank" data-en="Online Order" rel="noopener">Online Sipariş</a></li>
+        <li><a href="https://tahsilat.ibavalresa.com.tr/" target="_blank" data-en="Payment Collection" rel="noopener">Tahsilat</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -957,7 +966,7 @@
         <li><a href="sss.html" data-en="FAQ">SSS</a></li>
       </ul>
       <ul style="margin-top:46px;">
-        <li><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/17623" target="_blank" style="font-size:11px;" data-en="Information Society Services">Bilgi Toplumu Hizmetleri</a></li>
+        <li><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/17623" target="_blank" style="font-size:11px;" data-en="Information Society Services" rel="noopener">Bilgi Toplumu Hizmetleri</a></li>
         <li><a href="kvkk-aydinlatma-metni.html" style="font-size:11px;" data-en="Personal Data Protection Notice">KVKK Aydınlatma Metni</a></li>
         <li><a href="cerez-politikasi.html" style="font-size:11px;" data-en="Cookie Policy">Çerez Politikası</a></li>
       </ul>
@@ -966,16 +975,16 @@
   <div class="footer-bottom">
     <div class="footer-copy" data-en="© 2026 All rights reserved.">© 2026 Tüm hakları saklıdır.</div>
     <div class="footer-social">
-      <a href="https://www.facebook.com/ibavalresa/" class="footer-social-btn" title="Facebook" target="_blank">
+      <a href="https://www.facebook.com/ibavalresa/" class="footer-social-btn" title="Facebook" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
       </a>
-      <a href="https://www.linkedin.com/company/ibavalresa-boya-kimya/" class="footer-social-btn" title="LinkedIn" target="_blank">
+      <a href="https://www.linkedin.com/company/ibavalresa-boya-kimya/" class="footer-social-btn" title="LinkedIn" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
       </a>
-      <a href="http://www.youtube.com/@ibavalresaboyavekimya" class="footer-social-btn" title="YouTube" target="_blank">
+      <a href="http://www.youtube.com/@ibavalresaboyavekimya" class="footer-social-btn" title="YouTube" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0d0d10"/></svg>
       </a>
-      <a href="https://www.instagram.com/ibavalresa/" class="footer-social-btn" title="Instagram" target="_blank">
+      <a href="https://www.instagram.com/ibavalresa/" class="footer-social-btn" title="Instagram" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
       </a>
     </div>

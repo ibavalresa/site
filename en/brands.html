@@ -29,7 +29,7 @@
 <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/css/base.css?v=9f90e086">
+<link rel="stylesheet" href="/css/base.css?v=5a6bf1a4">
 <style>
 .next-page { display: flex; justify-content: flex-end; margin-top: -14px; margin-bottom: 42px; }
 
@@ -159,13 +159,19 @@
     <li class="nav-item has-dropdown">
       <button class="nav-link-btn"><span>Corporate</span> <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="nav-dropdown">
-        <div class="nav-dropdown-inner nav-dropdown-simple">
+        <div class="nav-svc">
+          <div class="nav-svc-links">
           <a href="/en/about.html" class="nav-drop-simple">About Us</a>
           <a href="/en/production-technology.html" class="nav-drop-simple">Production & Technology</a>
           <a href="/en/research-development.html" class="nav-drop-simple">Research & Development</a>
           <a href="/en/careers.html" class="nav-drop-simple">Human Resources</a>
           <a href="/en/sustainability.html" class="nav-drop-simple">Sustainability</a>
           <a href="/en/quality-certificates.html" class="nav-drop-simple">Quality & Certificates</a>
+          </div>
+          <a class="nav-svc-promo" href="/sunum.html?lang=en" target="_blank" rel="noopener nofollow">
+            <img loading="lazy" src="/img/sunum-kapak-en.jpg" alt="" width="640" height="360">
+            <span class="nav-svc-promo-title">Our company presentation <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
         </div>
       </div>
     </li>
@@ -242,11 +248,11 @@
           <span class="lang-flag">🇬🇧</span><span class="lang-name">English</span>
           <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
         </button>
-        <button class="lang-option" data-lang="RU" disabled title="Coming soon">
+        <button class="lang-option" data-lang="RU" onclick="location.href='/ru/'">
           <span class="lang-flag">🇷🇺</span><span class="lang-name">Русский</span>
           <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
         </button>
-        <button class="lang-option" data-lang="ES" disabled title="Coming soon">
+        <button class="lang-option" data-lang="ES" onclick="location.href='/es/'">
           <span class="lang-flag">🇪🇸</span><span class="lang-name">Español</span>
           <svg class="lang-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="opacity:0"><path d="M20 6L9 17l-5-5"/></svg>
         </button>
@@ -275,6 +281,7 @@
       <a href="/en/careers.html">Human Resources</a>
       <a href="/en/sustainability.html">Sustainability</a>
       <a href="/en/quality-certificates.html">Quality & Certificates</a>
+      <a class="mobile-menu-sub-extra" href="/sunum.html?lang=en" target="_blank" rel="noopener nofollow">Company presentation ↗</a>
     </div>
   </div>
   <div class="mobile-menu-group">
@@ -305,8 +312,8 @@
   <div class="mobile-menu-langs">
     <button class="active" onclick="selectLang('TR')">🇹🇷 TR</button>
     <button onclick="selectLang('EN')">🇬🇧 EN</button>
-    <button disabled title="Coming soon">🇷🇺 RU</button>
-    <button disabled title="Coming soon">🇪🇸 ES</button>
+    <button onclick="location.href='/ru/'">🇷🇺 RU</button>
+    <button onclick="location.href='/es/'">🇪🇸 ES</button>
   </div>
 </div>
 
@@ -403,16 +410,16 @@
       <h4>Catalogs</h4>
       <ul>
         <li><a href="/en/color-charts.html">RAL-NCS-Nova Color Charts</a></li>
-        <li><a href="https://www.valresa.com.tr/urunkatalogu/">Valresa Catalog</a></li>
-        <li><a href="https://esfera.com.tr/urun-katalogu/">Esfera Catalog</a></li>
-        <li><a href="https://www.ibavet.com.tr/urunkatalogu/">Ibavet Catalog</a></li>
+        <li><a target="_blank" href="https://www.valresa.com.tr/urunkatalogu/" rel="noopener">Valresa Catalog</a></li>
+        <li><a target="_blank" href="https://esfera.com.tr/urun-katalogu/" rel="noopener">Esfera Catalog</a></li>
+        <li><a target="_blank" href="https://www.ibavet.com.tr/urunkatalogu/" rel="noopener">Ibavet Catalog</a></li>
       </ul>
       <div style="margin-top:40px;"></div>
       <h4>Online Services</h4>
       <ul>
         <li><a href="https://globalweborder.ibavalresa.com.tr:5555/" target="_blank" rel="noopener">Export Customer Portal</a></li>
-        <li><a href="https://weborder.ibavalresa.com.tr" target="_blank">Online Order</a></li>
-        <li><a href="https://tahsilat.ibavalresa.com.tr/" target="_blank">Payment Collection</a></li>
+        <li><a href="https://weborder.ibavalresa.com.tr" target="_blank" rel="noopener">Online Order</a></li>
+        <li><a href="https://tahsilat.ibavalresa.com.tr/" target="_blank" rel="noopener">Payment Collection</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -422,7 +429,7 @@
         <li><a href="/en/faq.html">FAQ</a></li>
       </ul>
       <ul style="margin-top:46px;">
-        <li><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/17623" target="_blank" style="font-size:11px;">Information Society Services</a></li>
+        <li><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/17623" target="_blank" style="font-size:11px;" rel="noopener">Information Society Services</a></li>
         <li><a href="/kvkk-aydinlatma-metni.html" style="font-size:11px;">Personal Data Protection Notice</a></li>
         <li><a href="/cerez-politikasi.html" style="font-size:11px;">Cookie Policy</a></li>
       </ul>
@@ -431,16 +438,16 @@
   <div class="footer-bottom">
     <div class="footer-copy">© 2026 All rights reserved.</div>
     <div class="footer-social">
-      <a href="https://www.facebook.com/ibavalresa/" class="footer-social-btn" title="Facebook" target="_blank">
+      <a href="https://www.facebook.com/ibavalresa/" class="footer-social-btn" title="Facebook" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
       </a>
-      <a href="https://www.linkedin.com/company/ibavalresa-boya-kimya/" class="footer-social-btn" title="LinkedIn" target="_blank">
+      <a href="https://www.linkedin.com/company/ibavalresa-boya-kimya/" class="footer-social-btn" title="LinkedIn" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
       </a>
-      <a href="http://www.youtube.com/@ibavalresaboyavekimya" class="footer-social-btn" title="YouTube" target="_blank">
+      <a href="http://www.youtube.com/@ibavalresaboyavekimya" class="footer-social-btn" title="YouTube" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0d0d10"/></svg>
       </a>
-      <a href="https://www.instagram.com/ibavalresa/" class="footer-social-btn" title="Instagram" target="_blank">
+      <a href="https://www.instagram.com/ibavalresa/" class="footer-social-btn" title="Instagram" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
       </a>
     </div>

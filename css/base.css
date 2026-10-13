@@ -2156,3 +2156,48 @@ footer img[alt="ibavalresa"] { filter: none !important; }
     width: 100%; margin-top: 26px; transform: none;
   }
 }
+
+/* ── KURUMSAL AÇILIR MENÜSÜ ──────────────────────────────────────────────
+   Solda sayfa bağlantıları, sağda firma sunumu kartı (kapak + bağlantı).
+   Kart, İletişim ve Online İşlemler menülerindeki görselli kartların
+   karşılığı; 900px altında menü gizli, telefon menüsünde düz bağlantı var. */
+
+.nav-svc {
+  display: grid; grid-template-columns: 220px 250px; gap: 8px;
+  padding: 8px; min-width: 520px;
+  background: var(--bg2); border: 1px solid rgba(0,0,0,.1); border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.18), 0 0 0 1px rgba(0,0,0,.04);
+  animation: dropIn .15s cubic-bezier(.22,.68,0,1.2) both;
+}
+
+.nav-svc-links { padding: 6px 10px 6px 4px; border-right: 1px solid var(--border); }
+
+/* .nav-links a kuralını ezmek için seçici bilerek daha özgül */
+.nav-links a.nav-svc-promo {
+  display: flex; flex-direction: column; justify-content: center; gap: 12px;
+  padding: 16px; border-radius: 10px;
+  background: #f4f5fb; color: var(--text); text-decoration: none;
+  transition: background .2s;
+}
+
+.nav-links a.nav-svc-promo:hover { background: #eceefa; color: var(--text); }
+
+.nav-svc-promo img {
+  display: block; width: 100%; height: auto; aspect-ratio: 16 / 9;
+  border-radius: 6px; box-shadow: 0 6px 16px rgba(16,34,63,.18);
+}
+
+.nav-svc-promo-title {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 15px; font-weight: 700; letter-spacing: -.2px; color: var(--accent);
+  transition: gap .2s;
+}
+
+.nav-svc-promo:hover .nav-svc-promo-title { gap: 11px; }
+
+/* Telefon menüsü: Kurumsal grubunun sonundaki sunum bağlantısı sayfa
+   bağlantılarından ince bir çizgiyle ayrılır (yeni sekmede açılan ayrı içerik). */
+.mobile-menu-sub a.mobile-menu-sub-extra {
+  margin: 6px 0 4px 16px; padding-left: 0; padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
