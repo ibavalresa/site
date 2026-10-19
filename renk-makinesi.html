@@ -273,125 +273,6 @@
 
 .office-contact-row .oc-label { color: var(--text3); width: 54px; flex-shrink: 0; font-size: 13px; }
 
-/* Contact form */
-
-.form-section { padding: 0 0 24px; }
-
-.form-section .section-inner { max-width: 1100px; }
-
-.form-card {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  overflow: hidden;
-  background: #fff;
-}
-
-.form-aside {
-  padding: 44px 40px;
-  background: #0d0d10;
-  color: #fff;
-  display: flex; flex-direction: column;
-}
-
-.form-aside-eyebrow {
-  font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-  color: var(--accent); margin-bottom: 16px;
-}
-
-.form-aside-title {
-  font-size: 30px; font-weight: 800; letter-spacing: -1.2px; line-height: 1.1;
-  margin-bottom: 16px; color: #fff;
-}
-
-.form-aside-text {
-  font-size: 14.5px; line-height: 1.7; color: rgba(240,239,244,0.66);
-  margin-bottom: 28px; text-wrap: pretty;
-}
-
-.form-aside-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: auto; }
-
-.form-aside-list li { display: flex; align-items: center; gap: 12px; font-size: 14px; color: rgba(240,239,244,0.82); }
-
-.form-aside-list svg { width: 17px; height: 17px; color: var(--accent); flex-shrink: 0; }
-
-.form-aside-list a { color: inherit; text-decoration: none; }
-
-.form-aside-list a:hover { color: #fff; }
-
-.form-body { padding: 40px 40px 36px; }
-
-.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 18px; }
-
-.form-field { display: flex; flex-direction: column; gap: 7px; }
-
-.form-field.full { grid-column: 1 / -1; }
-
-.form-field label { font-size: 12px; font-weight: 600; color: var(--text2); letter-spacing: .01em; }
-
-.form-field label span { color: var(--accent); }
-
-.form-field input,
-.form-field select,
-.form-field textarea {
-  font-family: var(--font);
-  font-size: 14px; color: var(--text);
-  background: #fafafb;
-  border: 1px solid var(--border);
-  border-radius: 9px;
-  padding: 11px 13px;
-  transition: border-color .18s, background .18s, box-shadow .18s;
-}
-
-.form-field textarea { resize: vertical; min-height: 110px; }
-
-.form-field input:focus,
-.form-field select:focus,
-.form-field textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-  background: #fff;
-  box-shadow: 0 0 0 3px var(--accent-dim);
-}
-
-.form-consent {
-  display: flex; align-items: flex-start; gap: 10px;
-  margin-top: 18px;
-  font-size: 12.5px; line-height: 1.55; color: var(--text2);
-}
-
-.form-consent input { margin-top: 2px; width: 16px; height: 16px; accent-color: var(--accent); flex-shrink: 0; }
-
-.form-consent a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(38,53,140,0.3); }
-
-.form-actions { display: flex; align-items: center; gap: 16px; margin-top: 22px; flex-wrap: wrap; }
-
-.form-submit {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--accent); color: #fff;
-  border: none; border-radius: 10px;
-  padding: 13px 26px; font-size: 14.5px; font-weight: 600;
-  font-family: var(--font); cursor: pointer;
-  transition: opacity .2s, box-shadow .2s, transform .1s;
-}
-
-.form-submit:hover { opacity: .9; box-shadow: 0 8px 28px var(--accent-glow); transform: translateY(-1px); }
-
-.form-status { font-size: 13.5px; font-weight: 600; color: #1f8a5b; opacity: 0; transition: opacity .25s; }
-
-.form-status.show { opacity: 1; }
-
-@media (max-width: 860px) {
-  .form-card { grid-template-columns: 1fr; }
-  .form-aside { padding: 32px 28px; }
-}
-
-@media (max-width: 520px) {
-  .form-grid { grid-template-columns: 1fr; }
-  .form-body { padding: 28px 22px; }
-}
-
 /* Regional managers */
 
 .regions-section { padding: 0 0 96px; }
@@ -703,17 +584,6 @@
   .doc-lead { font-size: 18px; }
 }
 </style>
-<template id="__bundler_thumbnail" data-bg-color="#ffffff">
-  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-    <rect width="1200" height="800" fill="#ffffff"/>
-    <g transform="translate(600,400)" text-anchor="middle" font-family="Inter, sans-serif">
-      <text y="-20" font-size="120" font-weight="800" fill="#0d0d10" letter-spacing="-3">iba.valresa</text>
-      <text y="60" font-size="36" font-weight="600" fill="#26358C" letter-spacing="2">HIGH QUALITY PRODUCTION</text>
-    </g>
-  </svg>
-</template>
-
-
 
 <script src="/js/nav-line.js?v=8bcaebc6" defer></script>
 </head>
@@ -733,16 +603,16 @@
   <ul class="nav-links">
 
     <li class="nav-item has-dropdown">
-      <button class="nav-link-btn"><span data-en="Corporate">Kurumsal</span> <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <button class="nav-link-btn"><span>Kurumsal</span> <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="nav-dropdown">
         <div class="nav-svc">
           <div class="nav-svc-links">
-          <a href="hakkimizda.html" class="nav-drop-simple" data-en="About Us">Hakkımızda</a>
-          <a href="uretim-ve-teknoloji.html" class="nav-drop-simple" data-en="Production & Technology">Üretim ve Teknoloji</a>
-          <a href="arge.html" class="nav-drop-simple" data-en="Research & Development">Araştırma Geliştirme</a>
-          <a href="insan-kaynaklari.html" class="nav-drop-simple" data-en="Human Resources">İnsan Kaynakları</a>
-          <a href="surdurulebilirlik.html" class="nav-drop-simple" data-en="Sustainability">Sürdürülebilirlik</a>
-          <a href="kalite-sertifikalar.html" class="nav-drop-simple" data-en="Quality & Certificates">Kalite & Sertifikalar</a>
+          <a href="hakkimizda.html" class="nav-drop-simple">Hakkımızda</a>
+          <a href="uretim-ve-teknoloji.html" class="nav-drop-simple">Üretim ve Teknoloji</a>
+          <a href="arge.html" class="nav-drop-simple">Araştırma Geliştirme</a>
+          <a href="insan-kaynaklari.html" class="nav-drop-simple">İnsan Kaynakları</a>
+          <a href="surdurulebilirlik.html" class="nav-drop-simple">Sürdürülebilirlik</a>
+          <a href="kalite-sertifikalar.html" class="nav-drop-simple">Kalite & Sertifikalar</a>
           </div>
           <a class="nav-svc-promo" href="sunum.html" target="_blank" rel="noopener nofollow">
             <img loading="lazy" src="img/sunum-kapak.jpg" alt="" width="640" height="360">
@@ -752,12 +622,12 @@
       </div>
     </li>
 
-    <li class="nav-item"><a href="markalar.html" class="nav-link-a" data-en="Brands">Markalar</a></li>
+    <li class="nav-item"><a href="markalar.html" class="nav-link-a">Markalar</a></li>
 
-    <li class="nav-item"><a href="hizmetlerimiz.html" class="nav-link-a" data-en="Our Services">Hizmetlerimiz</a></li>
+    <li class="nav-item"><a href="hizmetlerimiz.html" class="nav-link-a">Hizmetlerimiz</a></li>
 
     <li class="nav-item has-dropdown">
-      <button class="nav-link-btn"><span data-en="Contact">İletişim</span> <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
+      <button class="nav-link-btn"><span>İletişim</span> <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="nav-dropdown nav-mega">
         <div class="nav-mega-inner">
           <a class="nav-mega-promo" href="https://wa.me/905330812525" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">
@@ -765,10 +635,10 @@
           </a>
           <div class="nav-mega-links">
             <a href="bolge-mudurlukleri.html" class="nav-drop-item">
-              <div><div class="nav-drop-title" data-en="Regional Offices">Bölge Müdürlükleri</div><div class="nav-drop-sub" data-en="All sales points">Tüm satış noktaları</div></div>
+              <div><div class="nav-drop-title">Bölge Müdürlükleri</div><div class="nav-drop-sub">Tüm satış noktaları</div></div>
             </a>
             <a href="iletisim.html" class="nav-drop-item">
-              <div><div class="nav-drop-title" data-en="Get in Touch">Bize Ulaşın</div><div class="nav-drop-sub" data-en="Our contact details">İletişim bilgilerimiz</div></div>
+              <div><div class="nav-drop-title">Bize Ulaşın</div><div class="nav-drop-sub">İletişim bilgilerimiz</div></div>
             </a>
           </div>
         </div>
@@ -779,7 +649,7 @@
   <!-- Online İşlemler mega dropdown -->
   <div class="nav-item has-dropdown online-drop" style="position:relative;margin-left:8px;">
     <button class="nav-cta" id="nav-cta" style="display:flex;align-items:center;gap:6px;">
-      <span data-en="Online Services">Online İşlemler</span>
+      <span>Online İşlemler</span>
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="nav-dropdown nav-mega" style="right:0;left:auto;">
@@ -792,15 +662,15 @@
         <div class="nav-mega-links">
           <a href="https://globalweborder.ibavalresa.com.tr:5555/" class="nav-drop-item" target="_blank">
             <div class="nav-drop-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-            <div><div class="nav-drop-title" data-en="Export Customer Portal">İhracat Müşteri Portalı</div><div class="nav-drop-sub" data-en="Orders, history &amp; documents">Sipariş, geçmiş ve belgeler</div></div>
+            <div><div class="nav-drop-title">İhracat Müşteri Portalı</div><div class="nav-drop-sub">Sipariş, geçmiş ve belgeler</div></div>
           </a>
           <a href="https://weborder.ibavalresa.com.tr" class="nav-drop-item" target="_blank">
             <div class="nav-drop-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-            <div><div class="nav-drop-title" data-en="Online Order">Online Sipariş</div><div class="nav-drop-sub" data-en="Create a quick order">Hızlı sipariş oluşturun</div></div>
+            <div><div class="nav-drop-title">Online Sipariş</div><div class="nav-drop-sub">Hızlı sipariş oluşturun</div></div>
           </a>
           <a href="https://tahsilat.ibavalresa.com.tr/" class="nav-drop-item" target="_blank">
             <div class="nav-drop-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-            <div><div class="nav-drop-title" data-en="Payment Collection">Tahsilat</div><div class="nav-drop-sub" data-en="Make an online payment">Online ödeme yapın</div></div>
+            <div><div class="nav-drop-title">Tahsilat</div><div class="nav-drop-sub">Online ödeme yapın</div></div>
           </a>
         </div>
       </div>
@@ -847,42 +717,42 @@
   </a>
   <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Menüyü kapat" type="button"></button>
   <div class="mobile-menu-group">
-    <button class="mobile-menu-head" data-toggle><span data-en="Corporate">Kurumsal</span>
+    <button class="mobile-menu-head" data-toggle><span>Kurumsal</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="mobile-menu-sub">
-      <a href="hakkimizda.html" data-en="About Us">Hakkımızda</a>
-      <a href="uretim-ve-teknoloji.html" data-en="Production & Technology">Üretim ve Teknoloji</a>
-      <a href="arge.html" data-en="Research & Development">Araştırma Geliştirme</a>
-      <a href="insan-kaynaklari.html" data-en="Human Resources">İnsan Kaynakları</a>
-      <a href="surdurulebilirlik.html" data-en="Sustainability">Sürdürülebilirlik</a>
-      <a href="kalite-sertifikalar.html" data-en="Quality & Certificates">Kalite & Sertifikalar</a>
+      <a href="hakkimizda.html">Hakkımızda</a>
+      <a href="uretim-ve-teknoloji.html">Üretim ve Teknoloji</a>
+      <a href="arge.html">Araştırma Geliştirme</a>
+      <a href="insan-kaynaklari.html">İnsan Kaynakları</a>
+      <a href="surdurulebilirlik.html">Sürdürülebilirlik</a>
+      <a href="kalite-sertifikalar.html">Kalite & Sertifikalar</a>
       <a class="mobile-menu-sub-extra" href="sunum.html" target="_blank" rel="noopener nofollow">Firma sunumumuz ↗</a>
     </div>
   </div>
   <div class="mobile-menu-group">
-    <a class="mobile-menu-link" href="markalar.html" data-en="Brands">Markalar</a>
+    <a class="mobile-menu-link" href="markalar.html">Markalar</a>
   </div>
   <div class="mobile-menu-group">
-    <a class="mobile-menu-link" href="hizmetlerimiz.html" data-en="Our Services">Hizmetlerimiz</a>
+    <a class="mobile-menu-link" href="hizmetlerimiz.html">Hizmetlerimiz</a>
   </div>
   <div class="mobile-menu-group">
-    <button class="mobile-menu-head" data-toggle><span data-en="Contact">İletişim</span>
+    <button class="mobile-menu-head" data-toggle><span>İletişim</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="mobile-menu-sub">
-      <a href="bolge-mudurlukleri.html" data-en="Regional Offices">Bölge Müdürlükleri</a>
-      <a href="iletisim.html" data-en="Get in Touch">Bize Ulaşın</a>
+      <a href="bolge-mudurlukleri.html">Bölge Müdürlükleri</a>
+      <a href="iletisim.html">Bize Ulaşın</a>
     </div>
   </div>
   <div class="mobile-menu-group open">
-    <button class="mobile-menu-head" data-toggle><span data-en="Online Services">Online İşlemler</span>
+    <button class="mobile-menu-head" data-toggle><span>Online İşlemler</span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
     </button>
     <div class="mobile-menu-sub">
-      <a href="https://globalweborder.ibavalresa.com.tr:5555/" target="_blank" data-en="Export Customer Portal">İhracat Müşteri Portalı</a>
-      <a href="https://weborder.ibavalresa.com.tr" target="_blank" data-en="Online Order">Online Sipariş</a>
-      <a href="https://tahsilat.ibavalresa.com.tr/" target="_blank" data-en="Payment Collection">Tahsilat</a>
+      <a href="https://globalweborder.ibavalresa.com.tr:5555/" target="_blank">İhracat Müşteri Portalı</a>
+      <a href="https://weborder.ibavalresa.com.tr" target="_blank">Online Sipariş</a>
+      <a href="https://tahsilat.ibavalresa.com.tr/" target="_blank">Tahsilat</a>
     </div>
   </div>
   <div class="mobile-menu-langs">
@@ -897,9 +767,9 @@
 <div class="doc-crumbbar">
   <div class="section-inner">
     <div class="doc-breadcrumb reveal">
-      <a href="index.html" data-en="Home">Ana Sayfa</a><span class="doc-crumb-sep">&rsaquo;</span>
-      <a href="hizmetlerimiz.html" data-en="Services">Hizmetlerimiz</a><span class="doc-crumb-sep">&rsaquo;</span>
-      <span class="doc-crumb-current" data-en="Color Machine">Renk Makinesi</span>
+      <a href="index.html">Ana Sayfa</a><span class="doc-crumb-sep">&rsaquo;</span>
+      <a href="hizmetlerimiz.html">Hizmetlerimiz</a><span class="doc-crumb-sep">&rsaquo;</span>
+      <span class="doc-crumb-current">Renk Makinesi</span>
     </div>
   </div>
 </div>
@@ -907,9 +777,9 @@
 <!-- ── RENK MAKİNESİ HERO ── -->
 <section class="contact-hero" id="hero">
   <div class="section-inner">
-    <div class="contact-hero-eyebrow reveal" data-en="Our Services">Hizmetlerimiz</div>
-    <h1 class="contact-hero-title reveal" data-en="Color &lt;em&gt;Machine&lt;/em&gt;">Renk <em>Makinesi</em></h1>
-    <p class="contact-hero-sub reveal" data-en="With our advanced color-machine systems, we deliver fast, accurate and repeatable solutions for standard and custom color needs.">Gelişmiş renk makinesi sistemlerimiz ile standart ve özel renk ihtiyaçlarına hızlı, doğru ve tekrarlanabilir çözümler sunuyoruz.</p>
+    <div class="contact-hero-eyebrow reveal">Hizmetlerimiz</div>
+    <h1 class="contact-hero-title reveal">Renk <em>Makinesi</em></h1>
+    <p class="contact-hero-sub reveal">Gelişmiş renk makinesi sistemlerimiz ile standart ve özel renk ihtiyaçlarına hızlı, doğru ve tekrarlanabilir çözümler sunuyoruz.</p>
   </div>
 </section>
 
@@ -919,35 +789,35 @@
     <article class="doc-main">
 
       <div class="doc-block reveal" id="standart-renk-kutuphaneleri">
-        <h2 class="doc-h2"><span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><span data-en="Standard Color Libraries">Standart Renk Kütüphaneleri</span></h2>
-        <p class="doc-p" data-en="Colors from RAL, NCS, NOVA and other standard color charts can be prepared with high accuracy.">RAL, NCS, NOVA ve diğer standart renk kartelalarındaki renkler yüksek doğrulukla hazırlanabilir.</p>
+        <h2 class="doc-h2"><span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><span>Standart Renk Kütüphaneleri</span></h2>
+        <p class="doc-p">RAL, NCS, NOVA ve diğer standart renk kartelalarındaki renkler yüksek doğrulukla hazırlanabilir.</p>
       </div>
       <div class="doc-block reveal" id="ozel-renk-eslestirme">
-        <h2 class="doc-h2"><span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></span><span data-en="Custom Color Matching">Özel Renk Eşleştirme</span></h2>
-        <p class="doc-p" data-en="Thanks to spectrophotometer integration, a customer sample, painted surface or reference color can be analyzed digitally to create the desired custom colors.">Spektrofotometre entegrasyonu sayesinde müşteri numunesi, boyalı yüzey veya referans renk dijital olarak analiz edilerek istenilen özel renkler oluşturulabilir.</p>
+        <h2 class="doc-h2"><span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></span><span>Özel Renk Eşleştirme</span></h2>
+        <p class="doc-p">Spektrofotometre entegrasyonu sayesinde müşteri numunesi, boyalı yüzey veya referans renk dijital olarak analiz edilerek istenilen özel renkler oluşturulabilir.</p>
       </div>
       <div class="doc-block reveal" id="yuksek-renk-dogrulugu">
-        <h2 class="doc-h2"><span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span><span data-en="High Color Accuracy">Yüksek Renk Doğruluğu</span></h2>
-        <p class="doc-p" data-en="Advanced color-formulation software minimizes color deviations and delivers consistent results in every production run.">Gelişmiş renk formülasyon yazılımı ile renk sapmaları en aza indirilir ve her üretimde tutarlı sonuçlar elde edilir.</p>
+        <h2 class="doc-h2"><span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg></span><span>Yüksek Renk Doğruluğu</span></h2>
+        <p class="doc-p">Gelişmiş renk formülasyon yazılımı ile renk sapmaları en aza indirilir ve her üretimde tutarlı sonuçlar elde edilir.</p>
       </div>
       <div class="doc-block reveal" id="hizli-formulasyon">
-        <h2 class="doc-h2"><span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span data-en="Fast Formulation">Hızlı Formülasyon</span></h2>
-        <p class="doc-p" data-en="Thousands of color formulas are accessed within seconds, speeding up the color-preparation process.">Binlerce renk formülüne saniyeler içinde ulaşılır, renk hazırlama süreci hızlanır.</p>
+        <h2 class="doc-h2"><span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span>Hızlı Formülasyon</span></h2>
+        <p class="doc-p">Binlerce renk formülüne saniyeler içinde ulaşılır, renk hazırlama süreci hızlanır.</p>
       </div>
       <div class="doc-block reveal" id="tekrarlanabilir-uretim">
-        <h2 class="doc-h2"><span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></span><span data-en="Repeatable Production">Tekrarlanabilir Üretim</span></h2>
-        <p class="doc-p" data-en="The same color can be reproduced at the same quality at different times and in different production batches.">Aynı renk, farklı zamanlarda ve farklı üretim partilerinde aynı kaliteyle yeniden hazırlanabilir.</p>
+        <h2 class="doc-h2"><span class="doc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></span><span>Tekrarlanabilir Üretim</span></h2>
+        <p class="doc-p">Aynı renk, farklı zamanlarda ve farklı üretim partilerinde aynı kaliteyle yeniden hazırlanabilir.</p>
       </div>
     </article>
 
     <aside class="doc-toc">
       <div class="doc-toc-inner reveal">
         <div class="doc-toc-nav" id="doc-toc-nav">
-          <a href="#standart-renk-kutuphaneleri" class="doc-toc-link" data-en="Standard Color Libraries">Standart Renk Kütüphaneleri</a>
-          <a href="#ozel-renk-eslestirme" class="doc-toc-link" data-en="Custom Color Matching">Özel Renk Eşleştirme</a>
-          <a href="#yuksek-renk-dogrulugu" class="doc-toc-link" data-en="High Color Accuracy">Yüksek Renk Doğruluğu</a>
-          <a href="#hizli-formulasyon" class="doc-toc-link" data-en="Fast Formulation">Hızlı Formülasyon</a>
-          <a href="#tekrarlanabilir-uretim" class="doc-toc-link" data-en="Repeatable Production">Tekrarlanabilir Üretim</a>
+          <a href="#standart-renk-kutuphaneleri" class="doc-toc-link">Standart Renk Kütüphaneleri</a>
+          <a href="#ozel-renk-eslestirme" class="doc-toc-link">Özel Renk Eşleştirme</a>
+          <a href="#yuksek-renk-dogrulugu" class="doc-toc-link">Yüksek Renk Doğruluğu</a>
+          <a href="#hizli-formulasyon" class="doc-toc-link">Hızlı Formülasyon</a>
+          <a href="#tekrarlanabilir-uretim" class="doc-toc-link">Tekrarlanabilir Üretim</a>
         </div>
       </div>
     </aside>
@@ -973,11 +843,11 @@
       <div class="palette-cta-head">
         <div class="palette-cta-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
         <div>
-          <div class="palette-cta-eyebrow" data-en="Color Palette">Renk Paleti</div>
-          <div class="palette-cta-title" data-en="Browse the RAL · NCS · NOVA color charts">RAL · NCS · NOVA kartelalarını inceleyin</div>
+          <div class="palette-cta-eyebrow">Renk Paleti</div>
+          <div class="palette-cta-title">RAL · NCS · NOVA kartelalarını inceleyin</div>
         </div>
       </div>
-      <span class="palette-cta-action" data-en="View Color Palette">Renk Paletini Görüntüle <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      <span class="palette-cta-action">Renk Paletini Görüntüle <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
     </a>
   </div>
 </section>
@@ -987,53 +857,53 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <img loading="lazy" src="assets/logos/ibavalresa-white.png" alt="ibavalresa" style="height:28px;width:auto;display:block;object-fit:contain;margin-bottom:14px;opacity:0.85;filter:brightness(0);">
-      <p class="footer-tagline" data-en="High Quality Production" style="font-size:15px;font-weight:800;letter-spacing:-0.3px;color:var(--gualda,#F1BF00);white-space:nowrap;">Yüksek Kaliteli Üretim</p>
+      <p class="footer-tagline" style="font-size:15px;font-weight:800;letter-spacing:-0.3px;color:var(--gualda,#F1BF00);white-space:nowrap;">Yüksek Kaliteli Üretim</p>
       <p class="footer-tagline" style="margin-top:6px;font-size:12px;color:var(--text3);white-space:nowrap;">Oğuz cd. NO:24 1.OSB Sincan / Ankara</p>
       <p class="footer-tagline" style="margin-top:4px;font-size:12px;color:var(--text3);">+90 312 267 56 22</p>
     </div>
     <div class="footer-col">
-      <h4 data-en="Corporate">Kurumsal</h4>
+      <h4>Kurumsal</h4>
       <ul>
-        <li><a href="sunum.html" target="_blank" rel="noopener nofollow" data-en="Company Presentation">Tanıtım Sunumu</a></li>
-        <li><a href="hakkimizda.html" data-en="About Us">Hakkımızda</a></li>
-        <li><a href="uretim-ve-teknoloji.html" data-en="Production & Technology">Üretim ve Teknoloji</a></li>
-        <li><a href="arge.html" data-en="Research & Development">Araştırma Geliştirme</a></li>
-        <li><a href="insan-kaynaklari.html" data-en="Human Resources">İnsan Kaynakları</a></li>
-        <li><a href="surdurulebilirlik.html" data-en="Sustainability">Sürdürülebilirlik</a></li>
-        <li><a href="kalite-sertifikalar.html" data-en="Quality & Certificates">Kalite & Sertifikalar</a></li>
+        <li><a href="sunum.html" target="_blank" rel="noopener nofollow">Tanıtım Sunumu</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="uretim-ve-teknoloji.html">Üretim ve Teknoloji</a></li>
+        <li><a href="arge.html">Araştırma Geliştirme</a></li>
+        <li><a href="insan-kaynaklari.html">İnsan Kaynakları</a></li>
+        <li><a href="surdurulebilirlik.html">Sürdürülebilirlik</a></li>
+        <li><a href="kalite-sertifikalar.html">Kalite & Sertifikalar</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4 data-en="Catalogs">Kataloglar</h4>
+      <h4>Kataloglar</h4>
       <ul>
-        <li><a href="renk-paleti.html" data-en="RAL-NCS-Nova Color Charts">RAL-NCS-Nova Kartela</a></li>
-        <li><a target="_blank" href="https://www.valresa.com.tr/urunkatalogu/" data-en="Valresa Catalog" rel="noopener">Valresa Kataloğu</a></li>
-        <li><a target="_blank" href="https://esfera.com.tr/urun-katalogu/" data-en="Esfera Catalog" rel="noopener">Esfera Kataloğu</a></li>
-        <li><a target="_blank" href="https://www.ibavet.com.tr/urunkatalogu/" data-en="İbavet Catalog" rel="noopener">İbavet Kataloğu</a></li>
+        <li><a href="renk-paleti.html">RAL-NCS-Nova Kartela</a></li>
+        <li><a target="_blank" href="https://www.valresa.com.tr/urunkatalogu/" rel="noopener">Valresa Kataloğu</a></li>
+        <li><a target="_blank" href="https://esfera.com.tr/urun-katalogu/" rel="noopener">Esfera Kataloğu</a></li>
+        <li><a target="_blank" href="https://www.ibavet.com.tr/urunkatalogu/" rel="noopener">İbavet Kataloğu</a></li>
       </ul>
       <div style="margin-top:40px;"></div>
-      <h4 data-en="Online Services">Online İşlemler</h4>
+      <h4>Online İşlemler</h4>
       <ul>
-        <li><a href="https://globalweborder.ibavalresa.com.tr:5555/" target="_blank" rel="noopener" data-en="Export Customer Portal">İhracat Müşteri Portalı</a></li>
-        <li><a href="https://weborder.ibavalresa.com.tr" target="_blank" data-en="Online Order" rel="noopener">Online Sipariş</a></li>
-        <li><a href="https://tahsilat.ibavalresa.com.tr/" target="_blank" data-en="Payment Collection" rel="noopener">Tahsilat</a></li>
+        <li><a href="https://globalweborder.ibavalresa.com.tr:5555/" target="_blank" rel="noopener">İhracat Müşteri Portalı</a></li>
+        <li><a href="https://weborder.ibavalresa.com.tr" target="_blank" rel="noopener">Online Sipariş</a></li>
+        <li><a href="https://tahsilat.ibavalresa.com.tr/" target="_blank" rel="noopener">Tahsilat</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4 style="opacity:0;pointer-events:none;">—</h4>
       <ul>
-        <li><a href="iletisim.html" data-en="Get in Touch">Bize Ulaşın</a></li>
-        <li><a href="sss.html" data-en="FAQ">SSS</a></li>
+        <li><a href="iletisim.html">Bize Ulaşın</a></li>
+        <li><a href="sss.html">SSS</a></li>
       </ul>
       <ul style="margin-top:46px;">
-        <li><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/17623" target="_blank" style="font-size:11px;" data-en="Information Society Services" rel="noopener">Bilgi Toplumu Hizmetleri</a></li>
-        <li><a href="kvkk-aydinlatma-metni.html" style="font-size:11px;" data-en="Personal Data Protection Notice">KVKK Aydınlatma Metni</a></li>
-        <li><a href="cerez-politikasi.html" style="font-size:11px;" data-en="Cookie Policy">Çerez Politikası</a></li>
+        <li><a href="https://e-sirket.mkk.com.tr/esir/Dashboard.jsp#/sirketbilgileri/17623" target="_blank" style="font-size:11px;" rel="noopener">Bilgi Toplumu Hizmetleri</a></li>
+        <li><a href="kvkk-aydinlatma-metni.html" style="font-size:11px;">KVKK Aydınlatma Metni</a></li>
+        <li><a href="cerez-politikasi.html" style="font-size:11px;">Çerez Politikası</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy" data-en="© 2026 All rights reserved.">© 2026 Tüm hakları saklıdır.</div>
+    <div class="footer-copy">© 2026 Tüm hakları saklıdır.</div>
     <div class="footer-social">
       <a href="https://www.facebook.com/ibavalresa/" class="footer-social-btn" title="Facebook" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -1148,7 +1018,6 @@ document.addEventListener('click', () => {
 });
 
 // Dil seçici — diller ayrı sayfalarda: TR bu sayfada, EN /en/... sayfasında.
-// data-en öznitelikleri yalnız /en/ üretimi (tools/build_en.py) için kaynaktır; sayfa içi çeviri yapılmaz.
 function toggleLang() {
   document.getElementById('lang-switcher').classList.toggle('open');
 }
@@ -1196,10 +1065,10 @@ document.addEventListener('click', e => {
 <!-- ── ÇEREZ BİLDİRİMİ ── -->
 
 <div class="cookie-bar" id="cookieBar" role="region" aria-label="Çerez bildirimi" hidden>
-  <p class="cookie-bar-text" data-en="This website uses essential cookies to run properly. To play embedded YouTube videos on the site, you must allow third-party (YouTube) cookies. For details, see our &lt;a href=&quot;cerez-politikasi.html&quot;&gt;Cookie Policy&lt;/a&gt;.">Bu web sitesinde sitenin çalışması için zorunlu çerezler kullanılır. Gömülü YouTube videolarını sitede oynatmak için üçüncü taraf (YouTube) çerezlerine izin vermeniz gerekir. Ayrıntılar için <a href="cerez-politikasi.html" data-en="Cookie Policy">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
+  <p class="cookie-bar-text">Bu web sitesinde sitenin çalışması için zorunlu çerezler kullanılır. Gömülü YouTube videolarını sitede oynatmak için üçüncü taraf (YouTube) çerezlerine izin vermeniz gerekir. Ayrıntılar için <a href="cerez-politikasi.html">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
   <div class="cookie-bar-btns">
-    <button class="cookie-bar-btn ghost" id="cookieReject" type="button" data-en="Reject">Reddet</button>
-    <button class="cookie-bar-btn" id="cookieAccept" type="button" data-en="Accept">Kabul Et</button>
+    <button class="cookie-bar-btn ghost" id="cookieReject" type="button">Reddet</button>
+    <button class="cookie-bar-btn" id="cookieAccept" type="button">Kabul Et</button>
   </div>
 </div>
 <script>
