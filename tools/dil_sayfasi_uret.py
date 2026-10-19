@@ -34,7 +34,7 @@ DIL = {
   cat_tag="Каталоги продукции", cat_h2="Каталоги наших брендов", cat_open="Открыть каталог",
   cat_desc=("Мебельные краски и лаки премиум-класса", "Водные краски и лаки для дерева", "Мебельные краски и лаки с оптимальным соотношением цены и качества", "Общепромышленные краски"),
   deck_badge="Презентация компании", deck_title="Познакомьтесь с IBAVALRESA подробнее",
-  deck_btn="Открыть презентацию", deck_meta="PDF · RU / EN / ES / TR",
+  deck_btn="Открыть презентацию",
   contact_tag="Контакты", contact_h2="Свяжитесь с нашим экспортным отделом",
   contact_sub="Заполните форму по вопросам продукции, дистрибуции и сотрудничества — наша команда свяжется с вами в ближайшее время.",
   exp_eyebrow="Экспорт", exp_title="Международные продажи и экспорт",
@@ -66,7 +66,7 @@ DIL = {
   cat_tag="Catálogos de productos", cat_h2="Catálogos de nuestras marcas", cat_open="Ver catálogo",
   cat_desc=("Pinturas y barnices para muebles de gama alta", "Pinturas y barnices al agua para madera", "Pinturas y barnices para muebles con buena relación calidad-precio", "Pinturas para la industria general"),
   deck_badge="Presentación corporativa", deck_title="Conozca IBAVALRESA más de cerca",
-  deck_btn="Ver la presentación", deck_meta="PDF · ES / EN / RU / TR",
+  deck_btn="Ver la presentación",
   contact_tag="Contacto", contact_h2="Contacte con nuestro departamento de exportación",
   contact_sub="Rellene el formulario sobre productos, distribución y colaboraciones y nuestro equipo se pondrá en contacto con usted lo antes posible.",
   exp_eyebrow="Exportación", exp_title="Ventas internacionales y exportación",
@@ -249,7 +249,6 @@ def sayfa(kod, t):
         <h2 class="deck-banner-title">{t['deck_title']}</h2>
         <div class="deck-banner-cta">
           <span class="deck-banner-btn"><span>{t['deck_btn']}</span> <span aria-hidden="true">→</span></span>
-          <span class="deck-banner-meta">{t['deck_meta']}</span>
         </div>
       </div>
       <img class="deck-banner-thumb" src="/img/sunum-kapak-{kod}.jpg" alt="" loading="lazy" width="640" height="360">

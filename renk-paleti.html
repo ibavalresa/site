@@ -29,7 +29,7 @@
 <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/css/base.css?v=5a6bf1a4">
+<link rel="stylesheet" href="/css/base.css?v=4f5a591d">
 <style>
 .about-pull {
   margin: 48px 0;
@@ -693,6 +693,9 @@
 .ral-swatch:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(13,13,16,0.12); }
 
 .ral-swatch .sw-color { height: 62px; }
+
+/* 210 kart: ekran dışındakilerin çizimi ertelenir (arama/yazma tepkisini hızlandırır) */
+.ral-swatch { content-visibility: auto; contain-intrinsic-size: auto 112px; }
 
 .ral-swatch .sw-meta { padding: 8px 10px 10px; }
 
