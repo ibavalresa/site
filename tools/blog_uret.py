@@ -144,6 +144,197 @@ def bas(p):
 
 POSTS = []
 
+# 5) Mobilyada UV uygulaması
+p = dict(yol="blog/mobilyada-uv-boya-uygulamasi.html", etiket="Uygulama Rehberi",
+         baslik="Mobilyada UV Boya Uygulaması: Hattan İyi Sonuç Almanın Koşulları",
+         h1="Mobilya üretiminde UV boya uygularken nelere dikkat edilmeli?",
+         lead="UV sistemler mobilya üretiminde hızlı kürlenme ve yüksek yüzey sertliği sağlar; buna karşılık hattın ayarlarına karşı geleneksel sistemlerden çok daha hassastır. Ar-Ge ve saha ekibimizin notlarından derlediğimiz bu yazıda, UV uygulamalarında sonucu belirleyen parametreleri sıralıyoruz.",
+         ozet="Flash-off süresi, lamba seçimi, katlar arası zımpara, kürlenme ve yapışma kontrolü: UV hattında sonucu belirleyen parametreler.",
+         desc="Mobilyada UV boya uygulaması: uygulama miktarı ve robot ayarları, flash-off süresi, galyum ve cıva lamba seçimi, katlar arası zımpara, kürlenme ve yapışma kontrolü, derin CNC yüzeyler ve PÜ üzerine UV.",
+         tarih_iso="2026-11-05", tarih="5 Kasım 2026",
+         hero="/img/blog/mobilyada-uv-boya-uygulamasi.jpg", hero_wh=(1400, 722),
+         hero_alt="İBAVALRESA Ar-Ge laboratuvarında boya hazırlığı ve ölçüm",
+         og="/img/blog/mobilyada-uv-boya-uygulamasi-og.jpg")
+p["govde"] = bas(p) + f"""
+<section class="about-section" style="border-top:none; padding-top:12px;">
+  <div class="section-inner">
+    <figure class="post-hero"><img src="{p['hero']}" alt="{p['hero_alt']}" width="1400" height="722" fetchpriority="high"><figcaption class="post-figcap">UV sistemlerde sonucu belirleyen parametreler, Ar-Ge ve saha çalışmalarımızda ölçülerek doğrulanır.</figcaption></figure>
+    <div class="post-body" style="margin-top:40px;">
+      <p>UV boyalarda film, ultraviyole ışık altında saniyeler içinde kürlenir. Bu hız seri üretimde büyük bir avantajdır; ancak aynı hız, hatadan dönmeyi de zorlaştırır. Geleneksel bir sistemde kuruma sırasında kendini toparlayan birçok sorun, UV hattında kürlenmiş film olarak sabitlenir. Bu yüzden UV uygulamasında işin büyük kısmı, lamba altına girmeden önce yapılan hazırlıkta biter.</p>
+
+      <h2 class="post-h2">Uygulama miktarı ve robot ayarları neden ölçülmeli?</h2>
+      <p>UV sistemlerde film kalınlığı, hem görünümü hem kürlenmeyi doğrudan belirler. Bu nedenle <strong>her denemede uygulama miktarı g/m² cinsinden ölçülmelidir</strong>; "gözle aynı görünüyor" bir ölçüm değildir ve denemeler arasında karşılaştırma yapmayı imkânsız kılar.</p>
+      <ul>
+        <li><strong>Püskürtme deseni:</strong> robot kollarının deseni mümkün olduğunca <strong>X şeklinde</strong> ayarlanmalıdır; bu, yüzeye bırakılan boyanın daha eşit dağılmasını sağlar.</li>
+        <li><strong>Tabanca açısı:</strong> açı arttıkça yüzeye bırakılan boya miktarı da artar. Açı değişikliği, farkında olunmadan film kalınlığını değiştiren en yaygın etkendir.</li>
+        <li><strong>CNC işlenmiş yüzeyler:</strong> düz panelde doğru olan robot açısı, profilli bir yüzeyde doğru olmayabilir. Robot açıları parçanın geometrisine göre revize edilmelidir.</li>
+      </ul>
+
+      <h2 class="post-h2">Flash-off süresi neden bu kadar kritik?</h2>
+      <p>UV kürlenmeden önce solventin yüzeyden yeterince uzaklaşmış olması gerekir. Film içinde solvent kalmışken lamba altına giren panelde, kürlenme yüzeyi hızla kapatır ve altta kalan solvent çıkış yolu bulamaz. Sonuç yüzeyde görülür:</p>
+      <ul>
+        <li><strong>Kaynama</strong></li>
+        <li><strong>Köpüklenme</strong></li>
+        <li>Ve bunlara bağlı diğer <strong>yüzey hataları</strong></li>
+      </ul>
+      <p>Panelin flash-off bölümünde <strong>en az 5–6 dakika</strong> kalması gerekir. Bu süre, konveyör hızının hat uzunluğuna göre ayarlanmasıyla sağlanır: hat kısaysa hızı artırmak değil, azaltmak gerekir. UV hattında üretim hızını belirleyen asıl kısıt çoğu zaman lamba değil, flash-off bölümüdür.</p>
+
+      <h2 class="post-h2">Hangi lamba ne işe yarar?</h2>
+      <p>UV kürlenmede lamba tipi, ışığın hangi dalga boyunda yoğunlaştığını belirler; bu da filmin hangi derinlikte kürlendiğini değiştirir.</p>
+      <ul>
+        <li><strong>Galyum lambası:</strong> pigmentli ve opak sistemlerde <strong>derin kürlenmeyi</strong> artırır. Pigment ışığı emdiği için, opak bir filmde alt katmanlara ulaşmak en zor kısımdır.</li>
+        <li><strong>Cıva lambası:</strong> <strong>yüzey kürlenmesinde</strong> daha etkilidir.</li>
+        <li><strong>TL lambalar:</strong> yalnızca mat ürün uygulamalarında kullanılması tavsiye edilir.</li>
+      </ul>
+      <p>Buradan çıkan sıralama şudur: <strong>opak sistemlerde önce galyum, ardından cıva lambası</strong> kullanılmalıdır — önce derinlik, sonra yüzey. <strong>Şeffaf sistemlerde</strong> ise çoğu uygulamada yalnızca cıva lambası yeterlidir.</p>
+
+      <h2 class="post-h2">Katlar arası zımpara atlanabilir mi?</h2>
+      <p>Hayır. <strong>Katlar arasında 400 numara zımpara yapılması önerilir.</strong> Ara zımpara yapılmadan uygulanan ikinci kat, katlar arası aderansı önemli ölçüde düşürür. Kürlenmiş UV filmin yüzeyi, üzerine gelen katın tutunabileceği bir doku sunmaz; zımpara bu dokuyu oluşturur.</p>
+      <p>Zımparanın ne zaman yapılacağı konusunda ise esneklik vardır: <strong>UV astar ve dolgu ürünlerinin zımparalanabilirliği zamanla önemli ölçüde değişmez.</strong> İlk saatlerde yüzey sertliği bir miktar artsa da, 1 saat sonra ile 1 gün sonra yapılan zımparanın performansının benzer olması beklenir. Yani ara zımpara için hattı beklemeye almak ya da acele etmek gerekmez.</p>
+
+      <h2 class="post-h2">Kürlenme ve yapışma nasıl kontrol edilir?</h2>
+      <p>İki basit kontrol, hattan çıkan panelde çoğu sorunu erken yakalar:</p>
+      <ol>
+        <li><strong>Kürlenme kontrolü:</strong> kürlenme sonrası yüzey hafifçe tırnakla kontrol edilir. Yüzeyde <strong>parlama veya iz oluşuyorsa kürlenme yetersiz</strong> olabilir. Bu durumda panel tekrar UV lambalarından geçirilebilir.</li>
+        <li><strong>Yapışma kontrolü:</strong> aderans testi <strong>panel soğuduktan sonra</strong> yapılmalıdır. Kürlenme tünelinden yeni çıkmış sıcak panelde yapılan test yanıltıcı sonuç verir — sıcakken zayıf görünen bir yapışma, panel soğuduğunda normale dönebilir.</li>
+      </ol>
+
+      <h2 class="post-h2">Derin CNC yüzeyler, PÜ üzeri UV ve renklendirilmiş sistemler</h2>
+      <p>Standart düz panel dışındaki üç durum ayrı bir yaklaşım ister.</p>
+      <p><strong>Derin CNC bölgeleri.</strong> Oyuk ve derin profillerde film kalınlığı doğal olarak artar; bu da tam UV kürlenmesini zorlaştırır. Bu tür uygulamalarda <strong>düşük oranda sertleştirici ile dual kürlenme sistemi</strong> tercih edilebilir: UV'nin ulaşamadığı derinlikte kimyasal kürlenme devreye girer. Gerekli performansa göre ayrıca <strong>UV kürlenme ajanı ilavesi</strong> de değerlendirilebilir.</p>
+      <p><strong>PÜ üzerine UV son kat.</strong> Poliüretan boya üzerine UV son kat uygulanabilir; ancak bunun için PÜ boyanın <strong>tamamen kürlenmiş</strong> olması gerekir. Tavsiye edilen bekleme süresi <strong>en az 24 saattir</strong>. Kürlenmesini tamamlamamış bir PÜ katman üzerine UV uygulamak, alttaki filmin çözücü ve ısı etkisiyle hareket etmesine yol açar.</p>
+      <p><strong>Renklendirilmiş yüzeyler.</strong> Valtinte gibi renklendiricilerle renklendirilmiş yüzeyler üzerine UV ürün uygulanması, aderans performansını olumsuz etkileyebilir. Bunun nedeni genellikle pigmentlerin kendisi değil, <strong>UV kürlenme mekanizmasının yüzey üzerindeki etkisidir</strong>. Özellikle <strong>kırmızı pigment</strong> içeren renklerde, kürlenme öncesi ve sonrası renk farkı daha belirgin görülebilir. Bu nedenle renk değerlendirmesi mutlaka <strong>UV kürlenmesi tamamlandıktan ve panel soğuduktan sonra</strong> yapılmalıdır; kürlenmemiş yaş film üzerinden verilen renk onayı yanıltır.</p>
+
+      <h2 class="post-h2">Uygulama ortamı neden hattın bir parçası?</h2>
+      <p>Uygulama sırasında veya hat çalışırken üretim alanının süpürülmesi ya da toz oluşturacak işlemler yapılmamalıdır. Havalanan toz UV hattına taşındığında doğrudan yüzey kalitesini düşürür; kürlenmiş film üzerinde bu kusurun telafisi zımpara ve yeniden kat demektir.</p>
+      <p class="post-note">Bu notlar genel uygulama prensipleridir; hat konfigürasyonu, lamba gücü, panel geometrisi ve kullanılan ürüne göre değerler değişir. Kendi hattınız için doğru parametreleri belirlemek üzere <a href="/arge.html">Ar-Ge</a> ve teknik ekibimizle birlikte deneme yapabilirsiniz.</p>
+    </div>
+  </div>
+</section>
+""" + cta("Hat denemesi ve teknik destek", "UV hattınızın parametrelerini birlikte optimize edelim")
+POSTS.append(p)
+
+# 4) Multi surface son kat
+p = dict(yol="blog/multi-surface-son-kat-boya.html", etiket="Ürün Teknolojisi",
+         baslik="Multi Surface Son Kat: Ahşap, Metal, Alüminyum ve Plastiğe Tek Sistem",
+         h1="Çok yüzeyli (multi surface) son kat boya nedir, hangi malzemelerde kullanılır?",
+         lead="Valresa'nın akrilik multi surface son kat boyaları; ahşap, metal, alüminyum ve plastik yüzeylerde aynı ürünle çalışabilmek için geliştirildi. İç ve dış mekânda kullanılabilen bu sistemin ne yaptığını, nerede işe yaradığını ve nasıl uygulandığını anlatıyoruz.",
+         ozet="Tek son kat ile ahşap, metal, alüminyum ve plastik: çok yüzeyli akrilik sistem ne zaman avantaj sağlar, nasıl uygulanır?",
+         desc="Valresa multi surface akrilik son kat boya: ahşap, metal, alüminyum ve plastik yüzeylerde yüksek örtücülük, sararmaya karşı direnç ve dış mekân dayanımı. Tabanca, airmix, fırça ve rulo ile uygulanır.",
+         tarih_iso="2026-11-03", tarih="3 Kasım 2026",
+         hero="/img/blog/multi-surface-son-kat-boya.jpg", hero_wh=(1400, 722),
+         hero_alt="Plastik, ahşap, metal ve alüminyum sandalyeler aynı multi surface son kat boyayla boyanmış",
+         og="/img/blog/multi-surface-son-kat-boya-og.jpg")
+p["govde"] = bas(p) + f"""
+<section class="about-section" style="border-top:none; padding-top:12px;">
+  <div class="section-inner">
+    <figure class="post-hero"><img src="{p['hero']}" alt="{p['hero_alt']}" width="1400" height="722" fetchpriority="high"><figcaption class="post-figcap">Fuar sunumumuzdan: plastik, ahşap, metal ve alüminyum sandalyeler aynı multi surface son katla boyandı.</figcaption></figure>
+    <div class="post-body" style="margin-top:40px;">
+      <h2 class="post-h2">Çok yüzeyli son kat ne demek?</h2>
+      <p>Boyada alışılmış düzen, her malzemenin kendi sistemini istemesidir: ahşaba bir astar, metale başka bir astar, alüminyuma ayrı bir tutunma primeri, plastiğe bir başkası. Bir mobilya ya da mekân birden fazla malzemeden oluştuğunda bu düzen hızla büyür — <strong>birkaç farklı ürün, birkaç farklı stok kalemi ve her malzemede ayrı bir uygulama prosedürü</strong>.</p>
+      <p>Çok yüzeyli (multi surface) son kat bu noktada devreye girer. Temel vaadi tek cümleyle şudur: <strong>farklı türde alt zeminlere tutunabilen tek bir son kat</strong>. Fuarda yaptığımız sunumda bunu dört sandalye üzerinden gösterdik — plastik, ahşap, metal ve alüminyum. Dördü de aynı son katla boyandı; sonuçta malzemeler değil, ortak bir yüzey görünüyor.</p>
+
+      <h2 class="post-h2">Hangi yüzeylerde kullanılıyor?</h2>
+      <p>Ürün, farklı türdeki alt zeminlere tutunacak şekilde formüle edilmiştir. Uygulamada en sık karşılaşılan malzemeler:</p>
+      <ul>
+        <li><strong>Ahşap ve ahşap esaslı paneller</strong></li>
+        <li><strong>Metal</strong> — demir ve çelik aksam</li>
+        <li><strong>Alüminyum</strong></li>
+        <li><strong>Plastik</strong></li>
+      </ul>
+      <p>Bu, özellikle karma malzemeli ürünlerde fark yaratır: ahşap oturma yüzeyi ile metal ayakların aynı tonda olması gereken bir sandalye, alüminyum çerçeveli ahşap bir panel ya da plastik ve metal parçaların bir arada bulunduğu bir mobilya grubunda renk ve parlaklık bütünlüğü tek üründen gelir.</p>
+
+      <h2 class="post-h2">İç mekânda da dış mekânda da kullanılabilir mi?</h2>
+      <p>Evet; ürün hem iç hem dış mekân uygulamaları için tanımlanmıştır. Dış mekânda belirleyici olan iki özellik şunlardır:</p>
+      <ul>
+        <li><strong>Sararmaya karşı direnç:</strong> özellikle beyaz ve açık tonlarda, zamanla oluşan sarı kaymayı geciktirir. Açık renkli dış mekân mobilyasında rengin ilk günkü gibi kalması büyük ölçüde bu özelliğe bağlıdır.</li>
+        <li><strong>Dış ortam dayanımı:</strong> güneş, nem ve sıcaklık değişimlerine açık yüzeylerde kullanım için formüle edilmiştir.</li>
+      </ul>
+      <p>Teknik föyde öne çıkan kullanım alanları bahçe mobilyası, panjur ve jaluziler ile dış mekân metal kapılardır. İç mekânda ise malzeme karışımının yoğun olduğu her mobilya ve doğrama uygulaması için uygundur.</p>
+
+      <h2 class="post-h2">Renk nasıl elde ediliyor?</h2>
+      <p>Sistemin çıkış noktası, <strong>beyaz mat konvertör son kat</strong>tır; bu ürün doğrudan kullanılabildiği gibi, renklendirilmiş son katların üretiminde taban olarak da kullanılır. Yüksek örtücülüğü sayesinde koyu ya da alacalı zeminlerde daha az katla kapatma sağlar — karma malzemeli bir üründe farklı alt zeminlerin aynı tonda görünmesi için bu önemlidir.</p>
+      <p>İstenen renk, standart kartela referanslarıyla hazırlanabilir. Renk kodları ve kartelalar için <a href="/renk-paleti.html">Renk Paleti</a> sayfamıza, partiden partiye renk tutarlılığının nasıl sağlandığı için <a href="/renk-makinesi.html">renk makinesi</a> sistemlerimize bakabilirsiniz.</p>
+
+      <h2 class="post-h2">Nasıl uygulanır?</h2>
+      <p>Ürün iki bileşenlidir. İBAVALRESA olarak kendi teknik föyümüzü hazırladık; karışım <strong>190069 kodlu sertleştirici ile 6+1 oranında</strong> yapılır. Uygulama yöntemi atölyeye göre seçilebilir:</p>
+      <ul>
+        <li><strong>Tabanca</strong> ile püskürtme</li>
+        <li><strong>Airmix / mikser</strong> ile seri uygulama</li>
+        <li><strong>Fırça ve rulo</strong> ile el uygulaması</li>
+      </ul>
+      <p>Fırça ve rulonun da seçenek olması, sahada yerinde yapılan işlerde ya da küçük partilerde tabanca kurulumuna gerek bırakmaz.</p>
+      <p>İncelticiyi ortam koşuluna göre seçmek sonucu doğrudan etkiler:</p>
+      <ol>
+        <li><strong>Standart koşullarda</strong> 510102 veya 510101 kullanılır.</li>
+        <li><strong>Yaz aylarında ve fırça uygulamasında</strong> 500024 tercih edilir; yüzeyin işlenebilir kaldığı süreyi uzatır.</li>
+        <li><strong>Yüksek sıcaklık veya yüksek nemde</strong> 540414 kullanılır. Bu inceltici <em>anti-blushing</em> özelliğiyle, nemli havada filmin içinde oluşan sisli-beyazımsı görünümü (blushing) engeller.</li>
+      </ol>
+      <p class="post-note">Çok yüzeyli bir son kat, yüzey hazırlığını ortadan kaldırmaz: her malzeme kendi temizlik, yağ alma ve zımpara gereksinimiyle gelir — özellikle alüminyum ve plastikte. Projenizdeki malzemeler için doğru hazırlık ve sistem kurgusunu teknik föy ve teknik ekibimizle birlikte netleştirin.</p>
+    </div>
+  </div>
+</section>
+""" + cta("Numune ve teknik destek", "Projenizdeki yüzeyler için doğru sistemi birlikte seçelim")
+POSTS.append(p)
+
+# 3) Yanma geciktirici sistem
+p = dict(yol="blog/yanma-geciktirici-ahsap-boya-vernik.html", etiket="Yangın Güvenliği",
+         baslik="Yanma Geciktirici Mobilya Boya ve Vernikleri",
+         h1="Yanma geciktirici mobilya boya ve vernikleri nedir, nasıl çalışır?",
+         lead="Valresa Yanma Geciktirici Sistem; iç mekân ahşap yüzeylerde yangının ilerleme hızını azaltan, akrilik esaslı bir ürün grubudur. Sistemin ne yaptığını, akrilik esaslı olmasının ne anlama geldiğini ve uygulamada nelere dikkat edilmesi gerektiğini anlatıyoruz.",
+         ozet="İç mekân ahşabında alevin yayılmasını geciktiren akrilik esaslı sistem: ne yapar, neyi vaat etmez, hangi ürünleri kapsar?",
+         desc="Valresa Yanma Geciktirici Sistem: iç mekân ahşap yüzeyler için akrilik esaslı dolgu, astar, vernik ve boya. Yangının ilerleme hızını azaltır, damlama yapmaz, kimyasal salınımı düşüktür.",
+         tarih_iso="2026-11-01", tarih="1 Kasım 2026",
+         hero="/img/blog/yanma-geciktirici-ahsap-boya-vernik.jpg", hero_wh=(1400, 722),
+         hero_alt="Valresa yanma geciktirici ahşap boya ve vernik sistemi",
+         og="/img/blog/yanma-geciktirici-ahsap-boya-vernik-og.jpg")
+p["govde"] = bas(p) + f"""
+<section class="about-section" style="border-top:none; padding-top:12px;">
+  <div class="section-inner">
+    <figure class="post-hero"><img src="{p['hero']}" alt="{p['hero_alt']}" width="1400" height="722" fetchpriority="high"><figcaption class="post-figcap">Valresa Yanma Geciktirici Sistem — iç mekân ahşap yüzeyler için akrilik esaslı ürün grubu.</figcaption></figure>
+    <div class="post-body" style="margin-top:40px;">
+      <h2 class="post-h2">Yanma geciktirici kaplama ne yapar?</h2>
+      <p>Ahşap yanıcı bir malzemedir ve hiçbir kaplama bunu değiştirmez. Yanma geciktirici bir sistemin işi, ahşabı yanmaz hâle getirmek değil, <strong>alevin yüzeyde yayılma hızını düşürmektir</strong>. Bir yangında en kritik şey ilk dakikalardır; bu dakikalar tahliye için kazanılan zamandır. Yanma geciktirici kaplamanın sağladığı asıl fayda budur.</p>
+      <p>Valresa Yanma Geciktirici Sistem, iç mekân ahşap yüzeylerde üç noktada çalışır:</p>
+      <ul>
+        <li><strong>Alev yayılımını yavaşlatır:</strong> yangının yüzey boyunca ilerleme hızını azaltır.</li>
+        <li><strong>Damlama yapmaz:</strong> yanan damlacıklar yangını alt yüzeylere ve komşu malzemelere taşır. Damlama davranışı, Avrupa yangın sınıflandırmasında parlama ve duman kadar ayrı bir ölçüt olarak değerlendirilir.</li>
+        <li><strong>Zararlı kimyasal salınımı düşüktür:</strong> hem normal kullanımda hem de uygulama sırasında iç mekân için önemlidir.</li>
+      </ul>
+
+      <h2 class="post-h2">Akrilik esaslı olması ne anlama geliyor?</h2>
+      <p>Bu ürün grubunu kategorideki yaygın alternatiflerden ayıran en belirgin özellik, <strong>akrilik esaslı</strong> olmasıdır. Yanma geciktirici kaplamalar çoğunlukla başka kimyasal sistemler üzerine kurulur; akrilik kimyası ise düşük salınım hedefiyle birlikte çalışmayı kolaylaştırır.</p>
+      <p>Pratik karşılığı şu: yangın performansı için iç mekân hava kalitesinden ödün vermek gerekmez. Okul, otel, hastane, ofis gibi insanların uzun süre bulunduğu kapalı alanlarda bu iki gereksinim çoğu zaman birlikte aranır.</p>
+
+      <h2 class="post-h2">Sistem hangi ürünleri kapsıyor?</h2>
+      <p>Ürün grubu, bir ahşap yüzeyin baştan sona kaplanabilmesi için gereken dört katmanı da içerir:</p>
+      <ul>
+        <li><strong>Dolgu</strong></li>
+        <li><strong>Astar</strong></li>
+        <li><strong>Vernik</strong> — 10 gloss'tan 80 gloss'a kadar</li>
+        <li><strong>Boya</strong> — 10 gloss'tan 60 gloss'a kadar</li>
+      </ul>
+      <p>Parlaklık aralığının genişliği, yangın performansı için tasarım tercihinden vazgeçmek gerekmediği anlamına gelir: tam mat bir yüzey de, yüksek parlak bir yüzey de aynı sistem içinde elde edilebilir. <strong>Ürünlerin tamamında karışım oranı 20/1'dir.</strong></p>
+      <p>Ürün grubu Avrupa sertifikasyon sistemine dâhildir.</p>
+
+      <h2 class="post-h2">Uygulamada nelere dikkat edilmeli?</h2>
+      <p>Yanma geciktirici kaplamalarda performans, ürünün kendisi kadar nasıl uygulandığına bağlıdır. Normal bir boyada bir miktar sapma yalnızca görünümü etkilerken, burada doğrudan yangın davranışını etkiler.</p>
+      <ol>
+        <li><strong>Karışım oranını birebir tutun.</strong> Tüm ürünlerde oran 20/1'dir; göz kararı hazırlanan karışım beklenen performansı vermez.</li>
+        <li><strong>Teknik föyde belirtilen sarfiyata uyun.</strong> Yanma geciktirici etki belirli bir film kalınlığında tanımlanır; eksik uygulanan kat, sistemi tanımlandığı performansın dışına çıkarır.</li>
+        <li><strong>Sistemi bütün olarak uygulayın.</strong> Astar, dolgu ve son katın birlikte çalışması esastır; katmanlardan birini başka bir üründen seçmek sistemin bütünlüğünü bozar.</li>
+        <li><strong>Yüzeyi hazırlayın.</strong> Tozsuz, kuru ve uygun şekilde zımparalanmış bir zemin, katların beklenen kalınlıkta ve tutunmada olmasını sağlar.</li>
+      </ol>
+
+      <h2 class="post-h2">Nerelerde kullanılır?</h2>
+      <p>Sistem iç mekân ahşap yüzeyler için geliştirilmiştir: mobilya, duvar ve tavan kaplamaları, paneller, ahşap doğrama ve ahşap detaylar. En sık ihtiyaç duyulduğu yerler, yangın yönetmeliklerinin yüzey malzemelerine koşul getirdiği toplu kullanım alanlarıdır — oteller, okullar, hastaneler, ofisler, alışveriş merkezleri ve toplantı salonları.</p>
+      <p class="post-note">Yanma geciktirici kaplamaların performansı; uygulanan sistem, film kalınlığı ve alt zemine göre değişir. Projenizde belirli bir yangın sınıfı talep ediliyorsa, hangi sistemin ve hangi uygulama koşullarının bu sınıfı karşıladığını teknik ekibimizle birlikte netleştirin.</p>
+    </div>
+  </div>
+</section>
+""" + cta("Teknik destek", "Projenizin yangın performansı gereksinimini birlikte değerlendirelim")
+POSTS.append(p)
+
 # 2) Spor salonu parkesi
 p = dict(yol="blog/spor-salonu-parke-vernik-yenileme.html", etiket="Uygulama Rehberi",
          baslik="Spor Salonu Parkelerinde Vernik Yenileme: Doğru Ürün Nasıl Seçilir?",
