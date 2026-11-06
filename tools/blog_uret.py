@@ -153,12 +153,12 @@ p = dict(yol="blog/mobilyada-uv-boya-uygulamasi.html", etiket="Uygulama Rehberi"
          desc="Mobilyada UV boya uygulaması: uygulama miktarı ve robot ayarları, flash-off süresi, galyum ve cıva lamba seçimi, katlar arası zımpara, kürlenme ve yapışma kontrolü, derin CNC yüzeyler ve PÜ üzerine UV.",
          tarih_iso="2026-11-05", tarih="5 Kasım 2026",
          hero="/img/blog/mobilyada-uv-boya-uygulamasi.jpg", hero_wh=(1400, 722),
-         hero_alt="İBAVALRESA Ar-Ge laboratuvarında boya hazırlığı ve ölçüm",
+         hero_alt="UV kürlenme tünelinde lambaların altından geçen konveyör hattı",
          og="/img/blog/mobilyada-uv-boya-uygulamasi-og.jpg")
 p["govde"] = bas(p) + f"""
 <section class="about-section" style="border-top:none; padding-top:12px;">
   <div class="section-inner">
-    <figure class="post-hero"><img src="{p['hero']}" alt="{p['hero_alt']}" width="1400" height="722" fetchpriority="high"><figcaption class="post-figcap">UV sistemlerde sonucu belirleyen parametreler, Ar-Ge ve saha çalışmalarımızda ölçülerek doğrulanır.</figcaption></figure>
+    <figure class="post-hero"><img src="{p['hero']}" alt="{p['hero_alt']}" width="1400" height="722" fetchpriority="high"><figcaption class="post-figcap">UV kürlenme tüneli: film, lambaların altından geçerken saniyeler içinde kürlenir.</figcaption></figure>
     <div class="post-body" style="margin-top:40px;">
       <p>UV boyalarda film, ultraviyole ışık altında saniyeler içinde kürlenir. Bu hız seri üretimde büyük bir avantajdır; ancak aynı hız, hatadan dönmeyi de zorlaştırır. Geleneksel bir sistemde kuruma sırasında kendini toparlayan birçok sorun, UV hattında kürlenmiş film olarak sabitlenir. Bu yüzden UV uygulamasında işin büyük kısmı, lamba altına girmeden önce yapılan hazırlıkta biter.</p>
 

@@ -23,14 +23,14 @@ DIL = {
   title="IBAVALRESA — производитель покрытий для дерева, мебели и промышленности (Турция)",
   desc="IBAVALRESA — производитель покрытий для дерева, мебели и промышленности из Турции: акриловые, ПУ, полиэфирные, водные и УФ-системы. 60+ лет, 25+ стран.",
   badge="Турецко-испанское партнёрство",
-  h1="Покрытия для дерева и общепромышленные покрытия",
+  h1="Покрытия для древесины и промышленные лакокрасочные материалы",
   h1_sub="<em>Индивидуальные серии и решения</em> под ваши задачи.",
   lead="IBAVALRESA — турецкий производитель лакокрасочных материалов. Для дерева и мебели мы выпускаем акриловые, полиуретановые, полиэфирные, нитроцеллюлозные, эпоксидные, водные и УФ-отверждаемые системы — в сериях премиум-класса и с оптимальным соотношением цены и качества, а для промышленного сегмента — краски и лаки с оптимальным соотношением цены и качества. Мы работаем на внутреннем рынке и на экспорт.",
-  stats=[("60+", "лет опыта"), ("25+", "стран экспорта"), ("30 000", "тонн в год — производственная мощность"), ("50%", "доля экспорта в общем объёме продаж")],
+  stats=[("Более", "60", "лет опыта"), ("Более", "25", "стран экспорта"), ("Производственная мощность", "30 000", "тонн в год"), ("Доля экспорта", "50%", "от общего объёма продаж")],
   about_tag="О компании", about_h2="Производитель покрытий для дерева, мебели и промышленности в Турции",
   about=["Благодаря производственному и научно-исследовательскому потенциалу, рождённому турецко-испанским партнёрством, мы поставляем на мировые рынки высококачественные покрытия для дерева, мебельные лаки и решения для промышленной окраски.",
-         "IBAVALRESA объединяет опыт <strong>IBA Kimya</strong> (Анкара, 1977) и <strong>Valresa</strong> (Валенсия, 1965). Партнёрство создано в 2005 году, а в 2007 году в Анкаре (Синджан) был запущен современный завод.",
-         "Производственная площадка площадью <strong>37 000 м²</strong> и мощностью <strong>30 000 тонн в год</strong> работает с полной прослеживаемостью процессов (SAP, SCADA) и сертифицирована по ISO 9001. Более 100 колеровочных машин в Турции и за рубежом обеспечивают одинаковый цвет в каждой точке."],
+         "IBAVALRESA объединяет опыт двух компаний: <strong>IBA Kimya</strong>, основанной в Анкаре в 1977 году, и <strong>Valresa</strong>, основанной в Валенсии в 1965 году. Партнёрство было создано в 2005 году, а в 2007 году в Анкаре, в районе Синджан, был запущен современный производственный завод.",
+         "Производственная площадка площадью <strong>37 000 м²</strong> обеспечивает выпуск <strong>30 000 тонн</strong> продукции в год. Все производственные процессы контролируются с использованием систем SAP и SCADA. Предприятие сертифицировано по стандарту ISO 9001. Компания также располагает более чем 100 колеровочными машинами, установленными в Турции и других странах мира, что позволяет обеспечивать точное соответствие цветов."],
   cat_tag="Каталоги продукции", cat_h2="Каталоги наших брендов", cat_open="Открыть каталог",
   cat_desc=("Мебельные краски и лаки премиум-класса", "Водные краски и лаки для дерева", "Мебельные краски и лаки с оптимальным соотношением цены и качества", "Общепромышленные краски"),
   deck_badge="Презентация компании", deck_title="Познакомьтесь с IBAVALRESA подробнее",
@@ -105,6 +105,7 @@ CSS = """
 .lp-lead { font-size: clamp(16px, 1.5vw, 19px); line-height: 1.65; color: var(--text2); max-width: 760px; }
 .lp-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; margin-top: 44px; }
 .lp-stat { background: var(--bg); padding: 26px 22px; }
+.lp-stat i { display: block; font-style: normal; font-size: 12px; font-weight: 600; color: var(--text2); line-height: 1.3; margin-bottom: 7px; }
 .lp-stat b { display: block; font-size: clamp(28px, 3vw, 40px); font-weight: 800; letter-spacing: -1.5px; line-height: 1; color: var(--text); }
 .lp-stat span { display: block; font-size: 13.5px; color: var(--text2); margin-top: 8px; line-height: 1.4; }
 .lp-sec { padding: 56px 0; border-top: 1px solid var(--border); }
@@ -188,7 +189,8 @@ def sayfa(kod, t):
            "address": {"@type": "PostalAddress", "streetAddress": "Oğuz cd. No:24, 1. OSB", "addressLocality": "Sincan", "addressRegion": "Ankara", "addressCountry": "TR"}}
     aktif = ' class="on" aria-current="page"'
     langs = "".join(f'<a href="{p}" hreflang="{k.lower()}"{aktif if k.lower() == kod else ""}>{k}</a>' for k, p, _ in DILLER)
-    stats = "".join(f'<div class="lp-stat"><b>{n}</b><span>{l}</span></div>' for n, l in t["stats"])
+    stats = "".join(f'<div class="lp-stat"><i>{x[0]}</i><b>{x[1]}</b><span>{x[2]}</span></div>' if len(x) == 3
+                     else f'<div class="lp-stat"><b>{x[0]}</b><span>{x[1]}</span></div>' for x in t["stats"])
     about = "".join(f'<p class="about-p">{p}</p>' for p in t["about"])
     kat = "".join(f'<a class="lp-cat" href="{u}" target="_blank" rel="noopener"><img src="/img/katalog/{img}" alt="{n} — {e(d)}" width="{w}" height="{h}" loading="lazy"><b>{n}</b><span>{e(d)}</span><em>{t["cat_open"]} {OUT}</em></a>'
                   for (n, u, img, w, h), d in zip(KATALOG, t["cat_desc"]))
