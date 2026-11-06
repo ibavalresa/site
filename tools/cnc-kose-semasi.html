@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;background:#fff;}
+  body{width:1400px;height:722px;font-family:'Inter',sans-serif;}
+</style></head><body>
+<svg width="1400" height="722" viewBox="0 0 1400 722" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">
+  <defs>
+    <!-- MDF yüzey kabuğu: sıkışmış, yoğun -->
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9a98f"/><stop offset="1" stop-color="#a99674"/>
+    </linearGradient>
+    <!-- MDF göbeği: düşük yoğunluklu, gözenekli -->
+    <pattern id="core" width="13" height="13" patternUnits="userSpaceOnUse">
+      <rect width="13" height="13" fill="#e4d7c0"/>
+      <circle cx="3" cy="3.5" r="1.7" fill="#cdbb9c"/>
+      <circle cx="9.5" cy="8" r="2.1" fill="#cdbb9c"/>
+      <circle cx="6" cy="11.5" r="1.3" fill="#cdbb9c"/>
+      <circle cx="11.5" cy="1.5" r="1.1" fill="#cdbb9c"/>
+    </pattern>
+    <!-- göbeğe çekmiş astar -->
+    <pattern id="soak" width="13" height="13" patternUnits="userSpaceOnUse">
+      <rect width="13" height="13" fill="#c8cde6"/>
+      <circle cx="3" cy="3.5" r="1.7" fill="#8e97c4"/>
+      <circle cx="9.5" cy="8" r="2.1" fill="#8e97c4"/>
+      <circle cx="6" cy="11.5" r="1.3" fill="#8e97c4"/>
+      <circle cx="11.5" cy="1.5" r="1.1" fill="#8e97c4"/>
+    </pattern>
+  </defs>
+
+  <rect width="1400" height="722" fill="#ffffff"/>
+
+  <!-- ══ başlık ══ -->
+  <text x="80" y="76" font-size="30" font-weight="800" fill="#0d0d10" letter-spacing="-.6">Astar köşelerde neden açık kalır?</text>
+  <text x="80" y="109" font-size="17" font-weight="500" fill="#54526a">MDF kesiti — aynı astar, iki farklı bölgede</text>
+  <line x1="80" y1="134" x2="1320" y2="134" stroke="rgba(0,0,0,0.09)"/>
+
+  <!-- ══════════ SOL: DÜZ YÜZEY ══════════ -->
+  <text x="80" y="188" font-size="13" font-weight="700" fill="#26358C" letter-spacing="1.6">DÜZ YÜZEY</text>
+  <line x1="80" y1="200" x2="188" y2="200" stroke="#26358C" stroke-width="2"/>
+
+  <g>
+    <!-- panel gövdesi -->
+    <rect x="80" y="300" width="520" height="190" fill="url(#core)"/>
+    <!-- üst/alt sıkışmış kabuk -->
+    <rect x="80" y="300" width="520" height="26" fill="url(#skin)"/>
+    <rect x="80" y="464" width="520" height="26" fill="url(#skin)"/>
+    <!-- astar filmi: kabuğun üstünde duruyor -->
+    <rect x="80" y="286" width="520" height="14" fill="#26358C"/>
+    <rect x="80" y="300" width="520" height="190" fill="none" stroke="#8a8898" stroke-width="1.5"/>
+
+    <!-- film kalınlığı ölçüsü -->
+    <line x1="630" y1="286" x2="630" y2="300" stroke="#26358C" stroke-width="2"/>
+    <line x1="622" y1="286" x2="638" y2="286" stroke="#26358C" stroke-width="2"/>
+    <line x1="622" y1="300" x2="638" y2="300" stroke="#26358C" stroke-width="2"/>
+    <text x="650" y="289" font-size="15" font-weight="700" fill="#26358C">Tam film</text>
+    <text x="650" y="310" font-size="14" fill="#54526a">kalınlığı korunur</text>
+
+    <text x="80" y="546" font-size="16" font-weight="700" fill="#0d0d10">Kabuk emmez.</text>
+    <text x="80" y="572" font-size="15.5" fill="#54526a">Preste sıkışmış yüzey katmanı kapalıdır; astar</text>
+    <text x="80" y="595" font-size="15.5" fill="#54526a">içeri çekmez, olduğu gibi üstte film oluşturur.</text>
+  </g>
+
+  <!-- ayraç -->
+  <line x1="700" y1="170" x2="700" y2="620" stroke="rgba(0,0,0,0.09)"/>
+
+  <!-- ══════════ SAĞ: CNC İLE AÇILAN PROFİL ══════════ -->
+  <text x="760" y="188" font-size="13" font-weight="700" fill="#26358C" letter-spacing="1.6">CNC İLE AÇILAN PROFİL</text>
+  <line x1="760" y1="200" x2="986" y2="200" stroke="#26358C" stroke-width="2"/>
+
+  <g>
+    <!-- gövde + kanal: kabuk kesilip göbek açığa çıkmış -->
+    <path id="prof" d="M760 300 H900 L940 360 H1040 L1080 300 H1280 V490 H760 Z" fill="url(#core)"/>
+    <!-- sağlam kalan üst kabuk parçaları -->
+    <rect x="760" y="300" width="140" height="26" fill="url(#skin)"/>
+    <rect x="1080" y="300" width="200" height="26" fill="url(#skin)"/>
+    <rect x="760" y="464" width="520" height="26" fill="url(#skin)"/>
+
+    <!-- göbeğe çekmiş astar: frezelenmiş yüzeyin ALTINDA, malzemenin içinde -->
+    <path d="M900 300 L940 360 H1040 L1080 300 V322 L1047 382 H933 L900 322 Z" fill="url(#soak)"/>
+
+    <!-- astar filmi: düz kabukta tam kalınlık, frezelenmiş bölgede incelmiş -->
+    <path d="M760 286 H898 L938 355 H1042 L1082 286 H1280 V300 H1080 L1040 360 H940 L900 300 H760 Z" fill="#26358C"/>
+
+    <path d="M760 300 H900 L940 360 H1040 L1080 300 H1280 V490 H760 Z" fill="none" stroke="#8a8898" stroke-width="1.5"/>
+
+    <!-- açık kalan nokta işareti -->
+    <circle cx="990" cy="352" r="30" fill="none" stroke="#C0392B" stroke-width="2.5"/>
+    <line x1="990" y1="322" x2="990" y2="236" stroke="#C0392B" stroke-width="2.5"/>
+    <text x="990" y="224" font-size="16" font-weight="700" fill="#C0392B" text-anchor="middle">Burada film inceliyor</text>
+
+    <text x="760" y="546" font-size="16" font-weight="700" fill="#0d0d10">Göbek emer.</text>
+    <text x="760" y="572" font-size="15.5" fill="#54526a">Freze kabuğu keser, düşük yoğunluklu göbeği açar.</text>
+    <text x="760" y="595" font-size="15.5" fill="#54526a">Gözenekli yüzey astarı içine çeker; köşede</text>
+    <text x="760" y="618" font-size="15.5" fill="#54526a">yüzeyde kalan film incelir.</text>
+  </g>
+
+  <!-- ══ alt şerit: lejant ══ -->
+  <g transform="translate(80,666)">
+    <rect x="0" y="0" width="26" height="12" fill="#26358C"/>
+    <text x="36" y="11" font-size="14.5" fill="#54526a">Yüzeyde kalan astar filmi</text>
+    <rect x="248" y="0" width="26" height="12" fill="url(#soak)" stroke="#8e97c4"/>
+    <text x="284" y="11" font-size="14.5" fill="#54526a">Göbeğe çekmiş astar</text>
+    <rect x="482" y="0" width="26" height="12" fill="url(#skin)"/>
+    <text x="518" y="11" font-size="14.5" fill="#54526a">Sıkışmış yüzey kabuğu</text>
+    <rect x="730" y="0" width="26" height="12" fill="url(#core)" stroke="#cdbb9c"/>
+    <text x="766" y="11" font-size="14.5" fill="#54526a">Düşük yoğunluklu MDF göbeği</text>
+  </g>
+  <text x="1320" y="677" font-size="13" fill="#8a8898" text-anchor="end">Şematik kesit — ölçekli değildir.</text>
+</svg>
+</body></html>

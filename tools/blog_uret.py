@@ -144,6 +144,62 @@ def bas(p):
 
 POSTS = []
 
+# 6) CNC yüzeylerde köşe kapatma
+p = dict(yol="blog/cnc-kose-kapatma-astar.html", etiket="Ürün Teknolojisi",
+         baslik="CNC İşlemeli MDF'de Köşe Kapatma: Astar Kenarlardan Neden Çekilir?",
+         h1="CNC işlemeli MDF yüzeylerde astar neden köşeleri kapatmıyor?",
+         lead="Derin kanallı ve profil geçişli CNC kapaklarda düz yüzey ilk astarda kapanırken köşeler açık kalabiliyor. Sebebi çoğu zaman astarın yetersizliği değil, frezenin MDF'nin iç yapısını açması. Köşede ne olduğunu ve ikinci astar turunu nasıl gereksiz kıldığımızı anlatıyoruz.",
+         ozet="CNC kanal kenarları ve profil geçişleri ilk astarda neden kapanmaz, ikinci astar turu nasıl ortadan kalkar?",
+         desc="CNC işlemeli MDF'de köşe kapatma sorunu: freze, MDF'nin düşük yoğunluklu göbeğini açar ve astar oraya çeker. Yüksek katı maddeli, tiksotropik astarlarla köşelere ikinci astar turuna gerek kalmaz.",
+         tarih_iso="2026-11-06", tarih="6 Kasım 2026",
+         hero="/img/blog/cnc-kose-kapatma-astar.jpg", hero_wh=(1400, 722),
+         hero_alt="MDF kesiti şeması: düz yüzeyde astar filmi tam kalınlıkta kalır, frezelenen kanalda göbek astarı emer ve film incelir",
+         og="/img/blog/cnc-kose-kapatma-astar-og.jpg")
+p["govde"] = bas(p) + f"""
+<section class="about-section" style="border-top:none; padding-top:12px;">
+  <div class="section-inner">
+    <figure class="post-hero"><img src="{p['hero']}" alt="{p['hero_alt']}" width="1400" height="722" fetchpriority="high"><figcaption class="post-figcap">Şematik kesit: düz yüzeyde sıkışmış kabuk astarı emmez, film tam kalınlıkta kalır. Frezelenen bölgede gözenekli göbek açığa çıkar ve astarı içine çeker; yüzeyde kalan film incelir.</figcaption></figure>
+    <div class="post-body" style="margin-top:40px;">
+      <p>CNC işlemeli kapaklar ve dekoratif MDF paneller mobilya tasarımında giderek daha fazla tercih ediliyor. Derin kanallar, ince çizgiler ve farklı profiller tasarıma değer katıyor — ama boyama sürecinde bu detayların tamamında aynı yüzey kalitesini tutturmak ayrı bir iş hâline geliyor. Köşelerin ve kenarların astarla yeterince kapanmaması, üretimde ek işlem gerektiren sorunların başında geliyor.</p>
+
+      <h2 class="post-h2">Düz yüzey hazır, köşeler için iş devam ediyor</h2>
+      <p>Astar uygulamasının ardından geniş alanlarda istenen dolgunluk elde edilir; buna karşılık kanal kenarlarında ve profil geçişlerinde açıklıklar kalabilir. Bu bölgeleri kapatmak için parçaya yeniden astar uygulanması, tekrar kurumaya bırakılması ve yeniden zımparalanması gerekir.</p>
+      <p>Sonuç, üretim planını doğrudan etkiler: <strong>küçük bir köşe detayı, parçanın tamamının son kat aşamasına geçmesini geciktirir.</strong> Üstelik her ek tur yalnızca malzeme tüketimi demek değildir — uygulama, bekleme, zımpara ve kontrol adımlarının hepsi yeniden yaşanır.</p>
+
+      <h2 class="post-h2">Köşede ne oluyor? Frezelenmiş yüzey, düz yüzeyle aynı malzeme değildir</h2>
+      <p>Sorunun kaynağı genellikle astarın kalitesi değil, MDF'nin kendi yapısıdır. MDF preslenirken yüzeyde <strong>yoğunluğu yüksek, sıkışmış bir kabuk</strong> oluşur; levhanın göbeği ise bu kabuğa göre <strong>daha düşük yoğunluklu ve daha gözeneklidir</strong>.</p>
+      <p>Düz yüzeyde astar bu kapalı kabuğun üstünde durur ve olduğu gibi film oluşturur. Freze bıçağı bir kanal ya da profil açtığında ise kabuk kesilir ve <strong>gözenekli göbek açığa çıkar</strong>. Bu yüzey, düz alana göre belirgin biçimde daha emicidir: uygulanan astarın bir bölümü yüzeyde film oluşturmak yerine malzemenin içine çeker. Aynı tabancadan, aynı turda, aynı gramajla çıkan astar düz alanda yeterliyken kanal kenarında yetersiz kalır.</p>
+      <p>Yani köşenin açık kalması bir uygulama hatası değil, iki farklı emiciliğe sahip yüzeyin aynı anda boyanmasının doğal sonucudur.</p>
+
+      <h2 class="post-h2">Daha fazla astar atmak neden çözüm değil?</h2>
+      <p>Akla gelen ilk çözüm, köşeleri kapatmak için tüm yüzeye daha fazla astar yüklemektir. Ancak fazla astar <strong>kanallarda birikir ve CNC deseninin belirginliğini azaltır</strong>. Tasarıma değer katması için açılan ince çizgiler yumuşar, derin kanalların keskinliği kaybolur.</p>
+      <p>Böylece üretici iki istenmeyen sonuç arasında sıkışır: ya köşeler açık kalır ve ikinci tura girilir, ya da desen körelir. İhtiyaç duyulan şey, <strong>detayları korurken köşelerde de yeterli kapatmayı sağlayan</strong> bir astardır.</p>
+
+      <h2 class="post-h2">Köşe kapatma performansı geliştirilmiş astarlar</h2>
+      <p>İBAVALRESA olarak, köşe kapatma performansı geliştirilmiş astarlarımızı tam da bu ihtiyaç için sunuyoruz. Bu ürünlerde iki özellik birlikte çalışır:</p>
+      <ul>
+        <li><strong>Yüksek katı madde oranı</strong> — aynı ıslak film içinde daha fazla katı madde bulunur, dolayısıyla bir bölümü göbeğe çektikten sonra bile yüzeyde yeterli kuru film kalır.</li>
+        <li><strong>Tiksotropik yapı</strong> — astar tabancadan çıkarken akıcıdır, yüzeye oturduktan sonra kıvamını geri kazanır. Böylece kanal kenarında aşağı doğru akmaz, bulunduğu yerde durur.</li>
+      </ul>
+      <p>Bu ikisi bir arada, köşelerde ve profil geçişlerinde düz alanla <strong>dengeli bir kapatma</strong> sağlar — kanalları doldurup deseni köreltmeden.</p>
+
+      <h2 class="post-h2">Üretimde ne değişiyor?</h2>
+      <p>Doğru uygulama koşullarında elde edilen bu performansın pratik karşılığı şudur: <strong>zımpara aşamasından sonra, parçayı son kata hazırlamak için CNC köşe bölgelerine yeniden astar uygulamaya gerek kalmaz.</strong> Bunun üretim akışındaki yansımaları:</p>
+      <ul>
+        <li><strong>Daha az ilave uygulama</strong> — köşelerdeki açıklıkları gidermek için parçaya geri dönme ihtiyacı azalır.</li>
+        <li><strong>Daha az ek işçilik</strong> — ilave astara bağlı zımpara ve bölgesel düzeltme işlemleri azalır.</li>
+        <li><strong>Daha verimli malzeme kullanımı</strong> — yalnızca köşeleri kapatmak için tüm yüzeye fazladan astar yükleme ihtiyacı sınırlanır.</li>
+        <li><strong>Öngörülebilir akış</strong> — parçalar hattı tek turda terk ettiği için son kat planlaması tahmin edilebilir hâle gelir.</li>
+      </ul>
+      <p>Bu astarlar <a href="https://www.ibavet.com.tr/urunkatalogu/" target="_blank" rel="noopener">İbavet ürün kataloğundaki astar grupları</a> içinde yer alıyor.</p>
+
+      <p class="post-note">Köşe kapatma performansı, astarın yanı sıra uygulama koşullarına da bağlıdır: freze sonrası zımpara kademesi, ortam sıcaklığı ve nem, gramaj ve katlar arası bekleme süresi sonucu doğrudan etkiler. Üretiminizdeki CNC desenlerine ve uygulama koşullarınıza uygun astar seçimi için teknik ekibimizle birlikte çalışın.</p>
+    </div>
+  </div>
+</section>
+""" + cta("Astar seçimi ve teknik destek", "CNC desenlerinize uygun astarı birlikte belirleyelim")
+POSTS.append(p)
+
 # 5) Mobilyada UV uygulaması
 p = dict(yol="blog/mobilyada-uv-boya-uygulamasi.html", etiket="Uygulama Rehberi",
          baslik="Mobilyada UV Boya Uygulaması: Hattan İyi Sonuç Almanın Koşulları",
