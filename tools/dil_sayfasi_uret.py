@@ -20,12 +20,12 @@ MAIL = "info@ibavalresa.com.tr"
 DIL = {
  "ru": dict(
   html_lang="ru", og_locale="ru_RU",
-  title="IBAVALRESA — производитель лакокрасочных материалов для дерева, мебели и промышленности (Турция)",
-  desc="IBAVALRESA — производитель лакокрасочных материалов для дерева, мебели и промышленности из Турции: акриловые, ПУ, полиэфирные, водные и УФ-системы. 60+ лет, 25+ стран.",
+  title="Производитель ЛКМ для дерева и мебели — IBAVALRESA, Турция",
+  desc="IBAVALRESA — турецкий производитель ЛКМ для дерева, мебели и промышленности: акриловые, ПУ, полиэфирные, водные и УФ-системы. Более 60 лет, 25 стран экспорта.",
   badge="Турецко-испанское партнёрство",
   h1="Покрытия для древесины и промышленные лакокрасочные материалы",
   h1_sub="<em>Индивидуальные серии и решения</em> под ваши задачи.",
-  lead="IBAVALRESA — турецкий производитель лакокрасочных материалов. Для дерева и мебели мы выпускаем акриловые, полиуретановые, полиэфирные, нитроцеллюлозные, эпоксидные, водные и УФ-отверждаемые системы — в двух сериях: премиум-класса и с оптимальным соотношением цены и качества. Для промышленного сегмента мы предлагаем краски и лаки, сочетающие доступную стоимость с надёжными эксплуатационными характеристиками. Мы работаем на внутреннем рынке и на экспорт.",
+  lead="IBAVALRESA — турецкий производитель лакокрасочных материалов (ЛКМ). Для дерева и мебели мы выпускаем акриловые, полиуретановые, полиэфирные, нитроцеллюлозные, эпоксидные, водные и УФ-отверждаемые системы — в двух сериях: премиум-класса и с оптимальным соотношением цены и качества. Для промышленного сегмента мы предлагаем краски и лаки, сочетающие доступную стоимость с надёжными эксплуатационными характеристиками. Мы работаем на внутреннем рынке и на экспорт.",
   stats=[("Более", "60", "лет опыта"), ("Более", "25", "стран экспорта"), ("Производственная мощность", "30 000", "тонн в год"), ("Доля экспорта", "50%", "от общего объёма продаж")],
   about_tag="О компании", about_h2="IBAVALRESA: высококачественные лакокрасочные материалы для дерева, мебели и промышленности",
   about=["Благодаря производственному и научно-исследовательскому потенциалу, рождённому турецко-испанским партнёрством, мы поставляем на мировые рынки высококачественные покрытия для дерева, мебельные лаки и решения для промышленной окраски.",
@@ -52,8 +52,8 @@ DIL = {
  ),
  "es": dict(
   html_lang="es", og_locale="es_ES",
-  title="IBAVALRESA — fabricante de pinturas y barnices para madera, mueble e industria (Turquía)",
-  desc="IBAVALRESA, fabricante turco de pinturas y barnices para madera, mueble e industria: sistemas acrílicos, PU, poliéster, al agua y UV. Más de 60 años y 25 países.",
+  title="Pinturas y barnices para madera y mueble — IBAVALRESA, Turquía",
+  desc="IBAVALRESA, fabricante turco de pinturas y barnices para madera, mueble e industria: sistemas acrílicos, PU, poliéster, al agua y UV. Más de 60 años, 25 países.",
   badge="Alianza turco-española",
   h1="Pinturas para madera y recubrimientos industriales generales",
   h1_sub="<em>Series y soluciones personalizadas</em> para sus necesidades.",
@@ -82,8 +82,62 @@ DIL = {
   slogan_p="En los mercados internacionales somos un socio sólido en soluciones de pinturas y barnices para madera, mueble e industria.",
   rights="© 2026 IBAVALRESA. Todos los derechos reservados.", other="El sitio en otros idiomas",
  ),
+ "ar": dict(
+  html_lang="ar", og_locale="ar_AR", rtl=True, noindex=True,
+  title="دهانات وورنيشات الأخشاب والأثاث — IBAVALRESA، تركيا",
+  desc="IBAVALRESA منتج تركي لدهانات وورنيشات الأخشاب والأثاث والطلاءات الصناعية: أنظمة أكريليك وبولي يوريثان وبوليستر ومائية وUV. أكثر من 60 عامًا و25 دولة تصدير.",
+  badge="شراكة تركية إسبانية",
+  h1="دهانات وورنيشات الأخشاب والطلاءات الصناعية",
+  h1_sub="<em>تشكيلات وحلول مخصّصة</em> تناسب احتياجاتكم.",
+  lead="IBAVALRESA منتج تركي للدهانات والورنيشات. ننتج للأخشاب والأثاث أنظمة أكريليك وبولي يوريثان وبوليستر ونيتروسيليلوز وإيبوكسي ومائية ومعالجة بالأشعة فوق البنفسجية، ضمن تشكيلتين: فئة متميّزة وفئة بتوازن ممتاز بين السعر والجودة. وللقطاع الصناعي نقدّم دهانات وورنيشات تجمع بين التكلفة المعقولة والأداء الموثوق. نعمل في السوق المحلي والتصدير.",
+  stats=[("أكثر من", "60", "عامًا من الخبرة"), ("أكثر من", "25", "دولة تصدير"), ("الطاقة الإنتاجية", "30 000", "طن سنويًا"), ("حصة التصدير", "50%", "من إجمالي المبيعات")],
+  about_tag="من نحن", about_h2="IBAVALRESA: دهانات وورنيشات عالية الجودة للأخشاب والأثاث والصناعة",
+  about=["بفضل الطاقة الإنتاجية وقدرات البحث والتطوير التي أنتجتها الشراكة التركية الإسبانية، نزوّد الأسواق العالمية بدهانات أخشاب وورنيشات أثاث وحلول طلاء صناعي عالية الجودة.",
+         "تجمع IBAVALRESA خبرة شركتين: <strong>IBA Kimya</strong> التي تأسست في أنقرة عام 1977، و<strong>Valresa</strong> التي تأسست في فالنسيا عام 1965. وقد تأسست الشراكة عام 2005، وفي عام 2007 بدأ تشغيل مصنع إنتاج حديث في منطقة سنجان بأنقرة.",
+         "يمتد الموقع الإنتاجي على مساحة <strong>37 000 م²</strong> بطاقة إنتاجية تبلغ <strong>30 000 طن</strong> سنويًا. وتُضمن إمكانية التتبّع الكاملة للإنتاج عبر نظامَي SAP وSCADA، والمنشأة حاصلة على شهادة ISO 9001:2015. كما يضمن أكثر من 100 جهاز تلوين في تركيا وخارجها تطابق الألوان بدقة في كل نقطة."],
+  cat_tag="كتالوجات المنتجات", cat_h2="كتالوجات علاماتنا التجارية", cat_open="فتح الكتالوج",
+  cat_desc=("دهانات وورنيشات أثاث من الفئة المتميّزة", "دهانات وورنيشات مائية للأثاث من الفئة المتميّزة", "دهانات وورنيشات أثاث بتوازن ممتاز بين السعر والجودة", "دهانات وورنيشات صناعية"),
+  deck_kod="en",
+  deck_badge="عرض الشركة", deck_title="تعرّفوا على IBAVALRESA عن قرب",
+  deck_btn="فتح العرض التقديمي (بالإنجليزية)",
+  contact_tag="اتصل بنا", contact_h2="تواصلوا مع قسم التصدير لدينا",
+  contact_sub="املأوا النموذج للاستفسار عن المنتجات والتوزيع والتعاون، وسيتواصل فريقنا معكم في أقرب وقت.",
+  exp_eyebrow="التصدير", exp_title="المبيعات الدولية والتصدير",
+  l_phone="الهاتف", l_mail="البريد الإلكتروني", l_wa="واتساب", l_addr="العنوان",
+  addr="Oğuz cd. No:24, 1. OSB، سنجان / أنقرة، تركيا",
+  f_name="الاسم واللقب", f_company="الشركة", f_country="الدولة", f_email="البريد الإلكتروني", f_phone="الهاتف", f_msg="الرسالة",
+  f_msg_ph="كيف يمكننا مساعدتكم؟", f_consent='أوافق على معالجة بياناتي للرد على استفساري (<a href="/kvkk-aydinlatma-metni.html" target="_blank" rel="noopener">سياسة الخصوصية، باللغة التركية</a>).',
+  f_send="إرسال", ok="شكرًا لكم! تم استلام رسالتكم وسنتواصل معكم قريبًا.",
+  err="تعذّر إرسال الرسالة. يُرجى مراسلتنا على info@ibavalresa.com.tr.",
+  subject="İbavalresa — AR sayfası mesajı",
+  slogan=("الموثوقية.", "الكفاءة.", "الجودة."),
+  slogan_btn="تواصلوا معنا",
+  slogan_p="في الأسواق العالمية، نحن شريك قوي في حلول دهانات وورنيشات الأخشاب والأثاث والصناعة.",
+  rights="© 2026 IBAVALRESA. جميع الحقوق محفوظة.", other="الموقع بلغات أخرى",
+ ),
 }
 
+# Arapça için sağdan-sola düzen. Harf aralığı Arapçada harfleri kopardığı için sıfırlanır.
+RTL_CSS = """
+/* Arapça: SAYFA DÜZENİ olduğu gibi kalır (header, footer, iletişim formu, katalog sırası,
+   sunum bloğu). Yalnız metin akışı sağdan sola çevrilir. Harf aralığı Arapçada harfleri
+   birbirinden kopardığı için sıfırlanmalıdır. */
+body { font-family: 'IBM Plex Sans Arabic', 'Inter', sans-serif; }
+.lp-badge, .lp-h1, .lp-lead, .lp-tag, .lp-stat, .about-h2, .about-p, .about-pull,
+.deck-banner-title, .lp-cat b, .lp-cat span, .lp-slogan p, .lp-sec h2 {
+  direction: rtl; text-align: right; }
+.lp-badge, .lp-h1, .lp-tag, .lp-stat b, .lp-stat i, .about-h2, .deck-banner-title,
+.lp-cat b, .export-eyebrow, .export-title { letter-spacing: 0 !important; }
+.lp-h1 { line-height: 1.24; }
+.lp-stat b { line-height: 1.18; }
+.lp-badge { display: inline-block; }
+/* etiketler kendi başlıklarıyla aynı kenara hizalanır; blokların yeri değişmez */
+.lp-hero .section-inner { text-align: right; }
+.lp-tag { display: flex; justify-content: flex-end; }
+/* alıntı bloğunun rengi sağ kenara geçer, konumu değişmez */
+.about-pull { border-left: none; border-right: 3px solid var(--accent); border-radius: 14px 0 0 14px;
+  background: linear-gradient(225deg, rgba(38,53,140,0.04) 0%, rgba(38,53,140,0) 100%); }
+"""
 HREFLANG = [("tr", "/"), ("en", "/en/"), ("ru", "/ru/"), ("es", "/es/")]
 DILLER = [("TR", "/", "🇹🇷"), ("EN", "/en/", "🇬🇧"), ("RU", "/ru/", "🇷🇺"), ("ES", "/es/", "🇪🇸")]
 ARROW = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>'
@@ -189,6 +243,19 @@ def sayfa(kod, t):
            "address": {"@type": "PostalAddress", "streetAddress": "Oğuz cd. No:24, 1. OSB", "addressLocality": "Sincan", "addressRegion": "Ankara", "addressCountry": "TR"}}
     aktif = ' class="on" aria-current="page"'
     langs = "".join(f'<a href="{p}" hreflang="{k.lower()}"{aktif if k.lower() == kod else ""}>{k}</a>' for k, p, _ in DILLER)
+    # DILLER'da olmayan dil (ör. henüz açılmamış /ar/) kendi düğmesini yalnız kendi sayfasında gösterir
+    if kod not in [k.lower() for k, _, _ in DILLER]:
+        langs += f'<a href="/{kod}/" hreflang="{kod}"{aktif}>{kod.upper()}</a>'
+    deck_kod = t.get("deck_kod", kod)   # Arapça sunum yok → İngilizceye yönlendirilir
+    rtl = bool(t.get("rtl"))
+    rtl_css = RTL_CSS if rtl else ''
+    font = ('<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">'
+            if rtl else
+            '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">')
+    # Yayına alınmamış dil: arama motorlarına kapalı, hreflang zincirine girmez
+    robots = '<meta name="robots" content="noindex,nofollow">\n' if t.get("noindex") else ''
+    if t.get("noindex"):
+        hreflang = ""
     stats = "".join(f'<div class="lp-stat"><i>{x[0]}</i><b>{x[1]}</b><span>{x[2]}</span></div>' if len(x) == 3
                      else f'<div class="lp-stat"><b>{x[0]}</b><span>{x[1]}</span></div>' for x in t["stats"])
     about = "".join(f'<p class="about-p">{p}</p>' for p in t["about"])
@@ -200,7 +267,7 @@ def sayfa(kod, t):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{e(t['title'])}</title>
+{robots}<title>{e(t['title'])}</title>
 <link rel="canonical" href="{url}">
 {hreflang}<meta name="description" content="{e(t['desc'])}">
 <meta property="og:type" content="website">
@@ -215,10 +282,10 @@ def sayfa(kod, t):
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/favicon-192x192.png">
 <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+{font}
 <link rel="stylesheet" href="/css/base.css?v={base_v}">
 <script src="/js/nav-line.js?v={nav_v}" defer></script>
-<style>{CSS}</style>
+<style>{CSS}{rtl_css}</style>
 </head>
 <body>
 
@@ -245,7 +312,7 @@ def sayfa(kod, t):
       <div>{about}</div>
     </div>
     <div class="lp-deck">
-    <a class="deck-banner" href="/sunum.html?lang={kod}" target="_blank" rel="noopener nofollow">
+    <a class="deck-banner" href="/sunum.html?lang={deck_kod}" target="_blank" rel="noopener nofollow">
       <div>
         <span class="deck-banner-badge">{t['deck_badge']}</span>
         <h2 class="deck-banner-title">{t['deck_title']}</h2>
@@ -253,7 +320,7 @@ def sayfa(kod, t):
           <span class="deck-banner-btn"><span>{t['deck_btn']}</span> <span aria-hidden="true">→</span></span>
         </div>
       </div>
-      <img class="deck-banner-thumb" src="/img/sunum-kapak-{kod}.jpg" alt="" loading="lazy" width="640" height="360">
+      <img class="deck-banner-thumb" src="/img/sunum-kapak-{deck_kod}.jpg" alt="" loading="lazy" width="640" height="360">
     </a>
     </div>
   </div>
