@@ -173,7 +173,8 @@ p["govde"] = bas(p) + f"""
 
       <h2 class="post-h2">Daha fazla astar atmak neden çözüm değil?</h2>
       <p>Akla gelen ilk çözüm, köşeleri kapatmak için tüm yüzeye daha fazla astar yüklemektir. Ancak fazla astar <strong>kanallarda birikir ve CNC deseninin belirginliğini azaltır</strong>. Tasarıma değer katması için açılan ince çizgiler yumuşar, derin kanalların keskinliği kaybolur.</p>
-      <p>Böylece üretici iki istenmeyen sonuç arasında sıkışır: ya köşeler açık kalır ve ikinci tura girilir, ya da desen körelir. İhtiyaç duyulan şey, <strong>detayları korurken köşelerde de yeterli kapatmayı sağlayan</strong> bir astardır.</p>
+      <p>Bunun yanında bir risk daha vardır: kanallarda biriken <strong>kalın katmanlı astar, çatlama ihtimali artan bir film</strong> oluşturur. Yani fazla astar yalnız deseni köreltmekle kalmaz, filmin kendi dayanımını da zayıflatabilir.</p>
+      <p>Böylece üretici, köşeleri açık bırakmak ile deseni köreltmek arasında sıkışır: ya köşeler açık kalır ve ikinci tura girilir, ya da desen körelir. İhtiyaç duyulan şey, <strong>detayları korurken köşelerde de yeterli kapatmayı sağlayan</strong> bir astardır.</p>
 
       <h2 class="post-h2">Köşe kapatma performansı geliştirilmiş astarlar</h2>
       <p>İBAVALRESA olarak, köşe kapatma performansı geliştirilmiş astarlarımızı tam da bu ihtiyaç için sunuyoruz. Bu ürünlerde iki özellik birlikte çalışır:</p>
@@ -245,21 +246,21 @@ p["govde"] = bas(p) + f"""
       <p>Buradan çıkan sıralama şudur: <strong>opak sistemlerde önce galyum, ardından cıva lambası</strong> kullanılmalıdır — önce derinlik, sonra yüzey. <strong>Şeffaf sistemlerde</strong> ise çoğu uygulamada yalnızca cıva lambası yeterlidir.</p>
 
       <h2 class="post-h2">Katlar arası zımpara atlanabilir mi?</h2>
-      <p>Hayır. <strong>Katlar arasında 400 numara zımpara yapılması önerilir.</strong> Ara zımpara yapılmadan uygulanan ikinci kat, katlar arası aderansı önemli ölçüde düşürür. Kürlenmiş UV filmin yüzeyi, üzerine gelen katın tutunabileceği bir doku sunmaz; zımpara bu dokuyu oluşturur.</p>
+      <p>Hayır. <strong>Katlar arasında 400 numara zımpara yapılması önerilir.</strong> Ara zımpara yapılmadan uygulanan ikinci kat, katlar arası <strong>yapışma performansını</strong> önemli ölçüde düşürür. Kürlenmiş UV filmin yüzeyi, üzerine gelen katın tutunabileceği bir doku sunmaz; zımpara bu dokuyu oluşturur.</p>
       <p>Zımparanın ne zaman yapılacağı konusunda ise esneklik vardır: <strong>UV astar ve dolgu ürünlerinin zımparalanabilirliği zamanla önemli ölçüde değişmez.</strong> İlk saatlerde yüzey sertliği bir miktar artsa da, 1 saat sonra ile 1 gün sonra yapılan zımparanın performansının benzer olması beklenir. Yani ara zımpara için hattı beklemeye almak ya da acele etmek gerekmez.</p>
 
       <h2 class="post-h2">Kürlenme ve yapışma nasıl kontrol edilir?</h2>
       <p>İki basit kontrol, hattan çıkan panelde çoğu sorunu erken yakalar:</p>
       <ol>
         <li><strong>Kürlenme kontrolü:</strong> kürlenme sonrası yüzey hafifçe tırnakla kontrol edilir. Yüzeyde <strong>parlama veya iz oluşuyorsa kürlenme yetersiz</strong> olabilir. Bu durumda panel tekrar UV lambalarından geçirilebilir.</li>
-        <li><strong>Yapışma kontrolü:</strong> aderans testi <strong>panel soğuduktan sonra</strong> yapılmalıdır. Kürlenme tünelinden yeni çıkmış sıcak panelde yapılan test yanıltıcı sonuç verir — sıcakken zayıf görünen bir yapışma, panel soğuduğunda normale dönebilir.</li>
+        <li><strong>Yapışma kontrolü:</strong> yapışma testi <strong>panel soğuduktan sonra</strong> yapılmalıdır. Kürlenme tünelinden yeni çıkmış sıcak panelde yapılan test yanıltıcı sonuç verir — sıcakken zayıf görünen bir yapışma, panel soğuduğunda normale dönebilir.</li>
       </ol>
 
       <h2 class="post-h2">Derin CNC yüzeyler, PÜ üzeri UV ve renklendirilmiş sistemler</h2>
       <p>Standart düz panel dışındaki üç durum ayrı bir yaklaşım ister.</p>
       <p><strong>Derin CNC bölgeleri.</strong> Oyuk ve derin profillerde film kalınlığı doğal olarak artar; bu da tam UV kürlenmesini zorlaştırır. Bu tür uygulamalarda <strong>düşük oranda sertleştirici ile dual kürlenme sistemi</strong> tercih edilebilir: UV'nin ulaşamadığı derinlikte kimyasal kürlenme devreye girer. Gerekli performansa göre ayrıca <strong>UV kürlenme ajanı ilavesi</strong> de değerlendirilebilir.</p>
       <p><strong>PÜ üzerine UV son kat.</strong> Poliüretan boya üzerine UV son kat uygulanabilir; ancak bunun için PÜ boyanın <strong>tamamen kürlenmiş</strong> olması gerekir. Tavsiye edilen bekleme süresi <strong>en az 24 saattir</strong>. Kürlenmesini tamamlamamış bir PÜ katman üzerine UV uygulamak, alttaki filmin çözücü ve ısı etkisiyle hareket etmesine yol açar.</p>
-      <p><strong>Renklendirilmiş yüzeyler.</strong> Valtinte gibi renklendiricilerle renklendirilmiş yüzeyler üzerine UV ürün uygulanması, aderans performansını olumsuz etkileyebilir. Bunun nedeni genellikle pigmentlerin kendisi değil, <strong>UV kürlenme mekanizmasının yüzey üzerindeki etkisidir</strong>. Özellikle <strong>kırmızı pigment</strong> içeren renklerde, kürlenme öncesi ve sonrası renk farkı daha belirgin görülebilir. Bu nedenle renk değerlendirmesi mutlaka <strong>UV kürlenmesi tamamlandıktan ve panel soğuduktan sonra</strong> yapılmalıdır; kürlenmemiş yaş film üzerinden verilen renk onayı yanıltır.</p>
+      <p><strong>Renklendirilmiş yüzeyler.</strong> Valtinte gibi renklendiricilerle renklendirilmiş yüzeyler üzerine UV ürün uygulanması, yapışma performansını olumsuz etkileyebilir. Bunun nedeni genellikle pigmentlerin kendisi değil, <strong>UV kürlenme mekanizmasının yüzey üzerindeki etkisidir</strong>. Özellikle <strong>kırmızı pigment</strong> içeren renklerde, kürlenme öncesi ve sonrası renk farkı daha belirgin görülebilir. Bu nedenle renk değerlendirmesi mutlaka <strong>UV kürlenmesi tamamlandıktan ve panel soğuduktan sonra</strong> yapılmalıdır; kürlenmemiş yaş film üzerinden verilen renk onayı yanıltır.</p>
 
       <h2 class="post-h2">Uygulama ortamı neden hattın bir parçası?</h2>
       <p>Uygulama sırasında veya hat çalışırken üretim alanının süpürülmesi ya da toz oluşturacak işlemler yapılmamalıdır. Havalanan toz UV hattına taşındığında doğrudan yüzey kalitesini düşürür; kürlenmiş film üzerinde bu kusurun telafisi zımpara ve yeniden kat demektir.</p>
@@ -309,7 +310,7 @@ p["govde"] = bas(p) + f"""
       <p>Teknik föyde öne çıkan kullanım alanları bahçe mobilyası, panjur ve jaluziler ile dış mekân metal kapılardır. İç mekânda ise malzeme karışımının yoğun olduğu her mobilya ve doğrama uygulaması için uygundur.</p>
 
       <h2 class="post-h2">Renk nasıl elde ediliyor?</h2>
-      <p>Sistemin çıkış noktası, <strong>beyaz mat konvertör son kat</strong>tır; bu ürün doğrudan kullanılabildiği gibi, renklendirilmiş son katların üretiminde taban olarak da kullanılır. Yüksek örtücülüğü sayesinde koyu ya da alacalı zeminlerde daha az katla kapatma sağlar — karma malzemeli bir üründe farklı alt zeminlerin aynı tonda görünmesi için bu önemlidir.</p>
+      <p>Sistemin çıkış noktası, <strong>beyaz mat baz son kat</strong>tır; bu ürün doğrudan kullanılabildiği gibi, renklendirilmiş son katların hazırlanmasında <strong>baz</strong> olarak da kullanılır. Yüksek örtücülüğü sayesinde koyu ya da alacalı zeminlerde daha az katla kapatma sağlar — karma malzemeli bir üründe farklı alt zeminlerin aynı tonda görünmesi için bu önemlidir.</p>
       <p>İstenen renk, standart kartela referanslarıyla hazırlanabilir. Renk kodları ve kartelalar için <a href="/renk-paleti.html">Renk Paleti</a> sayfamıza, partiden partiye renk tutarlılığının nasıl sağlandığı için <a href="/renk-makinesi.html">renk makinesi</a> sistemlerimize bakabilirsiniz.</p>
 
       <h2 class="post-h2">Nasıl uygulanır?</h2>
@@ -322,8 +323,8 @@ p["govde"] = bas(p) + f"""
       <p>Fırça ve rulonun da seçenek olması, sahada yerinde yapılan işlerde ya da küçük partilerde tabanca kurulumuna gerek bırakmaz.</p>
       <p>İncelticiyi ortam koşuluna göre seçmek sonucu doğrudan etkiler:</p>
       <ol>
-        <li><strong>Standart koşullarda</strong> 510102 veya 510101 kullanılır.</li>
-        <li><strong>Yaz aylarında ve fırça uygulamasında</strong> 500024 tercih edilir; yüzeyin işlenebilir kaldığı süreyi uzatır.</li>
+        <li><strong>Standart koşullarda</strong> 510102 kodlu inceltici kullanılır.</li>
+        <li><strong>Yaz aylarında ve fırça uygulamasında</strong> yavaş inceltici tercih edilir; yüzeyin işlenebilir kaldığı süreyi uzatır.</li>
         <li><strong>Yüksek sıcaklık veya yüksek nemde</strong> 540414 kullanılır. Bu inceltici <em>anti-blushing</em> özelliğiyle, nemli havada filmin içinde oluşan sisli-beyazımsı görünümü (blushing) engeller.</li>
       </ol>
       <p class="post-note">Çok yüzeyli bir son kat, yüzey hazırlığını ortadan kaldırmaz: her malzeme kendi temizlik, yağ alma ve zımpara gereksinimiyle gelir — özellikle alüminyum ve plastikte. Projenizdeki malzemeler için doğru hazırlık ve sistem kurgusunu teknik föy ve teknik ekibimizle birlikte netleştirin.</p>
