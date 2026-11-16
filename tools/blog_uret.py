@@ -6,6 +6,13 @@ blog.html ve blog/*.html, sss.html'nin menü/footer/script iskeletinden yeniden
 ekle, görseli img/blog/'a koy, site kökünden çalıştır:
     python3 tools/blog_uret.py
 Blog sayfalarını elle düzenleme; bir sonraki çalıştırmada üzerine yazılır.
+
+İSTİSNA — dışarıdan gelen yazılar: tools/blog_dis_yazilar.json'daki yazıların
+HTML dosyaları blog/ altında elle hazırlanmış hâlleriyle durur ve bu üretici
+onları YENİDEN YAZMAZ. Yalnız blog.html listesine kartlarını ve Blog şemasına
+girdilerini ekler, böylece blog.html her üretimde eksiksiz kalır. Böyle bir
+yazının metnini değiştirmek gerekirse kendi dosyasını düzenleyin; kart
+bilgisi (başlık, özet, görsel, tarih) değişiyorsa JSON'u da güncelleyin.
 """
 import json, re, html, os
 
@@ -73,6 +80,40 @@ CSS = """
 .pdf-box-title { font-size: 17px; font-weight: 700; color: var(--text); letter-spacing: -.3px; }
 .pdf-box-meta { font-size: 13.5px; color: var(--text3); margin-top: 3px; }
 
+/* Kategori başlığı ve bloğu (blog listesi) */
+.kat-blok + .kat-blok { margin-top: 52px; }
+.kat-blok[hidden] { display: none; }
+.kat-baslik { display: flex; align-items: baseline; gap: 14px; margin: 0 0 20px; }
+.kat-baslik h2 { font-size: 22px; font-weight: 800; letter-spacing: -.5px; color: var(--text); margin: 0; white-space: nowrap; }
+.kat-baslik .kat-sayi { font-size: 13px; color: var(--text3); white-space: nowrap; }
+.kat-baslik::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+
+/* Günün okuma önerisi — seçicinin altında, ayın gününe göre değişir */
+.gunun { display: flex; align-items: center; gap: 30px; margin-top: 30px; padding: 22px 26px; border: 1px solid rgba(38,53,140,.18); background: #f4f5fb; border-radius: 14px; text-decoration: none; color: inherit; transition: border-color .2s, transform .2s; }
+.gunun:hover { border-color: var(--accent); transform: translateY(-2px); }
+.gunun img { display: block; width: 208px; height: auto; aspect-ratio: 1400 / 722; object-fit: cover; border-radius: 8px; flex-shrink: 0; order: 2; }
+.gunun-metin { flex: 1; min-width: 0; }
+.gunun-ust { display: flex; align-items: baseline; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 7px; }
+.gunun-ust span { font-weight: 600; letter-spacing: .04em; color: var(--text3); }
+.gunun-ad { font-size: 17.5px; font-weight: 700; letter-spacing: -.3px; line-height: 1.3; color: var(--text); }
+.gunun-ozet { font-size: 14px; line-height: 1.6; color: var(--text2); margin-top: 6px; }
+@media (max-width: 600px) { .gunun { flex-direction: column; align-items: stretch; gap: 16px; } .gunun img { width: 100%; order: 0; } }
+
+/* Kategori seçici — listenin üstünde, yazıları süzer */
+.kat-sec { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.kat-sec a { display: inline-flex; align-items: baseline; gap: 7px; padding: 9px 16px; border: 1px solid var(--border); border-radius: 999px; font-size: 13.5px; font-weight: 600; color: var(--text2); text-decoration: none; transition: border-color .2s, color .2s, background .2s; }
+.kat-sec a:hover { border-color: var(--accent); color: var(--accent); }
+.kat-sec a[aria-current="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.kat-sec a i { font-style: normal; font-size: 12px; font-weight: 500; opacity: .62; }
+
+/* İlgili yazılar — paket yazılarındaki .ilgili ile birebir aynı */
+.ilgili { max-width: 760px; margin-top: 46px; }
+.ilgili-liste { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.ilgili-liste a { display: block; padding: 18px 20px; border: 1px solid var(--border); border-radius: 12px; text-decoration: none; background: #fff; transition: border-color .2s, transform .2s; }
+.ilgili-liste a:hover { border-color: var(--accent); transform: translateY(-2px); }
+.ilgili-etiket { display: block; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.ilgili-ad { display: block; font-size: 15.5px; font-weight: 700; line-height: 1.35; color: var(--text); }
+
 .nw { white-space: nowrap; }
 
 .post-note { max-width: 760px; margin-top: 22px; font-size: 13.5px; line-height: 1.6; color: var(--text3); }
@@ -129,6 +170,12 @@ def cta(ust, baslik):
 </section>
 """
 
+def ilgili(*yollar):
+    """İlgili yazılar bloğu. Başlık ve etiket üretim sırasında doldurulur,
+    böylece listede henüz tanımlanmamış yazılara da bağlantı verilebilir."""
+    return "<!--ILGILI:" + ",".join(yollar) + "-->"
+
+
 def bas(p):
     return f"""
 <section class="about-section" style="padding-top: 140px; padding-bottom: 20px; border-top: none;">
@@ -141,6 +188,11 @@ def bas(p):
   </div>
 </section>
 """
+
+# Dışarıdan gelen, elle hazırlanmış yazılar (üretilmez, yalnız listelenir)
+DIS = json.load(open(os.path.join(KOK, "tools", "blog_dis_yazilar.json"), encoding="utf-8"))
+for d in DIS:
+    d["hero_wh"] = tuple(d["hero_wh"])
 
 POSTS = []
 
@@ -198,7 +250,7 @@ p["govde"] = bas(p) + f"""
     </div>
   </div>
 </section>
-""" + cta("Astar seçimi ve teknik destek", "CNC desenlerinize uygun astarı birlikte belirleyelim")
+""" + ilgili("blog/ortuculuk-ve-cnc-dip-gosterme.html", "blog/zimpara-sorunlari.html", "blog/boyada-catlama.html") + cta("Astar seçimi ve teknik destek", "CNC desenlerinize uygun astarı birlikte belirleyelim")
 POSTS.append(p)
 
 # 5) Mobilyada UV uygulaması
@@ -268,7 +320,7 @@ p["govde"] = bas(p) + f"""
     </div>
   </div>
 </section>
-""" + cta("Hat denemesi ve teknik destek", "UV hattınızın parametrelerini birlikte optimize edelim")
+""" + ilgili("blog/zimpara-sorunlari.html", "blog/boyada-soyulma-yapismama.html", "blog/renk-farki-ve-renk-kiyaslama.html") + cta("Hat denemesi ve teknik destek", "UV hattınızın parametrelerini birlikte optimize edelim")
 POSTS.append(p)
 
 # 4) Multi surface son kat
@@ -331,7 +383,7 @@ p["govde"] = bas(p) + f"""
     </div>
   </div>
 </section>
-""" + cta("Numune ve teknik destek", "Projenizdeki yüzeyler için doğru sistemi birlikte seçelim")
+""" + ilgili("blog/boyada-soyulma-yapismama.html", "blog/hangi-tiner-ne-zaman.html", "blog/beyaz-boya-ve-vernikte-sararma.html") + cta("Numune ve teknik destek", "Projenizdeki yüzeyler için doğru sistemi birlikte seçelim")
 POSTS.append(p)
 
 # 3) Yanma geciktirici sistem
@@ -389,7 +441,7 @@ p["govde"] = bas(p) + f"""
     </div>
   </div>
 </section>
-""" + cta("Teknik destek", "Projenizin yangın performansı gereksinimini birlikte değerlendirelim")
+""" + ilgili("blog/karisim-orani-sertlestirici-kullanim-suresi.html", "blog/su-bazli-boyaya-gecis.html", "blog/boyada-catlama.html") + cta("Teknik destek", "Projenizin yangın performansı gereksinimini birlikte değerlendirelim")
 POSTS.append(p)
 
 # 2) Spor salonu parkesi
@@ -437,7 +489,7 @@ p["govde"] = bas(p) + f"""
     </div>
   </div>
 </section>
-""" + cta("Teknik destek", "Spor zemini projeniz için sistemi birlikte planlayalım")
+""" + ilgili("blog/su-bazli-boyaya-gecis.html", "blog/boyada-soyulma-yapismama.html", "blog/zimpara-sorunlari.html") + cta("Teknik destek", "Spor zemini projeniz için sistemi birlikte planlayalım")
 POSTS.append(p)
 
 # 1) Valresa Renk Trendleri
@@ -487,8 +539,25 @@ p["govde"] = bas(p) + f"""
     <p class="post-note">Dijital renkler ekran ayarlarına göre farklı görünebilir; katalogdaki tonlar yalnızca yaklaşık renk referansı olarak değerlendirilmelidir.</p>
   </div>
 </section>
-""" + cta("Kartela ve numune", "Projeniz için tonları birlikte seçelim")
+""" + ilgili("blog/renk-farki-ve-renk-kiyaslama.html", "blog/beyaz-boya-ve-vernikte-sararma.html", "blog/mobilyada-eskitme-ve-patina.html") + cta("Kartela ve numune", "Projeniz için tonları birlikte seçelim")
 POSTS.append(p)
+
+# ── ilgili yazılar yer tutucularını çöz ──
+BILGI = {q["yol"]: (q["etiket"], q["baslik"]) for q in DIS + POSTS}
+
+def _ilgili_coz(m):
+    satir = ""
+    for yol in m.group(1).split(","):
+        etiket, baslik = BILGI[yol]
+        satir += (f'\n<a href="/{yol}"><span class="ilgili-etiket">{etiket}</span>'
+                  f'<span class="ilgili-ad">{html.escape(baslik)}</span></a>')
+    return ('\n<section class="about-section" style="border-top:none; padding-top:0; padding-bottom:0;">\n'
+            '  <div class="section-inner">\n    <div class="ilgili">\n'
+            '      <h2 class="post-h2">İlgili yazılar</h2>\n      <div class="ilgili-liste">'
+            + satir + '\n      </div>\n    </div>\n  </div>\n</section>\n')
+
+for p in POSTS:
+    p["govde"] = re.sub(r"<!--ILGILI:([^>]+)-->", _ilgili_coz, p["govde"])
 
 for p in POSTS:
     url = SITE + "/" + p["yol"]
@@ -501,40 +570,158 @@ for p in POSTS:
                       {"@type": "ListItem", "position": 2, "name": p["baslik"], "item": url}]}],
           icerik=p["govde"])
 
-# ── blog ana sayfası ──
-kartlar = ""
-for i, p in enumerate(POSTS):
-    w, h = p["hero_wh"]
-    yuk = 'fetchpriority="high"' if i == 0 else 'loading="lazy"'
-    kartlar += f"""
-      <a class="post-card" href="/{p['yol']}">
-        <img src="{p['hero']}" alt="{p['hero_alt']}" width="{w}" height="{h}" {yuk}>
-        <div class="post-card-body">
-          <div class="post-card-tag">{p['etiket']}</div>
-          <div class="post-card-title">{p['h1'] if 'nw' in p['h1'] else p['baslik']}</div>
-          <p class="post-card-desc">{p['ozet']}</p>
-          <div class="post-card-foot"><span>{p['tarih']}</span><span>Yazıyı oku →</span></div>
-        </div>
-      </a>"""
+# ── blog ana sayfası (tek sayfa, kategori süzgeci) ──
+# Bütün yazılar tek sayfada, kategori kategori bloklanmış olarak durur. Üstteki
+# seçici blokları gösterip gizler; JavaScript kapalıysa hepsi görünür kalır.
+TUM = DIS + POSTS
+KAT_SIRA = ["Uygulama Rehberi", "Yüzey Sorunları", "Ürün Teknolojisi", "Yangın Güvenliği", "Renk Trendleri"]
+
+bilinmeyen = {q["etiket"] for q in TUM} - set(KAT_SIRA)
+assert not bilinmeyen, "KAT_SIRA'ya eklenmemiş kategori: %s" % bilinmeyen
+
+gruplar = [(k, [q for q in TUM if q["etiket"] == k]) for k in KAT_SIRA]
+gruplar = [(k, v) for k, v in gruplar if v]
+
+
+def kimlik(kat):
+    tr = str.maketrans("çğıöşüÇĞİÖŞÜ", "cgiosucgiosu")
+    return re.sub(r"[^a-z0-9]+", "-", kat.translate(tr).lower()).strip("-")
+
+
+def kart(q, ilk):
+    w, h = q["hero_wh"]
+    yuk = 'fetchpriority="high"' if ilk else 'loading="lazy"'
+    return f"""
+        <a class="post-card" href="/{q['yol']}">
+          <img src="{q['hero']}" alt="{q['hero_alt']}" width="{w}" height="{h}" {yuk}>
+          <div class="post-card-body">
+            <div class="post-card-tag">{q['etiket']}</div>
+            <div class="post-card-title">{q['h1'] if 'nw' in q.get('h1', '') else q['baslik']}</div>
+            <p class="post-card-desc">{q['ozet']}</p>
+            <div class="post-card-foot"><span>{q['tarih']}</span><span>Yazıyı oku →</span></div>
+          </div>
+        </a>"""
+
+
+# ── günün okuma önerisi ──
+# Bütün yazılar tek bir sırada dizilir ve her gün bir sonrakine geçilir; sıra
+# bitince başa döner. Yeni yazı eklendiğinde sıraya kendiliğinden katılır ve
+# döngü uzar. Sıra kategoriler arasında dönüşümlü kurulur, böylece arka arkaya
+# iki gün aynı konu gelmez (küçük kategoriler tükenince sonlarda tekrar olur).
+def gunluk_sira(gruplar):
+    kalan = {k: list(v) for k, v in gruplar}
+    toplam = sum(len(v) for v in kalan.values())
+    sira, onceki = [], None
+    while len(sira) < toplam:
+        aday = [k for k, v in kalan.items() if v and k != onceki] or [k for k, v in kalan.items() if v]
+        k = max(aday, key=lambda x: len(kalan[x]))    # en kalabalık kategoriden al
+        sira.append(kalan[k].pop(0))
+        onceki = k
+    return sira
+
+GUN_SIRA = gunluk_sira(gruplar)
+
+gunun_veri = json.dumps([{"yol": "/" + q["yol"], "etiket": q["etiket"],
+                          "baslik": q["baslik"], "ozet": q["ozet"],
+                          "hero": q["hero"], "alt": q["hero_alt"]} for q in GUN_SIRA],
+                        ensure_ascii=False)
+
+_ilk = GUN_SIRA[0]
+gunun = f"""
+    <a class="gunun" id="gunun" href="/{_ilk['yol']}">
+      <img src="{_ilk['hero']}" alt="{html.escape(_ilk['hero_alt'])}" width="1400" height="722" loading="lazy">
+      <div class="gunun-metin">
+        <div class="gunun-ust">Günün okuma önerisi <span>{_ilk['etiket']}</span></div>
+        <div class="gunun-ad">{html.escape(_ilk['baslik'])}</div>
+        <p class="gunun-ozet">{html.escape(_ilk['ozet'])}</p>
+      </div>
+    </a>"""
+
+secici = '\n    <div class="kat-sec" id="kat-sec">'
+secici += f'\n      <a href="#tumu" data-kat="tumu" aria-current="true">Tümü <i>{len(TUM)}</i></a>'
+for kat, yazilar in gruplar:
+    secici += f'\n      <a href="#{kimlik(kat)}" data-kat="{kimlik(kat)}">{kat} <i>{len(yazilar)}</i></a>'
+secici += "\n    </div>"
+
+bloklar, ilk_kart = "", True
+for kat, yazilar in gruplar:
+    bloklar += (f'\n    <div class="kat-blok" data-kat="{kimlik(kat)}">'
+                f'\n      <div class="kat-baslik"><h2>{kat}</h2>'
+                f'<span class="kat-sayi">{len(yazilar)} yazı</span></div>'
+                f'\n      <div class="post-list">')
+    for q in yazilar:
+        bloklar += kart(q, ilk_kart)
+        ilk_kart = False
+    bloklar += "\n      </div>\n    </div>"
+
+# Süzgeç: adres çubuğundaki # ile çalışır, paylaşılan bağlantı da aynı kategoriyi açar
+SUZGEC = """
+<script>
+(function () {
+  // Günün okuma önerisi: her gün sıradaki yazı, sıra bitince başa döner
+  var gunler = __GUNLER__;
+  var kutu = document.getElementById('gunun');
+  if (kutu && gunler.length) {
+    var d = new Date();
+    var gun = Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 86400000);
+    var y = gunler[((gun % gunler.length) + gunler.length) % gunler.length];
+    kutu.href = y.yol;
+    kutu.querySelector('img').src = y.hero;
+    kutu.querySelector('img').alt = y.alt;
+    kutu.querySelector('.gunun-ust span').textContent = y.etiket;
+    kutu.querySelector('.gunun-ad').textContent = y.baslik;
+    kutu.querySelector('.gunun-ozet').textContent = y.ozet;
+  }
+})();
+(function () {
+  var sec = document.getElementById('kat-sec');
+  if (!sec) return;
+  var dugmeler = sec.querySelectorAll('a[data-kat]');
+  var bloklar = document.querySelectorAll('.kat-blok');
+  function uygula(kat) {
+    var bulundu = false;
+    dugmeler.forEach(function (d) {
+      var secili = d.dataset.kat === kat;
+      if (secili) bulundu = true;
+      d.setAttribute('aria-current', secili ? 'true' : 'false');
+    });
+    if (!bulundu) return uygula('tumu');
+    bloklar.forEach(function (b) {
+      b.hidden = kat !== 'tumu' && b.dataset.kat !== kat;
+    });
+  }
+  dugmeler.forEach(function (d) {
+    d.addEventListener('click', function (e) {
+      e.preventDefault();
+      uygula(d.dataset.kat);
+      history.replaceState(null, '', d.dataset.kat === 'tumu' ? location.pathname : '#' + d.dataset.kat);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+  uygula((location.hash || '#tumu').slice(1));
+})();
+</script>
+"""
+
 liste = f"""
 <section class="about-section" style="padding-top: 148px; padding-bottom: 24px; border-top: none;">
   <div class="section-inner">
     <div class="section-tag">Blog</div>
     <h1 class="blog-h1">Renk, yüzey ve boya üzerine</h1>
-    <p class="about-lead" style="max-width:680px;font-size:clamp(14px,1.3vw,18px);color:var(--text2);">Renk trendleri, uygulama rehberleri ve ahşap, mobilya ve sanayi boyaları üzerine İBAVALRESA'dan notlar.</p>
+    <p class="about-lead" style="max-width:680px;font-size:clamp(14px,1.3vw,18px);color:var(--text2);">Renk trendleri, uygulama rehberleri ve ahşap, mobilya ve sanayi boyaları üzerine İBAVALRESA'dan notlar.</p>{secici}{gunun}
   </div>
 </section>
 
 <section class="about-section" style="border-top:none; padding-top:8px; padding-bottom:72px;">
-  <div class="section-inner">
-    <div class="post-list">{kartlar}
-    </div>
+  <div class="section-inner">{bloklar}
   </div>
 </section>
-"""
-sayfa(yol="blog.html", title="Blog — İBAVALRESA", desc="Renk trendleri, uygulama rehberleri ve ahşap, mobilya ve sanayi boyaları üzerine İBAVALRESA blog yazıları.",
-      og_img=POSTS[0]["og"], og_type="website",
+{SUZGEC.replace("__GUNLER__", gunun_veri)}"""
+
+sayfa(yol="blog.html", title="Blog — İBAVALRESA",
+      desc="Renk trendleri, uygulama rehberleri ve ahşap, mobilya ve sanayi boyaları üzerine İBAVALRESA blog yazıları.",
+      og_img=TUM[0]["og"], og_type="website",
       schema=[{"@context": "https://schema.org", "@type": "Blog", "name": "İBAVALRESA Blog", "url": SITE + "/blog.html", "inLanguage": "tr-TR",
                "publisher": org,
-               "blogPost": [{"@type": "BlogPosting", "headline": p["baslik"], "url": SITE + "/" + p["yol"], "datePublished": p["tarih_iso"]} for p in POSTS]}],
+               "blogPost": [{"@type": "BlogPosting", "headline": q["baslik"], "url": SITE + "/" + q["yol"], "datePublished": q["tarih_iso"]} for q in TUM]}],
       icerik=liste)

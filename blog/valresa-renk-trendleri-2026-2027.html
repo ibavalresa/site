@@ -69,6 +69,40 @@
 .pdf-box-title { font-size: 17px; font-weight: 700; color: var(--text); letter-spacing: -.3px; }
 .pdf-box-meta { font-size: 13.5px; color: var(--text3); margin-top: 3px; }
 
+/* Kategori başlığı ve bloğu (blog listesi) */
+.kat-blok + .kat-blok { margin-top: 52px; }
+.kat-blok[hidden] { display: none; }
+.kat-baslik { display: flex; align-items: baseline; gap: 14px; margin: 0 0 20px; }
+.kat-baslik h2 { font-size: 22px; font-weight: 800; letter-spacing: -.5px; color: var(--text); margin: 0; white-space: nowrap; }
+.kat-baslik .kat-sayi { font-size: 13px; color: var(--text3); white-space: nowrap; }
+.kat-baslik::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+
+/* Günün okuma önerisi — seçicinin altında, ayın gününe göre değişir */
+.gunun { display: flex; align-items: center; gap: 30px; margin-top: 30px; padding: 22px 26px; border: 1px solid rgba(38,53,140,.18); background: #f4f5fb; border-radius: 14px; text-decoration: none; color: inherit; transition: border-color .2s, transform .2s; }
+.gunun:hover { border-color: var(--accent); transform: translateY(-2px); }
+.gunun img { display: block; width: 208px; height: auto; aspect-ratio: 1400 / 722; object-fit: cover; border-radius: 8px; flex-shrink: 0; order: 2; }
+.gunun-metin { flex: 1; min-width: 0; }
+.gunun-ust { display: flex; align-items: baseline; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 7px; }
+.gunun-ust span { font-weight: 600; letter-spacing: .04em; color: var(--text3); }
+.gunun-ad { font-size: 17.5px; font-weight: 700; letter-spacing: -.3px; line-height: 1.3; color: var(--text); }
+.gunun-ozet { font-size: 14px; line-height: 1.6; color: var(--text2); margin-top: 6px; }
+@media (max-width: 600px) { .gunun { flex-direction: column; align-items: stretch; gap: 16px; } .gunun img { width: 100%; order: 0; } }
+
+/* Kategori seçici — listenin üstünde, yazıları süzer */
+.kat-sec { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.kat-sec a { display: inline-flex; align-items: baseline; gap: 7px; padding: 9px 16px; border: 1px solid var(--border); border-radius: 999px; font-size: 13.5px; font-weight: 600; color: var(--text2); text-decoration: none; transition: border-color .2s, color .2s, background .2s; }
+.kat-sec a:hover { border-color: var(--accent); color: var(--accent); }
+.kat-sec a[aria-current="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.kat-sec a i { font-style: normal; font-size: 12px; font-weight: 500; opacity: .62; }
+
+/* İlgili yazılar — paket yazılarındaki .ilgili ile birebir aynı */
+.ilgili { max-width: 760px; margin-top: 46px; }
+.ilgili-liste { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.ilgili-liste a { display: block; padding: 18px 20px; border: 1px solid var(--border); border-radius: 12px; text-decoration: none; background: #fff; transition: border-color .2s, transform .2s; }
+.ilgili-liste a:hover { border-color: var(--accent); transform: translateY(-2px); }
+.ilgili-etiket { display: block; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.ilgili-ad { display: block; font-size: 15.5px; font-weight: 700; line-height: 1.35; color: var(--text); }
+
 .nw { white-space: nowrap; }
 
 .post-note { max-width: 760px; margin-top: 22px; font-size: 13.5px; line-height: 1.6; color: var(--text3); }
@@ -295,6 +329,19 @@
       <p>Seri üretimde ise rengin her partide aynı çıkması belirleyicidir. RAL gibi standart bir referans kullanmak; tasarımcı, mobilya üreticisi ve boya tedarikçisi arasında aynı rengin aynı kodla konuşulmasını sağlar ve tekrar siparişlerde tutarlılığı korur. İBAVALRESA'nın <a href="/renk-makinesi.html">renk makinesi</a> sistemleri, RAL referanslı renklerin farklı zamanlarda ve farklı üretim partilerinde aynı kaliteyle yeniden hazırlanmasını sağlar; standart kartelalar için <a href="/renk-paleti.html">Renk Paleti</a> sayfasına göz atabilirsiniz.</p>
     </div>
     <p class="post-note">Dijital renkler ekran ayarlarına göre farklı görünebilir; katalogdaki tonlar yalnızca yaklaşık renk referansı olarak değerlendirilmelidir.</p>
+  </div>
+</section>
+
+<section class="about-section" style="border-top:none; padding-top:0; padding-bottom:0;">
+  <div class="section-inner">
+    <div class="ilgili">
+      <h2 class="post-h2">İlgili yazılar</h2>
+      <div class="ilgili-liste">
+<a href="/blog/renk-farki-ve-renk-kiyaslama.html"><span class="ilgili-etiket">Yüzey Sorunları</span><span class="ilgili-ad">Uygulanan renk numuneyle neden tutmuyor, renk nasıl doğru kıyaslanır?</span></a>
+<a href="/blog/beyaz-boya-ve-vernikte-sararma.html"><span class="ilgili-etiket">Yüzey Sorunları</span><span class="ilgili-ad">Beyaz boya ve vernik neden sararır?</span></a>
+<a href="/blog/mobilyada-eskitme-ve-patina.html"><span class="ilgili-etiket">Uygulama Rehberi</span><span class="ilgili-ad">Mobilyada eskitme ve patina nasıl yapılır?</span></a>
+      </div>
+    </div>
   </div>
 </section>
 
