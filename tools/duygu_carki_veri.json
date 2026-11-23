@@ -1,0 +1,1068 @@
+{
+ "duygular": [
+  {
+   "ad": "Ferahlık",
+   "metin": "Beyazlar ve açık nötrler. Mekânı aydınlık ve geniş gösterir; diğer renklerin yanında sakin bir zemin olur.",
+   "alanlar": [
+    "Mutfak dolabı",
+    "İç kapılar",
+    "Gardırop ve dolap yüzeyleri"
+   ],
+   "alt": [
+    {
+     "ad": "Aydınlık",
+     "metin": "Saf beyazdan sıcak beyaza uzanan en açık tonlar.",
+     "tonlar": [
+      {
+       "kod": "RAL 9016",
+       "hex": "#fcfcfc",
+       "aile": "Saf Beyazlar",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 9003",
+       "hex": "#fdfdfd",
+       "aile": "Saf Beyazlar",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 9010",
+       "hex": "#faf9f5",
+       "aile": "Saf Beyazlar",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 9001",
+       "hex": "#f9f5ea",
+       "aile": "Saf Beyazlar",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 1013",
+       "hex": "#faf3e3",
+       "aile": "Saf Beyazlar",
+       "ikinci": false,
+       "diger": ""
+      }
+     ]
+    },
+    {
+     "ad": "Sadelik",
+     "metin": "Beyazın hemen yanındaki kırık beyazlar ve açık griler.",
+     "tonlar": [
+      {
+       "kod": "RAL 9002",
+       "hex": "#f0efea",
+       "aile": "Saf Beyazlar",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 1015",
+       "hex": "#f9efe3",
+       "aile": "Saf Beyazlar",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7047",
+       "hex": "#e8e6e7",
+       "aile": "Yumuşak Nötrler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7035",
+       "hex": "#dfe0db",
+       "aile": "Yumuşak Nötrler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7040",
+       "hex": "#c0c0c1",
+       "aile": "Yumuşak Nötrler",
+       "ikinci": false,
+       "diger": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Huzur",
+   "metin": "Mineral griler, tozlu maviler, grej ve taupe. Göze batmayan, dingin bir zemin oluşturur; ahşap dokular ve metal aksesuarlarla kolay bir arada durur.",
+   "alanlar": [
+    "Yatak odası mobilyası",
+    "Mutfak dolabı",
+    "İç kapılar"
+   ],
+   "alt": [
+    {
+     "ad": "Dinginlik",
+     "metin": "Mavimsi ve yeşilimsi, açık ve orta griler.",
+     "tonlar": [
+      {
+       "kod": "RAL 7042",
+       "hex": "#b6b5b3",
+       "aile": "Yumuşak Nötrler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7045",
+       "hex": "#a5a5a5",
+       "aile": "Yumuşak Nötrler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7036",
+       "hex": "#b7b6b4",
+       "aile": "Mineral Griler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7037",
+       "hex": "#989898",
+       "aile": "Mineral Griler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7046",
+       "hex": "#989c9f",
+       "aile": "Mineral Griler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 5014",
+       "hex": "#758497",
+       "aile": "Tozlu Maviler",
+       "ikinci": false,
+       "diger": ""
+      }
+     ]
+    },
+    {
+     "ad": "Yumuşaklık",
+     "metin": "Gri ile bej arasında kalan grej ve taupe tonları.",
+     "tonlar": [
+      {
+       "kod": "RAL 7030",
+       "hex": "#c5c2bb",
+       "aile": "Sıcak Griler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 1019",
+       "hex": "#ae9e89",
+       "aile": "Grej ve Taupe",
+       "ikinci": false,
+       "diger": "Sıcaklık › Samimiyet"
+      },
+      {
+       "kod": "RAL 7032",
+       "hex": "#bdb9ad",
+       "aile": "Grej ve Taupe",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7038",
+       "hex": "#bcbdb8",
+       "aile": "Grej ve Taupe",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7044",
+       "hex": "#c6bdae",
+       "aile": "Grej ve Taupe",
+       "ikinci": false,
+       "diger": "Sıcaklık › Samimiyet"
+      },
+      {
+       "kod": "RAL 7048",
+       "hex": "#a19d97",
+       "aile": "Grej ve Taupe",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7006",
+       "hex": "#8c8170",
+       "aile": "Grej ve Taupe",
+       "ikinci": false,
+       "diger": ""
+      }
+     ]
+    },
+    {
+     "ad": "Serinlik",
+     "metin": "Taşı ve betonu hatırlatan serin griler ile tozlu maviler.",
+     "tonlar": [
+      {
+       "kod": "RAL 7000",
+       "hex": "#959ea8",
+       "aile": "Mineral Griler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7031",
+       "hex": "#7d848c",
+       "aile": "Mineral Griler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 5023",
+       "hex": "#4d648a",
+       "aile": "Tozlu Maviler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 5024",
+       "hex": "#6897b5",
+       "aile": "Tozlu Maviler",
+       "ikinci": false,
+       "diger": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Güven",
+   "metin": "Lacivertler, maviler ve orta griler. Dengeli ve düzenli bir görünüm kurar; çalışma ve ofis mobilyasında sakin bir ağırlık verir.",
+   "alanlar": [
+    "Ofis mobilyası",
+    "Kütüphane ve raf",
+    "İç kapılar"
+   ],
+   "alt": [
+    {
+     "ad": "Kararlılık",
+     "metin": "Derin lacivertler ve kobalt tonları.",
+     "tonlar": [
+      {
+       "kod": "RAL 5002",
+       "hex": "#10307b",
+       "aile": "Maviler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 5003",
+       "hex": "#142f54",
+       "aile": "Maviler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 5011",
+       "hex": "#09243f",
+       "aile": "Maviler",
+       "ikinci": false,
+       "diger": "Zarafet › Gizem"
+      },
+      {
+       "kod": "RAL 5013",
+       "hex": "#163259",
+       "aile": "Maviler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 5008",
+       "hex": "#273643",
+       "aile": "Tozlu Maviler",
+       "ikinci": false,
+       "diger": ""
+      }
+     ]
+    },
+    {
+     "ad": "Denge",
+     "metin": "Orta griler ve gri-maviler; ne açık ne koyu.",
+     "tonlar": [
+      {
+       "kod": "RAL 7004",
+       "hex": "#bdbdbf",
+       "aile": "Sıcak Griler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7033",
+       "hex": "#aaaca7",
+       "aile": "Sıcak Griler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7023",
+       "hex": "#7d7f76",
+       "aile": "Sıcak Griler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7034",
+       "hex": "#8c8870",
+       "aile": "Sıcak Griler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7039",
+       "hex": "#787571",
+       "aile": "Mineral Griler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 5000",
+       "hex": "#365784",
+       "aile": "Maviler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 5007",
+       "hex": "#35668f",
+       "aile": "Maviler",
+       "ikinci": false,
+       "diger": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Tazelik",
+   "metin": "Yeşiller ve botanik yeşiller. Doğayı hatırlatan tonlar; açık ahşap ve beyazla temiz bir karşıtlık kurar.",
+   "alanlar": [
+    "Mutfak dolabı",
+    "Çocuk odası mobilyası",
+    "Banyo dolapları"
+   ],
+   "alt": [
+    {
+     "ad": "Doğallık",
+     "metin": "Yaprağı ve otu hatırlatan orta yeşiller.",
+     "tonlar": [
+      {
+       "kod": "RAL 6011",
+       "hex": "#758666",
+       "aile": "Yeşiller",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 6021",
+       "hex": "#8e9e81",
+       "aile": "Yeşiller",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 6003",
+       "hex": "#444839",
+       "aile": "Yeşiller",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 6013",
+       "hex": "#707460",
+       "aile": "Botanik Yeşiller",
+       "ikinci": false,
+       "diger": "Tutku › Romantizm"
+      },
+      {
+       "kod": "RAL 6025",
+       "hex": "#5d703e",
+       "aile": "Botanik Yeşiller",
+       "ikinci": false,
+       "diger": ""
+      }
+     ]
+    },
+    {
+     "ad": "Canlılık",
+     "metin": "Turkuaza ve pastel yeşile yakın açık tonlar.",
+     "tonlar": [
+      {
+       "kod": "RAL 6019",
+       "hex": "#bad1b5",
+       "aile": "Yeşiller",
+       "ikinci": false,
+       "diger": "Neşe › Oyunculuk"
+      },
+      {
+       "kod": "RAL 5018",
+       "hex": "#039698",
+       "aile": "Maviler",
+       "ikinci": false,
+       "diger": "Neşe › Oyunculuk"
+      },
+      {
+       "kod": "RAL 6000",
+       "hex": "#4a7363",
+       "aile": "Botanik Yeşiller",
+       "ikinci": false,
+       "diger": ""
+      }
+     ]
+    },
+    {
+     "ad": "İçe dönüş",
+     "metin": "Çam ve köknar yeşili gibi koyu, kapalı yeşiller.",
+     "tonlar": [
+      {
+       "kod": "RAL 6005",
+       "hex": "#173a2f",
+       "aile": "Yeşiller",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 6028",
+       "hex": "#244c43",
+       "aile": "Yeşiller",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 6009",
+       "hex": "#233026",
+       "aile": "Botanik Yeşiller",
+       "ikinci": false,
+       "diger": "Zarafet › Gizem"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Neşe",
+   "metin": "Sarılar, hardallar ve pembeler. Canlı ama ölçülü; tek bir mobilya parçasında, bir kapakta ya da sandalyede vurgu olarak öne çıkar.",
+   "alanlar": [
+    "Sandalye ve tabure",
+    "Konsol ve sehpa",
+    "Tek kapak ya da çekmece vurgusu"
+   ],
+   "alt": [
+    {
+     "ad": "Enerji",
+     "metin": "Parlak sarılar ve altın sarısı.",
+     "tonlar": [
+      {
+       "kod": "RAL 1018",
+       "hex": "#fae470",
+       "aile": "Kum ve Krem",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 1023",
+       "hex": "#fed434",
+       "aile": "Kum ve Krem",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 1037",
+       "hex": "#f9ad30",
+       "aile": "Kum ve Krem",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 1004",
+       "hex": "#f4b103",
+       "aile": "Sarılar ve Hardallar",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 1006",
+       "hex": "#f5a11a",
+       "aile": "Sarılar ve Hardallar",
+       "ikinci": false,
+       "diger": ""
+      }
+     ]
+    },
+    {
+     "ad": "Oyunculuk",
+     "metin": "Pudra ve pembe tonları; yanında turkuaz ve pastel yeşil.",
+     "tonlar": [
+      {
+       "kod": "RAL 3015",
+       "hex": "#f2b1b8",
+       "aile": "Pudra Pembe ve Ten Tonları",
+       "ikinci": false,
+       "diger": "Tutku › Romantizm"
+      },
+      {
+       "kod": "RAL 3014",
+       "hex": "#e4938f",
+       "aile": "Pudra Pembe ve Ten Tonları",
+       "ikinci": false,
+       "diger": "Tutku › Romantizm"
+      },
+      {
+       "kod": "RAL 5018",
+       "hex": "#039698",
+       "aile": "Maviler",
+       "ikinci": true,
+       "diger": "Tazelik › Canlılık"
+      },
+      {
+       "kod": "RAL 6019",
+       "hex": "#bad1b5",
+       "aile": "Yeşiller",
+       "ikinci": true,
+       "diger": "Tazelik › Canlılık"
+      }
+     ]
+    },
+    {
+     "ad": "Nostalji",
+     "metin": "Okra ve hardal; yanında kum ve açık kahve.",
+     "tonlar": [
+      {
+       "kod": "RAL 1024",
+       "hex": "#bd9c4e",
+       "aile": "Sarılar ve Hardallar",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 1027",
+       "hex": "#9c8b3b",
+       "aile": "Sarılar ve Hardallar",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 8025",
+       "hex": "#6b513e",
+       "aile": "Sıcak Toprak – Kahveler",
+       "ikinci": true,
+       "diger": "Sıcaklık › Sağlamlık"
+      },
+      {
+       "kod": "RAL 1001",
+       "hex": "#e4cba3",
+       "aile": "Kum ve Krem",
+       "ikinci": true,
+       "diger": "Sıcaklık › Samimiyet"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Sıcaklık",
+   "metin": "Kum, krem, kahve ve terrakota. Toprak tonları mekâna sıcak ve doğal bir hava katar; ceviz ve meşe gibi ahşap dokularla birlikte bütünlüklü okunur.",
+   "alanlar": [
+    "Mutfak dolabı",
+    "Kütüphane ve TV ünitesi",
+    "İç kapılar"
+   ],
+   "alt": [
+    {
+     "ad": "Samimiyet",
+     "metin": "Bej, kum ve krem; beyaza göre daha yumuşak açık tonlar.",
+     "tonlar": [
+      {
+       "kod": "RAL 1001",
+       "hex": "#e4cba3",
+       "aile": "Kum ve Krem",
+       "ikinci": false,
+       "diger": "Neşe › Nostalji"
+      },
+      {
+       "kod": "RAL 1002",
+       "hex": "#f1d5a3",
+       "aile": "Kum ve Krem",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 1003",
+       "hex": "#e8bf63",
+       "aile": "Kum ve Krem",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 1019",
+       "hex": "#ae9e89",
+       "aile": "Grej ve Taupe",
+       "ikinci": true,
+       "diger": "Huzur › Yumuşaklık"
+      },
+      {
+       "kod": "RAL 7044",
+       "hex": "#c6bdae",
+       "aile": "Grej ve Taupe",
+       "ikinci": true,
+       "diger": "Huzur › Yumuşaklık"
+      }
+     ]
+    },
+    {
+     "ad": "Sağlamlık",
+     "metin": "Pişmiş toprağı ve kili hatırlatan kızıl kahveler.",
+     "tonlar": [
+      {
+       "kod": "RAL 8003",
+       "hex": "#78431a",
+       "aile": "Sıcak Toprak – Kahveler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 8011",
+       "hex": "#5e3114",
+       "aile": "Sıcak Toprak – Kahveler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 8025",
+       "hex": "#6b513e",
+       "aile": "Sıcak Toprak – Kahveler",
+       "ikinci": false,
+       "diger": "Neşe › Nostalji"
+      },
+      {
+       "kod": "RAL 8001",
+       "hex": "#aa5e22",
+       "aile": "Sıcak Toprak – Terrakota ve Kil",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 8023",
+       "hex": "#bf511f",
+       "aile": "Sıcak Toprak – Terrakota ve Kil",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 8002",
+       "hex": "#7e3a27",
+       "aile": "Sıcak Toprak – Terrakota ve Kil",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 8004",
+       "hex": "#9d371f",
+       "aile": "Sıcak Toprak – Terrakota ve Kil",
+       "ikinci": false,
+       "diger": "Tutku › Derinlik"
+      }
+     ]
+    },
+    {
+     "ad": "Köklülük",
+     "metin": "Koyu kahveler; masif ahşap görünümüyle yan yana bütünlük sağlar.",
+     "tonlar": [
+      {
+       "kod": "RAL 8016",
+       "hex": "#4d271a",
+       "aile": "Sıcak Toprak – Kahveler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 8017",
+       "hex": "#391f16",
+       "aile": "Sıcak Toprak – Kahveler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 8019",
+       "hex": "#3b2e25",
+       "aile": "Sıcak Toprak – Kahveler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 8022",
+       "hex": "#1f1a16",
+       "aile": "Sıcak Toprak – Kahveler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 8028",
+       "hex": "#443122",
+       "aile": "Sıcak Toprak – Kahveler",
+       "ikinci": false,
+       "diger": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Tutku",
+   "metin": "Kırmızılar, bordolar ve leylak. Dikkat çeken bir renk grubu; çoğunlukla tek bir yüzeyde vurgu olarak kullanılır.",
+   "alanlar": [
+    "Tek dolap ya da büfe",
+    "Sandalye",
+    "Mağaza mobilyası"
+   ],
+   "alt": [
+    {
+     "ad": "Romantizm",
+     "metin": "Pembe-bej kırmızı ve pastel leylak.",
+     "tonlar": [
+      {
+       "kod": "RAL 3012",
+       "hex": "#d68f80",
+       "aile": "Pudra Pembe ve Ten Tonları",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 4009",
+       "hex": "#b47a90",
+       "aile": "Pudra Pembe ve Ten Tonları",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 3014",
+       "hex": "#e4938f",
+       "aile": "Pudra Pembe ve Ten Tonları",
+       "ikinci": true,
+       "diger": "Neşe › Oyunculuk"
+      },
+      {
+       "kod": "RAL 3015",
+       "hex": "#f2b1b8",
+       "aile": "Pudra Pembe ve Ten Tonları",
+       "ikinci": true,
+       "diger": "Neşe › Oyunculuk"
+      },
+      {
+       "kod": "RAL 6013",
+       "hex": "#707460",
+       "aile": "Botanik Yeşiller",
+       "ikinci": true,
+       "diger": "Tazelik › Doğallık"
+      }
+     ]
+    },
+    {
+     "ad": "Cesaret",
+     "metin": "Saf ve koyu kırmızılar.",
+     "tonlar": [
+      {
+       "kod": "RAL 3020",
+       "hex": "#ce1616",
+       "aile": "Kırmızılar",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 3011",
+       "hex": "#7e1114",
+       "aile": "Kırmızılar",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 3004",
+       "hex": "#740b19",
+       "aile": "Kırmızılar",
+       "ikinci": false,
+       "diger": ""
+      }
+     ]
+    },
+    {
+     "ad": "Derinlik",
+     "metin": "Bordo ve şarap tonları.",
+     "tonlar": [
+      {
+       "kod": "RAL 3005",
+       "hex": "#520b13",
+       "aile": "Kırmızılar",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 3007",
+       "hex": "#2f0f14",
+       "aile": "Kırmızılar",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 8004",
+       "hex": "#9d371f",
+       "aile": "Sıcak Toprak – Terrakota ve Kil",
+       "ikinci": true,
+       "diger": "Sıcaklık › Sağlamlık"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ad": "Zarafet",
+   "metin": "Grafitler, antrasit ve siyahlar. Net ve modern bir görünüm verir; metal, cam ve açık ahşapla keskin bir karşıtlık kurar.",
+   "alanlar": [
+    "Mutfak dolabı",
+    "İç kapılar",
+    "Ofis mobilyası"
+   ],
+   "alt": [
+    {
+     "ad": "Özgüven",
+     "metin": "Koyu griler ve grafitler.",
+     "tonlar": [
+      {
+       "kod": "RAL 7010",
+       "hex": "#656764",
+       "aile": "Grafitler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7011",
+       "hex": "#5d6266",
+       "aile": "Grafitler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7012",
+       "hex": "#575b5e",
+       "aile": "Grafitler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7015",
+       "hex": "#4f5054",
+       "aile": "Grafitler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7024",
+       "hex": "#47484d",
+       "aile": "Grafitler",
+       "ikinci": false,
+       "diger": ""
+      }
+     ]
+    },
+    {
+     "ad": "Güç",
+     "metin": "Antrasit ve kömür tonları.",
+     "tonlar": [
+      {
+       "kod": "RAL 7016",
+       "hex": "#383d41",
+       "aile": "Grafitler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7021",
+       "hex": "#323433",
+       "aile": "Grafitler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7022",
+       "hex": "#454440",
+       "aile": "Grafitler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7026",
+       "hex": "#3a4149",
+       "aile": "Grafitler",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 7043",
+       "hex": "#53575a",
+       "aile": "Mineral Griler",
+       "ikinci": false,
+       "diger": ""
+      }
+     ]
+    },
+    {
+     "ad": "Gizem",
+     "metin": "Siyah ve siyaha yakın tonlar.",
+     "tonlar": [
+      {
+       "kod": "RAL 9004",
+       "hex": "#1a1b1d",
+       "aile": "Siyahlar",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 9005",
+       "hex": "#070707",
+       "aile": "Siyahlar",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 9011",
+       "hex": "#0d0e10",
+       "aile": "Siyahlar",
+       "ikinci": false,
+       "diger": ""
+      },
+      {
+       "kod": "RAL 5011",
+       "hex": "#09243f",
+       "aile": "Maviler",
+       "ikinci": true,
+       "diger": "Güven › Kararlılık"
+      },
+      {
+       "kod": "RAL 6009",
+       "hex": "#233026",
+       "aile": "Botanik Yeşiller",
+       "ikinci": true,
+       "diger": "Tazelik › İçe dönüş"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "not": "Renkler ekran ayarlarına göre farklı görünebilir; yaklaşık referans içindir.",
+ "yelpaze": [
+  "#fcfcfc",
+  "#fdfdfd",
+  "#faf9f5",
+  "#f0efea",
+  "#f9f5ea",
+  "#faf3e3",
+  "#f9efe3",
+  "#e8e6e7",
+  "#dfe0db",
+  "#c0c0c1",
+  "#b6b5b3",
+  "#a5a5a5",
+  "#bdbdbf",
+  "#c5c2bb",
+  "#aaaca7",
+  "#7d7f76",
+  "#8c8870",
+  "#959ea8",
+  "#7d848c",
+  "#b7b6b4",
+  "#989898",
+  "#787571",
+  "#53575a",
+  "#989c9f",
+  "#656764",
+  "#5d6266",
+  "#575b5e",
+  "#4f5054",
+  "#383d41",
+  "#323433",
+  "#454440",
+  "#47484d",
+  "#3a4149",
+  "#1a1b1d",
+  "#070707",
+  "#0d0e10",
+  "#e4cba3",
+  "#f1d5a3",
+  "#e8bf63",
+  "#fae470",
+  "#fed434",
+  "#f9ad30",
+  "#f4b103",
+  "#f5a11a",
+  "#bd9c4e",
+  "#9c8b3b",
+  "#78431a",
+  "#5e3114",
+  "#4d271a",
+  "#391f16",
+  "#3b2e25",
+  "#1f1a16",
+  "#6b513e",
+  "#443122",
+  "#aa5e22",
+  "#7e3a27",
+  "#9d371f",
+  "#bf511f",
+  "#740b19",
+  "#520b13",
+  "#7e1114",
+  "#ce1616",
+  "#2f0f14",
+  "#d68f80",
+  "#e4938f",
+  "#f2b1b8",
+  "#b47a90",
+  "#365784",
+  "#10307b",
+  "#142f54",
+  "#35668f",
+  "#09243f",
+  "#163259",
+  "#039698",
+  "#273643",
+  "#758497",
+  "#4d648a",
+  "#6897b5",
+  "#444839",
+  "#173a2f",
+  "#758666",
+  "#bad1b5",
+  "#8e9e81",
+  "#244c43",
+  "#707460",
+  "#5d703e",
+  "#4a7363",
+  "#233026",
+  "#ae9e89",
+  "#8c8170",
+  "#bdb9ad",
+  "#bcbdb8",
+  "#c6bdae",
+  "#a19d97"
+ ],
+ "sayi": {
+  "ton": 94,
+  "ikinci": 12,
+  "aile": 17
+ }
+}
