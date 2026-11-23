@@ -29,7 +29,7 @@ for v in VARLIKLAR:
         print(f"  ! bulunamadi, atlandi: {v}"); continue
     damga[v] = hashlib.md5(open(v, "rb").read()).hexdigest()[:8]
 
-sayfalar = sorted(glob.glob("*.html") + glob.glob("en/*.html"))
+sayfalar = sorted(glob.glob("*.html") + glob.glob("en/*.html") + glob.glob("blog/*.html"))  # blog/: elle hazırlanan dış yazılar da
 degisen = 0
 for f in sayfalar:
     s = open(f, encoding="utf-8").read(); o = s

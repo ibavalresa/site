@@ -23,9 +23,9 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/favicon-192x192.png">
 <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-<link rel="stylesheet" href="/css/base.css?v=5f99f7b7">
+<link rel="stylesheet" href="/css/base.css?v=574ec9d2">
 <style>
 .section-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
 .section-tag::before { content: ""; width: 22px; height: 1px; background: var(--accent); opacity: .5; }
@@ -225,6 +225,35 @@
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Menü"><span></span></button>
   </div>
 </nav>
+
+<!-- Çerez bildirimi: sayfanın başında, ilk boyamada görünsün diye (mobil LCP) -->
+<div class="cookie-bar" id="cookieBar" role="region" aria-label="Çerez bildirimi" hidden>
+  <p class="cookie-bar-text">Bu web sitesinde sitenin çalışması için zorunlu çerezler kullanılır. Gömülü YouTube videolarını sitede oynatmak için üçüncü taraf (YouTube) çerezlerine izin vermeniz gerekir. Ayrıntılar için <a href="/cerez-politikasi.html">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
+  <div class="cookie-bar-btns">
+    <button class="cookie-bar-btn ghost" id="cookieReject" type="button">Reddet</button>
+    <button class="cookie-bar-btn" id="cookieAccept" type="button">Kabul Et</button>
+  </div>
+</div>
+<script>
+(function(){
+  var stored = null;
+  try { stored = localStorage.getItem('ibav_cookieConsent'); } catch(e){}
+  window.ibavConsent = stored;
+  var bar = document.getElementById('cookieBar');
+  if (!bar) return;
+  function set(v){
+    window.ibavConsent = v;
+    try { localStorage.setItem('ibav_cookieConsent', v); } catch(e){}
+    bar.hidden = true;
+    try { document.dispatchEvent(new CustomEvent('ibav:consent', { detail: v })); } catch(e){}
+  }
+  bar.hidden = (stored === 'accepted' || stored === 'rejected');
+  var a = document.getElementById('cookieAccept');
+  var r = document.getElementById('cookieReject');
+  a && a.addEventListener('click', function(){ set('accepted'); });
+  r && r.addEventListener('click', function(){ set('rejected'); });
+})();
+</script>
 
 <!-- Mobile menu drawer -->
 <div class="mobile-menu" id="mobile-menu">
@@ -567,33 +596,6 @@ document.addEventListener('click', e => {
 </script>
 <!-- ── ÇEREZ BİLDİRİMİ ── -->
 
-<div class="cookie-bar" id="cookieBar" role="region" aria-label="Çerez bildirimi" hidden>
-  <p class="cookie-bar-text">Bu web sitesinde sitenin çalışması için zorunlu çerezler kullanılır. Gömülü YouTube videolarını sitede oynatmak için üçüncü taraf (YouTube) çerezlerine izin vermeniz gerekir. Ayrıntılar için <a href="/cerez-politikasi.html">Çerez Politikası</a> sayfamızı inceleyebilirsiniz.</p>
-  <div class="cookie-bar-btns">
-    <button class="cookie-bar-btn ghost" id="cookieReject" type="button">Reddet</button>
-    <button class="cookie-bar-btn" id="cookieAccept" type="button">Kabul Et</button>
-  </div>
-</div>
-<script>
-(function(){
-  var stored = null;
-  try { stored = localStorage.getItem('ibav_cookieConsent'); } catch(e){}
-  window.ibavConsent = stored;
-  var bar = document.getElementById('cookieBar');
-  if (!bar) return;
-  function set(v){
-    window.ibavConsent = v;
-    try { localStorage.setItem('ibav_cookieConsent', v); } catch(e){}
-    bar.hidden = true;
-    try { document.dispatchEvent(new CustomEvent('ibav:consent', { detail: v })); } catch(e){}
-  }
-  bar.hidden = (stored === 'accepted' || stored === 'rejected');
-  var a = document.getElementById('cookieAccept');
-  var r = document.getElementById('cookieReject');
-  a && a.addEventListener('click', function(){ set('accepted'); });
-  r && r.addEventListener('click', function(){ set('rejected'); });
-})();
-</script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b339ef40148849a3bd6edd8333dde101"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

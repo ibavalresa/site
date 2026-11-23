@@ -116,6 +116,13 @@ CSS = """
 
 .nw { white-space: nowrap; }
 
+.renk-aile { margin-top: 30px; }
+.renk-aile-ad { font-size: 19px; font-weight: 700; letter-spacing: -.3px; line-height: 1.3; color: var(--text); margin: 0 0 10px; }
+.renk-aile-ad span { font-weight: 500; color: var(--text3); }
+.renk-serit { display: flex; height: 34px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 12px; }
+.renk-serit span { flex: 1; }
+.renk-aile p { margin: 0; }
+
 .post-note { max-width: 760px; margin-top: 22px; font-size: 13.5px; line-height: 1.6; color: var(--text3); }
 @media (max-width: 600px) { .pdf-box { flex-direction: column; align-items: stretch; } .pdf-box .btn-primary { justify-content: center; } }
 """
@@ -495,14 +502,14 @@ POSTS.append(p)
 # 1) Valresa Renk Trendleri
 PDF = "/belgeler/Valresa-Colour-Trends-2026-2027.pdf"
 p = dict(yol="blog/valresa-renk-trendleri-2026-2027.html", etiket="Renk Trendleri",
-         baslik="Valresa 2026–2027 Renk Trendleri",
-         h1='Valresa <span class="nw">2026–2027</span> Renk Trendleri',
+         baslik="2026–2027 Mobilya Renk Trendleri: Valresa Renk Kataloğu",
+         h1='<span class="nw">2026–2027</span> Mobilya Renk Trendleri: Valresa Renk Kataloğu',
          lead="Renk makinesi sistemlerimizde en çok tercih edilen renklerden derlenen koleksiyon; mimarlar, iç mimarlar ve mobilya tasarımcıları için seçili RAL tonlarını 17 renk ailesinde sunar.",
-         ozet="Renk makinesi sistemlerimizde en çok tercih edilen renklerden derlenen, 17 renk ailesinde seçili RAL tonlarından oluşan profesyonel renk paleti.",
-         desc="Valresa 2026–2027 Renk Trendleri: renk makinesi sistemlerimizde en çok tercih edilen renklerden derlenen 17 renk ailesi ve 94 seçili RAL tonu. Mimarlar, iç mimarlar ve mobilya tasarımcıları için PDF katalog.",
-         tarih_iso="2026-10-05", tarih="5 Ekim 2026", guncel_iso="2026-10-07", guncel="7 Ekim 2026",
+         ozet="2026–2027'de öne çıkan mobilya renkleri: renk makinesi sistemlerimizde en çok tercih edilen tonlardan derlenen 17 renk ailesi ve PDF katalog.",
+         desc="2026–2027 mobilya renk trendleri: Valresa Renk Kataloğu'ndaki 17 renk ailesi, her birinin karakteri, uygun mobilyalar ve malzeme eşleşmeleri. PDF katalog.",
+         tarih_iso="2026-10-05", tarih="5 Ekim 2026", guncel_iso="2026-11-22", guncel="22 Kasım 2026",
          hero="/img/blog/valresa-renk-trendleri-2026-2027.jpg", hero_wh=(1400, 722),
-         hero_alt="Valresa 2026–2027 Colour Trends / Renk Trendleri kataloğu kapağı",
+         hero_alt="Valresa 2026–2027 mobilya renk trendleri kataloğu kapağı",
          og="/img/blog/valresa-renk-trendleri-2026-2027-og.jpg")
 p["govde"] = bas(p) + f"""
 <section class="about-section" style="border-top:none; padding-top:12px;">
@@ -510,13 +517,13 @@ p["govde"] = bas(p) + f"""
     <figure class="post-hero"><img src="{p['hero']}" alt="{p['hero_alt']}" width="1400" height="722" fetchpriority="high"></figure>
     <div class="post-body" style="margin-top:40px;">
       <h2 class="post-h2">Koleksiyon hakkında</h2>
-      <p>Valresa 2026–2027 Renk Trendleri; mimarlar, iç mimarlar ve mobilya tasarımcıları için <strong>seçili RAL tonlarını</strong>, güncel renk yönelimlerini ve zamansız nötrlerden karakterli tonlara uzanan profesyonel bir renk paletinde buluşturur.</p>
+      <p>Valresa 2026–2027 Renk Trendleri Koleksiyonu; mimarlar, iç mimarlar ve mobilya tasarımcıları için <strong>seçilmiş RAL renklerini</strong> ve güncel renk trendlerini bir araya getiriyor. Sade ve klasik nötr tonlardan özgün ve etkileyici renklere uzanan geniş renk yelpazesiyle tasarım projelerine ilham veren profesyonel bir renk paleti sunuyor.</p>
       <p>Koleksiyon, <strong>renk makinesi sistemlerimizde en çok tercih edilen renklerden</strong> derlenmiştir. Katalogdaki tonlar, mobilya ve iç mekân uygulamalarında sahada sıkça seçilen renklerdir.</p>
       <p>Renkler, farklı tasarım yaklaşımlarında kolay yorumlanabilmesi ve doğru tonların daha hızlı karşılaştırılabilmesi için tematik renk aileleri altında gruplandırılmıştır. Seçili RAL referanslarıyla hazırlanan koleksiyon, iç mimari, mobilya ve yüzey tasarımında renk kararlarına ilham vermeyi amaçlar.</p>
 
       <h2 class="post-h2">Katalogda neler var?</h2>
       <ul>
-        <li><strong>17 tematik renk ailesi:</strong> Pure Whites (Saf Beyazlar) ve Soft Neutrals (Yumuşak Nötrler) gibi zamansız nötrlerden Red Collection (Kırmızılar) ve Botanical Greens (Botanik Yeşiller) gibi karakterli tonlara.</li>
+        <li><strong>17 tematik renk ailesi:</strong> Saf Beyazlar (Pure Whites) ve Yumuşak Nötrler (Soft Neutrals) gibi sade ve klasik tonlardan, Kırmızılar (Red Collection) ve Botanik Yeşiller (Botanical Greens) gibi özgün ve etkileyici renklere uzanan geniş bir yelpaze.</li>
         <li><strong>94 seçili RAL tonu:</strong> her ailede, renk kartı ve RAL koduyla.</li>
         <li><strong>Pantone Yılın Renkleri 2017–2026:</strong> son on yılın renk yönelimlerini izlemek için referans.</li>
       </ul>
@@ -524,6 +531,100 @@ p["govde"] = bas(p) + f"""
     <div class="pdf-box">
       <div><div class="pdf-box-title">Valresa Colour Trends 2026–2027</div><div class="pdf-box-meta">PDF</div></div>
       <a class="btn-primary" href="{PDF}" target="_blank" rel="noopener"><span>Kataloğu İncele</span>{ARROW}</a>
+    </div>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="section-inner">
+    <div class="post-body">
+      <h2 class="post-h2">2026–2027'de öne çıkan mobilya renkleri</h2>
+      <p>Katalogdaki 17 renk ailesi, renk makinesi sistemlerimizde en çok tercih edilen renklerden derlendi. Aşağıda her ailenin karakterini, hangi mobilyada iyi durduğunu ve hangi malzemelerle eşleştiğini özetledik. Renk şeritleri katalogdaki tonları gösterir; RAL kodları ve büyük renk kartları <a href="{PDF}" target="_blank" rel="noopener">PDF katalogda</a>.</p>
+      <div class="renk-aile" id="saf-beyazlar">
+        <h3 class="renk-aile-ad">Saf Beyazlar <span>(Pure Whites)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#fcfcfc"></span><span style="background:#fdfdfd"></span><span style="background:#faf9f5"></span><span style="background:#f1f0eb"></span><span style="background:#f9f5ea"></span><span style="background:#f9f2e3"></span><span style="background:#f9efe3"></span></div>
+        <p>Saf beyazdan kırık beyaza ve fildişine uzanan, mekânı ferah ve aydınlık gösteren temel aile. Mutfak dolabı, banyo dolabı ve gardıroplarda zamansız bir başlangıç noktasıdır. Soğuk beyazlar mermer ve krom aksesuarla temiz bir görünüm verir; fildişi tonlar açık meşe ve pirinçle daha sıcak durur.</p>
+      </div>
+      <div class="renk-aile" id="yumusak-notrler">
+        <h3 class="renk-aile-ad">Yumuşak Nötrler <span>(Soft Neutrals)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#e8e6e7"></span><span style="background:#dfe0db"></span><span style="background:#bfbfbf"></span><span style="background:#b8b7b5"></span><span style="background:#a5a5a5"></span></div>
+        <p>Beyaz kadar keskin olmayan, açık ve hafif gri tonlar; göz yormayan sakin bir zemin oluşturur. Ofis mobilyası, dolap gövdeleri ve geniş duvar panellerinde bütün mekânı toparlar. Açık ahşap, beton görünümlü yüzeyler ve mat siyah metal ayaklarla iyi eşleşir.</p>
+      </div>
+      <div class="renk-aile" id="sicak-griler">
+        <h3 class="renk-aile-ad">Sıcak Griler <span>(Warm Greys)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#bdbdbf"></span><span style="background:#c5c2bb"></span><span style="background:#abada8"></span><span style="background:#7d7f76"></span><span style="background:#8c8870"></span></div>
+        <p>Kahve ve zeytin alt tonu taşıyan, taşı andıran doğal griler. Salon ünitelerinde, yatak odası mobilyasında ve otel odalarında soğuk durmadan modern bir görünüm verir. Ceviz ve meşe, traverten gibi doğal taşlar, keten kumaş ve bronz aksesuarla uyumludur.</p>
+      </div>
+      <div class="renk-aile" id="mineral-griler">
+        <h3 class="renk-aile-ad">Mineral Griler <span>(Mineral Greys)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#97a0a9"></span><span style="background:#7e858d"></span><span style="background:#b7b6b4"></span><span style="background:#999999"></span><span style="background:#7a7774"></span><span style="background:#54575c"></span><span style="background:#989c9f"></span></div>
+        <p>Mavi ve yeşil alt tonlu, serin ve düzenli görünen griler. Ofis mobilyası, mutfak adaları ve banyo dolaplarında çağdaş, teknik bir hava yaratır. Beyaz mermer, beton, paslanmaz çelik ve açık renk ahşapla dengelenir.</p>
+      </div>
+      <div class="renk-aile" id="grafitler">
+        <h3 class="renk-aile-ad">Grafitler <span>(Graphites)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#656764"></span><span style="background:#5e6367"></span><span style="background:#585c5f"></span><span style="background:#4f5054"></span><span style="background:#383d41"></span><span style="background:#333436"></span><span style="background:#454440"></span><span style="background:#47484d"></span><span style="background:#3a4149"></span></div>
+        <p>Antrasite yakın koyu griler; siyah kadar sert olmadan derinlik verir. Mutfak dolabı, TV ünitesi, çalışma masası ve metal ayak ya da çerçevelerde güçlü bir çizgi oluşturur. Meşe ve ceviz gibi sıcak ahşaplar, pirinç aksesuar ve açık nötr tonlarla kontrast kurar.</p>
+      </div>
+      <div class="renk-aile" id="siyahlar">
+        <h3 class="renk-aile-ad">Siyahlar <span>(Blacks)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#1f2022"></span><span style="background:#070909"></span><span style="background:#0e1014"></span></div>
+        <p>Net ve iddialı bir aile; mobilyanın formunu öne çıkarır. Mutfak adası, raf sistemleri, sandalye ve masa ayakları gibi vurgu parçalarında etkilidir. Açık meşe, beyaz mermer ve pirinç ya da altın tonlu aksesuarla dengeli bir kontrast verir.</p>
+      </div>
+      <div class="renk-aile" id="kum-ve-krem">
+        <h3 class="renk-aile-ad">Kum ve Krem <span>(Sand & Cream)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#e5caa3"></span><span style="background:#f0d4a2"></span><span style="background:#e9bf62"></span><span style="background:#fbe470"></span><span style="background:#fed435"></span><span style="background:#f9ad30"></span></div>
+        <p>Bej ve kremden güneş sarısına uzanan sıcak, aydınlık tonlar. Açık tonlar mutfak ve yatak odasında yumuşak bir zemin olur; canlı sarılar çocuk odası, kafe ve mağaza mobilyasında enerji katar. Açık ahşap, rattan ve beyazla ferah bir bütün oluşturur.</p>
+      </div>
+      <div class="renk-aile" id="sarilar-ve-hardallar">
+        <h3 class="renk-aile-ad">Sarılar ve Hardallar <span>(Yellows & Mustards)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#f5b303"></span><span style="background:#f5a11a"></span><span style="background:#be9d4e"></span><span style="background:#9d8c3d"></span></div>
+        <p>Altın sarısından okra ve hardala uzanan, retro bir sıcaklık taşıyan tonlar. Sandalye, tek kapak, raf içi ya da döşemeli parça gibi vurgu noktalarında iyi çalışır. Ceviz, koyu yeşil ve lacivert yüzeyler, siyah metal ile karakterli bir eşleşme yapar.</p>
+      </div>
+      <div class="renk-aile" id="kahveler">
+        <h3 class="renk-aile-ad">Sıcak Toprak – Kahveler <span>(Warm Earth – Earth Browns)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#784319"></span><span style="background:#5f3114"></span><span style="background:#4d271b"></span><span style="background:#3a1f16"></span><span style="background:#3c2f26"></span><span style="background:#1f1a16"></span><span style="background:#6b513f"></span><span style="background:#463224"></span></div>
+        <p>Kil kahvesinden koyu çikolataya uzanan, ahşabın sıcaklığını boyalı yüzeye taşıyan aile. Kütüphane, yatak başlığı, otel ve restoran mobilyasında köklü ve samimi bir hava verir. Krem ve bej tonlar, deri, keten ve pirinçle uyumludur.</p>
+      </div>
+      <div class="renk-aile" id="terrakota-ve-kil">
+        <h3 class="renk-aile-ad">Sıcak Toprak – Terrakota ve Kil <span>(Warm Earth – Terracotta & Clay)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#ac5f21"></span><span style="background:#7f3b28"></span><span style="background:#a13a22"></span><span style="background:#c25321"></span></div>
+        <p>Pişmiş toprağı ve bakırı andıran, Akdeniz esintili turuncu kahveler. Konsol, büfe, duvar paneli ve kafe mobilyasında sıcak bir odak noktası oluşturur. Doğal taş, açık ahşap, rattan ve krem tonlarla doğal bir palet tamamlar.</p>
+      </div>
+      <div class="renk-aile" id="kirmizilar">
+        <h3 class="renk-aile-ad">Kırmızılar <span>(Red Collection)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#750b1a"></span><span style="background:#530a13"></span><span style="background:#7e1215"></span><span style="background:#d01718"></span><span style="background:#320f15"></span></div>
+        <p>Bordo ve şarap kırmızısı gibi derin tonlardan canlı kırmızıya uzanan aile. Koyu kırmızılar zarif ve sofistike, canlı kırmızı ise enerjik durur; restoran, kafe, mağaza ve vurgu mobilyalarında öne çıkar. Ceviz, siyah metal, pirinç ve kremle iyi eşleşir.</p>
+      </div>
+      <div class="renk-aile" id="pudra-pembe">
+        <h3 class="renk-aile-ad">Pudra Pembe ve Ten Tonları <span>(Dusty Pink & Nude)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#d58f81"></span><span style="background:#e4938f"></span><span style="background:#f2b1b7"></span><span style="background:#b57b91"></span></div>
+        <p>Antik pembe, açık pembe ve pastel mora uzanan yumuşak, sıcak tonlar. Yatak odası, çocuk odası, butik mağaza ve kafe mobilyasında samimi bir atmosfer kurar. Açık meşe, beyaz, terrazzo ve altın tonlu aksesuarla uyumludur.</p>
+      </div>
+      <div class="renk-aile" id="maviler">
+        <h3 class="renk-aile-ad">Maviler <span>(Blue Collection)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#365784"></span><span style="background:#10307b"></span><span style="background:#143055"></span><span style="background:#33648d"></span><span style="background:#09243f"></span><span style="background:#16325a"></span><span style="background:#049698"></span></div>
+        <p>Laciverdin klasik ağırlığından kobalt ve turkuaza uzanan aile. Lacivertler mutfak dolabı, kütüphane ve ofis mobilyasında güven veren bir derinlik sağlar; turkuaz ise vurgu parçalarında canlılık katar. Pirinç, beyaz mermer ve meşeyle zamansız bir eşleşmedir.</p>
+      </div>
+      <div class="renk-aile" id="tozlu-maviler">
+        <h3 class="renk-aile-ad">Tozlu Maviler <span>(Dusty Blues)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#283744"></span><span style="background:#758597"></span><span style="background:#4d648a"></span><span style="background:#6896b5"></span></div>
+        <p>Grimsi, sakin ve dinlendirici mavi tonlar. Banyo dolapları, yatak odası, çocuk odası ve ofis mobilyasında huzurlu bir ortam yaratır. Beyaz, açık ahşap, mat siyah ya da krom aksesuarla sade ve modern durur.</p>
+      </div>
+      <div class="renk-aile" id="yesiller">
+        <h3 class="renk-aile-ad">Yeşiller <span>(Green Collection)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#454a3a"></span><span style="background:#183b2e"></span><span style="background:#768666"></span><span style="background:#bbd1b5"></span><span style="background:#8f9f82"></span><span style="background:#264e45"></span></div>
+        <p>Zeytinden çam yeşiline ve açık pastel yeşile uzanan geniş bir aile. Koyu yeşiller mutfak dolabı ve kütüphanede zarif bir derinlik verir; açık tonlar küçük mekânları ferahlatır. Ceviz, meşe, pirinç ve mermerle uyumludur.</p>
+      </div>
+      <div class="renk-aile" id="botanik-yesiller">
+        <h3 class="renk-aile-ad">Botanik Yeşiller <span>(Botanical Greens)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#707461"></span><span style="background:#5d703e"></span><span style="background:#4a7363"></span><span style="background:#233026"></span></div>
+        <p>Bitki dünyasından ilham alan, doğal ve dinlendirici yeşiller. Salon, otel, kafe ve mutfak mobilyasında doğayı iç mekâna taşır. Rattan, hasır, açık ahşap, doğal taş ve terrakota tonlarla bütünlük kurar.</p>
+      </div>
+      <div class="renk-aile" id="grej-ve-taupe">
+        <h3 class="renk-aile-ad">Grej ve Taupe <span>(Greige & Taupe Collection)</span></h3>
+        <div class="renk-serit" aria-hidden="true"><span style="background:#ae9d89"></span><span style="background:#8d8271"></span><span style="background:#bdb9ad"></span><span style="background:#bcbdb8"></span><span style="background:#c6bdae"></span><span style="background:#a19d96"></span></div>
+        <p>Gri ile bej arasında, hem sıcak hem sade duran tonlar; mekânın ana rengi olmaya çok uygundur. Mutfak dolabı, gardırop ve yatak odası mobilyasında sakin ve şık bir temel oluşturur. Meşe, ceviz, keten, pirinç ve mat siyah detaylarla kolayca eşleşir.</p>
+      </div>
     </div>
   </div>
 </section>

@@ -249,9 +249,10 @@ def sayfa(kod, t):
     deck_kod = t.get("deck_kod", kod)   # Arapça sunum yok → İngilizceye yönlendirilir
     rtl = bool(t.get("rtl"))
     rtl_css = RTL_CSS if rtl else ''
-    font = ('<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">'
-            if rtl else
-            '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">')
+    # Inter sitenin kendi sunucusundan (@font-face base.css'te); yalnız Arapça yazı tipi Google'dan gelir
+    font = ('<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>'
+            + ('\n<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">'
+               if rtl else ''))
     # Yayına alınmamış dil: arama motorlarına kapalı, hreflang zincirine girmez
     robots = '<meta name="robots" content="noindex,nofollow">\n' if t.get("noindex") else ''
     if t.get("noindex"):
