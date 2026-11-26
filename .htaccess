@@ -11,6 +11,14 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # --- Tek adres: her şey https://www.ibavalresa.com.tr'ye (2026-11-26, yeni sunucu) ---
+  # http → https ve www'suz → www, tek 301 ile. SSL yenilemesi (Let's Encrypt) için
+  # /.well-known/ yolu yönlendirilmez.
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteRule ^ https://www.ibavalresa.com.tr%{REQUEST_URI} [R=301,L,NE]
+
   # --- Onaylanmış eski URL'ler (site: aramasından tespit edildi) ---
   RewriteRule ^en/district-directorates/?$   /en/regional-offices.html   [R=301,L]
   RewriteRule ^en/iba-valresa-career/?$       /en/careers.html            [R=301,L]
