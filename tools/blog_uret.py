@@ -203,6 +203,131 @@ for d in DIS:
 
 POSTS = []
 
+ESFERA_KAT = "https://esfera.com.tr/urun-katalogu/"
+
+# 10) Ahşap kulübe ve hobi uygulamaları — ekibin metni (2026-11-27), hafif dil düzeltmesi.
+#    Görsel: tools/ahsap-kulube-semasi.html (şema; tik tonları yaklaşık, yalnız koyulaşmayı anlatır).
+p = dict(yol="blog/ahsap-kulube-boyama.html", etiket="Uygulama Rehberi",
+         baslik="Ahşap Kulübe Boyamalarında ve Hobi Uygulamalarında Nelere Dikkat Edilmelidir?",
+         h1="Ahşap kulübe boyamalarında ve hobi uygulamalarında nelere dikkat edilmelidir?",
+         lead="Bir ahşap kulübe inşa ettiniz ama nasıl boyayacağınızı bilmiyor musunuz? Esfera Dış Cephe Renkli Vernik ile uygulamanın ayrıntılarını ve avantajlarını adım adım anlatıyoruz.",
+         ozet="Ahşap kulübe nasıl boyanır? Zımparadan inceltme oranına, kat sayısından renk koyulaşmasına Esfera Dış Cephe Renkli Vernik ile adım adım uygulama.",
+         desc="Ahşap kulübe ve hobi uygulamalarında boyama: 220–400 zımpara, Esfera Dış Cephe Renkli Vernik (7035XX) ile %20'ye kadar su inceltme, kat sayısı ve renk koyulaşması.",
+         tarih_iso="2026-11-27", tarih="27 Kasım 2026",
+         hero="/img/blog/ahsap-kulube-renkli-vernik.jpg", hero_wh=(1400, 722),
+         hero_alt="Ahşap kulübenin yarısı ham, yarısı tik renkli vernikli; yanında üç uygulama adımı ve kat sayısıyla koyulaşan renk örnekleri",
+         og="/img/blog/ahsap-kulube-renkli-vernik-og.jpg")
+p["govde"] = bas(p) + f"""
+<section class="about-section" style="border-top:none; padding-top:12px;">
+  <div class="section-inner">
+    <figure class="post-hero"><img src="{p['hero']}" alt="{p['hero_alt']}" width="1400" height="722" fetchpriority="high"><figcaption class="post-figcap">Renk örnekleri yaklaşıktır; kat arttıkça koyulaşmayı göstermek içindir.</figcaption></figure>
+    <div class="post-body" style="margin-top:40px;">
+      <p><a href="{ESFERA_KAT}" target="_blank" rel="noopener">Esfera Dış Cephe Renkli Vernik (7035XX)</a> ürünleri standart olarak 11 renkte sunulur; isteğe bağlı renklendirmelerle sonsuz renk çeşitliliği sağlanabilir. Kafa karışıklığı olmaması için bu yazıda <strong>703505 Esfera Renkli Vernik Tik</strong> rengi üzerinden ilerliyoruz.</p>
+
+      <h2 class="post-h2">Yüzey hazırlığı</h2>
+      <p>İnşası tamamlanmış, üzerinde boya, vernik, yağ ya da benzeri bir kirlilik bulunmayan kulübe yüzeylerinde gözenekleri açmak için <strong>220–400 kumlu zımpara</strong> yapılmalıdır. Bu işlem, uygulanacak renkli verniğin yapışma performansını artırır.</p>
+
+      <h2 class="post-h2">Uygulama</h2>
+      <ol>
+        <li>Yüzey hazırlığı yapılan ahşaba Esfera 703505 Renkli Vernik Tik; fırça, rulo, tabanca ya da bezle uygulanabilir. Uygulama koşullarına bağlı olarak <strong>%20'ye kadar su</strong> ile inceltilebilir.</li>
+        <li>Kuruma tamamlandığında yoklama zımparası yapılarak 2. kat uygulanabilir.</li>
+        <li>Ortalama <strong>3 kata kadar</strong> uygulama yapılması önerilir.</li>
+      </ol>
+
+      <h2 class="post-h2">Uyarı: her kat rengi koyulaştırır</h2>
+      <p>Her katta yeni bir renk katmanı oluştuğu için renk koyulaşır. Beklenmedik sonuçlardan kaçınmak için geniş yüzeye geçmeden önce küçük bir alanda deneme yaparak kat sayısını, inceltme oranını ve uygulama aparatını belirlemeniz önerilir. Denemede uygulanan yöntemden sapmadığınız sürece aynı rengi her uygulamada yakalayabilirsiniz.</p>
+    </div>
+  </div>
+</section>
+""" + ilgili("blog/ahsap-ev-boya-tadilati.html", "blog/ahsap-ev-ureticileri-neden-esfera.html", "blog/renk-farki-ve-renk-kiyaslama.html") + cta("Teknik destek", "Kulübeniz için doğru rengi ve sistemi birlikte seçelim")
+POSTS.append(p)
+
+# 9) Ahşap ev üreticileri neden Esfera'yı tercih eder — ekibin metni (2026-11-27), hafif dil düzeltmesi.
+#    Görsel: tools/esfera-tercih-semasi.html (şema; fotoğraf gelince değişebilir).
+p = dict(yol="blog/ahsap-ev-ureticileri-neden-esfera.html", etiket="Ürün Teknolojisi",
+         baslik="Ahşap Ev Üreticileri Neden Esfera Ürünlerini Tercih Eder?",
+         h1="Ahşap ev üreticileri neden Esfera ürünlerini tercih eder?",
+         lead="Ahşap ev üreticisi müşterilerimizle yaptığımız görüşmeler ve anket sonuçları, Esfera ürünlerinin neden tercih edildiğine dair beş ortak neden ortaya koyuyor.",
+         ozet="Dayanım, kolay uygulama, yalın ürün çeşidi, doğal görünüm ve yüksek teknoloji: ahşap ev üreticilerinin Esfera'yı seçme nedenleri.",
+         desc="Ahşap ev üreticileri neden Esfera ahşap boya ve verniklerini tercih ediyor? Müşteri görüşmeleri ve anketlerde öne çıkan beş neden: dayanım, kolay uygulama, yalın ürün çeşidi, doğal görünüm, yüksek teknoloji.",
+         tarih_iso="2026-11-27", tarih="27 Kasım 2026",
+         hero="/img/blog/ahsap-ev-ureticileri-esfera.jpg", hero_wh=(1400, 722),
+         hero_alt="Ahşap ev üreticilerinin Esfera ürünlerini tercih etme nedenlerini gösteren beş başlıklı şema",
+         og="/img/blog/ahsap-ev-ureticileri-esfera-og.jpg")
+p["govde"] = bas(p) + f"""
+<section class="about-section" style="border-top:none; padding-top:12px;">
+  <div class="section-inner">
+    <figure class="post-hero"><img src="{p['hero']}" alt="{p['hero_alt']}" width="1400" height="722" fetchpriority="high"><figcaption class="post-figcap">Müşteri görüşmeleri ve anketlerde öne çıkan beş neden.</figcaption></figure>
+    <div class="post-body" style="margin-top:40px;">
+      <h2 class="post-h2">Yüksek dayanım</h2>
+      <p>Esfera ürünleriyle yapılan uygulamalar uzun süre yeniden tadilat gerektirmez; ürünler ahşabı doğallığıyla birlikte korur.</p>
+
+      <h2 class="post-h2">Kolay uygulanabilirlik</h2>
+      <p>Esfera ürünleri kolay uygulanır, fırça izi bırakmaz ve hızlı kurur. Bu da verimli üretim için avantaj sağlar.</p>
+
+      <h2 class="post-h2">Yalın ürün çeşitliliği</h2>
+      <p>Ahşap işleyen firmaların pek çok ihtiyacına yeterli sayıda ürünle yanıt verilir. Aynı ürünle farklı uygulamalar yapılabilmesi, üretimde yalınlığı korur.</p>
+
+      <h2 class="post-h2">Doğal görünüm</h2>
+      <p>Esfera ürünleri ahşabın doğal dokusunu koruyarak ve harelerini ön plana çıkararak renklendirir, ahşabın ömrünü uzatır. Bu, ahşap işleyen pek çok firmanın ürünlerimizi tercih etmesindeki önemli etkenlerden biridir.</p>
+
+      <h2 class="post-h2">Yüksek teknoloji</h2>
+      <p>Esfera ürünleri yüksek otomasyonlu <a href="/uretim-ve-teknoloji.html">üretim hattımızda</a> üretilir. Bu sayede üretim standart kalır ve ürünlere hızlı erişim sağlanır.</p>
+
+      <p>Ürünlerin tamamı için <a href="{ESFERA_KAT}" target="_blank" rel="noopener">Esfera ürün kataloğuna</a> göz atabilirsiniz.</p>
+    </div>
+  </div>
+</section>
+""" + ilgili("blog/ahsap-ev-boya-tadilati.html", "blog/spor-salonu-parke-vernik-yenileme.html", "blog/su-bazli-boyaya-gecis.html") + cta("Ahşap ev üreticileri için", "Üretiminize uygun sistemi birlikte seçelim")
+POSTS.append(p)
+
+# 8) Ahşap ev boya tadilatı — ekibin metni (2026-11-27), hafif dil düzeltmesi.
+#    Görsel: tools/ahsap-ev-tadilat-semasi.html (şema; fotoğraf gelince değişebilir).
+p = dict(yol="blog/ahsap-ev-boya-tadilati.html", etiket="Uygulama Rehberi",
+         baslik="Ahşap Ev Boya Tadilatı Ne Zaman ve Nasıl Yapılmalıdır?",
+         h1="Ahşap ev boya tadilatı ne zaman ve nasıl yapılmalıdır?",
+         lead="Ahşap evlerde dış yüzeylerin düzenli olarak yeniden boyanması ve verniklenmesi gerekir. Tadilata ne zaman karar verileceğini ve uygulamanın adım adım nasıl yapılacağını anlatıyoruz.",
+         ozet="Hangi cephe tadilat ister, hangisine lokal müdahale yeter? Zımparadan renklendirici ve dış mekân verniğine, ahşap ev boya tadilatı adım adım.",
+         desc="Ahşap boyası ne zaman yenilenir, ahşap ev boya tadilatı nasıl yapılır? Cephelerin incelenmesi, iklimin etkisi, zımpara, Esfera Ahşap Renklendirici ve Dış Mekan Şeffaf Vernik ile adım adım uygulama.",
+         tarih_iso="2026-11-27", tarih="27 Kasım 2026",
+         hero="/img/blog/ahsap-ev-boya-tadilati.jpg", hero_wh=(1400, 722),
+         hero_alt="Ahşap evde güneş alan ve korunaklı cephenin farklı yıpranmasını ve tadilatın dört adımını gösteren şema",
+         og="/img/blog/ahsap-ev-boya-tadilati-og.jpg")
+p["govde"] = bas(p) + f"""
+<section class="about-section" style="border-top:none; padding-top:12px;">
+  <div class="section-inner">
+    <figure class="post-hero"><img src="{p['hero']}" alt="{p['hero_alt']}" width="1400" height="722" fetchpriority="high"><figcaption class="post-figcap">Cepheler aynı hızda yıpranmaz; her cephe ayrı değerlendirilir.</figcaption></figure>
+    <div class="post-body" style="margin-top:40px;">
+      <p>Bir ahşap ev sahibiyseniz, ahşap yüzeylerin düzenli olarak yeniden boyanması ve verniklenmesi gerektiğini bilirsiniz. Bu süreci doğru biçimde yürütmek profesyoneller için bile zaman zaman zorlayıcıdır. Bu yazıda size yol göstermek istiyoruz. Her şeyden önce, ahşap evinizin boya tadilatında <a href="{ESFERA_KAT}" target="_blank" rel="noopener">Esfera ürünlerini</a> kullanarak ilk adımı doğru atabilirsiniz.</p>
+
+      <h2 class="post-h2">Tadilat gerçekten gerekli mi?</h2>
+      <p>İlk aşama, tadilatın gerçekten gerekip gerekmediğine karar vermektir. Bunun için evinizin ya da ahşap kaplamalı yapınızın tüm yüzeylerini ayrıntılı olarak incelemeniz gerekir. Evin cepheleri arasında yıpranma bakımından farklar görülebilir; bunun nedeni, cephelerin farklı miktarlarda UV ışınlarına, yağışa ya da rüzgâra maruz kalmasıdır. Bu yüzden her cepheyi ayrı ayrı değerlendirmek gerekir. Aynı evde bir cephe ikinci tadilatını beklerken, başka bir cephe ilk tadilatını bekliyor olabilir.</p>
+
+      <h2 class="post-h2">Ahşap boyası ne zaman yenilenmelidir?</h2>
+      <ul>
+        <li>Vernikli ve boyalı alanlardaki çatlakların miktarına ve boyanın ahşaba hâlâ yapışıp yapışmadığına bakılmalıdır. Kenar ve köşelerde ya da küçük alanlarda başlayan hafif dökülme veya çatlaklara lokal müdahale yapılabilir; kapsamlı bir tadilata gerek olmayabilir.</li>
+        <li>Ahşap boyasız biçimde ortaya çıkmaya başlamışsa ve genel yüzeydeki boyada kalkmalar oluşmuşsa, her malzemede olduğu gibi bu boyanın da kullanım ömrü dolmuştur; tadilat yapılması gerekir.</li>
+        <li>Bu konudaki en kritik etken, ahşabın maruz kaldığı iklim ve coğrafyadır. Yüksek sıcaklığa, yoğun yağışa ve dik gelen UV ışınlarına maruz kalan yüzeyler daha erken yenileme ister.</li>
+        <li>Daha az güneş gören ve daha az yağış alan bölgelerdeki ahşaplarda yenileme süreleri daha uzun olabilir.</li>
+      </ul>
+
+      <h2 class="post-h2">Ahşap ev boya tadilatı adım adım</h2>
+      <p>Tadilata karar verildiyse aşama aşama başlayabiliriz:</p>
+      <ol>
+        <li><strong>Temizlik ve zımpara:</strong> Yüzeydeki eski boya, vernik, yağ ve benzeri uygulama kalıntıları zımparalanarak uzaklaştırılmalıdır. Zımparalamada kalın kumlu zımpara kullanılabilir; ahşabı fazla aşındırmayan her yöntem uygundur.</li>
+        <li><strong>Renklendirme:</strong> Temizlenen ahşaba, <strong>Esfera Ahşap Renklendirici (7034XX)</strong> ürünleri arasından zevkinize uygun renk seçilerek uygulamaya başlanabilir. Bu uygulamayla ahşabın güneşten gelen UV ışınlarına karşı dayanımı artırılır; ahşap mantar, küf ve böcek gibi çevresel etmenlere karşı da korunur.</li>
+        <li><strong>Bez ya da fırça:</strong> Renklendirmenin bez ya da fırçayla yapılması, ürünün ahşaba daha iyi nüfuz etmesi açısından önemlidir.</li>
+        <li><strong>Vernik:</strong> Renklendirmeden sonra ahşabın yağmur, kar, rüzgâr gibi hava olaylarından korunabilmesi için vernik uygulanmalıdır. Bunun için <strong>Esfera Dış Mekan Şeffaf Vernik (70020X)</strong> ürünleri seçilmelidir.</li>
+        <li><strong>İlk kat fırçayla:</strong> Verniğin ilk katı fırçayla uygulandığında ahşaba nüfuzu artar. İsteğe bağlı olarak tabancayla ince katlar hâlinde de uygulanabilir.</li>
+        <li><strong>Kat sayısı:</strong> Vernik 2 ila 3 kat uygulanabilir.</li>
+      </ol>
+      <p>Bu uygulamayla, çevre ve iklim koşullarına bağlı olarak değişmekle birlikte, ahşabınızı uzun süre koruyabilirsiniz.</p>
+    </div>
+  </div>
+</section>
+""" + ilgili("blog/ahsap-ev-ureticileri-neden-esfera.html", "blog/boyada-soyulma-yapismama.html", "blog/zimpara-sorunlari.html") + cta("Teknik destek", "Ahşap evinizin tadilatını birlikte planlayalım")
+POSTS.append(p)
+
 # 7) Valresa Duygu Çarkı — tasarım ekibinin aracı, sitenin görünümüyle yazının içinde.
 #    Veri: tools/duygu_carki_veri.json (ekip yeni sürüm gönderince: tools/duygu_carki_veri_al.py <html>),
 #    görünüm/davranış: tools/duygu_carki.css + tools/duygu_carki.js (buradan gömülür, ayrı .js dosyası yok).
@@ -515,7 +640,7 @@ p = dict(yol="blog/spor-salonu-parke-vernik-yenileme.html", etiket="Uygulama Reh
          lead="Uluslararası organizasyonlara ev sahipliği yapan bir spor kompleksinin parke sahasını su bazlı sistemimizle yeniledik. Bu uygulama üzerinden, spor parkelerinde vernik seçerken nelere dikkat edilmesi gerektiğini anlatıyoruz.",
          ozet="Spor parkesi vernikten ne bekler, geniş yüzeyde renk bütünlüğü nasıl korunur? Su bazlı 700600 verniğimizle tamamlanan bir saha uygulamasından notlar.",
          desc="Spor salonu parkelerinde vernik seçimi: aşınma dayanımı, kayma direnci, parlaklık ve geniş yüzeyde renk bütünlüğü. Su bazlı 700600 vernikle tamamlanan bir saha yenileme uygulaması.",
-         tarih_iso="2026-10-06", tarih="6 Ekim 2026",
+         tarih_iso="2026-10-06", tarih="6 Ekim 2026", guncel_iso="2026-11-27", guncel="27 Kasım 2026",
          hero="/img/blog/spor-salonu-parke-su-bazli-vernik.jpg", hero_wh=(1400, 584),
          hero_alt="Spor salonu parke sahasında su bazlı vernik uygulaması",
          og="/img/blog/spor-salonu-parke-su-bazli-vernik-og.jpg")
@@ -536,20 +661,22 @@ p["govde"] = bas(p) + f"""
 
       <h2 class="post-h2">Geniş yüzeyde renk bütünlüğü nasıl korunur?</h2>
       <p>Renkli bir kat uygulandığında en sık karşılaşılan sorun, ek yeri ve tur izleridir. Bir şerit kurumaya başlarken yanına gelen yeni şerit onun üzerine bindiğinde, iki uygulama arasında ton farkı oluşur. Bir basketbol sahası büyüklüğündeki yüzeyde bunu önlemenin yolu, ürünün açık kalma süresini, yani yüzeyin işlenebilir kaldığı süreyi, uygulama hızına göre uzatmaktır.</p>
-      <p>Bu uygulamada istenen özel renk tonu, <strong>700400</strong> kodlu ürünümüzün içine su bazlı renk pastalarımız katılarak elde edildi. Geniş yüzeyde renk bütünlüğünü korumak, ek yerlerinde ton farkını önlemek ve kurumayı kontrollü şekilde yavaşlatmak için <a href="/arge.html">Ar-Ge</a> birimimizin bu iş için özel olarak hazırladığı <strong>ZZ 1012 Retarder</strong>, ürüne <strong>%7</strong> oranında ilave edildi.</p>
+      <p>Bu uygulamada istenen özel renk tonu, <strong>Esfera Ahşap Renklendirici</strong> ürün grubundan (<strong>7034XX</strong>) hazırlanan özel renk ile oluşturulmuştur. Geniş yüzeyde renk bütünlüğünü korumak, ek yerlerinde ton farkını önlemek ve kurumayı kontrollü şekilde yavaşlatmak için <a href="/arge.html">Ar-Ge</a> birimimizin bu iş için özel olarak hazırladığı katkı malzemesi ile ürünün kuruma süresi uzatılmış ve kat izi oluşumunun önüne geçilerek uygulama kolaylığı sağlanmıştır.</p>
 
       <h2 class="post-h2">Uygulama adımları</h2>
       <ol>
-        <li>Sahadaki mevcut vernik sisteminin tamamen yenilenmesi için yüzeyin hazırlanması.</li>
-        <li>İstenen renk tonunun 700400 kodlu ürüne su bazlı renk pastalarıyla verilmesi.</li>
-        <li>Açık kalma süresini uzatmak için ZZ 1012 Retarder'ın %7 oranında eklenmesi ve renkli katın uygulanması.</li>
-        <li>18 saatlik bekleme süresi.</li>
-        <li>Son kat olarak <strong>700600 su bazlı verniğimizin</strong> uygulanması.</li>
+        <li>Sahadaki vernik sisteminin tamamen yenilenmesi için yüzeyin hazırlanması amacıyla tüm saha sistre edilmiş ve yüzeydeki eski vernik kalıntılarının tamamı uzaklaştırılmıştır.</li>
+        <li>Saha için özel renk, Esfera Ahşap Renklendirici (7034XX) grubu ile hazırlanmıştır.</li>
+        <li>Uygulayıcı firmanın talebi üzerine ürün, geç kuruyacak biçimde modifiye edilmiştir.</li>
+        <li>Renk işlemleri tamamlandıktan sonra <strong>Esfera Premium Vernik (700600)</strong> uygulaması yapılmıştır.</li>
+        <li>Premium Vernik uygulaması rulo ile yapılmıştır. Ürün, %10 oranında Esfera İC Sertleştirici (190203) ile karıştırılarak hazırlanmış ve %10 su ile inceltilmiştir.</li>
+        <li>2 kat Esfera Premium Vernik (700600) uygulaması yapılmıştır.</li>
+        <li>3 gün kürlenme süresi beklenmiştir.</li>
       </ol>
 
       <h2 class="post-h2">Sahadan sonuç</h2>
-      <p>Bu çalışmayla, uluslararası spor organizasyonlarına ev sahipliği yapan bir spor kompleksinin sahasında İBAVALRESA ürünleri <strong>%100 oranında</strong> kullanıldı. Ürünlerimiz daha önce de uluslararası organizasyonlara ev sahipliği yapan bir başka büyük spor kompleksinin parke uygulamasında %100 oranında kullanılmıştı. Böylece iki önemli spor kompleksinde başarılı uygulamalar tamamlanmış oldu.</p>
-      <p>Spor zemini projelerinde ürün seçimi; sahanın kullanım yoğunluğuna, istenen renk ve parlaklığa ve uygulama süresine göre birlikte planlanmalıdır. Teknik ekibimiz, projeye özel renk ve uygulama sistemi için destek verir.</p>
+      <p>Bu çalışmayla, uluslararası spor organizasyonlarına ev sahipliği yapan bir spor kompleksinin sahasının verniği Esfera ürünleri ile yenilenmiştir. Pek çok sahada yapılan bu ve benzeri uygulamalar ile hem Esfera ürünlerinin dayanımı ve performansı hem de Esfera Premium Verniğin (700600) kabiliyetleri ve performansı tekrar tekrar sınanarak onaylanmıştır.</p>
+      <p>Spor zemini projelerinde ürün seçimi; sahanın kullanım yoğunluğuna, istenen renk, parlaklık ve uygulama süresine göre planlanmalıdır. Teknik ekibimiz, proje özelindeki taleplere bağlı olarak gerekli renk hazırlığı ve ürün modifikasyonu desteği vererek her proje için gerekli desteği tüm iş ortaklarımıza sunmaktadır.</p>
     </div>
   </div>
 </section>
